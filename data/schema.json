@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "dataset_name": "Budget vs Actual Variance Navigator - Canonical Intelligence Data",
+  "description": "Canonical financial metrics dataset standardized from the Phase 2 synthetic budget data.",
+  "format": "CSV",
+  "encoding": "UTF-8",
+  "row_count": 72,
+  "column_count": 20,
+  "columns": [
+    {"name": "record_id", "type": "string", "required": true, "unique": true},
+    {"name": "record_type", "type": "string", "required": true},
+    {"name": "observed_at", "type": "string", "format": "ISO 8601 UTC", "required": true},
+    {"name": "entity_id", "type": "string", "required": true},
+    {"name": "related_entity_id", "type": "string", "required": false},
+    {"name": "entity_name", "type": "string", "required": true},
+    {"name": "category", "type": "string", "required": true},
+    {"name": "subcategory", "type": "string", "required": false},
+    {"name": "status", "type": "string", "required": false},
+    {"name": "stage", "type": "string", "required": false},
+    {"name": "metric_name", "type": "string", "required": true},
+    {"name": "metric_value", "type": "number", "required": true},
+    {"name": "metric_unit", "type": "string", "required": true},
+    {"name": "text_value", "type": "string", "required": false},
+    {"name": "latitude", "type": "number", "required": false},
+    {"name": "longitude", "type": "number", "required": false},
+    {"name": "source_name", "type": "string", "required": true},
+    {"name": "source_record_id", "type": "string", "required": true},
+    {"name": "is_synthetic", "type": "boolean", "required": true},
+    {"name": "data_version", "type": "string", "required": true}
+  ],
+  "allowed_metric_names": [
+    "budget_amount",
+    "actual_amount",
+    "committed_amount",
+    "forecast_amount"
+  ],
+  "metric_unit": "USD",
+  "synthetic_data": true
+}

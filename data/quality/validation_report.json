@@ -1,0 +1,172 @@
+{
+  "validation_version": "1.0.0",
+  "dataset": "data/canonical/intelligence_data.csv",
+  "status": "passed",
+  "records_checked": 72,
+  "columns_checked": 20,
+  "checks_passed": 40,
+  "checks_failed": 0,
+  "errors": [],
+  "checks": [
+    {
+      "check": "Required file exists: data\\README.md",
+      "passed": true
+    },
+    {
+      "check": "Required file exists: data\\manifest.json",
+      "passed": true
+    },
+    {
+      "check": "Required file exists: data\\schema.json",
+      "passed": true
+    },
+    {
+      "check": "Required file exists: data\\source-sample\\source_sample.csv",
+      "passed": true
+    },
+    {
+      "check": "Required file exists: data\\canonical\\intelligence_data.csv",
+      "passed": true
+    },
+    {
+      "check": "Required file exists: data\\published\\intelligence_data.json",
+      "passed": true
+    },
+    {
+      "check": "Required file exists: data\\quality\\data_profile.json",
+      "passed": true
+    },
+    {
+      "check": "Required file exists: data\\quality\\sampling_report.md",
+      "passed": true
+    },
+    {
+      "check": "Schema and manifest are valid JSON",
+      "passed": true
+    },
+    {
+      "check": "Exact canonical column order",
+      "passed": true
+    },
+    {
+      "check": "CSV columns match schema",
+      "passed": true
+    },
+    {
+      "check": "Canonical record count is 72",
+      "passed": true
+    },
+    {
+      "check": "Canonical column count is 20",
+      "passed": true
+    },
+    {
+      "check": "Canonical row limit",
+      "passed": true
+    },
+    {
+      "check": "Canonical column limit",
+      "passed": true
+    },
+    {
+      "check": "All record IDs are non-empty",
+      "passed": true
+    },
+    {
+      "check": "Record IDs are unique",
+      "passed": true
+    },
+    {
+      "check": "All observed_at values use ISO 8601 UTC",
+      "passed": true
+    },
+    {
+      "check": "All metric values are numeric",
+      "passed": true
+    },
+    {
+      "check": "All records are marked synthetic",
+      "passed": true
+    },
+    {
+      "check": "All source names are traceable",
+      "passed": true
+    },
+    {
+      "check": "All data versions match manifest",
+      "passed": true
+    },
+    {
+      "check": "All metric names are allowed",
+      "passed": true
+    },
+    {
+      "check": "All record types are financial_metric",
+      "passed": true
+    },
+    {
+      "check": "All metric units are USD",
+      "passed": true
+    },
+    {
+      "check": "Text values do not exceed 500 characters",
+      "passed": true
+    },
+    {
+      "check": "Exactly 18 records exist for each financial metric",
+      "passed": true
+    },
+    {
+      "check": "Source sample contains 18 records",
+      "passed": true
+    },
+    {
+      "check": "Four canonical records per source record",
+      "passed": true
+    },
+    {
+      "check": "Manifest record count matches CSV",
+      "passed": true
+    },
+    {
+      "check": "Manifest column count matches CSV",
+      "passed": true
+    },
+    {
+      "check": "Manifest canonical path is correct",
+      "passed": true
+    },
+    {
+      "check": "Main file size limit: data\\source-sample\\source_sample.csv",
+      "passed": true
+    },
+    {
+      "check": "Main file size limit: data\\canonical\\intelligence_data.csv",
+      "passed": true
+    },
+    {
+      "check": "Main file size limit: data\\published\\intelligence_data.json",
+      "passed": true
+    },
+    {
+      "check": "Total data directory size limit",
+      "passed": true
+    },
+    {
+      "check": "No binary or media files under data/",
+      "passed": true
+    },
+    {
+      "check": "Published JSON is a record list",
+      "passed": true
+    },
+    {
+      "check": "Published JSON record count matches CSV",
+      "passed": true
+    },
+    {
+      "check": "Published JSON records match canonical CSV after type conversion",
+      "passed": true
+    }
+  ]
+}

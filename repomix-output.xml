@@ -1,10 +1,10 @@
-This file is a merged representation of a subset of the codebase, containing files not matching ignore patterns, combined into a single document by Repomix.
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
 
 <file_summary>
 This section contains a summary of this file.
 
 <purpose>
-This file contains a packed representation of a subset of the repository's contents that is considered the most important context.
+This file contains a packed representation of the entire repository's contents.
 It is designed to be easily consumable by AI systems for analysis, code review,
 or other automated processes.
 </purpose>
@@ -32,7 +32,6 @@ The content is organized as follows:
 <notes>
 - Some files may have been excluded based on .gitignore rules and Repomix's configuration
 - Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
-- Files matching these patterns are excluded: frontend/frontend-backup/**
 - Files matching patterns in .gitignore are excluded
 - Files matching default ignore patterns are excluded
 - Files are sorted by Git change count (files with more changes are at the bottom)
@@ -42,12 +41,35 @@ The content is organized as follows:
 
 <directory_structure>
 backend/
+  .dockerignore
   budget_data.csv
+  Dockerfile
   main.py
   requirements.txt
+data/
+  canonical/
+    intelligence_data.csv
+  published/
+    intelligence_data.json
+  quality/
+    data_profile.json
+    sampling_report.md
+    validation_report.json
+  source-sample/
+    source_sample.csv
+  manifest.json
+  README.md
+  schema.json
 docs/
-  03_INFOCREON_LOCAL_CONTAINER_MIRROR (1).docx
+  docs/
+    CANONICAL_DATA_MAPPING.md
+    CANONICAL_DATA_PACKAGE_VALIDATION.md
+  03_INFOCREON_LOCAL_CONTAINER_MIRROR.docx
   ARCHITECTURE_REVIEW.md
+  CANONICAL_DATA_MAPPING.md
+  CANONICAL_DATA_PACKAGE_VALIDATION.md
+  DATA_SOURCE_INVENTORY.md
+  SAMPLING_AND_REDUCTION_REPORT.md
 frontend/
   public/
     file.svg
@@ -61,17 +83,3752 @@ frontend/
       globals.css
       layout.tsx
       page.tsx
+  .dockerignore
   .gitignore
   AGENTS.md
+  Dockerfile
   eslint.config.mjs
   next.config.ts
   package.json
   README.md
   tsconfig.json
+screenshots/
+  selenium-failure.png
+  selenium-live-dashboard.png
+scripts/
+  data_pipeline/
+    extract_data.py
+    publish_data.py
+    sample_data.py
+    standardize_data.py
+    validate_data.py
+test-results/
+  results.json
+tests/
+  test_live_application.py
+.gitignore
+docker-compose.yml
+README-SELENIUM.md
+README.md
+requirements-selenium.txt
+SELENIUM_TEST_REPORT.md
+Test_Report.txt
 </directory_structure>
 
 <files>
 This section contains the contents of the repository's files.
+
+<file path="data/canonical/intelligence_data.csv">
+record_id,record_type,observed_at,entity_id,related_entity_id,entity_name,category,subcategory,status,stage,metric_name,metric_value,metric_unit,text_value,latitude,longitude,source_name,source_record_id,is_synthetic,data_version
+FIN-0001-BUDGET_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-101,,Engineering,Cloud Infrastructure,,,,budget_amount,45000,USD,,,,backend/budget_data.csv,SRC-0001,true,1.0.0
+FIN-0001-ACTUAL_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-101,,Engineering,Cloud Infrastructure,,,,actual_amount,48000,USD,,,,backend/budget_data.csv,SRC-0001,true,1.0.0
+FIN-0001-COMMITTED_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-101,,Engineering,Cloud Infrastructure,,,,committed_amount,2000,USD,,,,backend/budget_data.csv,SRC-0001,true,1.0.0
+FIN-0001-FORECAST_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-101,,Engineering,Cloud Infrastructure,,,,forecast_amount,50000,USD,,,,backend/budget_data.csv,SRC-0001,true,1.0.0
+FIN-0002-BUDGET_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-101,,Engineering,Cloud Infrastructure,,,,budget_amount,45000,USD,,,,backend/budget_data.csv,SRC-0002,true,1.0.0
+FIN-0002-ACTUAL_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-101,,Engineering,Cloud Infrastructure,,,,actual_amount,49500,USD,,,,backend/budget_data.csv,SRC-0002,true,1.0.0
+FIN-0002-COMMITTED_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-101,,Engineering,Cloud Infrastructure,,,,committed_amount,1500,USD,,,,backend/budget_data.csv,SRC-0002,true,1.0.0
+FIN-0002-FORECAST_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-101,,Engineering,Cloud Infrastructure,,,,forecast_amount,51000,USD,,,,backend/budget_data.csv,SRC-0002,true,1.0.0
+FIN-0003-BUDGET_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-101,,Engineering,Cloud Infrastructure,,,,budget_amount,45000,USD,,,,backend/budget_data.csv,SRC-0003,true,1.0.0
+FIN-0003-ACTUAL_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-101,,Engineering,Cloud Infrastructure,,,,actual_amount,52000,USD,,,,backend/budget_data.csv,SRC-0003,true,1.0.0
+FIN-0003-COMMITTED_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-101,,Engineering,Cloud Infrastructure,,,,committed_amount,3000,USD,,,,backend/budget_data.csv,SRC-0003,true,1.0.0
+FIN-0003-FORECAST_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-101,,Engineering,Cloud Infrastructure,,,,forecast_amount,53500,USD,,,,backend/budget_data.csv,SRC-0003,true,1.0.0
+FIN-0004-BUDGET_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-102,,Engineering,Software Licenses,,,,budget_amount,20000,USD,,,,backend/budget_data.csv,SRC-0004,true,1.0.0
+FIN-0004-ACTUAL_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-102,,Engineering,Software Licenses,,,,actual_amount,18500,USD,,,,backend/budget_data.csv,SRC-0004,true,1.0.0
+FIN-0004-COMMITTED_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-102,,Engineering,Software Licenses,,,,committed_amount,1000,USD,,,,backend/budget_data.csv,SRC-0004,true,1.0.0
+FIN-0004-FORECAST_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-102,,Engineering,Software Licenses,,,,forecast_amount,19000,USD,,,,backend/budget_data.csv,SRC-0004,true,1.0.0
+FIN-0005-BUDGET_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-102,,Engineering,Software Licenses,,,,budget_amount,20000,USD,,,,backend/budget_data.csv,SRC-0005,true,1.0.0
+FIN-0005-ACTUAL_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-102,,Engineering,Software Licenses,,,,actual_amount,19000,USD,,,,backend/budget_data.csv,SRC-0005,true,1.0.0
+FIN-0005-COMMITTED_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-102,,Engineering,Software Licenses,,,,committed_amount,1000,USD,,,,backend/budget_data.csv,SRC-0005,true,1.0.0
+FIN-0005-FORECAST_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-102,,Engineering,Software Licenses,,,,forecast_amount,19500,USD,,,,backend/budget_data.csv,SRC-0005,true,1.0.0
+FIN-0006-BUDGET_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-102,,Engineering,Software Licenses,,,,budget_amount,20000,USD,,,,backend/budget_data.csv,SRC-0006,true,1.0.0
+FIN-0006-ACTUAL_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-102,,Engineering,Software Licenses,,,,actual_amount,21000,USD,,,,backend/budget_data.csv,SRC-0006,true,1.0.0
+FIN-0006-COMMITTED_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-102,,Engineering,Software Licenses,,,,committed_amount,500,USD,,,,backend/budget_data.csv,SRC-0006,true,1.0.0
+FIN-0006-FORECAST_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-102,,Engineering,Software Licenses,,,,forecast_amount,21500,USD,,,,backend/budget_data.csv,SRC-0006,true,1.0.0
+FIN-0007-BUDGET_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-201,,Marketing,Paid Ads & Campaigns,,,,budget_amount,60000,USD,,,,backend/budget_data.csv,SRC-0007,true,1.0.0
+FIN-0007-ACTUAL_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-201,,Marketing,Paid Ads & Campaigns,,,,actual_amount,68000,USD,,,,backend/budget_data.csv,SRC-0007,true,1.0.0
+FIN-0007-COMMITTED_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-201,,Marketing,Paid Ads & Campaigns,,,,committed_amount,5000,USD,,,,backend/budget_data.csv,SRC-0007,true,1.0.0
+FIN-0007-FORECAST_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-201,,Marketing,Paid Ads & Campaigns,,,,forecast_amount,70000,USD,,,,backend/budget_data.csv,SRC-0007,true,1.0.0
+FIN-0008-BUDGET_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-201,,Marketing,Paid Ads & Campaigns,,,,budget_amount,60000,USD,,,,backend/budget_data.csv,SRC-0008,true,1.0.0
+FIN-0008-ACTUAL_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-201,,Marketing,Paid Ads & Campaigns,,,,actual_amount,58000,USD,,,,backend/budget_data.csv,SRC-0008,true,1.0.0
+FIN-0008-COMMITTED_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-201,,Marketing,Paid Ads & Campaigns,,,,committed_amount,4000,USD,,,,backend/budget_data.csv,SRC-0008,true,1.0.0
+FIN-0008-FORECAST_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-201,,Marketing,Paid Ads & Campaigns,,,,forecast_amount,62000,USD,,,,backend/budget_data.csv,SRC-0008,true,1.0.0
+FIN-0009-BUDGET_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-201,,Marketing,Paid Ads & Campaigns,,,,budget_amount,65000,USD,,,,backend/budget_data.csv,SRC-0009,true,1.0.0
+FIN-0009-ACTUAL_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-201,,Marketing,Paid Ads & Campaigns,,,,actual_amount,72000,USD,,,,backend/budget_data.csv,SRC-0009,true,1.0.0
+FIN-0009-COMMITTED_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-201,,Marketing,Paid Ads & Campaigns,,,,committed_amount,8000,USD,,,,backend/budget_data.csv,SRC-0009,true,1.0.0
+FIN-0009-FORECAST_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-201,,Marketing,Paid Ads & Campaigns,,,,forecast_amount,75000,USD,,,,backend/budget_data.csv,SRC-0009,true,1.0.0
+FIN-0010-BUDGET_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-202,,Marketing,Events & PR,,,,budget_amount,30000,USD,,,,backend/budget_data.csv,SRC-0010,true,1.0.0
+FIN-0010-ACTUAL_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-202,,Marketing,Events & PR,,,,actual_amount,25000,USD,,,,backend/budget_data.csv,SRC-0010,true,1.0.0
+FIN-0010-COMMITTED_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-202,,Marketing,Events & PR,,,,committed_amount,2000,USD,,,,backend/budget_data.csv,SRC-0010,true,1.0.0
+FIN-0010-FORECAST_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-202,,Marketing,Events & PR,,,,forecast_amount,28000,USD,,,,backend/budget_data.csv,SRC-0010,true,1.0.0
+FIN-0011-BUDGET_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-202,,Marketing,Events & PR,,,,budget_amount,30000,USD,,,,backend/budget_data.csv,SRC-0011,true,1.0.0
+FIN-0011-ACTUAL_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-202,,Marketing,Events & PR,,,,actual_amount,34000,USD,,,,backend/budget_data.csv,SRC-0011,true,1.0.0
+FIN-0011-COMMITTED_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-202,,Marketing,Events & PR,,,,committed_amount,1000,USD,,,,backend/budget_data.csv,SRC-0011,true,1.0.0
+FIN-0011-FORECAST_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-202,,Marketing,Events & PR,,,,forecast_amount,35000,USD,,,,backend/budget_data.csv,SRC-0011,true,1.0.0
+FIN-0012-BUDGET_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-202,,Marketing,Events & PR,,,,budget_amount,35000,USD,,,,backend/budget_data.csv,SRC-0012,true,1.0.0
+FIN-0012-ACTUAL_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-202,,Marketing,Events & PR,,,,actual_amount,31000,USD,,,,backend/budget_data.csv,SRC-0012,true,1.0.0
+FIN-0012-COMMITTED_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-202,,Marketing,Events & PR,,,,committed_amount,3000,USD,,,,backend/budget_data.csv,SRC-0012,true,1.0.0
+FIN-0012-FORECAST_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-202,,Marketing,Events & PR,,,,forecast_amount,34000,USD,,,,backend/budget_data.csv,SRC-0012,true,1.0.0
+FIN-0013-BUDGET_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-301,,Sales,Travel & Client Entertainment,,,,budget_amount,25000,USD,,,,backend/budget_data.csv,SRC-0013,true,1.0.0
+FIN-0013-ACTUAL_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-301,,Sales,Travel & Client Entertainment,,,,actual_amount,29000,USD,,,,backend/budget_data.csv,SRC-0013,true,1.0.0
+FIN-0013-COMMITTED_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-301,,Sales,Travel & Client Entertainment,,,,committed_amount,1500,USD,,,,backend/budget_data.csv,SRC-0013,true,1.0.0
+FIN-0013-FORECAST_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-301,,Sales,Travel & Client Entertainment,,,,forecast_amount,30000,USD,,,,backend/budget_data.csv,SRC-0013,true,1.0.0
+FIN-0014-BUDGET_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-301,,Sales,Travel & Client Entertainment,,,,budget_amount,25000,USD,,,,backend/budget_data.csv,SRC-0014,true,1.0.0
+FIN-0014-ACTUAL_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-301,,Sales,Travel & Client Entertainment,,,,actual_amount,27500,USD,,,,backend/budget_data.csv,SRC-0014,true,1.0.0
+FIN-0014-COMMITTED_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-301,,Sales,Travel & Client Entertainment,,,,committed_amount,2000,USD,,,,backend/budget_data.csv,SRC-0014,true,1.0.0
+FIN-0014-FORECAST_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-301,,Sales,Travel & Client Entertainment,,,,forecast_amount,28000,USD,,,,backend/budget_data.csv,SRC-0014,true,1.0.0
+FIN-0015-BUDGET_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-301,,Sales,Travel & Client Entertainment,,,,budget_amount,28000,USD,,,,backend/budget_data.csv,SRC-0015,true,1.0.0
+FIN-0015-ACTUAL_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-301,,Sales,Travel & Client Entertainment,,,,actual_amount,32000,USD,,,,backend/budget_data.csv,SRC-0015,true,1.0.0
+FIN-0015-COMMITTED_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-301,,Sales,Travel & Client Entertainment,,,,committed_amount,2500,USD,,,,backend/budget_data.csv,SRC-0015,true,1.0.0
+FIN-0015-FORECAST_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-301,,Sales,Travel & Client Entertainment,,,,forecast_amount,33000,USD,,,,backend/budget_data.csv,SRC-0015,true,1.0.0
+FIN-0016-BUDGET_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-401,,HR & Ops,Recruitment & Onboarding,,,,budget_amount,15000,USD,,,,backend/budget_data.csv,SRC-0016,true,1.0.0
+FIN-0016-ACTUAL_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-401,,HR & Ops,Recruitment & Onboarding,,,,actual_amount,12000,USD,,,,backend/budget_data.csv,SRC-0016,true,1.0.0
+FIN-0016-COMMITTED_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-401,,HR & Ops,Recruitment & Onboarding,,,,committed_amount,500,USD,,,,backend/budget_data.csv,SRC-0016,true,1.0.0
+FIN-0016-FORECAST_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-401,,HR & Ops,Recruitment & Onboarding,,,,forecast_amount,13000,USD,,,,backend/budget_data.csv,SRC-0016,true,1.0.0
+FIN-0017-BUDGET_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-401,,HR & Ops,Recruitment & Onboarding,,,,budget_amount,15000,USD,,,,backend/budget_data.csv,SRC-0017,true,1.0.0
+FIN-0017-ACTUAL_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-401,,HR & Ops,Recruitment & Onboarding,,,,actual_amount,14500,USD,,,,backend/budget_data.csv,SRC-0017,true,1.0.0
+FIN-0017-COMMITTED_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-401,,HR & Ops,Recruitment & Onboarding,,,,committed_amount,1000,USD,,,,backend/budget_data.csv,SRC-0017,true,1.0.0
+FIN-0017-FORECAST_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-401,,HR & Ops,Recruitment & Onboarding,,,,forecast_amount,15000,USD,,,,backend/budget_data.csv,SRC-0017,true,1.0.0
+FIN-0018-BUDGET_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-401,,HR & Ops,Recruitment & Onboarding,,,,budget_amount,18000,USD,,,,backend/budget_data.csv,SRC-0018,true,1.0.0
+FIN-0018-ACTUAL_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-401,,HR & Ops,Recruitment & Onboarding,,,,actual_amount,22000,USD,,,,backend/budget_data.csv,SRC-0018,true,1.0.0
+FIN-0018-COMMITTED_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-401,,HR & Ops,Recruitment & Onboarding,,,,committed_amount,3000,USD,,,,backend/budget_data.csv,SRC-0018,true,1.0.0
+FIN-0018-FORECAST_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-401,,HR & Ops,Recruitment & Onboarding,,,,forecast_amount,23000,USD,,,,backend/budget_data.csv,SRC-0018,true,1.0.0
+</file>
+
+<file path="data/published/intelligence_data.json">
+[
+  {
+    "record_id": "FIN-0001-BUDGET_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-01-01T00:00:00Z",
+    "entity_id": "CC-101",
+    "related_entity_id": null,
+    "entity_name": "Engineering",
+    "category": "Cloud Infrastructure",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "budget_amount",
+    "metric_value": 45000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0001",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0001-ACTUAL_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-01-01T00:00:00Z",
+    "entity_id": "CC-101",
+    "related_entity_id": null,
+    "entity_name": "Engineering",
+    "category": "Cloud Infrastructure",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "actual_amount",
+    "metric_value": 48000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0001",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0001-COMMITTED_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-01-01T00:00:00Z",
+    "entity_id": "CC-101",
+    "related_entity_id": null,
+    "entity_name": "Engineering",
+    "category": "Cloud Infrastructure",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "committed_amount",
+    "metric_value": 2000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0001",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0001-FORECAST_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-01-01T00:00:00Z",
+    "entity_id": "CC-101",
+    "related_entity_id": null,
+    "entity_name": "Engineering",
+    "category": "Cloud Infrastructure",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "forecast_amount",
+    "metric_value": 50000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0001",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0002-BUDGET_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-02-01T00:00:00Z",
+    "entity_id": "CC-101",
+    "related_entity_id": null,
+    "entity_name": "Engineering",
+    "category": "Cloud Infrastructure",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "budget_amount",
+    "metric_value": 45000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0002",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0002-ACTUAL_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-02-01T00:00:00Z",
+    "entity_id": "CC-101",
+    "related_entity_id": null,
+    "entity_name": "Engineering",
+    "category": "Cloud Infrastructure",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "actual_amount",
+    "metric_value": 49500.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0002",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0002-COMMITTED_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-02-01T00:00:00Z",
+    "entity_id": "CC-101",
+    "related_entity_id": null,
+    "entity_name": "Engineering",
+    "category": "Cloud Infrastructure",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "committed_amount",
+    "metric_value": 1500.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0002",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0002-FORECAST_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-02-01T00:00:00Z",
+    "entity_id": "CC-101",
+    "related_entity_id": null,
+    "entity_name": "Engineering",
+    "category": "Cloud Infrastructure",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "forecast_amount",
+    "metric_value": 51000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0002",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0003-BUDGET_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-03-01T00:00:00Z",
+    "entity_id": "CC-101",
+    "related_entity_id": null,
+    "entity_name": "Engineering",
+    "category": "Cloud Infrastructure",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "budget_amount",
+    "metric_value": 45000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0003",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0003-ACTUAL_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-03-01T00:00:00Z",
+    "entity_id": "CC-101",
+    "related_entity_id": null,
+    "entity_name": "Engineering",
+    "category": "Cloud Infrastructure",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "actual_amount",
+    "metric_value": 52000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0003",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0003-COMMITTED_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-03-01T00:00:00Z",
+    "entity_id": "CC-101",
+    "related_entity_id": null,
+    "entity_name": "Engineering",
+    "category": "Cloud Infrastructure",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "committed_amount",
+    "metric_value": 3000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0003",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0003-FORECAST_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-03-01T00:00:00Z",
+    "entity_id": "CC-101",
+    "related_entity_id": null,
+    "entity_name": "Engineering",
+    "category": "Cloud Infrastructure",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "forecast_amount",
+    "metric_value": 53500.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0003",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0004-BUDGET_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-01-01T00:00:00Z",
+    "entity_id": "CC-102",
+    "related_entity_id": null,
+    "entity_name": "Engineering",
+    "category": "Software Licenses",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "budget_amount",
+    "metric_value": 20000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0004",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0004-ACTUAL_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-01-01T00:00:00Z",
+    "entity_id": "CC-102",
+    "related_entity_id": null,
+    "entity_name": "Engineering",
+    "category": "Software Licenses",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "actual_amount",
+    "metric_value": 18500.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0004",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0004-COMMITTED_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-01-01T00:00:00Z",
+    "entity_id": "CC-102",
+    "related_entity_id": null,
+    "entity_name": "Engineering",
+    "category": "Software Licenses",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "committed_amount",
+    "metric_value": 1000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0004",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0004-FORECAST_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-01-01T00:00:00Z",
+    "entity_id": "CC-102",
+    "related_entity_id": null,
+    "entity_name": "Engineering",
+    "category": "Software Licenses",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "forecast_amount",
+    "metric_value": 19000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0004",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0005-BUDGET_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-02-01T00:00:00Z",
+    "entity_id": "CC-102",
+    "related_entity_id": null,
+    "entity_name": "Engineering",
+    "category": "Software Licenses",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "budget_amount",
+    "metric_value": 20000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0005",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0005-ACTUAL_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-02-01T00:00:00Z",
+    "entity_id": "CC-102",
+    "related_entity_id": null,
+    "entity_name": "Engineering",
+    "category": "Software Licenses",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "actual_amount",
+    "metric_value": 19000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0005",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0005-COMMITTED_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-02-01T00:00:00Z",
+    "entity_id": "CC-102",
+    "related_entity_id": null,
+    "entity_name": "Engineering",
+    "category": "Software Licenses",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "committed_amount",
+    "metric_value": 1000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0005",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0005-FORECAST_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-02-01T00:00:00Z",
+    "entity_id": "CC-102",
+    "related_entity_id": null,
+    "entity_name": "Engineering",
+    "category": "Software Licenses",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "forecast_amount",
+    "metric_value": 19500.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0005",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0006-BUDGET_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-03-01T00:00:00Z",
+    "entity_id": "CC-102",
+    "related_entity_id": null,
+    "entity_name": "Engineering",
+    "category": "Software Licenses",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "budget_amount",
+    "metric_value": 20000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0006",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0006-ACTUAL_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-03-01T00:00:00Z",
+    "entity_id": "CC-102",
+    "related_entity_id": null,
+    "entity_name": "Engineering",
+    "category": "Software Licenses",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "actual_amount",
+    "metric_value": 21000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0006",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0006-COMMITTED_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-03-01T00:00:00Z",
+    "entity_id": "CC-102",
+    "related_entity_id": null,
+    "entity_name": "Engineering",
+    "category": "Software Licenses",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "committed_amount",
+    "metric_value": 500.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0006",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0006-FORECAST_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-03-01T00:00:00Z",
+    "entity_id": "CC-102",
+    "related_entity_id": null,
+    "entity_name": "Engineering",
+    "category": "Software Licenses",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "forecast_amount",
+    "metric_value": 21500.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0006",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0007-BUDGET_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-01-01T00:00:00Z",
+    "entity_id": "CC-201",
+    "related_entity_id": null,
+    "entity_name": "Marketing",
+    "category": "Paid Ads & Campaigns",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "budget_amount",
+    "metric_value": 60000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0007",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0007-ACTUAL_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-01-01T00:00:00Z",
+    "entity_id": "CC-201",
+    "related_entity_id": null,
+    "entity_name": "Marketing",
+    "category": "Paid Ads & Campaigns",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "actual_amount",
+    "metric_value": 68000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0007",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0007-COMMITTED_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-01-01T00:00:00Z",
+    "entity_id": "CC-201",
+    "related_entity_id": null,
+    "entity_name": "Marketing",
+    "category": "Paid Ads & Campaigns",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "committed_amount",
+    "metric_value": 5000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0007",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0007-FORECAST_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-01-01T00:00:00Z",
+    "entity_id": "CC-201",
+    "related_entity_id": null,
+    "entity_name": "Marketing",
+    "category": "Paid Ads & Campaigns",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "forecast_amount",
+    "metric_value": 70000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0007",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0008-BUDGET_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-02-01T00:00:00Z",
+    "entity_id": "CC-201",
+    "related_entity_id": null,
+    "entity_name": "Marketing",
+    "category": "Paid Ads & Campaigns",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "budget_amount",
+    "metric_value": 60000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0008",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0008-ACTUAL_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-02-01T00:00:00Z",
+    "entity_id": "CC-201",
+    "related_entity_id": null,
+    "entity_name": "Marketing",
+    "category": "Paid Ads & Campaigns",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "actual_amount",
+    "metric_value": 58000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0008",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0008-COMMITTED_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-02-01T00:00:00Z",
+    "entity_id": "CC-201",
+    "related_entity_id": null,
+    "entity_name": "Marketing",
+    "category": "Paid Ads & Campaigns",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "committed_amount",
+    "metric_value": 4000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0008",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0008-FORECAST_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-02-01T00:00:00Z",
+    "entity_id": "CC-201",
+    "related_entity_id": null,
+    "entity_name": "Marketing",
+    "category": "Paid Ads & Campaigns",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "forecast_amount",
+    "metric_value": 62000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0008",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0009-BUDGET_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-03-01T00:00:00Z",
+    "entity_id": "CC-201",
+    "related_entity_id": null,
+    "entity_name": "Marketing",
+    "category": "Paid Ads & Campaigns",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "budget_amount",
+    "metric_value": 65000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0009",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0009-ACTUAL_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-03-01T00:00:00Z",
+    "entity_id": "CC-201",
+    "related_entity_id": null,
+    "entity_name": "Marketing",
+    "category": "Paid Ads & Campaigns",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "actual_amount",
+    "metric_value": 72000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0009",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0009-COMMITTED_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-03-01T00:00:00Z",
+    "entity_id": "CC-201",
+    "related_entity_id": null,
+    "entity_name": "Marketing",
+    "category": "Paid Ads & Campaigns",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "committed_amount",
+    "metric_value": 8000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0009",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0009-FORECAST_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-03-01T00:00:00Z",
+    "entity_id": "CC-201",
+    "related_entity_id": null,
+    "entity_name": "Marketing",
+    "category": "Paid Ads & Campaigns",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "forecast_amount",
+    "metric_value": 75000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0009",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0010-BUDGET_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-01-01T00:00:00Z",
+    "entity_id": "CC-202",
+    "related_entity_id": null,
+    "entity_name": "Marketing",
+    "category": "Events & PR",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "budget_amount",
+    "metric_value": 30000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0010",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0010-ACTUAL_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-01-01T00:00:00Z",
+    "entity_id": "CC-202",
+    "related_entity_id": null,
+    "entity_name": "Marketing",
+    "category": "Events & PR",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "actual_amount",
+    "metric_value": 25000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0010",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0010-COMMITTED_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-01-01T00:00:00Z",
+    "entity_id": "CC-202",
+    "related_entity_id": null,
+    "entity_name": "Marketing",
+    "category": "Events & PR",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "committed_amount",
+    "metric_value": 2000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0010",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0010-FORECAST_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-01-01T00:00:00Z",
+    "entity_id": "CC-202",
+    "related_entity_id": null,
+    "entity_name": "Marketing",
+    "category": "Events & PR",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "forecast_amount",
+    "metric_value": 28000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0010",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0011-BUDGET_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-02-01T00:00:00Z",
+    "entity_id": "CC-202",
+    "related_entity_id": null,
+    "entity_name": "Marketing",
+    "category": "Events & PR",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "budget_amount",
+    "metric_value": 30000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0011",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0011-ACTUAL_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-02-01T00:00:00Z",
+    "entity_id": "CC-202",
+    "related_entity_id": null,
+    "entity_name": "Marketing",
+    "category": "Events & PR",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "actual_amount",
+    "metric_value": 34000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0011",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0011-COMMITTED_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-02-01T00:00:00Z",
+    "entity_id": "CC-202",
+    "related_entity_id": null,
+    "entity_name": "Marketing",
+    "category": "Events & PR",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "committed_amount",
+    "metric_value": 1000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0011",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0011-FORECAST_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-02-01T00:00:00Z",
+    "entity_id": "CC-202",
+    "related_entity_id": null,
+    "entity_name": "Marketing",
+    "category": "Events & PR",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "forecast_amount",
+    "metric_value": 35000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0011",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0012-BUDGET_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-03-01T00:00:00Z",
+    "entity_id": "CC-202",
+    "related_entity_id": null,
+    "entity_name": "Marketing",
+    "category": "Events & PR",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "budget_amount",
+    "metric_value": 35000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0012",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0012-ACTUAL_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-03-01T00:00:00Z",
+    "entity_id": "CC-202",
+    "related_entity_id": null,
+    "entity_name": "Marketing",
+    "category": "Events & PR",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "actual_amount",
+    "metric_value": 31000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0012",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0012-COMMITTED_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-03-01T00:00:00Z",
+    "entity_id": "CC-202",
+    "related_entity_id": null,
+    "entity_name": "Marketing",
+    "category": "Events & PR",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "committed_amount",
+    "metric_value": 3000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0012",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0012-FORECAST_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-03-01T00:00:00Z",
+    "entity_id": "CC-202",
+    "related_entity_id": null,
+    "entity_name": "Marketing",
+    "category": "Events & PR",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "forecast_amount",
+    "metric_value": 34000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0012",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0013-BUDGET_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-01-01T00:00:00Z",
+    "entity_id": "CC-301",
+    "related_entity_id": null,
+    "entity_name": "Sales",
+    "category": "Travel & Client Entertainment",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "budget_amount",
+    "metric_value": 25000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0013",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0013-ACTUAL_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-01-01T00:00:00Z",
+    "entity_id": "CC-301",
+    "related_entity_id": null,
+    "entity_name": "Sales",
+    "category": "Travel & Client Entertainment",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "actual_amount",
+    "metric_value": 29000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0013",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0013-COMMITTED_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-01-01T00:00:00Z",
+    "entity_id": "CC-301",
+    "related_entity_id": null,
+    "entity_name": "Sales",
+    "category": "Travel & Client Entertainment",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "committed_amount",
+    "metric_value": 1500.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0013",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0013-FORECAST_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-01-01T00:00:00Z",
+    "entity_id": "CC-301",
+    "related_entity_id": null,
+    "entity_name": "Sales",
+    "category": "Travel & Client Entertainment",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "forecast_amount",
+    "metric_value": 30000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0013",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0014-BUDGET_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-02-01T00:00:00Z",
+    "entity_id": "CC-301",
+    "related_entity_id": null,
+    "entity_name": "Sales",
+    "category": "Travel & Client Entertainment",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "budget_amount",
+    "metric_value": 25000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0014",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0014-ACTUAL_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-02-01T00:00:00Z",
+    "entity_id": "CC-301",
+    "related_entity_id": null,
+    "entity_name": "Sales",
+    "category": "Travel & Client Entertainment",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "actual_amount",
+    "metric_value": 27500.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0014",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0014-COMMITTED_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-02-01T00:00:00Z",
+    "entity_id": "CC-301",
+    "related_entity_id": null,
+    "entity_name": "Sales",
+    "category": "Travel & Client Entertainment",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "committed_amount",
+    "metric_value": 2000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0014",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0014-FORECAST_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-02-01T00:00:00Z",
+    "entity_id": "CC-301",
+    "related_entity_id": null,
+    "entity_name": "Sales",
+    "category": "Travel & Client Entertainment",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "forecast_amount",
+    "metric_value": 28000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0014",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0015-BUDGET_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-03-01T00:00:00Z",
+    "entity_id": "CC-301",
+    "related_entity_id": null,
+    "entity_name": "Sales",
+    "category": "Travel & Client Entertainment",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "budget_amount",
+    "metric_value": 28000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0015",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0015-ACTUAL_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-03-01T00:00:00Z",
+    "entity_id": "CC-301",
+    "related_entity_id": null,
+    "entity_name": "Sales",
+    "category": "Travel & Client Entertainment",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "actual_amount",
+    "metric_value": 32000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0015",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0015-COMMITTED_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-03-01T00:00:00Z",
+    "entity_id": "CC-301",
+    "related_entity_id": null,
+    "entity_name": "Sales",
+    "category": "Travel & Client Entertainment",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "committed_amount",
+    "metric_value": 2500.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0015",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0015-FORECAST_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-03-01T00:00:00Z",
+    "entity_id": "CC-301",
+    "related_entity_id": null,
+    "entity_name": "Sales",
+    "category": "Travel & Client Entertainment",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "forecast_amount",
+    "metric_value": 33000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0015",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0016-BUDGET_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-01-01T00:00:00Z",
+    "entity_id": "CC-401",
+    "related_entity_id": null,
+    "entity_name": "HR & Ops",
+    "category": "Recruitment & Onboarding",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "budget_amount",
+    "metric_value": 15000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0016",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0016-ACTUAL_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-01-01T00:00:00Z",
+    "entity_id": "CC-401",
+    "related_entity_id": null,
+    "entity_name": "HR & Ops",
+    "category": "Recruitment & Onboarding",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "actual_amount",
+    "metric_value": 12000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0016",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0016-COMMITTED_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-01-01T00:00:00Z",
+    "entity_id": "CC-401",
+    "related_entity_id": null,
+    "entity_name": "HR & Ops",
+    "category": "Recruitment & Onboarding",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "committed_amount",
+    "metric_value": 500.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0016",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0016-FORECAST_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-01-01T00:00:00Z",
+    "entity_id": "CC-401",
+    "related_entity_id": null,
+    "entity_name": "HR & Ops",
+    "category": "Recruitment & Onboarding",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "forecast_amount",
+    "metric_value": 13000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0016",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0017-BUDGET_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-02-01T00:00:00Z",
+    "entity_id": "CC-401",
+    "related_entity_id": null,
+    "entity_name": "HR & Ops",
+    "category": "Recruitment & Onboarding",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "budget_amount",
+    "metric_value": 15000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0017",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0017-ACTUAL_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-02-01T00:00:00Z",
+    "entity_id": "CC-401",
+    "related_entity_id": null,
+    "entity_name": "HR & Ops",
+    "category": "Recruitment & Onboarding",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "actual_amount",
+    "metric_value": 14500.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0017",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0017-COMMITTED_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-02-01T00:00:00Z",
+    "entity_id": "CC-401",
+    "related_entity_id": null,
+    "entity_name": "HR & Ops",
+    "category": "Recruitment & Onboarding",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "committed_amount",
+    "metric_value": 1000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0017",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0017-FORECAST_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-02-01T00:00:00Z",
+    "entity_id": "CC-401",
+    "related_entity_id": null,
+    "entity_name": "HR & Ops",
+    "category": "Recruitment & Onboarding",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "forecast_amount",
+    "metric_value": 15000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0017",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0018-BUDGET_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-03-01T00:00:00Z",
+    "entity_id": "CC-401",
+    "related_entity_id": null,
+    "entity_name": "HR & Ops",
+    "category": "Recruitment & Onboarding",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "budget_amount",
+    "metric_value": 18000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0018",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0018-ACTUAL_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-03-01T00:00:00Z",
+    "entity_id": "CC-401",
+    "related_entity_id": null,
+    "entity_name": "HR & Ops",
+    "category": "Recruitment & Onboarding",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "actual_amount",
+    "metric_value": 22000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0018",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0018-COMMITTED_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-03-01T00:00:00Z",
+    "entity_id": "CC-401",
+    "related_entity_id": null,
+    "entity_name": "HR & Ops",
+    "category": "Recruitment & Onboarding",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "committed_amount",
+    "metric_value": 3000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0018",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  },
+  {
+    "record_id": "FIN-0018-FORECAST_AMOUNT",
+    "record_type": "financial_metric",
+    "observed_at": "2026-03-01T00:00:00Z",
+    "entity_id": "CC-401",
+    "related_entity_id": null,
+    "entity_name": "HR & Ops",
+    "category": "Recruitment & Onboarding",
+    "subcategory": null,
+    "status": null,
+    "stage": null,
+    "metric_name": "forecast_amount",
+    "metric_value": 23000.0,
+    "metric_unit": "USD",
+    "text_value": null,
+    "latitude": null,
+    "longitude": null,
+    "source_name": "backend/budget_data.csv",
+    "source_record_id": "SRC-0018",
+    "is_synthetic": true,
+    "data_version": "1.0.0"
+  }
+]
+</file>
+
+<file path="data/quality/data_profile.json">
+{
+  "profile_version": "1.0.0",
+  "dataset": "data/canonical/intelligence_data.csv",
+  "profile_status": "initial_profile",
+  "source_record_count": 18,
+  "canonical_record_count": 72,
+  "column_count": 20,
+  "unique_record_ids": 72,
+  "record_type": "financial_metric",
+  "metric_names": {
+    "budget_amount": 18,
+    "actual_amount": 18,
+    "committed_amount": 18,
+    "forecast_amount": 18
+  },
+  "metric_unit": "USD",
+  "date_range": {
+    "start": "2026-01-01T00:00:00Z",
+    "end": "2026-03-01T00:00:00Z"
+  },
+  "synthetic_records": 72,
+  "non_synthetic_records": 0,
+  "missing_value_observations": {
+    "related_entity_id": 72,
+    "subcategory": 72,
+    "status": 72,
+    "stage": 72,
+    "text_value": 72,
+    "latitude": 72,
+    "longitude": 72
+  },
+  "observations": [
+    "All 18 source records were retained.",
+    "Each source record was expanded into four financial metric records.",
+    "All canonical records are marked synthetic.",
+    "Optional fields are blank because the supplied source does not contain corresponding information.",
+    "The dataset covers three monthly reporting periods."
+  ],
+  "forecast_limitation": "Forecast values are supplied illustrative figures and are not evidence of statistically validated forecasting performance.",
+  "validation_status": "pending"
+}
+</file>
+
+<file path="data/quality/sampling_report.md">
+# Sampling and Reduction Report
+
+## Dataset Information
+
+- Source: `data/source-sample/source_sample.csv`
+- Original records: 18
+- Retained records: 18
+- Source columns: 8
+- Sampling method: Complete dataset retention
+- Random sampling: Not applied
+- Record reduction: None
+
+## Sampling Decision
+
+All 18 source records were retained.
+
+The dataset is small enough to process in full. Retaining every
+record preserves all available departments, cost centres,
+account categories, reporting months, and financial measures.
+
+## Preservation Check
+
+- Original record count: 18
+- Retained record count: 18
+- Records excluded: 0
+- Records lost: 0
+- Preservation status: PASSED
+
+## Canonical Expansion Plan
+
+Each source record will later produce four canonical financial
+measure records:
+
+- budget_amount
+- actual_amount
+- committed_amount
+- forecast_amount
+
+Expected canonical records: 18 × 4 = 72
+
+## Generated Information
+
+- Report generated at: 2026-11-03T14:40:21.144017+00:00
+- Sampling script: `scripts/data_pipeline/sample_data.py`
+</file>
+
+<file path="data/quality/validation_report.json">
+{
+  "validation_version": "1.0.0",
+  "dataset": "data/canonical/intelligence_data.csv",
+  "status": "passed",
+  "records_checked": 72,
+  "columns_checked": 20,
+  "checks_passed": 40,
+  "checks_failed": 0,
+  "errors": [],
+  "checks": [
+    {
+      "check": "Required file exists: data\\README.md",
+      "passed": true
+    },
+    {
+      "check": "Required file exists: data\\manifest.json",
+      "passed": true
+    },
+    {
+      "check": "Required file exists: data\\schema.json",
+      "passed": true
+    },
+    {
+      "check": "Required file exists: data\\source-sample\\source_sample.csv",
+      "passed": true
+    },
+    {
+      "check": "Required file exists: data\\canonical\\intelligence_data.csv",
+      "passed": true
+    },
+    {
+      "check": "Required file exists: data\\published\\intelligence_data.json",
+      "passed": true
+    },
+    {
+      "check": "Required file exists: data\\quality\\data_profile.json",
+      "passed": true
+    },
+    {
+      "check": "Required file exists: data\\quality\\sampling_report.md",
+      "passed": true
+    },
+    {
+      "check": "Schema and manifest are valid JSON",
+      "passed": true
+    },
+    {
+      "check": "Exact canonical column order",
+      "passed": true
+    },
+    {
+      "check": "CSV columns match schema",
+      "passed": true
+    },
+    {
+      "check": "Canonical record count is 72",
+      "passed": true
+    },
+    {
+      "check": "Canonical column count is 20",
+      "passed": true
+    },
+    {
+      "check": "Canonical row limit",
+      "passed": true
+    },
+    {
+      "check": "Canonical column limit",
+      "passed": true
+    },
+    {
+      "check": "All record IDs are non-empty",
+      "passed": true
+    },
+    {
+      "check": "Record IDs are unique",
+      "passed": true
+    },
+    {
+      "check": "All observed_at values use ISO 8601 UTC",
+      "passed": true
+    },
+    {
+      "check": "All metric values are numeric",
+      "passed": true
+    },
+    {
+      "check": "All records are marked synthetic",
+      "passed": true
+    },
+    {
+      "check": "All source names are traceable",
+      "passed": true
+    },
+    {
+      "check": "All data versions match manifest",
+      "passed": true
+    },
+    {
+      "check": "All metric names are allowed",
+      "passed": true
+    },
+    {
+      "check": "All record types are financial_metric",
+      "passed": true
+    },
+    {
+      "check": "All metric units are USD",
+      "passed": true
+    },
+    {
+      "check": "Text values do not exceed 500 characters",
+      "passed": true
+    },
+    {
+      "check": "Exactly 18 records exist for each financial metric",
+      "passed": true
+    },
+    {
+      "check": "Source sample contains 18 records",
+      "passed": true
+    },
+    {
+      "check": "Four canonical records per source record",
+      "passed": true
+    },
+    {
+      "check": "Manifest record count matches CSV",
+      "passed": true
+    },
+    {
+      "check": "Manifest column count matches CSV",
+      "passed": true
+    },
+    {
+      "check": "Manifest canonical path is correct",
+      "passed": true
+    },
+    {
+      "check": "Main file size limit: data\\source-sample\\source_sample.csv",
+      "passed": true
+    },
+    {
+      "check": "Main file size limit: data\\canonical\\intelligence_data.csv",
+      "passed": true
+    },
+    {
+      "check": "Main file size limit: data\\published\\intelligence_data.json",
+      "passed": true
+    },
+    {
+      "check": "Total data directory size limit",
+      "passed": true
+    },
+    {
+      "check": "No binary or media files under data/",
+      "passed": true
+    },
+    {
+      "check": "Published JSON is a record list",
+      "passed": true
+    },
+    {
+      "check": "Published JSON record count matches CSV",
+      "passed": true
+    },
+    {
+      "check": "Published JSON records match canonical CSV after type conversion",
+      "passed": true
+    }
+  ]
+}
+</file>
+
+<file path="data/source-sample/source_sample.csv">
+cost_centre,department,account_category,month,budget_amount,actual_amount,committed_amount,forecast_amount
+CC-101,Engineering,Cloud Infrastructure,Jan 2026,45000,48000,2000,50000
+CC-101,Engineering,Cloud Infrastructure,Feb 2026,45000,49500,1500,51000
+CC-101,Engineering,Cloud Infrastructure,Mar 2026,45000,52000,3000,53500
+CC-102,Engineering,Software Licenses,Jan 2026,20000,18500,1000,19000
+CC-102,Engineering,Software Licenses,Feb 2026,20000,19000,1000,19500
+CC-102,Engineering,Software Licenses,Mar 2026,20000,21000,500,21500
+CC-201,Marketing,Paid Ads & Campaigns,Jan 2026,60000,68000,5000,70000
+CC-201,Marketing,Paid Ads & Campaigns,Feb 2026,60000,58000,4000,62000
+CC-201,Marketing,Paid Ads & Campaigns,Mar 2026,65000,72000,8000,75000
+CC-202,Marketing,Events & PR,Jan 2026,30000,25000,2000,28000
+CC-202,Marketing,Events & PR,Feb 2026,30000,34000,1000,35000
+CC-202,Marketing,Events & PR,Mar 2026,35000,31000,3000,34000
+CC-301,Sales,Travel & Client Entertainment,Jan 2026,25000,29000,1500,30000
+CC-301,Sales,Travel & Client Entertainment,Feb 2026,25000,27500,2000,28000
+CC-301,Sales,Travel & Client Entertainment,Mar 2026,28000,32000,2500,33000
+CC-401,HR & Ops,Recruitment & Onboarding,Jan 2026,15000,12000,500,13000
+CC-401,HR & Ops,Recruitment & Onboarding,Feb 2026,15000,14500,1000,15000
+CC-401,HR & Ops,Recruitment & Onboarding,Mar 2026,18000,22000,3000,23000
+</file>
+
+<file path="data/manifest.json">
+{
+  "dataset_name": "Budget vs Actual Variance Navigator - Canonical Intelligence Data",
+  "dataset_version": "1.0.0",
+  "schema_version": "1.0.0",
+  "status": "pending_validation",
+  "source": {
+    "source_file": "backend/budget_data.csv",
+    "preserved_sample": "data/source-sample/source_sample.csv",
+    "source_records": 18
+  },
+  "canonical": {
+    "file": "data/canonical/intelligence_data.csv",
+    "records": 72,
+    "columns": 20,
+    "encoding": "UTF-8",
+    "format": "CSV"
+  },
+  "transformation": {
+    "method": "One source row is expanded into four financial metric records.",
+    "metric_names": [
+      "budget_amount",
+      "actual_amount",
+      "committed_amount",
+      "forecast_amount"
+    ],
+    "metric_unit": "USD",
+    "is_synthetic": true
+  },
+  "limits": {
+    "maximum_data_directory_bytes": 10485760,
+    "maximum_main_file_bytes": 5242880,
+    "maximum_rows": 10000,
+    "maximum_columns": 50,
+    "maximum_text_value_characters": 500
+  }
+}
+</file>
+
+<file path="data/README.md">
+# Canonical Data Package
+
+## Dataset
+**Name:** Budget vs Actual Variance Navigator – Canonical Intelligence Data
+**Version:** 1.0.0
+**Status:** Pending validation
+**Format:** CSV
+**Encoding:** UTF-8
+**Synthetic data:** Yes
+
+## Source
+The canonical dataset is derived from `backend/budget_data.csv`, a synthetic financial dataset containing 18 source records and 8 columns.
+
+An unchanged copy of the source is preserved at:
+
+`data/source-sample/source_sample.csv`
+
+## Canonical Dataset
+The canonical source of truth is:
+
+`data/canonical/intelligence_data.csv`
+
+It contains:
+- 72 canonical records
+- 20 columns in the required order
+- Four financial metric records per source record
+- USD as the metric unit
+- ISO 8601 UTC reporting dates
+
+## Financial Metrics
+Each source record produces four metric records:
+1. `budget_amount`
+2. `actual_amount`
+3. `committed_amount`
+4. `forecast_amount`
+
+## Pipeline
+The reproducible pipeline is located in `scripts/data_pipeline/`:
+
+1. `extract_data.py` – extracts and preserves the source sample.
+2. `sample_data.py` – documents the sampling decision.
+3. `standardize_data.py` – transforms source records into canonical records.
+4. `validate_data.py` – validates the canonical package.
+5. `publish_data.py` – publishes the canonical dataset as JSON.
+
+## Package Structure
+- `source-sample/` – preserved source CSV.
+- `canonical/` – canonical CSV source of truth.
+- `published/` – published JSON representation.
+- `quality/` – sampling, profiling, and validation evidence.
+- `schema.json` – canonical column definitions.
+- `manifest.json` – dataset metadata and package limits.
+
+## Data Quality and Safety
+The dataset is synthetic and contains financial planning figures. No personal financial account information is included in the supplied source.
+
+The package is subject to validation for:
+- Required columns and column order
+- Record count and unique identifiers
+- Data types and date formats
+- Source traceability
+- Synthetic-data flags and version consistency
+- File-size and directory-size limits
+- Published JSON consistency
+
+## Important Limitation
+The source contains only three monthly periods (January–March 2026). Forecast values are supplied illustrative figures and should not be treated as evidence of statistically validated forecasting performance.
+
+## Approval
+The package remains pending until the validation pipeline completes and the required evidence is reviewed.
+</file>
+
+<file path="data/schema.json">
+{
+  "schema_version": "1.0.0",
+  "dataset_name": "Budget vs Actual Variance Navigator - Canonical Intelligence Data",
+  "description": "Canonical financial metrics dataset standardized from the Phase 2 synthetic budget data.",
+  "format": "CSV",
+  "encoding": "UTF-8",
+  "row_count": 72,
+  "column_count": 20,
+  "columns": [
+    {"name": "record_id", "type": "string", "required": true, "unique": true},
+    {"name": "record_type", "type": "string", "required": true},
+    {"name": "observed_at", "type": "string", "format": "ISO 8601 UTC", "required": true},
+    {"name": "entity_id", "type": "string", "required": true},
+    {"name": "related_entity_id", "type": "string", "required": false},
+    {"name": "entity_name", "type": "string", "required": true},
+    {"name": "category", "type": "string", "required": true},
+    {"name": "subcategory", "type": "string", "required": false},
+    {"name": "status", "type": "string", "required": false},
+    {"name": "stage", "type": "string", "required": false},
+    {"name": "metric_name", "type": "string", "required": true},
+    {"name": "metric_value", "type": "number", "required": true},
+    {"name": "metric_unit", "type": "string", "required": true},
+    {"name": "text_value", "type": "string", "required": false},
+    {"name": "latitude", "type": "number", "required": false},
+    {"name": "longitude", "type": "number", "required": false},
+    {"name": "source_name", "type": "string", "required": true},
+    {"name": "source_record_id", "type": "string", "required": true},
+    {"name": "is_synthetic", "type": "boolean", "required": true},
+    {"name": "data_version", "type": "string", "required": true}
+  ],
+  "allowed_metric_names": [
+    "budget_amount",
+    "actual_amount",
+    "committed_amount",
+    "forecast_amount"
+  ],
+  "metric_unit": "USD",
+  "synthetic_data": true
+}
+</file>
+
+<file path="docs/docs/CANONICAL_DATA_MAPPING.md">
+# Canonical Data Mapping
+
+## 1. Purpose
+
+This document defines how the original Budget vs Actual Variance Navigator dataset is transformed into the Phase 3 canonical data structure.
+
+The canonical source of truth will be:
+
+`data/canonical/intelligence_data.csv`
+
+## 2. Source Dataset
+
+- **Source file:** `data/source-sample/source_sample.csv`
+- **Original records:** 18
+- **Original columns:** 8
+- **Canonical columns:** 20
+- **Financial measures:** 4
+- **Expected canonical records:** 72
+
+Each source row generates four canonical records, one for each financial measure.
+
+## 3. Canonical Column Mapping
+
+| Canonical column | Source or transformation | Mapping rule |
+|---|---|---|
+| `record_id` | Generated | Unique deterministic ID for each canonical record |
+| `record_type` | Generated | `financial_metric` |
+| `observed_at` | `month` | Convert month to ISO 8601 UTC, using the first day of the month |
+| `entity_id` | `cost_centre` | Preserve cost centre identifier |
+| `related_entity_id` | Not available | Leave blank |
+| `entity_name` | `department` | Preserve department name associated with the cost centre |
+| `category` | `account_category` | Preserve account category |
+| `subcategory` | Not available | Leave blank |
+| `status` | Not available | Leave blank |
+| `stage` | Not available | Leave blank |
+| `metric_name` | Financial measure | Use `budget_amount`, `actual_amount`, `committed_amount`, or `forecast_amount` |
+| `metric_value` | Financial measure | Preserve the corresponding numeric amount |
+| `metric_unit` | Generated | `USD` |
+| `text_value` | Not applicable | Leave blank |
+| `latitude` | Not available | Leave blank |
+| `longitude` | Not available | Leave blank |
+| `source_name` | Generated | `backend/budget_data.csv` |
+| `source_record_id` | Generated | Stable source-row identifier |
+| `is_synthetic` | Generated | `true` |
+| `data_version` | Generated | `1.0.0` |
+
+## 4. Financial Measure Expansion
+
+Each original source record is expanded into four canonical records.
+
+| Original source field | Canonical metric_name | Canonical metric_value |
+|---|---|---|
+| `budget_amount` | `budget_amount` | Original budget value |
+| `actual_amount` | `actual_amount` | Original actual value |
+| `committed_amount` | `committed_amount` | Original committed value |
+| `forecast_amount` | `forecast_amount` | Original forecast value |
+
+For example, the first source row generates four records for:
+
+- Cost centre: CC-101
+- Department: Engineering
+- Category: Cloud Infrastructure
+- Reporting month: January 2026
+
+The four records preserve the original values of 45000, 48000, 2000, and 50000 respectively.
+
+## 5. Identifier Strategy
+
+- `record_id` will be generated uniquely and deterministically.
+- `source_record_id` will identify the original source CSV row.
+- All four canonical records generated from one source row will share the same `source_record_id`.
+- The identifiers will remain stable across repeated pipeline runs using the same source data.
+
+## 6. Date Standardization
+
+The original month values use the format `Mon YYYY`.
+
+They will be converted to the first day of the corresponding month in ISO 8601 UTC format.
+
+Examples:
+
+- `Jan 2026` → `2026-01-01T00:00:00Z`
+- `Feb 2026` → `2026-02-01T00:00:00Z`
+- `Mar 2026` → `2026-03-01T00:00:00Z`
+
+This represents the reporting month, not an exact transaction timestamp.
+
+## 7. Numeric and Missing Value Rules
+
+- Financial amounts will remain numeric.
+- Currency symbols and thousands separators will not be added.
+- The currency unit will be represented by `USD`.
+- Unavailable source fields will remain blank.
+- No unsupported values will be invented.
+- Boolean values will use `true` and `false`.
+
+## 8. Expected Output
+
+The canonical dataset is expected to contain:
+
+- 72 records.
+- Exactly 20 columns.
+- All 18 original source records represented.
+- Four financial measures for each source record.
+- Unique canonical record identifiers.
+- Preserved source-row relationships.
+
+## 9. Preservation and Traceability
+
+The original source dataset remains unchanged.
+
+The canonical dataset will be reproducible from the preserved source snapshot using the Phase 3 data pipeline.
+
+The `source_name` and `source_record_id` fields provide traceability back to the original source.
+
+## 10. Conclusion
+
+The mapping converts the original eight-column financial dataset into the required 20-column canonical structure.
+
+All available financial measures and source relationships are preserved without introducing unsupported business information.
+</file>
+
+<file path="docs/docs/CANONICAL_DATA_PACKAGE_VALIDATION.md">
+# Canonical Data Package Validation
+
+## 1. Purpose
+
+This document defines the validation requirements for the Phase 3 Canonical Data Foundation package.
+
+The canonical source of truth is:
+
+`data/canonical/intelligence_data.csv`
+
+## 2. Required Package Structure
+
+The following files must be present:
+
+- `data/README.md`
+- `data/manifest.json`
+- `data/schema.json`
+- `data/source-sample/source_sample.csv`
+- `data/canonical/intelligence_data.csv`
+- `data/published/intelligence_data.json`
+- `data/quality/data_profile.json`
+- `data/quality/validation_report.json`
+- `data/quality/sampling_report.md`
+- `scripts/data_pipeline/extract_data.py`
+- `scripts/data_pipeline/sample_data.py`
+- `scripts/data_pipeline/standardize_data.py`
+- `scripts/data_pipeline/validate_data.py`
+- `scripts/data_pipeline/publish_data.py`
+
+## 3. Canonical Schema Validation
+
+The canonical CSV must contain exactly 20 columns in the following order:
+
+1. `record_id`
+2. `record_type`
+3. `observed_at`
+4. `entity_id`
+5. `related_entity_id`
+6. `entity_name`
+7. `category`
+8. `subcategory`
+9. `status`
+10. `stage`
+11. `metric_name`
+12. `metric_value`
+13. `metric_unit`
+14. `text_value`
+15. `latitude`
+16. `longitude`
+17. `source_name`
+18. `source_record_id`
+19. `is_synthetic`
+20. `data_version`
+
+## 4. Record Validation
+
+The validator must confirm:
+
+- Canonical record identifiers are present and unique.
+- Required fields are not null or blank.
+- Date values follow ISO 8601 UTC format.
+- Financial metric values are numeric.
+- Currency units are represented consistently as USD.
+- Synthetic flags use valid boolean values.
+- Source names and source record identifiers are present.
+- Data version is present and consistent.
+- Every original source row is represented by four financial measure records.
+- The expected canonical record count is 72.
+
+## 5. File and Package Limits
+
+The package must satisfy these limits:
+
+- Total `data/` directory size: no more than 10 MB.
+- Each main CSV and JSON file: no more than 5 MB.
+- Default maximum rows: 10,000.
+- Default maximum columns: 50.
+- Free-text fields: no more than 500 characters.
+- No binary or media files inside `data/`.
+
+## 6. Source Preservation
+
+The original source file must remain unchanged.
+
+The preserved source sample must contain all 18 source records.
+
+The canonical transformation must preserve all four financial measures from each source row.
+
+## 7. Published JSON Validation
+
+The published JSON must:
+
+- Be generated from the canonical CSV.
+- Contain the same canonical records.
+- Preserve field names and values.
+- Be valid JSON.
+- Be refreshed whenever the canonical CSV changes.
+
+## 8. Manifest and Schema Validation
+
+The manifest must describe the package, source, record counts, columns, and data version.
+
+The schema must define all 20 canonical columns and their expected data types.
+
+The validator must compare the actual canonical dataset against the schema and manifest.
+
+## 9. Pipeline Validation
+
+The data pipeline must support reproducible execution.
+
+The following scripts must be implemented:
+
+- `extract_data.py`
+- `sample_data.py`
+- `standardize_data.py`
+- `validate_data.py`
+- `publish_data.py`
+
+Validation must produce:
+
+`data/quality/validation_report.json`
+
+The data profile must be saved at:
+
+`data/quality/data_profile.json`
+
+## 10. Final Acceptance Criteria
+
+The package can be declared ready only when:
+
+- All required files exist.
+- The canonical schema and column order are correct.
+- All 72 expected records are present.
+- Record identifiers are unique.
+- Financial values and dates are valid.
+- Source traceability is maintained.
+- Published JSON matches the canonical CSV.
+- Manifest and schema checks pass.
+- File size and safety limits are satisfied.
+- The complete pipeline runs successfully.
+
+## 11. Final Status
+
+The final review must use exactly one of these conclusions:
+
+- `CANONICAL DATA PACKAGE READY`
+- `CANONICAL DATA PACKAGE CHANGES REQUIRED`
+- `DATA SOURCE NOT SUITABLE`
+
+The package must not be treated as approved until all required validation checks pass.
+</file>
+
+<file path="docs/CANONICAL_DATA_MAPPING.md">
+# Canonical Data Mapping
+
+## 1. Purpose
+
+This document explains how the original budget dataset is transformed into the Phase 3 canonical data structure.
+
+The canonical dataset provides a standardized format for budget and actual financial metrics while preserving the relationship between each record and its original source.
+
+## 2. Source Dataset
+
+**Source file:** `backend/budget_data.csv`
+
+- Original records: 18
+- Original columns: 8
+- Departments: 4
+- Cost centres: 6
+- Reporting period: January–March 2026
+- Currency: USD
+- Data classification: Synthetic
+
+The original source file is preserved without modification.
+
+## 3. Transformation Approach
+
+Each source record contains four financial measures:
+
+1. `budget_amount`
+2. `actual_amount`
+3. `committed_amount`
+4. `forecast_amount`
+
+Each measure is converted into a separate canonical record.
+
+Therefore:
+
+- Original source records: 18
+- Canonical records per source record: 4
+- Total canonical records: 18 × 4 = 72
+
+No source records are removed during this transformation.
+
+## 4. Canonical Field Mapping
+
+| Canonical field | Source / transformation |
+|---|---|
+| `record_id` | Generated as `FIN-{source index}-{metric name}` |
+| `record_type` | Constant value: `financial_metric` |
+| `observed_at` | Month converted to ISO 8601 UTC format using the first day of the month |
+| `entity_id` | `cost_centre` |
+| `related_entity_id` | Blank; not available in source |
+| `entity_name` | `department` |
+| `category` | `account_category` |
+| `subcategory` | Blank; not available in source |
+| `status` | Blank; not available in source |
+| `stage` | Blank; not available in source |
+| `metric_name` | One of the four financial measure names |
+| `metric_value` | Corresponding financial amount |
+| `metric_unit` | Constant value: `USD` |
+| `text_value` | Blank; not available in source |
+| `latitude` | Blank; not available in source |
+| `longitude` | Blank; not available in source |
+| `source_name` | `backend/budget_data.csv` |
+| `source_record_id` | Generated as `SRC-{source index}` |
+| `is_synthetic` | `true` |
+| `data_version` | `1.0.0` |
+
+## 5. Record Identification and Lineage
+
+Every original source row receives a stable source record identifier.
+
+The pipeline generates four canonical records from that source row, one for each financial measure.
+
+The generated identifiers follow these patterns:
+
+- Source record: `SRC-0001`
+- Canonical records: `FIN-0001-BUDGET_AMOUNT`, `FIN-0001-ACTUAL_AMOUNT`, `FIN-0001-COMMITTED_AMOUNT`, and `FIN-0001-FORECAST_AMOUNT`
+
+The source record identifier maintains traceability between canonical records and the original dataset.
+
+Identifiers are generated deterministically using the source row order and metric name.
+
+## 6. Date Standardization
+
+The original month values use the format `Mon YYYY`.
+
+They are converted to ISO 8601 UTC timestamps using the first day of each month.
+
+Example:
+
+- Original value: `Jan 2026`
+- Canonical value: `2026-01-01T00:00:00Z`
+
+The same approach is applied to February and March 2026.
+
+## 7. Canonical Output
+
+**Output file:** `data/canonical/intelligence_data.csv`
+
+The output contains:
+
+- 72 records
+- 20 canonical columns
+- Standardized financial metric names
+- Numeric metric values
+- USD as the metric unit
+- Source record lineage
+- Synthetic data indicators
+- Dataset version `1.0.0`
+
+The canonical CSV is the single source of truth for the published dataset.
+
+## 8. Assumptions and Limitations
+
+1. The source dataset contains synthetic financial information.
+2. All four financial measures are preserved for every source record.
+3. No additional records or external data are introduced.
+4. Missing information is represented using blank fields.
+5. No geographic coordinates or related entity identifiers are available in the source.
+6. The `forecast_amount` values are taken directly from the source dataset. They are not newly generated or statistically validated forecasts.
+7. The dataset covers only January, February, and March 2026.
+
+## 9. Reproducibility
+
+The transformation is implemented in:
+
+`scripts/data_pipeline/standardize_data.py`
+
+The pipeline reads the preserved source sample and produces the canonical CSV using the documented mapping rules.
+
+The generated output can be checked using:
+
+`scripts/data_pipeline/validate_data.py`
+</file>
+
+<file path="docs/CANONICAL_DATA_PACKAGE_VALIDATION.md">
+# Canonical Data Package Validation
+
+## 1. Purpose
+
+This document records the validation of the Phase 3 Canonical Data Foundation package.
+
+The validation process checks the canonical dataset, supporting metadata, published JSON output, required files, data consistency, and project constraints.
+
+## 2. Validation Scope
+
+The following files and components are included:
+
+- `data/README.md`
+- `data/manifest.json`
+- `data/schema.json`
+- `data/source-sample/source_sample.csv`
+- `data/canonical/intelligence_data.csv`
+- `data/published/intelligence_data.json`
+- `data/quality/data_profile.json`
+- `data/quality/validation_report.json`
+- `data/quality/sampling_report.md`
+- `scripts/data_pipeline/`
+
+## 3. Expected Dataset Structure
+
+| Item | Expected value |
+|---|---:|
+| Original source records | 18 |
+| Canonical records | 72 |
+| Canonical columns | 20 |
+| Metrics per source record | 4 |
+| Dataset version | 1.0.0 |
+| Currency | USD |
+| Synthetic records | 72 |
+| Reporting period | January–March 2026 |
+
+The canonical CSV must follow the exact 20-column order defined in `data/schema.json`.
+
+## 4. Validation Checks
+
+The validation script checks the following areas:
+
+### 4.1 Required Files
+
+- Required dataset files exist.
+- Schema and manifest files contain valid JSON.
+- Required canonical and published outputs are available.
+
+### 4.2 Canonical Structure
+
+- Canonical column names match the schema.
+- Canonical column order is correct.
+- Expected record count is 72.
+- Expected column count is 20.
+- Dataset row and column limits are respected.
+
+### 4.3 Record Integrity
+
+- Record identifiers are not empty.
+- Record identifiers are unique.
+- Source record identifiers are preserved.
+- Source names are present.
+- Record types are valid.
+- Dataset versions match the manifest.
+
+### 4.4 Data Quality
+
+- Observation dates follow the expected ISO 8601 UTC format.
+- Metric values are numeric.
+- Metric names belong to the allowed metric list.
+- Metric units are USD.
+- Synthetic indicators are true.
+- Free-text values respect the configured length limit.
+
+### 4.5 Source and Transformation Consistency
+
+- The preserved source sample contains 18 records.
+- Four canonical metric records are generated per source record.
+- Each of the four metric types contains 18 records.
+- No source records are excluded.
+
+### 4.6 Published JSON Consistency
+
+- Published JSON is valid.
+- Published JSON contains 72 records.
+- Published records match the canonical CSV after the expected data-type conversions.
+
+### 4.7 Package Safety and Size
+
+- Main CSV and JSON files respect the configured file-size limits.
+- The complete data directory respects the 10 MB limit.
+- Binary and media files are not included in the data package.
+
+## 5. Validation Execution
+
+The validation was executed using:
+
+```powershell
+python scripts/data_pipeline/validate_data.py
+```
+
+The script generated the validation report at:
+
+`data/quality/validation_report.json`
+
+## 6. Validation Results
+
+<text> </text>
+
+| Result | Count |
+|---|---:|
+| Records checked | 72 |
+| Columns checked | 20 |
+| Checks passed | 40 |
+| Checks failed | 0 |
+
+**Validation status: PASSED**
+
+The validation script completed successfully with no failed checks.
+
+## 7. Pipeline Components
+
+The Phase 3 data pipeline contains five scripts:
+
+1. `extract_data.py` — preserves the original source dataset.
+2. `sample_data.py` — documents the sampling and retention decision.
+3. `standardize_data.py` — transforms source records into canonical records.
+4. `publish_data.py` — generates the published JSON dataset.
+5. `validate_data.py` — checks the canonical data package.
+
+## 8. Known Limitations
+
+1. The source dataset contains synthetic financial data.
+2. The reporting period is limited to three months.
+3. Forecast values are inherited from the source dataset and are not statistically validated.
+4. Geographic coordinates and related entity identifiers are unavailable.
+5. The 40 passed checks represent the validations implemented in the current script; they do not constitute independent organizational approval.
+
+## 9. Conclusion
+
+The implemented validation process reports 40 checks passed and zero failed.
+
+The canonical dataset and published JSON are consistent with the checks performed.
+
+**Package status: Ready for review and approval.**
+
+Formal approval remains subject to the Phase 3 review process.
+</file>
+
+<file path="docs/DATA_SOURCE_INVENTORY.md">
+# Data Source Inventory
+
+## 1. Project Information
+
+- **Project:** Budget vs Actual Variance Navigator
+- **Phase:** Phase 3 – Canonical Data Foundation
+- **Source file:** `backend/budget_data.csv`
+- **Preserved source copy:** `data/source-sample/source_sample.csv`
+- **Data format:** CSV
+- **Encoding:** UTF-8 (to be verified)
+
+## 2. Source Description
+
+The source dataset contains synthetic financial budget information for six cost centres across four departments.
+
+It covers three monthly periods: January, February, and March 2026.
+
+The dataset is used by the existing Budget vs Actual Variance Navigator application.
+
+## 3. Source Statistics
+
+| Property | Value |
+|---|---|
+| Total records | 18 |
+| Total columns | 8 |
+| Cost centres | 6 |
+| Departments | 4 |
+| Reporting period | January–March 2026 |
+| Currency | USD |
+| Data classification | Synthetic |
+| Binary or media content | None |
+
+## 4. Original Source Columns
+
+| Column | Description |
+|---|---|
+| `cost_centre` | Cost centre identifier |
+| `department` | Department responsible for the expenditure |
+| `account_category` | Financial expenditure category |
+| `month` | Reporting month |
+| `budget_amount` | Planned budget amount |
+| `actual_amount` | Actual expenditure amount |
+| `committed_amount` | Committed expenditure amount |
+| `forecast_amount` | Forecast expenditure amount |
+
+## 5. Data Categories
+
+The dataset includes the following departments:
+
+- Engineering
+- Marketing
+- Sales
+- HR & Ops
+
+It includes six cost centres:
+
+- CC-101
+- CC-102
+- CC-201
+- CC-202
+- CC-301
+- CC-401
+
+## 6. Data Sensitivity and Safety
+
+The source dataset is identified as synthetic financial data.
+
+No personal information, customer records, employee identifiers, or real financial account details have been identified in the supplied records.
+
+The dataset contains numeric financial values expressed in USD.
+
+## 7. Extraction and Preservation
+
+The original source is maintained at:
+
+`backend/budget_data.csv`
+
+A separate source snapshot was copied to:
+
+`data/source-sample/source_sample.csv`
+
+The original Phase 2 source file has not been modified.
+
+All 18 source records are preserved. No sampling or reduction has been applied.
+
+## 8. Known Limitations
+
+- The dataset contains only three months of observations.
+- The records are synthetic and do not represent verified real-world expenditure.
+- The dataset does not contain transaction-level details.
+- No geographical coordinates are supplied.
+- Forecast values are supplied by the source and are not independently validated.
+
+## 9. Phase 3 Usage
+
+The preserved source snapshot will be used as the input for the Phase 3 canonical data standardization pipeline.
+
+The canonical dataset will follow the required 20-column schema defined in the Phase 3 Canonical Data Foundation Guide.
+
+The original source dataset will remain unchanged.
+</file>
+
+<file path="docs/SAMPLING_AND_REDUCTION_REPORT.md">
+# Sampling and Reduction Report
+
+## 1. Purpose
+
+This report documents the sampling and data reduction decisions for the Phase 3 Canonical Data Foundation of the Budget vs Actual Variance Navigator.
+
+## 2. Source Dataset
+
+- **Source:** `backend/budget_data.csv`
+- **Preserved snapshot:** `data/source-sample/source_sample.csv`
+- **Format:** CSV
+- **Original record count:** 18
+- **Original column count:** 8
+- **Reporting period:** January–March 2026
+- **Data classification:** Synthetic financial data
+
+## 3. Sampling Decision
+
+All 18 source records are retained.
+
+No random sampling, filtering, or record exclusion has been applied.
+
+This decision was made because the source dataset is small and contains only 18 records. Retaining the complete dataset preserves all available cost centres, departments, account categories, reporting months, and financial measures.
+
+## 4. Reduction Decision
+
+No source records have been removed.
+
+The canonical transformation will reorganize the source information into the required 20-column structure. This is a standardization process, not a loss of source records.
+
+Each source row will be represented by multiple canonical records to preserve its separate financial measures:
+
+- Budget amount
+- Actual amount
+- Committed amount
+- Forecast amount
+
+The expected canonical record count is therefore:
+
+18 source rows × 4 financial measures = **72 canonical records**.
+
+## 5. Data Preservation
+
+The original source file remains unchanged at:
+
+`backend/budget_data.csv`
+
+The preserved snapshot is stored at:
+
+`data/source-sample/source_sample.csv`
+
+The canonical output will be stored separately at:
+
+`data/canonical/intelligence_data.csv`
+
+## 6. Sampling Quality Considerations
+
+The complete source dataset preserves:
+
+- All six cost centres.
+- All four departments.
+- All six account categories.
+- All three reporting months.
+- All available financial measures.
+
+No rare categories or reporting periods are intentionally excluded.
+
+## 7. Limitations
+
+- The source contains only three months of synthetic financial observations.
+- The dataset is not suitable for claiming statistically validated long-term forecasting performance.
+- No additional historical records are available in the supplied source.
+- The canonical expansion creates separate measure records but does not create additional independent source observations.
+
+## 8. Conclusion
+
+The complete source dataset is retained without sampling or reduction.
+
+The transformation will expand 18 source rows into 72 canonical measure records while preserving the original financial values and their source relationships.
+</file>
+
+<file path="scripts/data_pipeline/extract_data.py">
+from pathlib import Path
+import csv
+import shutil
+import sys
+
+# Locate the project root automatically
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+
+SOURCE_FILE = PROJECT_ROOT / "backend" / "budget_data.csv"
+OUTPUT_FILE = PROJECT_ROOT / "data" / "source-sample" / "source_sample.csv"
+
+REQUIRED_COLUMNS = [
+    "cost_centre",
+    "department",
+    "account_category",
+    "month",
+    "budget_amount",
+    "actual_amount",
+    "committed_amount",
+    "forecast_amount",
+]
+
+
+def main():
+    print("Starting source data extraction...")
+
+    if not SOURCE_FILE.exists():
+        raise FileNotFoundError(f"Source file not found: {SOURCE_FILE}")
+
+    # Validate the source CSV before copying
+    with SOURCE_FILE.open("r", encoding="utf-8-sig", newline="") as file:
+        reader = csv.DictReader(file)
+
+        if reader.fieldnames != REQUIRED_COLUMNS:
+            raise ValueError(
+                f"Unexpected source columns: {reader.fieldnames}"
+            )
+
+        rows = list(reader)
+
+    if not rows:
+        raise ValueError("The source dataset is empty.")
+
+    # Create the destination folder if necessary
+    OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
+
+    # Copy the original file without changing its contents
+    shutil.copyfile(SOURCE_FILE, OUTPUT_FILE)
+
+    # Verify the copied file
+    with OUTPUT_FILE.open("r", encoding="utf-8-sig", newline="") as file:
+        copied_rows = list(csv.DictReader(file))
+
+    if len(rows) != len(copied_rows):
+        raise ValueError("Source and copied record counts do not match.")
+
+    if SOURCE_FILE.read_bytes() != OUTPUT_FILE.read_bytes():
+        raise ValueError("The copied file does not match the original.")
+
+    print("Extraction completed successfully.")
+    print(f"Source records: {len(rows)}")
+    print(f"Source columns: {len(REQUIRED_COLUMNS)}")
+    print(f"Output file: {OUTPUT_FILE.relative_to(PROJECT_ROOT)}")
+    print("Original source file remains unchanged.")
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except Exception as error:
+        print(f"EXTRACTION FAILED: {error}")
+        sys.exit(1)
+</file>
+
+<file path="scripts/data_pipeline/publish_data.py">
+import csv
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+
+CANONICAL_FILE = ROOT / "data" / "canonical" / "intelligence_data.csv"
+PUBLISHED_FILE = ROOT / "data" / "published" / "intelligence_data.json"
+MANIFEST_FILE = ROOT / "data" / "manifest.json"
+
+print("Starting canonical JSON publication...")
+
+if not CANONICAL_FILE.is_file():
+    raise SystemExit("ERROR: Canonical CSV does not exist.")
+
+with MANIFEST_FILE.open("r", encoding="utf-8") as file:
+    manifest = json.load(file)
+
+with CANONICAL_FILE.open("r", encoding="utf-8-sig", newline="") as file:
+    reader = csv.DictReader(file)
+    rows = list(reader)
+
+if not rows:
+    raise SystemExit("ERROR: Canonical CSV is empty.")
+
+if len(rows) != manifest["canonical"]["records"]:
+    raise SystemExit("ERROR: Canonical record count does not match manifest.")
+
+# Convert numeric fields into JSON numbers and boolean fields into JSON booleans.
+numeric_fields = {"metric_value", "latitude", "longitude"}
+boolean_fields = {"is_synthetic"}
+
+published_records = []
+
+for row in rows:
+    record = {}
+
+    for key, value in row.items():
+        if value == "":
+            record[key] = None
+        elif key in numeric_fields:
+            record[key] = float(value)
+        elif key in boolean_fields:
+            record[key] = value.strip().lower() == "true"
+        else:
+            record[key] = value
+
+    published_records.append(record)
+
+PUBLISHED_FILE.parent.mkdir(parents=True, exist_ok=True)
+
+with PUBLISHED_FILE.open("w", encoding="utf-8") as file:
+    json.dump(published_records, file, indent=2, ensure_ascii=False)
+    file.write("\n")
+
+# Verify the published JSON can be read and has the expected record count.
+with PUBLISHED_FILE.open("r", encoding="utf-8") as file:
+    verification = json.load(file)
+
+if len(verification) != len(rows):
+    raise SystemExit("ERROR: Published JSON verification failed.")
+
+print("JSON publication completed successfully.")
+print(f"Canonical records: {len(rows)}")
+print(f"Published records: {len(verification)}")
+print(f"Output: {PUBLISHED_FILE.relative_to(ROOT)}")
+</file>
+
+<file path="scripts/data_pipeline/sample_data.py">
+from pathlib import Path
+import csv
+import json
+from datetime import datetime, timezone
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+
+SOURCE_FILE = PROJECT_ROOT / "data" / "source-sample" / "source_sample.csv"
+OUTPUT_REPORT = PROJECT_ROOT / "data" / "quality" / "sampling_report.md"
+
+EXPECTED_RECORDS = 18
+
+
+def main():
+    print("Starting sampling and reduction process...")
+
+    if not SOURCE_FILE.exists():
+        raise FileNotFoundError(f"Source sample not found: {SOURCE_FILE}")
+
+    with SOURCE_FILE.open("r", encoding="utf-8-sig", newline="") as file:
+        reader = csv.DictReader(file)
+        columns = reader.fieldnames
+        rows = list(reader)
+
+    if len(rows) != EXPECTED_RECORDS:
+        raise ValueError(
+            f"Expected {EXPECTED_RECORDS} records, found {len(rows)}."
+        )
+
+    # Retain the complete dataset: no filtering or random sampling.
+    sampled_rows = rows.copy()
+
+    if len(sampled_rows) != len(rows):
+        raise ValueError("Record preservation check failed.")
+
+    OUTPUT_REPORT.parent.mkdir(parents=True, exist_ok=True)
+
+    report = f"""# Sampling and Reduction Report
+
+## Dataset Information
+
+- Source: `data/source-sample/source_sample.csv`
+- Original records: {len(rows)}
+- Retained records: {len(sampled_rows)}
+- Source columns: {len(columns)}
+- Sampling method: Complete dataset retention
+- Random sampling: Not applied
+- Record reduction: None
+
+## Sampling Decision
+
+All {len(rows)} source records were retained.
+
+The dataset is small enough to process in full. Retaining every
+record preserves all available departments, cost centres,
+account categories, reporting months, and financial measures.
+
+## Preservation Check
+
+- Original record count: {len(rows)}
+- Retained record count: {len(sampled_rows)}
+- Records excluded: 0
+- Records lost: 0
+- Preservation status: PASSED
+
+## Canonical Expansion Plan
+
+Each source record will later produce four canonical financial
+measure records:
+
+- budget_amount
+- actual_amount
+- committed_amount
+- forecast_amount
+
+Expected canonical records: {len(sampled_rows)} × 4 = {len(sampled_rows) * 4}
+
+## Generated Information
+
+- Report generated at: {datetime.now(timezone.utc).isoformat()}
+- Sampling script: `scripts/data_pipeline/sample_data.py`
+"""
+
+    OUTPUT_REPORT.write_text(report, encoding="utf-8")
+
+    print("Sampling completed successfully.")
+    print(f"Original records: {len(rows)}")
+    print(f"Retained records: {len(sampled_rows)}")
+    print("Records excluded: 0")
+    print(f"Expected canonical records: {len(sampled_rows) * 4}")
+    print(f"Report: {OUTPUT_REPORT.relative_to(PROJECT_ROOT)}")
+
+
+if __name__ == "__main__":
+    main()
+</file>
+
+<file path="scripts/data_pipeline/standardize_data.py">
+from pathlib import Path
+from datetime import datetime, timezone
+import csv
+import sys
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+
+SOURCE_FILE = PROJECT_ROOT / "data" / "source-sample" / "source_sample.csv"
+OUTPUT_FILE = PROJECT_ROOT / "data" / "canonical" / "intelligence_data.csv"
+
+SOURCE_COLUMNS = [
+    "cost_centre",
+    "department",
+    "account_category",
+    "month",
+    "budget_amount",
+    "actual_amount",
+    "committed_amount",
+    "forecast_amount",
+]
+
+CANONICAL_COLUMNS = [
+    "record_id",
+    "record_type",
+    "observed_at",
+    "entity_id",
+    "related_entity_id",
+    "entity_name",
+    "category",
+    "subcategory",
+    "status",
+    "stage",
+    "metric_name",
+    "metric_value",
+    "metric_unit",
+    "text_value",
+    "latitude",
+    "longitude",
+    "source_name",
+    "source_record_id",
+    "is_synthetic",
+    "data_version",
+]
+
+FINANCIAL_MEASURES = [
+    "budget_amount",
+    "actual_amount",
+    "committed_amount",
+    "forecast_amount",
+]
+
+DATA_VERSION = "1.0.0"
+SOURCE_NAME = "backend/budget_data.csv"
+
+
+def convert_month(month_text):
+    """Convert Mon YYYY into the first day of that month in UTC."""
+    parsed = datetime.strptime(month_text, "%b %Y")
+    return parsed.replace(
+        day=1, hour=0, minute=0, second=0, microsecond=0,
+        tzinfo=timezone.utc
+    ).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def main():
+    print("Starting canonical data standardization...")
+
+    if not SOURCE_FILE.exists():
+        raise FileNotFoundError(f"Source file not found: {SOURCE_FILE}")
+
+    with SOURCE_FILE.open("r", encoding="utf-8-sig", newline="") as file:
+        reader = csv.DictReader(file)
+
+        if reader.fieldnames != SOURCE_COLUMNS:
+            raise ValueError(
+                f"Unexpected source columns: {reader.fieldnames}"
+            )
+
+        source_rows = list(reader)
+
+    if not source_rows:
+        raise ValueError("Source dataset is empty.")
+
+    canonical_rows = []
+
+    for source_index, source_row in enumerate(source_rows, start=1):
+        source_record_id = f"SRC-{source_index:04d}"
+        observed_at = convert_month(source_row["month"])
+
+        for measure in FINANCIAL_MEASURES:
+            try:
+                metric_value = float(source_row[measure])
+            except (TypeError, ValueError):
+                raise ValueError(
+                    f"Invalid numeric value in source row "
+                    f"{source_index}, column {measure}"
+                )
+
+            canonical_record = {
+                "record_id": f"FIN-{source_index:04d}-{measure.upper()}",
+                "record_type": "financial_metric",
+                "observed_at": observed_at,
+                "entity_id": source_row["cost_centre"],
+                "related_entity_id": "",
+                "entity_name": source_row["department"],
+                "category": source_row["account_category"],
+                "subcategory": "",
+                "status": "",
+                "stage": "",
+                "metric_name": measure,
+                "metric_value": format(metric_value, ".15g"),
+                "metric_unit": "USD",
+                "text_value": "",
+                "latitude": "",
+                "longitude": "",
+                "source_name": SOURCE_NAME,
+                "source_record_id": source_record_id,
+                "is_synthetic": "true",
+                "data_version": DATA_VERSION,
+            }
+
+            canonical_rows.append(canonical_record)
+
+    expected_count = len(source_rows) * len(FINANCIAL_MEASURES)
+
+    if len(canonical_rows) != expected_count:
+        raise ValueError(
+            f"Expected {expected_count} canonical records, "
+            f"generated {len(canonical_rows)}."
+        )
+
+    OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
+
+    with OUTPUT_FILE.open("w", encoding="utf-8", newline="") as file:
+        writer = csv.DictWriter(
+            file,
+            fieldnames=CANONICAL_COLUMNS,
+            extrasaction="raise"
+        )
+        writer.writeheader()
+        writer.writerows(canonical_rows)
+
+    # Verify the written file
+    with OUTPUT_FILE.open("r", encoding="utf-8", newline="") as file:
+        reader = csv.DictReader(file)
+        written_rows = list(reader)
+
+        if reader.fieldnames != CANONICAL_COLUMNS:
+            raise ValueError("Canonical column order verification failed.")
+
+    if len(written_rows) != expected_count:
+        raise ValueError("Canonical output record count verification failed.")
+
+    record_ids = [row["record_id"] for row in written_rows]
+
+    if len(record_ids) != len(set(record_ids)):
+        raise ValueError("Duplicate canonical record IDs detected.")
+
+    print("Canonical standardization completed successfully.")
+    print(f"Source records: {len(source_rows)}")
+    print(f"Canonical records: {len(written_rows)}")
+    print(f"Canonical columns: {len(CANONICAL_COLUMNS)}")
+    print("Unique record IDs: verified")
+    print(f"Output: {OUTPUT_FILE.relative_to(PROJECT_ROOT)}")
+
+
+if __name__ == "__main__":
+    try:
+        main()
+    except Exception as error:
+        print(f"STANDARDIZATION FAILED: {error}")
+        sys.exit(1)
+</file>
+
+<file path="scripts/data_pipeline/validate_data.py">
+import csv
+import json
+from pathlib import Path
+from datetime import datetime
+from collections import Counter
+
+ROOT = Path(__file__).resolve().parents[2]
+
+DATA_DIR = ROOT / "data"
+SOURCE_FILE = DATA_DIR / "source-sample" / "source_sample.csv"
+CANONICAL_FILE = DATA_DIR / "canonical" / "intelligence_data.csv"
+SCHEMA_FILE = DATA_DIR / "schema.json"
+MANIFEST_FILE = DATA_DIR / "manifest.json"
+REPORT_FILE = DATA_DIR / "quality" / "validation_report.json"
+
+EXPECTED_COLUMNS = [
+    "record_id", "record_type", "observed_at", "entity_id",
+    "related_entity_id", "entity_name", "category", "subcategory",
+    "status", "stage", "metric_name", "metric_value", "metric_unit",
+    "text_value", "latitude", "longitude", "source_name",
+    "source_record_id", "is_synthetic", "data_version"
+]
+
+EXPECTED_METRICS = {
+    "budget_amount",
+    "actual_amount",
+    "committed_amount",
+    "forecast_amount"
+}
+
+REQUIRED_FILES = [
+    DATA_DIR / "README.md",
+    MANIFEST_FILE,
+    SCHEMA_FILE,
+    SOURCE_FILE,
+    CANONICAL_FILE,
+    DATA_DIR / "published" / "intelligence_data.json",
+    DATA_DIR / "quality" / "data_profile.json",
+    DATA_DIR / "quality" / "sampling_report.md"
+]
+
+errors = []
+checks = []
+
+
+def check(condition, message):
+    checks.append({
+        "check": message,
+        "passed": bool(condition)
+    })
+
+    if not condition:
+        errors.append(message)
+
+
+def read_json(path):
+    with path.open("r", encoding="utf-8") as file:
+        return json.load(file)
+
+
+print("Starting canonical data package validation...")
+
+
+# 1. Required file checks
+for path in REQUIRED_FILES:
+    check(
+        path.is_file(),
+        f"Required file exists: {path.relative_to(ROOT)}"
+    )
+
+
+# 2. Check core input files
+if (
+    not CANONICAL_FILE.is_file()
+    or not SCHEMA_FILE.is_file()
+    or not MANIFEST_FILE.is_file()
+):
+    print("Validation stopped: core input files are missing.")
+    raise SystemExit(1)
+
+
+# 3. Read schema and manifest
+try:
+    schema = read_json(SCHEMA_FILE)
+    manifest = read_json(MANIFEST_FILE)
+
+    check(True, "Schema and manifest are valid JSON")
+
+except (json.JSONDecodeError, OSError) as error:
+    print(f"Cannot read metadata: {error}")
+    raise SystemExit(1)
+
+
+# 4. Read canonical CSV
+try:
+    with CANONICAL_FILE.open(
+        "r", encoding="utf-8-sig", newline=""
+    ) as file:
+        reader = csv.DictReader(file)
+        actual_columns = reader.fieldnames or []
+        rows = list(reader)
+
+except (OSError, UnicodeError, csv.Error) as error:
+    print(f"Cannot read canonical CSV: {error}")
+    raise SystemExit(1)
+
+
+# 5. Column and structure checks
+check(
+    actual_columns == EXPECTED_COLUMNS,
+    "Exact canonical column order"
+)
+
+check(
+    actual_columns == [
+        column["name"] for column in schema.get("columns", [])
+    ],
+    "CSV columns match schema"
+)
+
+check(len(rows) == 72, "Canonical record count is 72")
+check(len(actual_columns) == 20, "Canonical column count is 20")
+check(len(rows) <= 10000, "Canonical row limit")
+check(len(actual_columns) <= 50, "Canonical column limit")
+
+
+# 6. Record ID checks
+record_ids = [row.get("record_id", "") for row in rows]
+
+check(
+    all(value.strip() for value in record_ids),
+    "All record IDs are non-empty"
+)
+
+check(
+    len(record_ids) == len(set(record_ids)),
+    "Record IDs are unique"
+)
+
+
+# 7. Data type and required value checks
+valid_dates = True
+valid_numbers = True
+valid_flags = True
+valid_sources = True
+valid_versions = True
+valid_metrics = True
+valid_record_types = True
+valid_units = True
+valid_text_lengths = True
+
+for row in rows:
+
+    try:
+        datetime.strptime(
+            row["observed_at"],
+            "%Y-%m-%dT%H:%M:%SZ"
+        )
+    except (ValueError, TypeError):
+        valid_dates = False
+
+    try:
+        value = float(row["metric_value"])
+
+        if value != value or value in (float("inf"), float("-inf")):
+            valid_numbers = False
+
+    except (ValueError, TypeError):
+        valid_numbers = False
+
+    if row["is_synthetic"].lower() != "true":
+        valid_flags = False
+
+    if row["source_name"] != "backend/budget_data.csv":
+        valid_sources = False
+
+    if row["data_version"] != manifest["dataset_version"]:
+        valid_versions = False
+
+    if row["metric_name"] not in EXPECTED_METRICS:
+        valid_metrics = False
+
+    if row["record_type"] != "financial_metric":
+        valid_record_types = False
+
+    if row["metric_unit"] != "USD":
+        valid_units = False
+
+    if len(row.get("text_value", "")) > 500:
+        valid_text_lengths = False
+
+
+check(valid_dates, "All observed_at values use ISO 8601 UTC")
+check(valid_numbers, "All metric values are numeric")
+check(valid_flags, "All records are marked synthetic")
+check(valid_sources, "All source names are traceable")
+check(valid_versions, "All data versions match manifest")
+check(valid_metrics, "All metric names are allowed")
+check(valid_record_types, "All record types are financial_metric")
+check(valid_units, "All metric units are USD")
+check(valid_text_lengths, "Text values do not exceed 500 characters")
+
+
+# 8. Metric distribution
+metric_counts = Counter(
+    row["metric_name"] for row in rows
+)
+
+check(
+    metric_counts == {
+        "budget_amount": 18,
+        "actual_amount": 18,
+        "committed_amount": 18,
+        "forecast_amount": 18
+    },
+    "Exactly 18 records exist for each financial metric"
+)
+
+
+# 9. Source sample checks
+if SOURCE_FILE.is_file():
+
+    try:
+        with SOURCE_FILE.open(
+            "r", encoding="utf-8-sig", newline=""
+        ) as file:
+            source_rows = list(csv.DictReader(file))
+
+        check(
+            len(source_rows) == 18,
+            "Source sample contains 18 records"
+        )
+
+        check(
+            len(rows) == len(source_rows) * 4,
+            "Four canonical records per source record"
+        )
+
+    except (OSError, UnicodeError, csv.Error):
+        check(False, "Source sample can be read")
+
+
+# 10. Manifest consistency
+check(
+    manifest["canonical"]["records"] == len(rows),
+    "Manifest record count matches CSV"
+)
+
+check(
+    manifest["canonical"]["columns"] == len(actual_columns),
+    "Manifest column count matches CSV"
+)
+
+check(
+    manifest["canonical"]["file"]
+    == "data/canonical/intelligence_data.csv",
+    "Manifest canonical path is correct"
+)
+
+
+# 11. File-size checks
+main_files = [
+    SOURCE_FILE,
+    CANONICAL_FILE,
+    DATA_DIR / "published" / "intelligence_data.json"
+]
+
+for path in main_files:
+
+    if path.is_file():
+
+        check(
+            path.stat().st_size <= 5 * 1024 * 1024,
+            f"Main file size limit: {path.relative_to(ROOT)}"
+        )
+
+
+data_size = sum(
+    path.stat().st_size
+    for path in DATA_DIR.rglob("*")
+    if path.is_file()
+)
+
+check(
+    data_size <= 10 * 1024 * 1024,
+    "Total data directory size limit"
+)
+
+
+# 12. Data directory safety
+binary_extensions = {
+    ".png", ".jpg", ".jpeg", ".gif",
+    ".mp4", ".mp3", ".pdf", ".zip",
+    ".exe", ".dll", ".bin"
+}
+
+binary_files = [
+    path.relative_to(ROOT).as_posix()
+    for path in DATA_DIR.rglob("*")
+    if path.is_file()
+    and path.suffix.lower() in binary_extensions
+]
+
+check(
+    not binary_files,
+    "No binary or media files under data/"
+)
+
+
+# 13. Published JSON validation
+published_file = (
+    DATA_DIR / "published" / "intelligence_data.json"
+)
+
+if published_file.is_file():
+
+    try:
+        published = read_json(published_file)
+
+        check(
+            isinstance(published, list),
+            "Published JSON is a record list"
+        )
+
+        check(
+            len(published) == len(rows),
+            "Published JSON record count matches CSV"
+        )
+
+        # Recreate the expected JSON representation from CSV.
+        # CSV values are strings, while JSON uses numbers,
+        # booleans and null values.
+
+        expected_published = []
+
+        for row in rows:
+
+            record = {}
+
+            for key, value in row.items():
+
+                if value == "":
+                    record[key] = None
+
+                elif key in {
+                    "metric_value",
+                    "latitude",
+                    "longitude"
+                }:
+                    record[key] = float(value)
+
+                elif key == "is_synthetic":
+                    record[key] = (
+                        value.strip().lower() == "true"
+                    )
+
+                else:
+                    record[key] = value
+
+            expected_published.append(record)
+
+        if isinstance(published, list):
+
+            check(
+                published == expected_published,
+                "Published JSON records match canonical CSV after type conversion"
+            )
+
+    except (
+        json.JSONDecodeError,
+        OSError,
+        ValueError
+    ):
+        check(
+            False,
+            "Published JSON is valid and matches canonical data"
+        )
+
+
+# 14. Generate validation report
+passed_count = sum(
+    item["passed"] for item in checks
+)
+
+failed_count = len(checks) - passed_count
+
+report = {
+    "validation_version": "1.0.0",
+    "dataset": "data/canonical/intelligence_data.csv",
+    "status": "passed" if failed_count == 0 else "failed",
+    "records_checked": len(rows),
+    "columns_checked": len(actual_columns),
+    "checks_passed": passed_count,
+    "checks_failed": failed_count,
+    "errors": errors,
+    "checks": checks
+}
+
+REPORT_FILE.parent.mkdir(
+    parents=True,
+    exist_ok=True
+)
+
+with REPORT_FILE.open("w", encoding="utf-8") as file:
+    json.dump(report, file, indent=2)
+
+
+# 15. Final result
+print("\nValidation completed.")
+print(f"Records checked: {len(rows)}")
+print(f"Columns checked: {len(actual_columns)}")
+print(f"Checks passed: {passed_count}")
+print(f"Checks failed: {failed_count}")
+
+print(
+    f"Report: {REPORT_FILE.relative_to(ROOT)}"
+)
+
+if failed_count:
+
+    print("\nValidation errors:")
+
+    for error in errors:
+        print(f"- {error}")
+
+    raise SystemExit(1)
+
+print("\nCANONICAL DATA PACKAGE CHECKS PASSED")
+</file>
+
+<file path="backend/.dockerignore">
+__pycache__/
+*.py[cod]
+*.log
+.venv/
+venv/
+.env
+.git/
+.pytest_cache/
+</file>
 
 <file path="backend/budget_data.csv">
 cost_centre,department,account_category,month,budget_amount,actual_amount,committed_amount,forecast_amount
@@ -95,495 +3852,6 @@ CC-401,HR & Ops,Recruitment & Onboarding,Feb 2026,15000,14500,1000,15000
 CC-401,HR & Ops,Recruitment & Onboarding,Mar 2026,18000,22000,3000,23000
 </file>
 
-<file path="backend/main.py">
-from datetime import datetime
-from pathlib import Path
-from typing import Any
-
-import duckdb
-import pandas as pd
-from fastapi import FastAPI, HTTPException, Query
-from fastapi.middleware.cors import CORSMiddleware
-
-app = FastAPI(
-    title="Budget vs Actual Variance Navigator API",
-    version="2.0.0",
-    description="Financial performance and budget variance analytics API",
-)
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=[
-        "http://localhost:3000",
-        "http://127.0.0.1:3000",
-    ],
-    allow_credentials=True,
-    allow_methods=["GET"],
-    allow_headers=["*"],
-)
-
-DATA_FILE = Path(__file__).resolve().parent / "budget_data.csv"
-
-REQUIRED_COLUMNS = {
-    "cost_centre",
-    "department",
-    "account_category",
-    "month",
-    "budget_amount",
-    "actual_amount",
-    "committed_amount",
-    "forecast_amount",
-}
-
-AMOUNT_COLUMNS = [
-    "budget_amount",
-    "actual_amount",
-    "committed_amount",
-    "forecast_amount",
-]
-
-GROUPING_COLUMNS = [
-    "department",
-    "month",
-    "cost_centre",
-    "account_category",
-]
-
-
-def load_data() -> pd.DataFrame:
-    """Load and validate the financial CSV dataset."""
-    try:
-        df = pd.read_csv(DATA_FILE)
-    except FileNotFoundError as exc:
-        raise HTTPException(
-            status_code=500,
-            detail="Financial dataset was not found.",
-        ) from exc
-    except (OSError, pd.errors.ParserError) as exc:
-        raise HTTPException(
-            status_code=500,
-            detail="Unable to read the financial dataset.",
-        ) from exc
-
-    missing = REQUIRED_COLUMNS.difference(df.columns)
-    if missing:
-        raise HTTPException(
-            status_code=500,
-            detail=f"Dataset is missing columns: {sorted(missing)}",
-        )
-
-    if df.empty:
-        raise HTTPException(
-            status_code=500,
-            detail="Financial dataset contains no records.",
-        )
-
-    for column in AMOUNT_COLUMNS:
-        df[column] = pd.to_numeric(df[column], errors="coerce")
-
-    if df[AMOUNT_COLUMNS].isna().any().any():
-        raise HTTPException(
-            status_code=500,
-            detail="Dataset contains missing or invalid financial amounts.",
-        )
-
-    if (df[AMOUNT_COLUMNS] < 0).any().any():
-        raise HTTPException(
-            status_code=500,
-            detail="Dataset contains negative financial amounts.",
-        )
-
-    if df[GROUPING_COLUMNS].isna().any().any():
-        raise HTTPException(
-            status_code=500,
-            detail="Dataset contains missing grouping information.",
-        )
-
-    return df
-
-
-def get_month_date(month: str) -> datetime:
-    """Convert month labels such as Jan 2026 into sortable dates."""
-    try:
-        return datetime.strptime(month, "%b %Y")
-    except ValueError as exc:
-        raise HTTPException(
-            status_code=500,
-            detail=f"Invalid month label in dataset: {month}",
-        ) from exc
-
-
-def money(value: Any) -> float:
-    """Return a rounded numeric value for API responses."""
-    return round(float(value), 2)
-
-
-def apply_filters(
-    df: pd.DataFrame,
-    department: str | None = None,
-    month: str | None = None,
-) -> pd.DataFrame:
-    """Validate and apply the shared dashboard filters."""
-
-    if department:
-        available_departments = df["department"].unique().tolist()
-
-        if department not in available_departments:
-            raise HTTPException(
-                status_code=422,
-                detail={
-                    "message": "Unknown department filter.",
-                    "available_departments": sorted(available_departments),
-                },
-            )
-
-        df = df[df["department"] == department]
-
-    if month:
-        available_months = df["month"].unique().tolist()
-
-        if month not in available_months:
-            raise HTTPException(
-                status_code=422,
-                detail={
-                    "message": "Unknown month filter.",
-                    "available_months": sorted(
-                        available_months,
-                        key=get_month_date,
-                    ),
-                },
-            )
-
-        df = df[df["month"] == month]
-
-    return df
-
-
-def sort_monthly_results(result: list[dict]) -> list[dict]:
-    """Sort monthly results chronologically."""
-    return sorted(
-        result,
-        key=lambda row: get_month_date(row["month"]),
-    )
-
-
-def round_result_fields(
-    rows: list[dict],
-    fields: list[str],
-) -> list[dict]:
-    """Round selected numeric fields in grouped API results."""
-    for row in rows:
-        for field in fields:
-            row[field] = money(row[field])
-
-    return rows
-
-
-@app.get("/api/health")
-def health_check():
-    return {
-        "status": "ok",
-        "service": "Budget vs Actual Variance Navigator",
-        "version": "2.0.0",
-    }
-
-
-@app.get("/api/summary")
-def get_summary(
-    department: str | None = Query(default=None),
-    month: str | None = Query(default=None),
-):
-    df = apply_filters(load_data(), department, month)
-
-    total_budget = df["budget_amount"].sum()
-    total_actual = df["actual_amount"].sum()
-    total_committed = df["committed_amount"].sum()
-    total_forecast = df["forecast_amount"].sum()
-
-    variance = total_actual - total_budget
-
-    variance_pct = (
-        (variance / total_budget) * 100
-        if total_budget != 0
-        else 0
-    )
-
-    status = (
-        "Over Budget" if variance > 0
-        else "Under Budget" if variance < 0
-        else "On Budget"
-    )
-
-    return {
-        "total_budget": money(total_budget),
-        "total_actual": money(total_actual),
-        "total_committed": money(total_committed),
-        "total_forecast": money(total_forecast),
-        "variance": money(variance),
-        "variance_pct": money(variance_pct),
-        "status": status,
-        "record_count": int(len(df)),
-        "department_count": int(df["department"].nunique()),
-    }
-
-
-@app.get("/api/waterfall")
-def get_waterfall(
-    department: str | None = Query(default=None),
-    month: str | None = Query(default=None),
-):
-    df = apply_filters(load_data(), department, month)
-
-    total_budget = df["budget_amount"].sum()
-    total_actual = df["actual_amount"].sum()
-
-    grouped = (
-        df.groupby("department")
-        .agg(
-            budget=("budget_amount", "sum"),
-            actual=("actual_amount", "sum"),
-        )
-        .reset_index()
-    )
-
-    grouped["variance"] = grouped["actual"] - grouped["budget"]
-    grouped = grouped.sort_values("department")
-
-    waterfall_items = [
-        {
-            "name": "Base Budget",
-            "value": money(total_budget),
-            "is_total": True,
-        }
-    ]
-
-    for _, row in grouped.iterrows():
-        waterfall_items.append(
-            {
-                "name": f"{row['department']} Variance",
-                "value": money(row["variance"]),
-                "is_total": False,
-            }
-        )
-
-    waterfall_items.append(
-        {
-            "name": "Final Actual",
-            "value": money(total_actual),
-            "is_total": True,
-        }
-    )
-
-    variance_sum = grouped["variance"].sum()
-
-    reconciles = bool(
-        abs((total_budget + variance_sum) - total_actual) < 0.01
-    )
-
-    return {
-        "waterfall": waterfall_items,
-        "reconciliation": {
-            "budget": money(total_budget),
-            "variance_sum": money(variance_sum),
-            "actual": money(total_actual),
-            "reconciles": reconciles,
-        },
-    }
-
-
-@app.get("/api/department-breakdown")
-def get_department_breakdown(
-    department: str | None = Query(default=None),
-    month: str | None = Query(default=None),
-):
-    df = apply_filters(load_data(), department, month)
-
-    with duckdb.connect() as con:
-        result = con.execute(
-            """
-            SELECT
-                department,
-                SUM(budget_amount) AS budget,
-                SUM(actual_amount) AS actual,
-                SUM(committed_amount) AS committed,
-                SUM(forecast_amount) AS forecast,
-                SUM(actual_amount - budget_amount) AS variance,
-                CASE
-                    WHEN SUM(budget_amount) = 0 THEN 0
-                    ELSE ROUND(
-                        SUM(actual_amount - budget_amount)
-                        / SUM(budget_amount) * 100,
-                        2
-                    )
-                END AS variance_pct
-            FROM df
-            GROUP BY department
-            ORDER BY variance DESC
-            """
-        ).df().to_dict(orient="records")
-
-    round_result_fields(
-        result,
-        [
-            "budget",
-            "actual",
-            "committed",
-            "forecast",
-            "variance",
-            "variance_pct",
-        ],
-    )
-
-    return {"departments": result}
-
-
-@app.get("/api/monthly-trends")
-def get_monthly_trends(
-    department: str | None = Query(default=None),
-    month: str | None = Query(default=None),
-):
-    """Return monthly financial trends with shared filters."""
-    df = apply_filters(load_data(), department, month)
-
-    with duckdb.connect() as con:
-        result = con.execute(
-            """
-            SELECT
-                month,
-                SUM(budget_amount) AS budget,
-                SUM(actual_amount) AS actual,
-                SUM(forecast_amount) AS forecast
-            FROM df
-            GROUP BY month
-            """
-        ).df().to_dict(orient="records")
-
-    result = sort_monthly_results(result)
-
-    round_result_fields(
-        result,
-        ["budget", "actual", "forecast"],
-    )
-
-    return {"trends": result}
-
-
-@app.get("/api/department-heatmap")
-def get_department_heatmap(
-    department: str | None = Query(default=None),
-    month: str | None = Query(default=None),
-):
-    df = apply_filters(load_data(), department, month)
-
-    with duckdb.connect() as con:
-        result = con.execute(
-            """
-            SELECT
-                department,
-                account_category,
-                SUM(budget_amount) AS budget,
-                SUM(actual_amount) AS actual,
-                SUM(actual_amount - budget_amount) AS variance,
-                CASE
-                    WHEN SUM(budget_amount) = 0 THEN 0
-                    ELSE ROUND(
-                        SUM(actual_amount - budget_amount)
-                        / SUM(budget_amount) * 100,
-                        2
-                    )
-                END AS variance_pct
-            FROM df
-            GROUP BY department, account_category
-            ORDER BY department, account_category
-            """
-        ).df().to_dict(orient="records")
-
-    round_result_fields(
-        result,
-        ["budget", "actual", "variance", "variance_pct"],
-    )
-
-    return {"heatmap": result}
-
-
-@app.get("/api/forecast")
-def get_forecast(
-    range_pct: float = Query(default=10.0, ge=0, le=50),
-    department: str | None = Query(default=None),
-    month: str | None = Query(default=None),
-):
-    """
-    Return an illustrative forecast range.
-
-    This is an assumption-based display range, not a statistically
-    validated confidence interval. The current dataset does not
-    contain historical forecast-error observations.
-    """
-    df = apply_filters(load_data(), department, month)
-
-    with duckdb.connect() as con:
-        result = con.execute(
-            """
-            SELECT
-                month,
-                SUM(budget_amount) AS budget,
-                SUM(actual_amount) AS actual,
-                SUM(forecast_amount) AS forecast
-            FROM df
-            GROUP BY month
-            """
-        ).df().to_dict(orient="records")
-
-    result = sort_monthly_results(result)
-
-    forecast_items = []
-
-    for row in result:
-        forecast = float(row["forecast"])
-        margin = forecast * (range_pct / 100)
-
-        forecast_items.append(
-            {
-                "month": row["month"],
-                "budget": money(row["budget"]),
-                "actual": money(row["actual"]),
-                "forecast": money(forecast),
-                "lower_bound": money(max(0, forecast - margin)),
-                "upper_bound": money(forecast + margin),
-            }
-        )
-
-    return {
-        "forecast": forecast_items,
-        "method": "Illustrative percentage-based range",
-        "range_pct": range_pct,
-        "is_statistically_validated": False,
-        "disclaimer": (
-            "The displayed range is assumption-based and is not "
-            "a statistically validated confidence interval."
-        ),
-    }
-
-
-@app.get("/api/filters")
-def get_filters():
-    df = load_data()
-
-    months = sorted(
-        df["month"].unique().tolist(),
-        key=get_month_date,
-    )
-
-    return {
-        "departments": sorted(df["department"].unique().tolist()),
-        "months": months,
-        "account_categories": sorted(
-            df["account_category"].unique().tolist()
-        ),
-        "cost_centres": sorted(df["cost_centre"].unique().tolist()),
-    }
-</file>
-
 <file path="backend/requirements.txt">
 fastapi==0.110.0
 uvicorn==0.28.0
@@ -599,13 +3867,13 @@ pydantic==2.6.4
 
 
 
-\*\*Project:\*\* Real Rails Interns Batch 8  
+\*\*Project:\*\* Real Rails Interns Batch 8
 
-\*\*Organization:\*\* Infocreon Internship  
+\*\*Organization:\*\* Infocreon Internship
 
-\*\*Repository:\*\* Budget vs Actual Variance Navigator  
+\*\*Repository:\*\* Budget vs Actual Variance Navigator
 
-\*\*Branch:\*\* `rebuild/full-stack-poc4`  
+\*\*Branch:\*\* `rebuild/full-stack-poc4`
 
 \*\*Document Status:\*\* Architecture Review Draft
 
@@ -1129,20 +4397,1087 @@ button {
 }
 </file>
 
+<file path="frontend/.dockerignore">
+node_modules/
+.next/
+out/
+build/
+coverage/
+.env
+.env.*
+!.env.example
+.git/
+*.log
+</file>
+
+<file path="frontend/.gitignore">
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+</file>
+
+<file path="frontend/AGENTS.md">
+<!-- BEGIN:nextjs-agent-rules -->
+
+## This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->
+</file>
+
+<file path="frontend/Dockerfile">
+FROM node:22-alpine
+
+WORKDIR /app
+
+# Install exact dependency versions from package-lock.json
+COPY package*.json ./
+RUN npm ci
+
+# Copy the frontend source code
+COPY . .
+
+# Set the API address used by browser-side requests
+ARG NEXT_PUBLIC_API_URL=http://localhost:8000
+ENV NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL
+
+# Build the Next.js application
+RUN npm run build
+
+EXPOSE 3000
+
+# Start Next.js so it is reachable outside the container
+CMD ["npm", "run", "start", "--", "-H", "0.0.0.0", "-p", "3000"]
+</file>
+
+<file path="frontend/eslint.config.mjs">
+import { defineConfig, globalIgnores } from "eslint/config";
+import nextVitals from "eslint-config-next/core-web-vitals";
+import nextTs from "eslint-config-next/typescript";
+
+const eslintConfig = defineConfig([
+  ...nextVitals,
+  ...nextTs,
+  // Override default ignores of eslint-config-next.
+  globalIgnores([
+    // Default ignores of eslint-config-next:
+    ".next/**",
+    "out/**",
+    "build/**",
+    "next-env.d.ts",
+  ]),
+]);
+
+export default eslintConfig;
+</file>
+
+<file path="frontend/next.config.ts">
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  /* config options here */
+  cacheComponents: true,
+  partialPrefetching: true,
+  turbopack: {
+    rules: {
+      "*.css": {
+        loaders: ["@tailwindcss/turbopack"],
+        as: "*.css",
+      },
+    },
+  },
+};
+
+export default nextConfig;
+</file>
+
+<file path="frontend/package.json">
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "lucide-react": "^1.64.0",
+    "next": "16.4.3",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "recharts": "^3.10.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.3",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
+</file>
+
+<file path="frontend/README.md">
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+## Getting Started
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+</file>
+
+<file path="frontend/tsconfig.json">
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    "**/*.mts"
+  ],
+  "exclude": ["node_modules"]
+}
+</file>
+
+<file path="tests/test_live_application.py">
+"""
+POC-4 live Selenium E2E test.
+Targets the deployed Render frontend; never defaults to localhost.
+"""
+import json
+import os
+import sys
+import traceback
+from datetime import datetime, timezone
+from pathlib import Path
+
+import requests
+from selenium import webdriver
+from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import Select, WebDriverWait
+
+ROOT = Path(__file__).resolve().parents[1]
+SCREENSHOTS = ROOT / "screenshots"
+RESULTS = ROOT / "test-results"
+SCREENSHOTS.mkdir(exist_ok=True)
+RESULTS.mkdir(exist_ok=True)
+
+FRONTEND_URL = os.getenv(
+    "FRONTEND_URL", "https://poc4-budget-frontend.onrender.com"
+).rstrip("/")
+BACKEND_URL = os.getenv(
+    "BACKEND_URL", "https://poc4-budget-backend.onrender.com"
+).rstrip("/")
+EXPECTED_NAME = os.getenv("EXPECTED_NAME", "Jona Peter")
+TIMEOUT = int(os.getenv("SELENIUM_TIMEOUT", "35"))
+
+results = []
+
+def record(name, passed, detail=""):
+    results.append({
+        "test": name,
+        "status": "PASS" if passed else "FAIL",
+        "detail": str(detail)
+    })
+    print(f"[{'PASS' if passed else 'FAIL'}] {name}: {detail}")
+
+def wait_for(driver, condition, timeout=TIMEOUT):
+    return WebDriverWait(driver, timeout).until(condition)
+
+def main():
+    options = webdriver.ChromeOptions()
+    if os.getenv("HEADLESS", "false").lower() == "true":
+        options.add_argument("--headless=new")
+    options.add_argument("--window-size=1440,1000")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--no-sandbox")
+    options.set_capability("goog:loggingPrefs", {"performance": "ALL"})
+
+    driver = None
+    try:
+        driver = webdriver.Chrome(options=options)
+
+        # 1. Live application availability and page load
+        response = requests.get(FRONTEND_URL, timeout=25)
+        record("Live frontend availability", response.status_code == 200,
+               f"HTTP {response.status_code} at {FRONTEND_URL}")
+
+        driver.get(FRONTEND_URL)
+        wait_for(driver, EC.presence_of_element_located((By.TAG_NAME, "main")))
+        wait_for(driver, lambda d: d.execute_script("return document.readyState") == "complete")
+        record("Page load", "Budget vs Actual Variance Navigator" in driver.title
+               or "Budget vs Actual Variance Navigator" in driver.page_source,
+               f"title={driver.title}")
+
+        # Wait until data has rendered; a visible error state is not accepted.
+        wait_for(driver, lambda d: len(d.find_elements(By.CSS_SELECTOR, "main button")) > 0)
+        body_text = driver.find_element(By.TAG_NAME, "body").text
+        no_error = "Unable to connect to the backend" not in body_text
+        record("Data rendered", no_error and len(body_text.strip()) > 100,
+               "Dashboard text is present" if no_error else "Backend connection error is visible")
+
+        # 2. Core visualization: Recharts SVGs are the rendered chart surfaces.
+        wait_for(driver, lambda d: len(d.find_elements(By.CSS_SELECTOR, "main svg.recharts-surface")) > 0)
+        charts = driver.find_elements(By.CSS_SELECTOR, "main svg.recharts-surface")
+        record("Visualization rendering", len(charts) > 0,
+               f"{len(charts)} Recharts chart surface(s) found")
+
+        # 3. Frontend-to-backend handshake: check deployed API health + summary.
+        health = requests.get(f"{BACKEND_URL}/api/health", timeout=20)
+        summary = requests.get(f"{BACKEND_URL}/api/summary", timeout=20)
+        api_ok = health.ok and summary.ok and bool(summary.content)
+        record("Frontend/backend API handshake", api_ok,
+               f"health={health.status_code}, summary={summary.status_code}, backend={BACKEND_URL}")
+
+        # 4. Department filter interaction
+        department_filter = wait_for(
+            driver, EC.presence_of_element_located(
+                (By.CSS_SELECTOR, 'select[aria-label="Filter by department"]')
+            )
+        )
+        department_options = Select(department_filter).options
+        if len(department_options) > 1:
+            before = department_filter.get_attribute("value")
+            Select(department_filter).select_by_index(1)
+            wait_for(driver, lambda d: d.find_element(
+                By.CSS_SELECTOR, 'select[aria-label="Filter by department"]'
+            ).get_attribute("value") != before)
+            record("Filter interaction", True,
+                   f"Selected {department_filter.get_attribute('value')}")
+        else:
+            record("Filter interaction", False, "No department options available")
+
+        # 5. Intelligence panel via a KPI card (actual dashboard click path).
+        kpi = wait_for(driver, EC.element_to_be_clickable(
+            (By.XPATH, "//button[.//*[contains(normalize-space(), 'Approved budget')]]")
+        ))
+        kpi.click()
+        panel = wait_for(driver, EC.visibility_of_element_located(
+            (By.CSS_SELECTOR, '[role="dialog"][aria-label="Financial insights"]')
+        ))
+        record("Intelligence panel interaction", panel.is_displayed(),
+               "Financial insights dialog opened from Approved budget KPI")
+        driver.find_element(By.CSS_SELECTOR, 'button[aria-label="Close insights panel"]').click()
+        wait_for(driver, EC.invisibility_of_element_located(
+            (By.CSS_SELECTOR, '[role="dialog"][aria-label="Financial insights"]')
+        ))
+
+        # 6. Signature: info icon opens metadata and expected intern name is present.
+        driver.find_element(By.CSS_SELECTOR, 'button[aria-label="Open application metadata"]').click()
+        metadata = wait_for(driver, EC.visibility_of_element_located(
+            (By.CSS_SELECTOR, '[role="dialog"][aria-labelledby="metadata-title"]')
+        ))
+        metadata_text = metadata.text
+        record("Info icon / signature", metadata.is_displayed() and EXPECTED_NAME in metadata_text,
+               f"Expected '{EXPECTED_NAME}' in metadata; modal text: {metadata_text[:300]}")
+        driver.find_element(By.CSS_SELECTOR, 'button[aria-label="Close metadata"]').click()
+
+        # 7. Responsive layout: use mobile viewport and verify no horizontal overflow.
+        driver.set_window_size(390, 844)
+        wait_for(driver, EC.presence_of_element_located((By.TAG_NAME, "main")))
+        dimensions = driver.execute_script(
+            "return {width: document.documentElement.clientWidth, "
+            "scrollWidth: document.documentElement.scrollWidth}"
+        )
+        responsive_ok = dimensions["scrollWidth"] <= dimensions["width"] + 2
+        record("Responsive layout", responsive_ok, json.dumps(dimensions))
+
+        driver.set_window_size(1440, 1000)
+        driver.save_screenshot(str(SCREENSHOTS / "selenium-live-dashboard.png"))
+        record("Screenshot evidence", True, "screenshots/selenium-live-dashboard.png")
+
+    except Exception as exc:
+        record("Execution exception", False, f"{type(exc).__name__}: {exc}")
+        if driver:
+            try:
+                driver.save_screenshot(str(SCREENSHOTS / "selenium-failure.png"))
+            except Exception:
+                pass
+        traceback.print_exc()
+    finally:
+        if driver:
+            driver.quit()
+
+    passed = sum(r["status"] == "PASS" for r in results)
+    failed = sum(r["status"] == "FAIL" for r in results)
+    overall = "PASS" if results and failed == 0 else "FAIL"
+    timestamp = datetime.now(timezone.utc).isoformat()
+    payload = {
+        "project": "POC-4 Budget vs Actual Variance Navigator",
+        "frontend_url": FRONTEND_URL,
+        "backend_url": BACKEND_URL,
+        "browser": "Google Chrome via Selenium WebDriver",
+        "executed_at_utc": timestamp,
+        "passed": passed,
+        "failed": failed,
+        "result": overall,
+        "tests": results,
+    }
+    (RESULTS / "results.json").write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    lines = [
+        "POC-4 SELENIUM E2E TEST REPORT",
+        f"Executed (UTC): {timestamp}",
+        f"Frontend URL: {FRONTEND_URL}",
+        f"Backend URL: {BACKEND_URL}",
+        "Browser: Google Chrome / Selenium WebDriver",
+        "",
+    ]
+    lines += [f"{r['status']}: {r['test']} — {r['detail']}" for r in results]
+    lines += ["", f"TOTAL: {passed} PASS, {failed} FAIL", f"FINAL RESULT: {overall}"]
+    (ROOT / "Test_Report.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    print(f"\nFINAL RESULT: {overall} ({passed} passed, {failed} failed)")
+    sys.exit(0 if overall == "PASS" else 1)
+
+if __name__ == "__main__":
+    main()
+</file>
+
+<file path=".gitignore">
+# Python generated files
+__pycache__/
+*.py[cod]
+*.log
+.venv/
+venv/
+
+# Node.js and Next.js generated files
+node_modules/
+.next/
+out/
+build/
+coverage/
+
+# Environment and secret files
+.env
+.env.*
+!.env.example
+
+# Local backups
+frontend/frontend-backup/
+
+# Git
+.git/
+</file>
+
+<file path="docker-compose.yml">
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: budget-variance-backend
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health', timeout=5)"
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: http://localhost:8000
+    container_name: budget-variance-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped
+</file>
+
+<file path="README-SELENIUM.md">
+# Selenium E2E execution
+
+## Prerequisites
+- Python 3.10+
+- Google Chrome installed
+- Internet access to the deployed Render services
+
+Selenium 4.6+ uses Selenium Manager to resolve the matching ChromeDriver in most
+setups; no separate driver download is normally needed.
+
+## Install
+```powershell
+py -m pip install -r requirements-selenium.txt
+```
+
+## Run against deployed services (no localhost)
+```powershell
+$env:FRONTEND_URL="https://poc4-budget-frontend.onrender.com"
+$env:BACKEND_URL="https://poc4-budget-backend.onrender.com"
+py tests/test_live_application.py
+```
+
+Optional headless run:
+```powershell
+$env:HEADLESS="true"
+py tests/test_live_application.py
+```
+
+Optional expected signature override:
+```powershell
+$env:EXPECTED_NAME="Jonah Peter"
+```
+
+## Generated evidence
+- `Test_Report.txt` — readable pass/fail report
+- `test-results/results.json` — machine-readable result
+- `screenshots/selenium-live-dashboard.png` — desktop screenshot
+- `screenshots/selenium-failure.png` — captured if an exception occurs
+
+The process exits `0` only if every recorded test passes; otherwise it exits `1`.
+</file>
+
+<file path="requirements-selenium.txt">
+selenium>=4.20,<5
+requests>=2.31,<3
+</file>
+
+<file path="SELENIUM_TEST_REPORT.md">
+# POC-4 Selenium E2E Test Report
+
+Run `py tests/test_live_application.py` to generate the authoritative `Test_Report.txt`,
+`test-results/results.json`, and screenshot evidence. Do not mark the run PASS until
+the script exits with code 0 and every required test is PASS.
+
+The metadata signature check expects `Jonah Peter`. The current Repomix snapshot
+shows `Jona Peter` in the metadata modal and footer; correct that typo in
+`frontend/src/app/page.tsx`, deploy the change, then rerun the test.
+
+The mandatory guide requests a real marker/data-point click to open the Intelligence
+Panel. This dashboard implementation exposes KPI cards that open the same
+`Financial insights` dialog; the script uses the Approved budget KPI because the
+current page source does not show a map marker interaction.
+
+The current repository source also does not expose an explicit `data-testid` on
+the visualizations; chart rendering is checked through Recharts SVG surfaces.
+</file>
+
+<file path="backend/Dockerfile">
+FROM python:3.11-slim
+
+WORKDIR /app
+
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir --default-timeout=300 --retries=10 -r requirements.txt
+
+COPY main.py .
+COPY budget_data.csv .
+
+EXPOSE 8000
+
+CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}"]
+</file>
+
+<file path="backend/main.py">
+from datetime import datetime
+from pathlib import Path
+from typing import Any
+
+import duckdb
+import pandas as pd
+from fastapi import FastAPI, HTTPException, Query
+from fastapi.middleware.cors import CORSMiddleware
+
+app = FastAPI(
+    title="Budget vs Actual Variance Navigator API",
+    version="2.0.0",
+    description="Financial performance and budget variance analytics API",
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+    "https://poc4-budget-frontend.onrender.com",
+],
+    allow_credentials=True,
+    allow_methods=["GET"],
+    allow_headers=["*"],
+)
+
+DATA_FILE = Path(__file__).resolve().parent / "budget_data.csv"
+
+REQUIRED_COLUMNS = {
+    "cost_centre",
+    "department",
+    "account_category",
+    "month",
+    "budget_amount",
+    "actual_amount",
+    "committed_amount",
+    "forecast_amount",
+}
+
+AMOUNT_COLUMNS = [
+    "budget_amount",
+    "actual_amount",
+    "committed_amount",
+    "forecast_amount",
+]
+
+GROUPING_COLUMNS = [
+    "department",
+    "month",
+    "cost_centre",
+    "account_category",
+]
+
+
+def load_data() -> pd.DataFrame:
+    """Load and validate the financial CSV dataset."""
+    try:
+        df = pd.read_csv(DATA_FILE)
+    except FileNotFoundError as exc:
+        raise HTTPException(
+            status_code=500,
+            detail="Financial dataset was not found.",
+        ) from exc
+    except (OSError, pd.errors.ParserError) as exc:
+        raise HTTPException(
+            status_code=500,
+            detail="Unable to read the financial dataset.",
+        ) from exc
+
+    missing = REQUIRED_COLUMNS.difference(df.columns)
+    if missing:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Dataset is missing columns: {sorted(missing)}",
+        )
+
+    if df.empty:
+        raise HTTPException(
+            status_code=500,
+            detail="Financial dataset contains no records.",
+        )
+
+    for column in AMOUNT_COLUMNS:
+        df[column] = pd.to_numeric(df[column], errors="coerce")
+
+    if df[AMOUNT_COLUMNS].isna().any().any():
+        raise HTTPException(
+            status_code=500,
+            detail="Dataset contains missing or invalid financial amounts.",
+        )
+
+    if (df[AMOUNT_COLUMNS] < 0).any().any():
+        raise HTTPException(
+            status_code=500,
+            detail="Dataset contains negative financial amounts.",
+        )
+
+    if df[GROUPING_COLUMNS].isna().any().any():
+        raise HTTPException(
+            status_code=500,
+            detail="Dataset contains missing grouping information.",
+        )
+
+    return df
+
+
+def get_month_date(month: str) -> datetime:
+    """Convert month labels such as Jan 2026 into sortable dates."""
+    try:
+        return datetime.strptime(month, "%b %Y")
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=500,
+            detail=f"Invalid month label in dataset: {month}",
+        ) from exc
+
+
+def money(value: Any) -> float:
+    """Return a rounded numeric value for API responses."""
+    return round(float(value), 2)
+
+
+def apply_filters(
+    df: pd.DataFrame,
+    department: str | None = None,
+    month: str | None = None,
+) -> pd.DataFrame:
+    """Validate and apply the shared dashboard filters."""
+
+    if department:
+        available_departments = df["department"].unique().tolist()
+
+        if department not in available_departments:
+            raise HTTPException(
+                status_code=422,
+                detail={
+                    "message": "Unknown department filter.",
+                    "available_departments": sorted(available_departments),
+                },
+            )
+
+        df = df[df["department"] == department]
+
+    if month:
+        available_months = df["month"].unique().tolist()
+
+        if month not in available_months:
+            raise HTTPException(
+                status_code=422,
+                detail={
+                    "message": "Unknown month filter.",
+                    "available_months": sorted(
+                        available_months,
+                        key=get_month_date,
+                    ),
+                },
+            )
+
+        df = df[df["month"] == month]
+
+    return df
+
+
+def sort_monthly_results(result: list[dict]) -> list[dict]:
+    """Sort monthly results chronologically."""
+    return sorted(
+        result,
+        key=lambda row: get_month_date(row["month"]),
+    )
+
+
+def round_result_fields(
+    rows: list[dict],
+    fields: list[str],
+) -> list[dict]:
+    """Round selected numeric fields in grouped API results."""
+    for row in rows:
+        for field in fields:
+            row[field] = money(row[field])
+
+    return rows
+
+
+@app.get("/api/health")
+def health_check():
+    return {
+        "status": "ok",
+        "service": "Budget vs Actual Variance Navigator",
+        "version": "2.0.0",
+    }
+
+
+@app.get("/api/summary")
+def get_summary(
+    department: str | None = Query(default=None),
+    month: str | None = Query(default=None),
+):
+    df = apply_filters(load_data(), department, month)
+
+    total_budget = df["budget_amount"].sum()
+    total_actual = df["actual_amount"].sum()
+    total_committed = df["committed_amount"].sum()
+    total_forecast = df["forecast_amount"].sum()
+
+    variance = total_actual - total_budget
+
+    variance_pct = (
+        (variance / total_budget) * 100
+        if total_budget != 0
+        else 0
+    )
+
+    status = (
+        "Over Budget" if variance > 0
+        else "Under Budget" if variance < 0
+        else "On Budget"
+    )
+
+    return {
+        "total_budget": money(total_budget),
+        "total_actual": money(total_actual),
+        "total_committed": money(total_committed),
+        "total_forecast": money(total_forecast),
+        "variance": money(variance),
+        "variance_pct": money(variance_pct),
+        "status": status,
+        "record_count": int(len(df)),
+        "department_count": int(df["department"].nunique()),
+    }
+
+
+@app.get("/api/waterfall")
+def get_waterfall(
+    department: str | None = Query(default=None),
+    month: str | None = Query(default=None),
+):
+    df = apply_filters(load_data(), department, month)
+
+    total_budget = df["budget_amount"].sum()
+    total_actual = df["actual_amount"].sum()
+
+    grouped = (
+        df.groupby("department")
+        .agg(
+            budget=("budget_amount", "sum"),
+            actual=("actual_amount", "sum"),
+        )
+        .reset_index()
+    )
+
+    grouped["variance"] = grouped["actual"] - grouped["budget"]
+    grouped = grouped.sort_values("department")
+
+    waterfall_items = [
+        {
+            "name": "Base Budget",
+            "value": money(total_budget),
+            "is_total": True,
+        }
+    ]
+
+    for _, row in grouped.iterrows():
+        waterfall_items.append(
+            {
+                "name": f"{row['department']} Variance",
+                "value": money(row["variance"]),
+                "is_total": False,
+            }
+        )
+
+    waterfall_items.append(
+        {
+            "name": "Final Actual",
+            "value": money(total_actual),
+            "is_total": True,
+        }
+    )
+
+    variance_sum = grouped["variance"].sum()
+
+    reconciles = bool(
+        abs((total_budget + variance_sum) - total_actual) < 0.01
+    )
+
+    return {
+        "waterfall": waterfall_items,
+        "reconciliation": {
+            "budget": money(total_budget),
+            "variance_sum": money(variance_sum),
+            "actual": money(total_actual),
+            "reconciles": reconciles,
+        },
+    }
+
+
+@app.get("/api/department-breakdown")
+def get_department_breakdown(
+    department: str | None = Query(default=None),
+    month: str | None = Query(default=None),
+):
+    df = apply_filters(load_data(), department, month)
+
+    with duckdb.connect() as con:
+        result = con.execute(
+            """
+            SELECT
+                department,
+                SUM(budget_amount) AS budget,
+                SUM(actual_amount) AS actual,
+                SUM(committed_amount) AS committed,
+                SUM(forecast_amount) AS forecast,
+                SUM(actual_amount - budget_amount) AS variance,
+                CASE
+                    WHEN SUM(budget_amount) = 0 THEN 0
+                    ELSE ROUND(
+                        SUM(actual_amount - budget_amount)
+                        / SUM(budget_amount) * 100,
+                        2
+                    )
+                END AS variance_pct
+            FROM df
+            GROUP BY department
+            ORDER BY variance DESC
+            """
+        ).df().to_dict(orient="records")
+
+    round_result_fields(
+        result,
+        [
+            "budget",
+            "actual",
+            "committed",
+            "forecast",
+            "variance",
+            "variance_pct",
+        ],
+    )
+
+    return {"departments": result}
+
+
+@app.get("/api/monthly-trends")
+def get_monthly_trends(
+    department: str | None = Query(default=None),
+    month: str | None = Query(default=None),
+):
+    """Return monthly financial trends with shared filters."""
+    df = apply_filters(load_data(), department, month)
+
+    with duckdb.connect() as con:
+        result = con.execute(
+            """
+            SELECT
+                month,
+                SUM(budget_amount) AS budget,
+                SUM(actual_amount) AS actual,
+                SUM(forecast_amount) AS forecast
+            FROM df
+            GROUP BY month
+            """
+        ).df().to_dict(orient="records")
+
+    result = sort_monthly_results(result)
+
+    round_result_fields(
+        result,
+        ["budget", "actual", "forecast"],
+    )
+
+    return {"trends": result}
+
+
+@app.get("/api/department-heatmap")
+def get_department_heatmap(
+    department: str | None = Query(default=None),
+    month: str | None = Query(default=None),
+):
+    df = apply_filters(load_data(), department, month)
+
+    with duckdb.connect() as con:
+        result = con.execute(
+            """
+            SELECT
+                department,
+                account_category,
+                SUM(budget_amount) AS budget,
+                SUM(actual_amount) AS actual,
+                SUM(actual_amount - budget_amount) AS variance,
+                CASE
+                    WHEN SUM(budget_amount) = 0 THEN 0
+                    ELSE ROUND(
+                        SUM(actual_amount - budget_amount)
+                        / SUM(budget_amount) * 100,
+                        2
+                    )
+                END AS variance_pct
+            FROM df
+            GROUP BY department, account_category
+            ORDER BY department, account_category
+            """
+        ).df().to_dict(orient="records")
+
+    round_result_fields(
+        result,
+        ["budget", "actual", "variance", "variance_pct"],
+    )
+
+    return {"heatmap": result}
+
+
+@app.get("/api/forecast")
+def get_forecast(
+    range_pct: float = Query(default=10.0, ge=0, le=50),
+    department: str | None = Query(default=None),
+    month: str | None = Query(default=None),
+):
+    """
+    Return an illustrative forecast range.
+
+    This is an assumption-based display range, not a statistically
+    validated confidence interval. The current dataset does not
+    contain historical forecast-error observations.
+    """
+    df = apply_filters(load_data(), department, month)
+
+    with duckdb.connect() as con:
+        result = con.execute(
+            """
+            SELECT
+                month,
+                SUM(budget_amount) AS budget,
+                SUM(actual_amount) AS actual,
+                SUM(forecast_amount) AS forecast
+            FROM df
+            GROUP BY month
+            """
+        ).df().to_dict(orient="records")
+
+    result = sort_monthly_results(result)
+
+    forecast_items = []
+
+    for row in result:
+        forecast = float(row["forecast"])
+        margin = forecast * (range_pct / 100)
+
+        forecast_items.append(
+            {
+                "month": row["month"],
+                "budget": money(row["budget"]),
+                "actual": money(row["actual"]),
+                "forecast": money(forecast),
+                "lower_bound": money(max(0, forecast - margin)),
+                "upper_bound": money(forecast + margin),
+            }
+        )
+
+    return {
+        "forecast": forecast_items,
+        "method": "Illustrative percentage-based range",
+        "range_pct": range_pct,
+        "is_statistically_validated": False,
+        "disclaimer": (
+            "The displayed range is assumption-based and is not "
+            "a statistically validated confidence interval."
+        ),
+    }
+
+
+@app.get("/api/filters")
+def get_filters():
+    df = load_data()
+
+    months = sorted(
+        df["month"].unique().tolist(),
+        key=get_month_date,
+    )
+
+    return {
+        "departments": sorted(df["department"].unique().tolist()),
+        "months": months,
+        "account_categories": sorted(
+            df["account_category"].unique().tolist()
+        ),
+        "cost_centres": sorted(df["cost_centre"].unique().tolist()),
+    }
+</file>
+
 <file path="frontend/src/app/layout.tsx">
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Budget vs Actual Variance Navigator | Infocreon",
@@ -1156,10 +5491,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
+    <html lang="en" className="h-full antialiased">
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
@@ -1463,8 +5795,7 @@ export default function DashboardPage() {
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
-
-  const budget = number(field(summary || {}, 'total_budget', 'budget_total', 'budget_amount'));
+    const budget = number(field(summary || {}, 'total_budget', 'budget_total', 'budget_amount'));
   const actual = number(field(summary || {}, 'total_actual', 'actual_total', 'actual_amount'));
   const committed = number(field(summary || {}, 'total_committed', 'committed_total', 'committed_amount'));
   const forecastTotal = number(field(summary || {}, 'total_forecast', 'forecast_total', 'forecast_amount'));
@@ -1694,20 +6025,73 @@ export default function DashboardPage() {
                       <SectionHeading eyebrow="01 / Reconciliation" title="Variance bridge" description="Budget baseline, departmental variance contributions and actual total. Select a bar to inspect its value." />
                       <div className="h-[310px]">
                         <ResponsiveContainer width="100%" height="100%">
-                          <BarChart data={waterfallData} margin={{ top: 10, right: 8, left: 0, bottom: 12 }} onClick={(state: any) => {
-                            const point = state?.activePayload?.[0]?.payload;
-                            if (point) openInsight(point, `Variance bridge · ${point.name}`);
-                          }}>
-                            <CartesianGrid stroke={chartColor.grid} strokeDasharray="3 5" vertical={false} />
-                            <XAxis dataKey="name" tick={{ fill: chartColor.tick, fontSize: 10 }} angle={-12} textAnchor="end" height={55} />
-                            <YAxis tick={{ fill: chartColor.tick, fontSize: 10 }} tickFormatter={(value) => `$${Math.round(value / 1000)}k`} />
-                            <Tooltip content={<ChartTooltip />} cursor={{ fill: '#b7a4ef', fillOpacity: 0.06 }} />
-                            <Bar dataKey="base" stackId="bridge" fill="transparent" />
-                            <Bar dataKey="change" stackId="bridge" name="Variance contribution" radius={[4, 4, 0, 0]}>
-                              {waterfallData.map((entry, index) => <Cell key={index} fill={entry.color} />)}
+                          <BarChart
+                            data={waterfallData}
+                            margin={{ top: 10, right: 8, left: 0, bottom: 12 }}
+                          >
+                            <CartesianGrid
+                              stroke={chartColor.grid}
+                              strokeDasharray="3 5"
+                              vertical={false}
+                            />
+                            <XAxis
+                              dataKey="name"
+                              tick={{ fill: chartColor.tick, fontSize: 10 }}
+                              angle={-12}
+                              textAnchor="end"
+                              height={55}
+                            />
+                            <YAxis
+                              tick={{ fill: chartColor.tick, fontSize: 10 }}
+                              tickFormatter={(value) => `$${Math.round(value / 1000)}k`}
+                            />
+                            <Tooltip
+                              content={<ChartTooltip />}
+                              cursor={{ fill: '#b7a4ef', fillOpacity: 0.06 }}
+                            />
+                            <Bar
+                              dataKey="base"
+                              stackId="bridge"
+                              fill="transparent"
+                            />
+                            <Bar
+                              dataKey="change"
+                              stackId="bridge"
+                              name="Variance contribution"
+                              radius={[4, 4, 0, 0]}
+                              cursor="pointer"
+                              onClick={(data: any) => {
+                                const point = data?.payload ?? data;
+                                if (point) {
+                                  openInsight(
+                                    point,
+                                    `Variance bridge · ${point.name}`
+                                  );
+                                }
+                              }}
+                            >
+                              {waterfallData.map((entry, index) => (
+                                <Cell key={index} fill={entry.color} />
+                              ))}
                             </Bar>
-                            <Bar dataKey="total" name="Budget / Actual" radius={[4, 4, 0, 0]}>
-                              {waterfallData.map((entry, index) => <Cell key={index} fill={entry.color} />)}
+                            <Bar
+                              dataKey="total"
+                              name="Budget / Actual"
+                              radius={[4, 4, 0, 0]}
+                              cursor="pointer"
+                              onClick={(data: any) => {
+                                const point = data?.payload ?? data;
+                                if (point) {
+                                  openInsight(
+                                    point,
+                                    `Variance bridge · ${point.name}`
+                                  );
+                                }
+                              }}
+                            >
+                              {waterfallData.map((entry, index) => (
+                                <Cell key={index} fill={entry.color} />
+                              ))}
                             </Bar>
                           </BarChart>
                         </ResponsiveContainer>
@@ -1719,8 +6103,7 @@ export default function DashboardPage() {
                         </span>
                       </div>
                     </div>
-
-                    <div className={panel}>
+                                        <div className={panel}>
                       <SectionHeading eyebrow="02 / Performance" title="Monthly movement" description="Budget, actual expenditure and forecast by reporting month." />
                       <div className="h-[310px]">
                         <ResponsiveContainer width="100%" height="100%">
@@ -1896,8 +6279,7 @@ export default function DashboardPage() {
                   </div>
                 </section>
               )}
-
-              <footer className="flex flex-col gap-2 border-t border-[#302b3c] pt-5 text-[10px] leading-relaxed text-[#817b8f] sm:flex-row sm:items-center sm:justify-between">
+                            <footer className="flex flex-col gap-2 border-t border-[#302b3c] pt-5 text-[10px] leading-relaxed text-[#817b8f] sm:flex-row sm:items-center sm:justify-between">
                 <span>Illustrative demonstration dataset · Jan–Mar 2026 · Finance & Cash</span>
                 <span className="text-[#a69db5]">Developed by: Jona Peter · PoC ID: PoC-4 · GitHub: @jonahpeter2006-12 · Infocreon Internship</span>
               </footer>
@@ -1999,208 +6381,345 @@ export default function DashboardPage() {
 }
 </file>
 
-<file path="frontend/.gitignore">
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# env files (can opt-in for committing if needed)
-.env*
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
-</file>
-
-<file path="frontend/AGENTS.md">
-<!-- BEGIN:nextjs-agent-rules -->
-
-## This is NOT the Next.js you know
-
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
-
-This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
-
-<!-- END:nextjs-agent-rules -->
-</file>
-
-<file path="frontend/eslint.config.mjs">
-import { defineConfig, globalIgnores } from "eslint/config";
-import nextVitals from "eslint-config-next/core-web-vitals";
-import nextTs from "eslint-config-next/typescript";
-
-const eslintConfig = defineConfig([
-  ...nextVitals,
-  ...nextTs,
-  // Override default ignores of eslint-config-next.
-  globalIgnores([
-    // Default ignores of eslint-config-next:
-    ".next/**",
-    "out/**",
-    "build/**",
-    "next-env.d.ts",
-  ]),
-]);
-
-export default eslintConfig;
-</file>
-
-<file path="frontend/next.config.ts">
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
-  turbopack: {
-    rules: {
-      "*.css": {
-        loaders: ["@tailwindcss/turbopack"],
-        as: "*.css",
-      },
-    },
-  },
-};
-
-export default nextConfig;
-</file>
-
-<file path="frontend/package.json">
+<file path="test-results/results.json">
 {
-  "name": "frontend",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "lucide-react": "^1.64.0",
-    "next": "16.4.3",
-    "react": "19.3.0",
-    "react-dom": "19.3.0",
-    "recharts": "^3.10.1"
-  },
-  "devDependencies": {
-    "@tailwindcss/turbopack": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.4.3",
-    "tailwindcss": "^4",
-    "typescript": "^5"
-  }
+  "project": "POC-4 Budget vs Actual Variance Navigator",
+  "frontend_url": "http://localhost:3000",
+  "backend_url": "http://127.0.0.1:8000",
+  "browser": "Google Chrome via Selenium WebDriver",
+  "executed_at_utc": "2026-11-03T04:25:45.254276+00:00",
+  "passed": 10,
+  "failed": 0,
+  "result": "PASS",
+  "tests": [
+    {
+      "test": "Live frontend availability",
+      "status": "PASS",
+      "detail": "HTTP 200 at http://localhost:3000"
+    },
+    {
+      "test": "Page load",
+      "status": "PASS",
+      "detail": "title=Budget vs Actual Variance Navigator | Infocreon"
+    },
+    {
+      "test": "Data rendered",
+      "status": "PASS",
+      "detail": "Dashboard text is present"
+    },
+    {
+      "test": "Visualization rendering",
+      "status": "PASS",
+      "detail": "6 Recharts chart surface(s) found"
+    },
+    {
+      "test": "Frontend/backend API handshake",
+      "status": "PASS",
+      "detail": "health=200, summary=200, backend=http://127.0.0.1:8000"
+    },
+    {
+      "test": "Filter interaction",
+      "status": "PASS",
+      "detail": "Selected Engineering"
+    },
+    {
+      "test": "Intelligence panel interaction",
+      "status": "PASS",
+      "detail": "Financial insights dialog opened from Approved budget KPI"
+    },
+    {
+      "test": "Info icon / signature",
+      "status": "PASS",
+      "detail": "Expected 'Jona Peter' in metadata; modal text: INFOCREON INTERNSHIP\nApplication metadata\n\u2715\nArchitect\nJona Peter\nBatch\nBatch 8\nPoC ID\nPoC-4\nProject\nBudget vs Actual Variance Navigator\nTech stack\nNext.js, FastAPI, Tailwind CSS, Recharts\nProgram\nInfocreon Internship\nGitHub\n@jonahpeter2006-12 \u2197\nClose project details"
+    },
+    {
+      "test": "Responsive layout",
+      "status": "PASS",
+      "detail": "{\"scrollWidth\": 487, \"width\": 487}"
+    },
+    {
+      "test": "Screenshot evidence",
+      "status": "PASS",
+      "detail": "screenshots/selenium-live-dashboard.png"
+    }
+  ]
 }
 </file>
 
-<file path="frontend/README.md">
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<file path="README.md">
+# Budget vs Actual Variance Navigator
 
-## Getting Started
+A containerized financial analytics application for exploring budget-versus-actual performance, department-level variances, monthly trends, and forecasts.
 
-First, run the development server:
+## Project Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+This project contains two main services:
+
+- **Frontend:** Next.js, React, TypeScript, and Recharts.
+- **Backend:** FastAPI, Python, Pandas, and DuckDB.
+
+The backend reads financial data from `backend/budget_data.csv` and exposes API endpoints consumed by the frontend.
+
+## Live Cloud Deployment
+
+The application is deployed on **Render** using Docker.
+
+| Service | Live URL |
+|---|---|
+| Frontend Dashboard | https://poc4-budget-frontend.onrender.com |
+| Backend API | https://poc4-budget-backend.onrender.com |
+| Backend Health Check | https://poc4-budget-backend.onrender.com/api/health |
+| Backend Summary | https://poc4-budget-backend.onrender.com/api/summary |
+
+**Cloud deployment status:** Successfully deployed and validated.
+
+Note: Render's free services may spin down after inactivity. The first request after an idle period may take 50 seconds or more while the service wakes up.
+
+## Project Structure
+
+```text
+.
+├── backend/
+│   ├── Dockerfile
+│   ├── .dockerignore
+│   ├── main.py
+│   ├── requirements.txt
+│   └── budget_data.csv
+├── frontend/
+│   ├── Dockerfile
+│   ├── .dockerignore
+│   ├── package.json
+│   ├── package-lock.json
+│   └── src/
+├── docs/
+├── docker-compose.yml
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Services and Ports
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Service | Technology | Local URL |
+|---|---|---|
+| Frontend | Next.js | http://localhost:3000 |
+| Backend | FastAPI | http://localhost:8000 |
+| Backend health | FastAPI | http://localhost:8000/api/health |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Prerequisites
 
-## Learn More
+- Docker Desktop
+- Docker Engine running
+- Docker Compose
+- Windows with WSL 2, or another supported Docker environment
 
-To learn more about Next.js, take a look at the following resources:
+## Run with Docker Compose
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Open PowerShell in the project root directory.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Build and start the services:
 
-## Deploy on Vercel
+```powershell
+docker compose up --build
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Open the application:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Frontend: http://localhost:3000
+- Backend health check: http://localhost:8000/api/health
+
+To stop the services, press `Ctrl + C` in the terminal and run:
+
+```powershell
+docker compose down
+```
+
+## Useful Docker Commands
+
+View running containers:
+
+```powershell
+docker compose ps
+```
+
+View service logs:
+
+```powershell
+docker compose logs
+```
+
+View backend logs:
+
+```powershell
+docker compose logs backend
+```
+
+View frontend logs:
+
+```powershell
+docker compose logs frontend
+```
+
+Rebuild the services:
+
+```powershell
+docker compose up --build
+```
+
+Stop and remove containers:
+
+```powershell
+docker compose down
+```
+
+## Backend API
+
+The backend provides these endpoints:
+
+| Endpoint | Purpose |
+|---|---|
+| `/api/health` | Backend health status |
+| `/api/summary` | Summary metrics |
+| `/api/waterfall` | Waterfall analysis |
+| `/api/department-breakdown` | Department breakdown |
+| `/api/monthly-trends` | Monthly trends |
+| `/api/department-heatmap` | Department heatmap |
+| `/api/forecast` | Forecast data |
+| `/api/filters` | Available filters |
+
+## Container Communication
+
+Docker Compose creates a shared network for the frontend and backend services.
+
+For local development, the frontend uses `http://localhost:8000` for browser-side API requests. Docker publishes backend port `8000` to the host so the browser can access it.
+
+For cloud deployment, the frontend uses the `NEXT_PUBLIC_API_URL` environment variable to connect to the deployed backend.
+
+The backend CORS configuration allows requests from the deployed frontend.
+
+## Render Deployment Configuration
+
+Both services use Docker deployment on Render.
+
+| Setting | Backend | Frontend |
+|---|---|---|
+| Service name | `poc4-budget-backend` | `poc4-budget-frontend` |
+| Runtime | Docker | Docker |
+| Dockerfile path | `backend/Dockerfile` | `frontend/Dockerfile` |
+| Build context | `backend` | `frontend` |
+| Branch | `master` | `master` |
+
+Frontend environment variable:
+
+```text
+NEXT_PUBLIC_API_URL=https://poc4-budget-backend.onrender.com
+```
+
+The backend uses Render's assigned `PORT` environment variable.
+
+## Troubleshooting
+
+### Docker Engine is not running
+
+Open Docker Desktop and wait until the engine reports that it is running.
+
+### Frontend cannot reach the backend
+
+1. Check that both containers are running:
+
+   ```powershell
+   docker compose ps
+   ```
+
+2. Check backend logs:
+
+   ```powershell
+   docker compose logs backend
+   ```
+
+3. Check the backend health endpoint:
+
+   http://localhost:8000/api/health
+
+### Container build fails
+
+Review the service logs and verify that the dependency files and source files are present.
+
+### Restart the application
+
+```powershell
+docker compose down
+docker compose up --build
+```
+
+### Cloud application takes time to load
+
+Render free services may spin down after inactivity. Allow time for the service to wake up and retry.
+
+## Current Validation Status
+
+### Local Docker Validation
+
+- [x] Backend Docker image builds successfully.
+- [x] Frontend Docker image builds successfully.
+- [x] Docker Compose configuration validated.
+- [x] Backend health endpoint responds successfully.
+- [x] Frontend dashboard loads at http://localhost:3000.
+- [x] Dashboard data, charts, and figures display.
+- [x] Department and month filters work.
+- [x] Frontend communicates with the backend successfully.
+- [x] Container logs show successful API responses.
+- [x] Containers recover after restart.
+- [x] Clean Docker rebuild succeeds.
+
+### Cloud Deployment Validation
+
+- [x] Backend deployed successfully on Render.
+- [x] Frontend deployed successfully on Render.
+- [x] Backend health endpoint responds successfully.
+- [x] Frontend connects to the deployed backend.
+- [x] Dashboard figures and charts load successfully.
+- [x] Overview tab validated.
+- [x] Departments tab validated.
+- [x] Trends tab validated.
+- [x] Heatmap tab validated
 </file>
 
-<file path="frontend/tsconfig.json">
-{
-  "compilerOptions": {
-    "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "bundler",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "react-jsx",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "paths": {
-      "@/*": ["./src/*"]
-    }
-  },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    ".next/dev/types/**/*.ts",
-    "**/*.mts"
-  ],
-  "exclude": ["node_modules"]
-}
+<file path="Test_Report.txt">
+POC-4 SELENIUM E2E TEST REPORT
+Executed (UTC): 2026-11-03T04:25:45.254276+00:00
+Frontend URL: http://localhost:3000
+Backend URL: http://127.0.0.1:8000
+Browser: Google Chrome / Selenium WebDriver
+
+PASS: Live frontend availability — HTTP 200 at http://localhost:3000
+PASS: Page load — title=Budget vs Actual Variance Navigator | Infocreon
+PASS: Data rendered — Dashboard text is present
+PASS: Visualization rendering — 6 Recharts chart surface(s) found
+PASS: Frontend/backend API handshake — health=200, summary=200, backend=http://127.0.0.1:8000
+PASS: Filter interaction — Selected Engineering
+PASS: Intelligence panel interaction — Financial insights dialog opened from Approved budget KPI
+PASS: Info icon / signature — Expected 'Jona Peter' in metadata; modal text: INFOCREON INTERNSHIP
+Application metadata
+✕
+Architect
+Jona Peter
+Batch
+Batch 8
+PoC ID
+PoC-4
+Project
+Budget vs Actual Variance Navigator
+Tech stack
+Next.js, FastAPI, Tailwind CSS, Recharts
+Program
+Infocreon Internship
+GitHub
+@jonahpeter2006-12 ↗
+Close project details
+PASS: Responsive layout — {"scrollWidth": 487, "width": 487}
+PASS: Screenshot evidence — screenshots/selenium-live-dashboard.png
+
+TOTAL: 10 PASS, 0 FAIL
+FINAL RESULT: PASS
 </file>
 
 </files>

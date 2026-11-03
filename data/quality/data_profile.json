@@ -1,0 +1,41 @@
+{
+  "profile_version": "1.0.0",
+  "dataset": "data/canonical/intelligence_data.csv",
+  "profile_status": "initial_profile",
+  "source_record_count": 18,
+  "canonical_record_count": 72,
+  "column_count": 20,
+  "unique_record_ids": 72,
+  "record_type": "financial_metric",
+  "metric_names": {
+    "budget_amount": 18,
+    "actual_amount": 18,
+    "committed_amount": 18,
+    "forecast_amount": 18
+  },
+  "metric_unit": "USD",
+  "date_range": {
+    "start": "2026-01-01T00:00:00Z",
+    "end": "2026-03-01T00:00:00Z"
+  },
+  "synthetic_records": 72,
+  "non_synthetic_records": 0,
+  "missing_value_observations": {
+    "related_entity_id": 72,
+    "subcategory": 72,
+    "status": 72,
+    "stage": 72,
+    "text_value": 72,
+    "latitude": 72,
+    "longitude": 72
+  },
+  "observations": [
+    "All 18 source records were retained.",
+    "Each source record was expanded into four financial metric records.",
+    "All canonical records are marked synthetic.",
+    "Optional fields are blank because the supplied source does not contain corresponding information.",
+    "The dataset covers three monthly reporting periods."
+  ],
+  "forecast_limitation": "Forecast values are supplied illustrative figures and are not evidence of statistically validated forecasting performance.",
+  "validation_status": "pending"
+}
