@@ -9,7 +9,7 @@
   "decision_supported": "Support descriptive human review of budget and actual financial measurements across the available groups. Do not automate financial decisions or infer real-world performance from synthetic records.",
   "quality_context": {
     "quality_overall_status": "assessment_completed_with_limitations",
-    "representativeness_assessment": "source_coverage_preserved_with_real_world_limitations",
+    "representativeness_assessment": "source_mapping_verified_with_real_world_limitations",
     "all_records_synthetic": true
   },
   "tracks": {

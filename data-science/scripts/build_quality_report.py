@@ -1,11 +1,15 @@
-﻿import json
+﻿
+import json
 from pathlib import Path
 
-root = Path.cwd()
+root = Path(__file__).resolve().parents[2]
 source = root / "data-science/outputs/quality_assessment.json"
 output = root / "docs/DATA_QUALITY_ASSESSMENT.md"
 
 data = json.loads(source.read_text(encoding="utf-8"))
+
+reproducibility = data["dimensions"]["reproducibility"]
+reproducibility_status = reproducibility["status"]
 
 lines = [
     "# DATA QUALITY ASSESSMENT",
@@ -24,7 +28,9 @@ lines = [
 ]
 
 for name, result in data["dimensions"].items():
-    lines.append(f"| {name.replace('_', ' ').title()} | {result['status']} |")
+    lines.append(
+        f"| {name.replace('_', ' ').title()} | {result['status']} |"
+    )
 
 for name, result in data["dimensions"].items():
     lines.extend([
@@ -36,7 +42,11 @@ for name, result in data["dimensions"].items():
         "**Evidence:**",
         "",
         "```json",
-        json.dumps(result.get("evidence", {}), indent=2, ensure_ascii=False),
+        json.dumps(
+            result.get("evidence", {}),
+            indent=2,
+            ensure_ascii=False
+        ),
         "```"
     ])
 
@@ -64,7 +74,14 @@ lines.extend([
     "",
     "The safety assessment is a basic screening and does not guarantee that all sensitive information is absent.",
     "",
-    "Reproducibility must be reconfirmed by rerunning the documented scripts in sequence.",
+    (
+        "Reproducibility verification passed. Two complete pipeline "
+        "executions produced matching assessment outputs, and the "
+        "input files remained unchanged."
+        if reproducibility_status == "passed"
+        else
+        f"Reproducibility verification status: {reproducibility_status}."
+    ),
     "",
     "## Conclusion",
     "",
@@ -73,8 +90,10 @@ lines.extend([
     "The dataset has no blocking quality failures, but its documented limitations must be considered before analytical development."
 ])
 
+output.parent.mkdir(parents=True, exist_ok=True)
 output.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 print("Data quality assessment report created:", output)
 print("Dimensions documented:", len(data["dimensions"]))
 print("Blocking failures:", len(data.get("blocking_failures", [])))
+print("Reproducibility status:", reproducibility_status)

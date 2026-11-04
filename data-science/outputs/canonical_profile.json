@@ -1,7 +1,9 @@
 {
-  "profile_version": "1.0.0",
+  "profile_version": "2.0.0",
   "dataset": "data/canonical/intelligence_data.csv",
+  "dataset_name": "Budget vs Actual Variance Navigator - Canonical Intelligence Data",
   "data_version": "1.0.0",
+  "schema_version": "1.0.0",
   "record_count": 72,
   "column_count": 20,
   "file_size_bytes": 12991,
@@ -27,6 +29,18 @@
     "is_synthetic",
     "data_version"
   ],
+  "schema_check": {
+    "schema_version": "1.0.0",
+    "declared_row_count": 72,
+    "observed_row_count": 72,
+    "declared_column_count": 20,
+    "observed_column_count": 20,
+    "missing_columns": [],
+    "unexpected_columns": [],
+    "column_order_matches_schema": true,
+    "row_count_matches_schema": true,
+    "column_count_matches_schema": true
+  },
   "record_type_distribution": {
     "financial_metric": 72
   },
@@ -44,6 +58,7 @@
       "null_count": 0,
       "null_percentage": 0.0,
       "unique_count": 72,
+      "uniqueness_percentage": 100.0,
       "examples": [
         "FIN-0001-BUDGET_AMOUNT",
         "FIN-0001-ACTUAL_AMOUNT",
@@ -51,6 +66,8 @@
         "FIN-0001-FORECAST_AMOUNT",
         "FIN-0002-BUDGET_AMOUNT"
       ],
+      "required_by_schema": true,
+      "nullable_by_schema": false,
       "expected_role": "Unique canonical record identifier generated from the source row and metric name."
     },
     "record_type": {
@@ -58,9 +75,12 @@
       "null_count": 0,
       "null_percentage": 0.0,
       "unique_count": 1,
+      "uniqueness_percentage": 1.39,
       "examples": [
         "financial_metric"
       ],
+      "required_by_schema": true,
+      "nullable_by_schema": false,
       "expected_role": "Classification of the canonical record. Constant value for financial metric observations."
     },
     "observed_at": {
@@ -68,11 +88,14 @@
       "null_count": 0,
       "null_percentage": 0.0,
       "unique_count": 3,
+      "uniqueness_percentage": 4.17,
       "examples": [
         "2026-01-01T00:00:00Z",
         "2026-02-01T00:00:00Z",
         "2026-03-01T00:00:00Z"
       ],
+      "required_by_schema": true,
+      "nullable_by_schema": false,
       "expected_role": "Reporting month from the source Month field, converted to the first day of the month in ISO 8601 UTC."
     },
     "entity_id": {
@@ -80,6 +103,7 @@
       "null_count": 0,
       "null_percentage": 0.0,
       "unique_count": 6,
+      "uniqueness_percentage": 8.33,
       "examples": [
         "CC-101",
         "CC-102",
@@ -87,6 +111,8 @@
         "CC-202",
         "CC-301"
       ],
+      "required_by_schema": true,
+      "nullable_by_schema": false,
       "expected_role": "Cost-centre identifier copied from the source cost_centre field."
     },
     "related_entity_id": {
@@ -94,7 +120,10 @@
       "null_count": 72,
       "null_percentage": 100.0,
       "unique_count": 0,
+      "uniqueness_percentage": 0,
       "examples": [],
+      "required_by_schema": false,
+      "nullable_by_schema": true,
       "expected_role": "Optional identifier linking this record to another entity. Not supplied by the source."
     },
     "entity_name": {
@@ -102,12 +131,15 @@
       "null_count": 0,
       "null_percentage": 0.0,
       "unique_count": 4,
+      "uniqueness_percentage": 5.56,
       "examples": [
         "Engineering",
         "Marketing",
         "Sales",
         "HR & Ops"
       ],
+      "required_by_schema": true,
+      "nullable_by_schema": false,
       "expected_role": "Department name copied from the source department field."
     },
     "category": {
@@ -115,6 +147,7 @@
       "null_count": 0,
       "null_percentage": 0.0,
       "unique_count": 6,
+      "uniqueness_percentage": 8.33,
       "examples": [
         "Cloud Infrastructure",
         "Software Licenses",
@@ -122,6 +155,8 @@
         "Events & PR",
         "Travel & Client Entertainment"
       ],
+      "required_by_schema": true,
+      "nullable_by_schema": false,
       "expected_role": "Account category copied from the source account_category field."
     },
     "subcategory": {
@@ -129,7 +164,10 @@
       "null_count": 72,
       "null_percentage": 100.0,
       "unique_count": 0,
+      "uniqueness_percentage": 0,
       "examples": [],
+      "required_by_schema": false,
+      "nullable_by_schema": true,
       "expected_role": "Optional subcategory. Not supplied by the source dataset."
     },
     "status": {
@@ -137,7 +175,10 @@
       "null_count": 72,
       "null_percentage": 100.0,
       "unique_count": 0,
+      "uniqueness_percentage": 0,
       "examples": [],
+      "required_by_schema": false,
+      "nullable_by_schema": true,
       "expected_role": "Optional financial or workflow status. Not supplied by the source dataset."
     },
     "stage": {
@@ -145,7 +186,10 @@
       "null_count": 72,
       "null_percentage": 100.0,
       "unique_count": 0,
+      "uniqueness_percentage": 0,
       "examples": [],
+      "required_by_schema": false,
+      "nullable_by_schema": true,
       "expected_role": "Optional process stage. Not supplied by the source dataset."
     },
     "metric_name": {
@@ -153,12 +197,15 @@
       "null_count": 0,
       "null_percentage": 0.0,
       "unique_count": 4,
+      "uniqueness_percentage": 5.56,
       "examples": [
         "budget_amount",
         "actual_amount",
         "committed_amount",
         "forecast_amount"
       ],
+      "required_by_schema": true,
+      "nullable_by_schema": false,
       "expected_role": "Name of the financial measure represented by this canonical record; derived from a source amount column."
     },
     "metric_value": {
@@ -166,6 +213,7 @@
       "null_count": 0,
       "null_percentage": 0.0,
       "unique_count": 47,
+      "uniqueness_percentage": 65.28,
       "examples": [
         "45000",
         "48000",
@@ -173,6 +221,8 @@
         "50000",
         "49500"
       ],
+      "required_by_schema": true,
+      "nullable_by_schema": false,
       "expected_role": "Numeric financial amount copied from the corresponding source amount column."
     },
     "metric_unit": {
@@ -180,9 +230,12 @@
       "null_count": 0,
       "null_percentage": 0.0,
       "unique_count": 1,
+      "uniqueness_percentage": 1.39,
       "examples": [
         "USD"
       ],
+      "required_by_schema": true,
+      "nullable_by_schema": false,
       "expected_role": "Currency unit used for the financial metric. The canonical dataset uses USD."
     },
     "text_value": {
@@ -190,7 +243,10 @@
       "null_count": 72,
       "null_percentage": 100.0,
       "unique_count": 0,
+      "uniqueness_percentage": 0,
       "examples": [],
+      "required_by_schema": false,
+      "nullable_by_schema": true,
       "expected_role": "Optional descriptive text. No text observations are supplied in the source dataset."
     },
     "latitude": {
@@ -198,7 +254,10 @@
       "null_count": 72,
       "null_percentage": 100.0,
       "unique_count": 0,
+      "uniqueness_percentage": 0,
       "examples": [],
+      "required_by_schema": false,
+      "nullable_by_schema": true,
       "expected_role": "Optional geographic latitude. No geographic coordinates are supplied in the source dataset."
     },
     "longitude": {
@@ -206,7 +265,10 @@
       "null_count": 72,
       "null_percentage": 100.0,
       "unique_count": 0,
+      "uniqueness_percentage": 0,
       "examples": [],
+      "required_by_schema": false,
+      "nullable_by_schema": true,
       "expected_role": "Optional geographic longitude. No geographic coordinates are supplied in the source dataset."
     },
     "source_name": {
@@ -214,9 +276,12 @@
       "null_count": 0,
       "null_percentage": 0.0,
       "unique_count": 1,
+      "uniqueness_percentage": 1.39,
       "examples": [
         "backend/budget_data.csv"
       ],
+      "required_by_schema": true,
+      "nullable_by_schema": false,
       "expected_role": "Path identifying the original source file for provenance."
     },
     "source_record_id": {
@@ -224,6 +289,7 @@
       "null_count": 0,
       "null_percentage": 0.0,
       "unique_count": 18,
+      "uniqueness_percentage": 25.0,
       "examples": [
         "SRC-0001",
         "SRC-0002",
@@ -231,6 +297,8 @@
         "SRC-0004",
         "SRC-0005"
       ],
+      "required_by_schema": true,
+      "nullable_by_schema": false,
       "expected_role": "Generated source-row identifier linking the four canonical measurements to their original source observation."
     },
     "is_synthetic": {
@@ -238,9 +306,12 @@
       "null_count": 0,
       "null_percentage": 0.0,
       "unique_count": 1,
+      "uniqueness_percentage": 1.39,
       "examples": [
         "true"
       ],
+      "required_by_schema": true,
+      "nullable_by_schema": false,
       "expected_role": "Boolean indicator identifying the dataset as synthetic rather than real operational data."
     },
     "data_version": {
@@ -248,14 +319,18 @@
       "null_count": 0,
       "null_percentage": 0.0,
       "unique_count": 1,
+      "uniqueness_percentage": 1.39,
       "examples": [
         "1.0.0"
       ],
+      "required_by_schema": true,
+      "nullable_by_schema": false,
       "expected_role": "Version identifier assigned to the canonical dataset."
     }
   },
   "numeric_metric_profile": {
-    "non_null_valid_count": 72,
+    "total_records": 72,
+    "valid_finite_count": 72,
     "invalid_count": 0,
     "infinite_count": 0,
     "minimum": 500.0,
@@ -309,6 +384,9 @@
       "Marketing": 24,
       "Sales": 12
     },
+    "related_entity_id": {
+      "(blank)": 72
+    },
     "category": {
       "Cloud Infrastructure": 12,
       "Events & PR": 12,
@@ -316,6 +394,9 @@
       "Recruitment & Onboarding": 12,
       "Software Licenses": 12,
       "Travel & Client Entertainment": 12
+    },
+    "subcategory": {
+      "(blank)": 72
     },
     "status": {
       "(blank)": 72
@@ -335,6 +416,26 @@
     "source_name": {
       "backend/budget_data.csv": 72
     },
+    "source_record_id": {
+      "SRC-0001": 4,
+      "SRC-0002": 4,
+      "SRC-0003": 4,
+      "SRC-0004": 4,
+      "SRC-0005": 4,
+      "SRC-0006": 4,
+      "SRC-0007": 4,
+      "SRC-0008": 4,
+      "SRC-0009": 4,
+      "SRC-0010": 4,
+      "SRC-0011": 4,
+      "SRC-0012": 4,
+      "SRC-0013": 4,
+      "SRC-0014": 4,
+      "SRC-0015": 4,
+      "SRC-0016": 4,
+      "SRC-0017": 4,
+      "SRC-0018": 4
+    },
     "is_synthetic": {
       "true": 72
     },
@@ -346,18 +447,93 @@
     "latitude_non_null": 0,
     "longitude_non_null": 0,
     "valid_coordinate_pairs": 0,
-    "invalid_coordinate_pairs": 0
+    "invalid_coordinate_pairs": 0,
+    "partial_coordinate_pairs": 0,
+    "empty_coordinate_pairs": 72
   },
   "text_profile": {
     "non_empty_count": 0,
     "empty_count": 72,
     "average_length": 0,
-    "maximum_length": 0
+    "maximum_length": 0,
+    "maximum_allowed_length": null,
+    "examples": []
+  },
+  "provenance_profile": {
+    "source_name_distribution": {
+      "backend/budget_data.csv": 72
+    },
+    "unique_source_record_count": 18,
+    "source_record_id_distribution": {
+      "SRC-0001": 4,
+      "SRC-0002": 4,
+      "SRC-0003": 4,
+      "SRC-0004": 4,
+      "SRC-0005": 4,
+      "SRC-0006": 4,
+      "SRC-0007": 4,
+      "SRC-0008": 4,
+      "SRC-0009": 4,
+      "SRC-0010": 4,
+      "SRC-0011": 4,
+      "SRC-0012": 4,
+      "SRC-0013": 4,
+      "SRC-0014": 4,
+      "SRC-0015": 4,
+      "SRC-0016": 4,
+      "SRC-0017": 4,
+      "SRC-0018": 4
+    },
+    "records_per_source_observation": {
+      "4": 1
+    },
+    "records_per_source_observation_distribution": {
+      "4": 18
+    },
+    "metric_sets_per_source_observation": {
+      "actual_amount|budget_amount|committed_amount|forecast_amount": 18
+    },
+    "duplicate_source_metric_pairs": 0,
+    "all_records_have_source_ids": true
+  },
+  "version_profile": {
+    "manifest_dataset_version": "1.0.0",
+    "schema_version": "1.0.0",
+    "observed_data_versions": {
+      "1.0.0": 72
+    },
+    "all_records_match_manifest_version": true,
+    "schema_version_matches_manifest": true
+  },
+  "source_relationship_profile": {
+    "manifest_source_observation_count": 18,
+    "observed_unique_source_observation_count": 18,
+    "expected_metrics": [
+      "actual_amount",
+      "budget_amount",
+      "committed_amount",
+      "forecast_amount"
+    ],
+    "observed_metrics": [
+      "actual_amount",
+      "budget_amount",
+      "committed_amount",
+      "forecast_amount"
+    ],
+    "missing_metrics": [],
+    "unexpected_metrics": [],
+    "canonical_records_per_source_distribution": {
+      "4": 18
+    },
+    "source_observation_count_matches_manifest": true,
+    "all_sources_have_expected_metric_set": true,
+    "canonical_rows_are_independent_transactions": false
   },
   "interpretation": {
-    "source_observations": 18,
-    "canonical_measurements_per_source_observation": 4,
+    "all_records_synthetic": true,
     "canonical_rows_are_independent_transactions": false,
-    "forecast_values_are_validated_predictions": false
+    "forecast_values_are_validated_predictions": false,
+    "source_mapping_requires_separate_representativeness_assessment": true,
+    "real_world_representativeness_established": false
   }
 }

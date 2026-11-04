@@ -1,13 +1,27 @@
 {
-  "assessment_version": "1.0.0",
+  "assessment_version": "2.0.0",
   "canonical_dataset": "data/canonical/intelligence_data.csv",
   "representativeness_reference": "data/source-sample/source_sample.csv",
   "canonical_record_count": 72,
   "source_observation_count": 18,
   "canonical_source_id_count": 18,
-  "transformation_note": "Canonical records are four financial measurements derived from each source observation, not independent transactions.",
+  "expected_metric_names": [
+    "actual_amount",
+    "budget_amount",
+    "committed_amount",
+    "forecast_amount"
+  ],
+  "transformation_note": "Each source observation is expected to produce exactly four canonical financial measurement rows. These are derived measurements, not independent transactions.",
+  "source_id_coverage": {
+    "expected_source_ids": 18,
+    "actual_source_ids": 18,
+    "missing_source_ids": [],
+    "unexpected_source_ids": []
+  },
   "coverage_comparison": {
     "cost_centres": {
+      "source_field": "cost_centre",
+      "canonical_field": "entity_id",
       "source_unique_count": 6,
       "canonical_unique_count": 6,
       "source_values": [
@@ -31,6 +45,8 @@
       "unexpected_in_canonical": []
     },
     "departments": {
+      "source_field": "department",
+      "canonical_field": "entity_name",
       "source_unique_count": 4,
       "canonical_unique_count": 4,
       "source_values": [
@@ -50,6 +66,8 @@
       "unexpected_in_canonical": []
     },
     "categories": {
+      "source_field": "account_category",
+      "canonical_field": "category",
       "source_unique_count": 6,
       "canonical_unique_count": 6,
       "source_values": [
@@ -74,18 +92,19 @@
     }
   },
   "temporal_coverage": {
-    "source_month_values": [
-      "Feb 2026",
-      "Jan 2026",
-      "Mar 2026"
+    "source_reporting_dates": [
+      "2026-01-01T00:00:00Z",
+      "2026-02-01T00:00:00Z",
+      "2026-03-01T00:00:00Z"
     ],
     "canonical_reporting_dates": [
       "2026-01-01T00:00:00Z",
       "2026-02-01T00:00:00Z",
       "2026-03-01T00:00:00Z"
     ],
-    "source_month_count": 3,
-    "canonical_reporting_period_count": 3
+    "source_reporting_period_count": 3,
+    "canonical_reporting_period_count": 3,
+    "all_reporting_periods_preserved": true
   },
   "source_observation_distributions": {
     "cost_centre": {
@@ -116,20 +135,75 @@
       "Mar 2026": 6
     }
   },
+  "canonical_record_distributions": {
+    "entity_id": {
+      "CC-101": 12,
+      "CC-102": 12,
+      "CC-201": 12,
+      "CC-202": 12,
+      "CC-301": 12,
+      "CC-401": 12
+    },
+    "entity_name": {
+      "Engineering": 24,
+      "Marketing": 24,
+      "Sales": 12,
+      "HR & Ops": 12
+    },
+    "category": {
+      "Cloud Infrastructure": 12,
+      "Software Licenses": 12,
+      "Paid Ads & Campaigns": 12,
+      "Events & PR": 12,
+      "Travel & Client Entertainment": 12,
+      "Recruitment & Onboarding": 12
+    },
+    "observed_at": {
+      "2026-01-01T00:00:00Z": 24,
+      "2026-02-01T00:00:00Z": 24,
+      "2026-03-01T00:00:00Z": 24
+    },
+    "metric_name": {
+      "budget_amount": 18,
+      "actual_amount": 18,
+      "committed_amount": 18,
+      "forecast_amount": 18
+    }
+  },
+  "mapping_verification": {
+    "expected_source_metric_pairs": 72,
+    "actual_canonical_source_metric_pairs": 72,
+    "missing_mappings": [],
+    "unexpected_mappings": [],
+    "duplicate_mappings": [],
+    "field_mismatches": [],
+    "incorrect_metric_sets": {},
+    "source_value_or_date_errors": []
+  },
   "checks": {
+    "source_observation_count_matches_manifest": true,
+    "canonical_record_count_matches_manifest": true,
     "all_source_observations_retained": true,
-    "four_metrics_per_source_observation": true,
+    "four_expected_metrics_per_source_observation": true,
+    "no_duplicate_source_metric_mappings": true,
+    "no_missing_source_metric_mappings": true,
+    "no_unexpected_source_metric_mappings": true,
+    "all_source_to_canonical_values_match": true,
+    "reporting_month_coverage_preserved": true,
     "cost_centre_coverage_preserved": true,
     "department_coverage_preserved": true,
     "category_coverage_preserved": true
   },
+  "checks_passed": 12,
+  "checks_total": 12,
   "all_mapping_coverage_checks_passed": true,
   "limitations": [
     "All supplied observations are synthetic.",
-    "All 18 available source observations were retained; this does not prove that the source represents real-world financial activity.",
-    "Only January to March 2026 is covered.",
+    "Preservation of the source sample does not establish real-world population representativeness.",
+    "Only the reporting periods present in the source sample are assessed.",
     "The preserved source sample is the available comparison reference, not an independent external population.",
-    "The 72 canonical rows must not be interpreted as 72 independent source observations."
+    "The canonical measurement rows must not be interpreted as independent source observations.",
+    "Source identifiers are generated from source row order because the source sample has no independent source-record identifier."
   ],
-  "assessment": "source_coverage_preserved_with_real_world_limitations"
+  "assessment": "source_mapping_verified_with_real_world_limitations"
 }

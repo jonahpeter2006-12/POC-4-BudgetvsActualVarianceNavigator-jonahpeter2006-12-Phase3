@@ -1,166 +1,195 @@
 # REPRESENTATIVENESS ASSESSMENT
 
-## Assessment Overview
+## 1. Assessment Overview
 
-- Assessment: **source_coverage_preserved_with_real_world_limitations**
+- Assessment version: 2.0.0
+- Assessment result: **source_mapping_verified_with_real_world_limitations**
 - Source observations: 18
 - Canonical records: 72
+- Canonical source identifiers: 18
+- Expected source-metric mappings: 72
+- Actual canonical source-metric mappings: 72
 
-## Full Assessment Evidence
+## 2. Transformation and Record Relationships
+
+Each source observation is expected to produce exactly four canonical financial measurement rows. These are derived measurements, not independent transactions.
+
+Expected metrics:
+
+- `actual_amount`
+- `budget_amount`
+- `committed_amount`
+- `forecast_amount`
+
+The canonical measurement rows are derived from source observations. They are not independent source transactions.
+
+## 3. Source-to-Canonical Coverage
+
+### Cost Centres
+
+- Source field: `cost_centre`
+- Canonical field: `entity_id`
+- Source unique values: 6
+- Canonical unique values: 6
+- All source values preserved: **True**
+- Missing from canonical: []
+- Unexpected in canonical: []
+
+### Departments
+
+- Source field: `department`
+- Canonical field: `entity_name`
+- Source unique values: 4
+- Canonical unique values: 4
+- All source values preserved: **True**
+- Missing from canonical: []
+- Unexpected in canonical: []
+
+### Categories
+
+- Source field: `account_category`
+- Canonical field: `category`
+- Source unique values: 6
+- Canonical unique values: 6
+- All source values preserved: **True**
+- Missing from canonical: []
+- Unexpected in canonical: []
+
+## 4. Temporal Coverage
+
+- Source reporting periods: 3
+- Canonical reporting periods: 3
+- All reporting periods preserved: **True**
+
+Source reporting dates:
+- 2026-01-01T00:00:00Z
+- 2026-02-01T00:00:00Z
+- 2026-03-01T00:00:00Z
+
+Canonical reporting dates:
+- 2026-01-01T00:00:00Z
+- 2026-02-01T00:00:00Z
+- 2026-03-01T00:00:00Z
+
+## 5. Source-to-Canonical Mapping Verification
+
+- Expected source-metric pairs: 72
+- Actual canonical source-metric pairs: 72
+- Missing mappings: 0
+- Unexpected mappings: 0
+- Duplicate mappings: 0
+- Field mismatches: 0
+- Incorrect metric sets: 0
+- Source value or date errors: 0
+
+## 6. Assessment Checks
+
+| Check | Result |
+|---|---|
+| Source Observation Count Matches Manifest | PASS |
+| Canonical Record Count Matches Manifest | PASS |
+| All Source Observations Retained | PASS |
+| Four Expected Metrics Per Source Observation | PASS |
+| No Duplicate Source Metric Mappings | PASS |
+| No Missing Source Metric Mappings | PASS |
+| No Unexpected Source Metric Mappings | PASS |
+| All Source To Canonical Values Match | PASS |
+| Reporting Month Coverage Preserved | PASS |
+| Cost Centre Coverage Preserved | PASS |
+| Department Coverage Preserved | PASS |
+| Category Coverage Preserved | PASS |
+
+**Checks passed: 12 / 12**
+
+## 7. Distribution Evidence
+
+### Source observation distributions
 
 ```json
 {
-  "assessment_version": "1.0.0",
-  "canonical_dataset": "data/canonical/intelligence_data.csv",
-  "representativeness_reference": "data/source-sample/source_sample.csv",
-  "canonical_record_count": 72,
-  "source_observation_count": 18,
-  "canonical_source_id_count": 18,
-  "transformation_note": "Canonical records are four financial measurements derived from each source observation, not independent transactions.",
-  "coverage_comparison": {
-    "cost_centres": {
-      "source_unique_count": 6,
-      "canonical_unique_count": 6,
-      "source_values": [
-        "CC-101",
-        "CC-102",
-        "CC-201",
-        "CC-202",
-        "CC-301",
-        "CC-401"
-      ],
-      "canonical_values": [
-        "CC-101",
-        "CC-102",
-        "CC-201",
-        "CC-202",
-        "CC-301",
-        "CC-401"
-      ],
-      "all_source_values_preserved": true,
-      "missing_from_canonical": [],
-      "unexpected_in_canonical": []
-    },
-    "departments": {
-      "source_unique_count": 4,
-      "canonical_unique_count": 4,
-      "source_values": [
-        "Engineering",
-        "HR & Ops",
-        "Marketing",
-        "Sales"
-      ],
-      "canonical_values": [
-        "Engineering",
-        "HR & Ops",
-        "Marketing",
-        "Sales"
-      ],
-      "all_source_values_preserved": true,
-      "missing_from_canonical": [],
-      "unexpected_in_canonical": []
-    },
-    "categories": {
-      "source_unique_count": 6,
-      "canonical_unique_count": 6,
-      "source_values": [
-        "Cloud Infrastructure",
-        "Events & PR",
-        "Paid Ads & Campaigns",
-        "Recruitment & Onboarding",
-        "Software Licenses",
-        "Travel & Client Entertainment"
-      ],
-      "canonical_values": [
-        "Cloud Infrastructure",
-        "Events & PR",
-        "Paid Ads & Campaigns",
-        "Recruitment & Onboarding",
-        "Software Licenses",
-        "Travel & Client Entertainment"
-      ],
-      "all_source_values_preserved": true,
-      "missing_from_canonical": [],
-      "unexpected_in_canonical": []
-    }
+  "cost_centre": {
+    "CC-101": 3,
+    "CC-102": 3,
+    "CC-201": 3,
+    "CC-202": 3,
+    "CC-301": 3,
+    "CC-401": 3
   },
-  "temporal_coverage": {
-    "source_month_values": [
-      "Feb 2026",
-      "Jan 2026",
-      "Mar 2026"
-    ],
-    "canonical_reporting_dates": [
-      "2026-01-01T00:00:00Z",
-      "2026-02-01T00:00:00Z",
-      "2026-03-01T00:00:00Z"
-    ],
-    "source_month_count": 3,
-    "canonical_reporting_period_count": 3
+  "department": {
+    "Engineering": 6,
+    "Marketing": 6,
+    "Sales": 3,
+    "HR & Ops": 3
   },
-  "source_observation_distributions": {
-    "cost_centre": {
-      "CC-101": 3,
-      "CC-102": 3,
-      "CC-201": 3,
-      "CC-202": 3,
-      "CC-301": 3,
-      "CC-401": 3
-    },
-    "department": {
-      "Engineering": 6,
-      "Marketing": 6,
-      "Sales": 3,
-      "HR & Ops": 3
-    },
-    "category": {
-      "Cloud Infrastructure": 3,
-      "Software Licenses": 3,
-      "Paid Ads & Campaigns": 3,
-      "Events & PR": 3,
-      "Travel & Client Entertainment": 3,
-      "Recruitment & Onboarding": 3
-    },
-    "month": {
-      "Jan 2026": 6,
-      "Feb 2026": 6,
-      "Mar 2026": 6
-    }
+  "category": {
+    "Cloud Infrastructure": 3,
+    "Software Licenses": 3,
+    "Paid Ads & Campaigns": 3,
+    "Events & PR": 3,
+    "Travel & Client Entertainment": 3,
+    "Recruitment & Onboarding": 3
   },
-  "checks": {
-    "all_source_observations_retained": true,
-    "four_metrics_per_source_observation": true,
-    "cost_centre_coverage_preserved": true,
-    "department_coverage_preserved": true,
-    "category_coverage_preserved": true
-  },
-  "all_mapping_coverage_checks_passed": true,
-  "limitations": [
-    "All supplied observations are synthetic.",
-    "All 18 available source observations were retained; this does not prove that the source represents real-world financial activity.",
-    "Only January to March 2026 is covered.",
-    "The preserved source sample is the available comparison reference, not an independent external population.",
-    "The 72 canonical rows must not be interpreted as 72 independent source observations."
-  ],
-  "assessment": "source_coverage_preserved_with_real_world_limitations"
+  "month": {
+    "Jan 2026": 6,
+    "Feb 2026": 6,
+    "Mar 2026": 6
+  }
 }
 ```
 
-## Interpretation
+### Canonical record distributions
 
-The assessment compares canonical coverage with the supplied source sample.
+```json
+{
+  "entity_id": {
+    "CC-101": 12,
+    "CC-102": 12,
+    "CC-201": 12,
+    "CC-202": 12,
+    "CC-301": 12,
+    "CC-401": 12
+  },
+  "entity_name": {
+    "Engineering": 24,
+    "Marketing": 24,
+    "Sales": 12,
+    "HR & Ops": 12
+  },
+  "category": {
+    "Cloud Infrastructure": 12,
+    "Software Licenses": 12,
+    "Paid Ads & Campaigns": 12,
+    "Events & PR": 12,
+    "Travel & Client Entertainment": 12,
+    "Recruitment & Onboarding": 12
+  },
+  "observed_at": {
+    "2026-01-01T00:00:00Z": 24,
+    "2026-02-01T00:00:00Z": 24,
+    "2026-03-01T00:00:00Z": 24
+  },
+  "metric_name": {
+    "budget_amount": 18,
+    "actual_amount": 18,
+    "committed_amount": 18,
+    "forecast_amount": 18
+  }
+}
+```
 
-- All 18 source observations are retained.
-- Each source observation expands into four financial measurements.
-- Cost-centre, department and category coverage is preserved.
-- The reporting period covers January to March 2026.
+## 8. Limitations
 
-## Limitations
+- All supplied observations are synthetic.
+- Preservation of the source sample does not establish real-world population representativeness.
+- Only the reporting periods present in the source sample are assessed.
+- The preserved source sample is the available comparison reference, not an independent external population.
+- The canonical measurement rows must not be interpreted as independent source observations.
+- Source identifiers are generated from source row order because the source sample has no independent source-record identifier.
 
-The source data is synthetic. Matching the supplied sample does not establish representativeness of a real-world population.
+## 9. Conclusion
 
-The 72 canonical records are derived from 18 source observations and must not be treated as 72 independent source observations.
+**The source-to-canonical mapping and supplied sample coverage checks passed. This finding is limited to the preserved synthetic source sample and does not establish real-world representativeness.**
 
-## Conclusion
+## 10. Full Machine-Readable Evidence
 
-**Source coverage is preserved, subject to real-world representativeness limitations.**
+The complete assessment output is available at `data-science/outputs/representativeness_assessment.json`.

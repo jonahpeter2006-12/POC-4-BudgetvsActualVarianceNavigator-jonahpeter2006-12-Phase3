@@ -11,31 +11,16 @@
 
 | Dimension | Status |
 |---|---|
-| Structural Integrity | passed |
 | Completeness | passed |
 | Uniqueness | passed |
 | Validity | passed |
 | Consistency | passed |
-| Accuracy | not_verifiable |
+| Accuracy | passed |
 | Representativeness | conditional |
 | Timeliness | conditional |
 | Provenance | passed |
 | Safety | passed |
 | Reproducibility | passed |
-
-## Structural Integrity
-
-**Status:** passed
-
-**Evidence:**
-
-```json
-{
-  "expected_columns": 20,
-  "actual_columns": 20,
-  "actual_records": 72
-}
-```
 
 ## Completeness
 
@@ -75,19 +60,112 @@
     "is_synthetic": 0,
     "data_version": 0
   },
-  "optional_blank_fields": [
-    "related_entity_id",
-    "subcategory",
-    "status",
-    "stage",
-    "text_value",
-    "latitude",
-    "longitude"
-  ]
+  "field_completeness": {
+    "record_id": {
+      "non_null_count": 72,
+      "null_count": 0,
+      "null_percentage": 0.0
+    },
+    "record_type": {
+      "non_null_count": 72,
+      "null_count": 0,
+      "null_percentage": 0.0
+    },
+    "observed_at": {
+      "non_null_count": 72,
+      "null_count": 0,
+      "null_percentage": 0.0
+    },
+    "entity_id": {
+      "non_null_count": 72,
+      "null_count": 0,
+      "null_percentage": 0.0
+    },
+    "related_entity_id": {
+      "non_null_count": 0,
+      "null_count": 72,
+      "null_percentage": 100.0
+    },
+    "entity_name": {
+      "non_null_count": 72,
+      "null_count": 0,
+      "null_percentage": 0.0
+    },
+    "category": {
+      "non_null_count": 72,
+      "null_count": 0,
+      "null_percentage": 0.0
+    },
+    "subcategory": {
+      "non_null_count": 0,
+      "null_count": 72,
+      "null_percentage": 100.0
+    },
+    "status": {
+      "non_null_count": 0,
+      "null_count": 72,
+      "null_percentage": 100.0
+    },
+    "stage": {
+      "non_null_count": 0,
+      "null_count": 72,
+      "null_percentage": 100.0
+    },
+    "metric_name": {
+      "non_null_count": 72,
+      "null_count": 0,
+      "null_percentage": 0.0
+    },
+    "metric_value": {
+      "non_null_count": 72,
+      "null_count": 0,
+      "null_percentage": 0.0
+    },
+    "metric_unit": {
+      "non_null_count": 72,
+      "null_count": 0,
+      "null_percentage": 0.0
+    },
+    "text_value": {
+      "non_null_count": 0,
+      "null_count": 72,
+      "null_percentage": 100.0
+    },
+    "latitude": {
+      "non_null_count": 0,
+      "null_count": 72,
+      "null_percentage": 100.0
+    },
+    "longitude": {
+      "non_null_count": 0,
+      "null_count": 72,
+      "null_percentage": 100.0
+    },
+    "source_name": {
+      "non_null_count": 72,
+      "null_count": 0,
+      "null_percentage": 0.0
+    },
+    "source_record_id": {
+      "non_null_count": 72,
+      "null_count": 0,
+      "null_percentage": 0.0
+    },
+    "is_synthetic": {
+      "non_null_count": 72,
+      "null_count": 0,
+      "null_percentage": 0.0
+    },
+    "data_version": {
+      "non_null_count": 72,
+      "null_count": 0,
+      "null_percentage": 0.0
+    }
+  }
 }
 ```
 
-**Limitation:** Optional blank fields limit additional analyses but are not required-field failures.
+**Limitation:** Optional blank fields are reported but are not automatically required-field failures.
 
 ## Uniqueness
 
@@ -97,9 +175,10 @@
 
 ```json
 {
-  "record_ids": 72,
+  "record_count": 72,
   "unique_record_ids": 72,
-  "duplicate_record_ids": 0
+  "duplicate_record_ids": 0,
+  "duplicate_source_metric_pairs": 0
 }
 ```
 
@@ -113,10 +192,28 @@
 {
   "invalid_numeric_values": 0,
   "invalid_dates": 0,
-  "non_usd_units": 0,
-  "invalid_metric_names": 0
+  "invalid_metric_names": 0,
+  "invalid_units": 0,
+  "invalid_coordinates": {
+    "latitude": 0,
+    "longitude": 0
+  },
+  "partial_coordinate_pairs": 0,
+  "invalid_schema_accepted_values": {
+    "record_type": 0,
+    "entity_id": 0,
+    "entity_name": 0,
+    "category": 0,
+    "metric_name": 0,
+    "metric_unit": 0,
+    "source_name": 0,
+    "is_synthetic": 0,
+    "data_version": 0
+  }
 }
 ```
+
+**Limitation:** Accepted-value checks are normalized according to the declared schema type.
 
 ## Consistency
 
@@ -126,35 +223,63 @@
 
 ```json
 {
+  "checks": {
+    "metric_distribution_matches_expected": true,
+    "source_observation_count_matches": true,
+    "four_measurements_per_source_observation": true,
+    "no_duplicate_source_metric_pairs": true,
+    "all_records_have_expected_synthetic_flag": true,
+    "data_version_matches_manifest": true,
+    "metric_units_consistent": true
+  },
   "metric_distribution": {
     "budget_amount": 18,
     "actual_amount": 18,
     "committed_amount": 18,
     "forecast_amount": 18
   },
+  "expected_metric_distribution": {
+    "budget_amount": 18,
+    "actual_amount": 18,
+    "committed_amount": 18,
+    "forecast_amount": 18
+  },
   "source_observation_count": 18,
-  "measurements_per_source": {
+  "records_per_source_distribution": {
     "4": 18
   },
-  "duplicate_source_metric_pairs": 0,
-  "all_records_synthetic": true
+  "mixed_metric_units": {},
+  "data_version_values": [
+    "1.0.0"
+  ],
+  "manifest_status": "validated",
+  "post1_validation_status": "passed"
 }
 ```
 
 ## Accuracy
 
-**Status:** not_verifiable
+**Status:** passed
 
 **Evidence:**
 
 ```json
 {
-  "synthetic_records": 72,
-  "independent_real_world_reference": false
+  "source_accuracy_checks": {
+    "source_columns_match_expected": true,
+    "source_observation_count_matches_manifest": true
+  },
+  "expected_source_metric_pairs": 72,
+  "actual_source_metric_pairs": 72,
+  "missing_mappings": [],
+  "unexpected_mappings": [],
+  "duplicate_mappings": [],
+  "value_mismatches": [],
+  "metadata_mismatches": []
 }
 ```
 
-**Limitation:** Structural and numeric validity do not prove that financial amounts represent real-world financial accuracy.
+**Limitation:** This verifies exact mapping against the preserved synthetic source sample; it does not prove real-world financial accuracy.
 
 ## Representativeness
 
@@ -164,13 +289,16 @@
 
 ```json
 {
-  "source_observations_retained": 18,
-  "canonical_measurements": 72,
-  "sampling_note": "All 18 supplied source observations were retained."
+  "assessment": "source_mapping_verified_with_real_world_limitations",
+  "checks_passed": 12,
+  "checks_total": 12,
+  "all_mapping_coverage_checks_passed": true,
+  "source_observations": 18,
+  "canonical_measurements": 72
 }
 ```
 
-**Limitation:** The supplied synthetic source does not establish representativeness of real organisations or financial activity.
+**Limitation:** The synthetic source sample cannot establish representativeness of real organisations or financial activity.
 
 ## Timeliness
 
@@ -182,11 +310,12 @@
 {
   "earliest_reporting_date": "2026-01-01T00:00:00+00:00",
   "latest_reporting_date": "2026-03-01T00:00:00+00:00",
-  "reporting_periods": 3
+  "reporting_periods": 3,
+  "unique_months": null
 }
 ```
 
-**Limitation:** Only January to March 2026 is available; no business freshness requirement was supplied.
+**Limitation:** The dataset covers January to March 2026 only. No business freshness requirement was supplied.
 
 ## Provenance
 
@@ -196,11 +325,15 @@
 
 ```json
 {
-  "source_names": [
+  "expected_source_name": "backend/budget_data.csv",
+  "actual_source_names": [
     "backend/budget_data.csv"
   ],
   "source_record_ids_present": true,
-  "source_observations": 18
+  "source_observation_count": 18,
+  "data_versions": [
+    "1.0.0"
+  ]
 }
 ```
 
@@ -212,16 +345,14 @@
 
 ```json
 {
-  "all_records_marked_synthetic": true,
+  "all_records_synthetic": true,
   "text_values_present": 0,
-  "text_pattern_screen": {
-    "email_like_strings": false,
-    "phone_like_strings": false
-  }
+  "email_like_matches": 0,
+  "phone_like_matches": 0
 }
 ```
 
-**Limitation:** This is a basic screening, not a guarantee that all sensitive information is absent.
+**Limitation:** Automated pattern screening is limited and does not guarantee that all sensitive information is absent.
 
 ## Reproducibility
 
@@ -232,12 +363,19 @@
 ```json
 {
   "profiling_script": "data-science/scripts/profile_canonical_data.py",
+  "quality_script": "data-science/scripts/assess_data_quality.py",
   "profile_output": "data-science/outputs/canonical_profile.json",
-  "source_dataset": "data/canonical/intelligence_data.csv"
+  "source_dataset": "data/canonical/intelligence_data.csv",
+  "full_pipeline_reproduction_verified": true,
+  "verification_method": "Two complete pipeline executions with JSON output comparison.",
+  "pipeline_runs_completed": 2,
+  "assessment_outputs_compared": 4,
+  "assessment_outputs_match": true,
+  "input_files_unchanged": true
 }
 ```
 
-**Limitation:** Reproducibility should be reconfirmed by rerunning the scripts in the documented order.
+**Limitation:** Verification confirms repeatable execution against the current local inputs. It does not establish real-world data accuracy.
 
 ## Blocking Failures
 
@@ -255,7 +393,7 @@ Accuracy cannot be independently verified because all observations are synthetic
 
 The safety assessment is a basic screening and does not guarantee that all sensitive information is absent.
 
-Reproducibility must be reconfirmed by rerunning the documented scripts in sequence.
+Reproducibility verification passed. Two complete pipeline executions produced matching assessment outputs, and the input files remained unchanged.
 
 ## Conclusion
 
