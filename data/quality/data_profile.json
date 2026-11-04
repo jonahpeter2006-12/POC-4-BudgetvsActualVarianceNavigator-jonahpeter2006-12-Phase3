@@ -37,5 +37,5 @@
     "The dataset covers three monthly reporting periods."
   ],
   "forecast_limitation": "Forecast values are supplied illustrative figures and are not evidence of statistically validated forecasting performance.",
-  "validation_status": "pending"
+  "validation_status": "passed"
 }

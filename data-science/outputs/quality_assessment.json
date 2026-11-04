@@ -1,0 +1,154 @@
+{
+  "assessment_version": "1.0.0",
+  "dataset": "data/canonical/intelligence_data.csv",
+  "data_version": "1.0.0",
+  "records_assessed": 72,
+  "dimensions": {
+    "structural_integrity": {
+      "status": "passed",
+      "evidence": {
+        "expected_columns": 20,
+        "actual_columns": 20,
+        "actual_records": 72
+      }
+    },
+    "completeness": {
+      "status": "passed",
+      "evidence": {
+        "required_fields": [
+          "record_id",
+          "record_type",
+          "observed_at",
+          "entity_id",
+          "entity_name",
+          "category",
+          "metric_name",
+          "metric_value",
+          "metric_unit",
+          "source_name",
+          "source_record_id",
+          "is_synthetic",
+          "data_version"
+        ],
+        "missing_required_values": {
+          "record_id": 0,
+          "record_type": 0,
+          "observed_at": 0,
+          "entity_id": 0,
+          "entity_name": 0,
+          "category": 0,
+          "metric_name": 0,
+          "metric_value": 0,
+          "metric_unit": 0,
+          "source_name": 0,
+          "source_record_id": 0,
+          "is_synthetic": 0,
+          "data_version": 0
+        },
+        "optional_blank_fields": [
+          "related_entity_id",
+          "subcategory",
+          "status",
+          "stage",
+          "text_value",
+          "latitude",
+          "longitude"
+        ]
+      },
+      "limitation": "Optional blank fields limit additional analyses but are not required-field failures."
+    },
+    "uniqueness": {
+      "status": "passed",
+      "evidence": {
+        "record_ids": 72,
+        "unique_record_ids": 72,
+        "duplicate_record_ids": 0
+      }
+    },
+    "validity": {
+      "status": "passed",
+      "evidence": {
+        "invalid_numeric_values": 0,
+        "invalid_dates": 0,
+        "non_usd_units": 0,
+        "invalid_metric_names": 0
+      }
+    },
+    "consistency": {
+      "status": "passed",
+      "evidence": {
+        "metric_distribution": {
+          "budget_amount": 18,
+          "actual_amount": 18,
+          "committed_amount": 18,
+          "forecast_amount": 18
+        },
+        "source_observation_count": 18,
+        "measurements_per_source": {
+          "4": 18
+        },
+        "duplicate_source_metric_pairs": 0,
+        "all_records_synthetic": true
+      }
+    },
+    "accuracy": {
+      "status": "not_verifiable",
+      "evidence": {
+        "synthetic_records": 72,
+        "independent_real_world_reference": false
+      },
+      "limitation": "Structural and numeric validity do not prove that financial amounts represent real-world financial accuracy."
+    },
+    "representativeness": {
+      "status": "conditional",
+      "evidence": {
+        "source_observations_retained": 18,
+        "canonical_measurements": 72,
+        "sampling_note": "All 18 supplied source observations were retained."
+      },
+      "limitation": "The supplied synthetic source does not establish representativeness of real organisations or financial activity."
+    },
+    "timeliness": {
+      "status": "conditional",
+      "evidence": {
+        "earliest_reporting_date": "2026-01-01T00:00:00+00:00",
+        "latest_reporting_date": "2026-03-01T00:00:00+00:00",
+        "reporting_periods": 3
+      },
+      "limitation": "Only January to March 2026 is available; no business freshness requirement was supplied."
+    },
+    "provenance": {
+      "status": "passed",
+      "evidence": {
+        "source_names": [
+          "backend/budget_data.csv"
+        ],
+        "source_record_ids_present": true,
+        "source_observations": 18
+      }
+    },
+    "safety": {
+      "status": "passed",
+      "evidence": {
+        "all_records_marked_synthetic": true,
+        "text_values_present": 0,
+        "text_pattern_screen": {
+          "email_like_strings": false,
+          "phone_like_strings": false
+        }
+      },
+      "limitation": "This is a basic screening, not a guarantee that all sensitive information is absent."
+    },
+    "reproducibility": {
+      "status": "passed",
+      "evidence": {
+        "profiling_script": "data-science/scripts/profile_canonical_data.py",
+        "profile_output": "data-science/outputs/canonical_profile.json",
+        "source_dataset": "data/canonical/intelligence_data.csv"
+      },
+      "limitation": "Reproducibility should be reconfirmed by rerunning the scripts in the documented order."
+    }
+  },
+  "blocking_failures": [],
+  "overall_status": "assessment_completed_with_limitations"
+}

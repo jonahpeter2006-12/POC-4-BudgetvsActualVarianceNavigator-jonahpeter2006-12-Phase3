@@ -1,32 +1,217 @@
 {
   "schema_version": "1.0.0",
   "dataset_name": "Budget vs Actual Variance Navigator - Canonical Intelligence Data",
-  "description": "Canonical financial metrics dataset standardized from the Phase 2 synthetic budget data.",
+  "description": "Canonical financial measurement dataset standardized from 18 synthetic source observations. Each source observation produces four metric rows; the 72 canonical rows are not 72 independent transactions. Forecast values are illustrative source figures, not validated model predictions.",
   "format": "CSV",
   "encoding": "UTF-8",
   "row_count": 72,
   "column_count": 20,
   "columns": [
-    {"name": "record_id", "type": "string", "required": true, "unique": true},
-    {"name": "record_type", "type": "string", "required": true},
-    {"name": "observed_at", "type": "string", "format": "ISO 8601 UTC", "required": true},
-    {"name": "entity_id", "type": "string", "required": true},
-    {"name": "related_entity_id", "type": "string", "required": false},
-    {"name": "entity_name", "type": "string", "required": true},
-    {"name": "category", "type": "string", "required": true},
-    {"name": "subcategory", "type": "string", "required": false},
-    {"name": "status", "type": "string", "required": false},
-    {"name": "stage", "type": "string", "required": false},
-    {"name": "metric_name", "type": "string", "required": true},
-    {"name": "metric_value", "type": "number", "required": true},
-    {"name": "metric_unit", "type": "string", "required": true},
-    {"name": "text_value", "type": "string", "required": false},
-    {"name": "latitude", "type": "number", "required": false},
-    {"name": "longitude", "type": "number", "required": false},
-    {"name": "source_name", "type": "string", "required": true},
-    {"name": "source_record_id", "type": "string", "required": true},
-    {"name": "is_synthetic", "type": "boolean", "required": true},
-    {"name": "data_version", "type": "string", "required": true}
+    {
+      "name": "record_id",
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "description": "Unique canonical record identifier generated from the source row and metric name.",
+      "origin": "generated",
+      "nullable": false
+    },
+    {
+      "name": "record_type",
+      "type": "string",
+      "required": true,
+      "description": "Classification of the canonical record. Constant value for financial metric observations.",
+      "origin": "constant",
+      "nullable": false,
+      "accepted_values": [
+        "financial_metric"
+      ]
+    },
+    {
+      "name": "observed_at",
+      "type": "string",
+      "format": "ISO 8601 UTC",
+      "required": true,
+      "description": "Reporting month from the source Month field, converted to the first day of the month in ISO 8601 UTC.",
+      "origin": "source-derived",
+      "nullable": false
+    },
+    {
+      "name": "entity_id",
+      "type": "string",
+      "required": true,
+      "description": "Cost-centre identifier copied from the source cost_centre field.",
+      "origin": "source-derived",
+      "nullable": false,
+      "accepted_values": [
+        "CC-101",
+        "CC-102",
+        "CC-201",
+        "CC-202",
+        "CC-301",
+        "CC-401"
+      ]
+    },
+    {
+      "name": "related_entity_id",
+      "type": "string",
+      "required": false,
+      "description": "Optional identifier linking this record to another entity. Not supplied by the source.",
+      "origin": "not-supplied",
+      "nullable": true
+    },
+    {
+      "name": "entity_name",
+      "type": "string",
+      "required": true,
+      "description": "Department name copied from the source department field.",
+      "origin": "source-derived",
+      "nullable": false,
+      "accepted_values": [
+        "Engineering",
+        "HR & Ops",
+        "Marketing",
+        "Sales"
+      ]
+    },
+    {
+      "name": "category",
+      "type": "string",
+      "required": true,
+      "description": "Account category copied from the source account_category field.",
+      "origin": "source-derived",
+      "nullable": false,
+      "accepted_values": [
+        "Cloud Infrastructure",
+        "Events & PR",
+        "Paid Ads & Campaigns",
+        "Recruitment & Onboarding",
+        "Software Licenses",
+        "Travel & Client Entertainment"
+      ]
+    },
+    {
+      "name": "subcategory",
+      "type": "string",
+      "required": false,
+      "description": "Optional subcategory. Not supplied by the source dataset.",
+      "origin": "not-supplied",
+      "nullable": true
+    },
+    {
+      "name": "status",
+      "type": "string",
+      "required": false,
+      "description": "Optional financial or workflow status. Not supplied by the source dataset.",
+      "origin": "not-supplied",
+      "nullable": true
+    },
+    {
+      "name": "stage",
+      "type": "string",
+      "required": false,
+      "description": "Optional process stage. Not supplied by the source dataset.",
+      "origin": "not-supplied",
+      "nullable": true
+    },
+    {
+      "name": "metric_name",
+      "type": "string",
+      "required": true,
+      "description": "Name of the financial measure represented by this canonical record; derived from a source amount column.",
+      "origin": "derived",
+      "nullable": false,
+      "accepted_values": [
+        "actual_amount",
+        "budget_amount",
+        "committed_amount",
+        "forecast_amount"
+      ]
+    },
+    {
+      "name": "metric_value",
+      "type": "number",
+      "required": true,
+      "description": "Numeric financial amount copied from the corresponding source amount column.",
+      "origin": "source-derived",
+      "nullable": false
+    },
+    {
+      "name": "metric_unit",
+      "type": "string",
+      "required": true,
+      "description": "Currency unit used for the financial metric. The canonical dataset uses USD.",
+      "origin": "constant",
+      "nullable": false,
+      "accepted_values": [
+        "USD"
+      ]
+    },
+    {
+      "name": "text_value",
+      "type": "string",
+      "required": false,
+      "description": "Optional descriptive text. No text observations are supplied in the source dataset.",
+      "origin": "not-supplied",
+      "nullable": true
+    },
+    {
+      "name": "latitude",
+      "type": "number",
+      "required": false,
+      "description": "Optional geographic latitude. No geographic coordinates are supplied in the source dataset.",
+      "origin": "not-supplied",
+      "nullable": true
+    },
+    {
+      "name": "longitude",
+      "type": "number",
+      "required": false,
+      "description": "Optional geographic longitude. No geographic coordinates are supplied in the source dataset.",
+      "origin": "not-supplied",
+      "nullable": true
+    },
+    {
+      "name": "source_name",
+      "type": "string",
+      "required": true,
+      "description": "Path identifying the original source file for provenance.",
+      "origin": "constant",
+      "nullable": false,
+      "accepted_values": [
+        "backend/budget_data.csv"
+      ]
+    },
+    {
+      "name": "source_record_id",
+      "type": "string",
+      "required": true,
+      "description": "Generated source-row identifier linking the four canonical measurements to their original source observation.",
+      "origin": "generated",
+      "nullable": false
+    },
+    {
+      "name": "is_synthetic",
+      "type": "boolean",
+      "required": true,
+      "description": "Boolean indicator identifying the dataset as synthetic rather than real operational data.",
+      "origin": "constant",
+      "nullable": false,
+      "accepted_values": [
+        true
+      ]
+    },
+    {
+      "name": "data_version",
+      "type": "string",
+      "required": true,
+      "description": "Version identifier assigned to the canonical dataset.",
+      "origin": "constant",
+      "nullable": false,
+      "accepted_values": [
+        "1.0.0"
+      ]
+    }
   ],
   "allowed_metric_names": [
     "budget_amount",
