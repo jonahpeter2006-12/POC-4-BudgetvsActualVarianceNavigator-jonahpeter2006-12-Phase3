@@ -1,9 +1,9 @@
 {
   "project": "POC-4 Budget vs Actual Variance Navigator",
-  "frontend_url": "http://localhost:3000",
-  "backend_url": "http://127.0.0.1:8000",
+  "frontend_url": "https://poc4-budget-frontend.onrender.com",
+  "backend_url": "https://poc4-budget-backend.onrender.com",
   "browser": "Google Chrome via Selenium WebDriver",
-  "executed_at_utc": "2026-11-03T04:25:45.254276+00:00",
+  "executed_at_utc": "2026-11-06T06:06:09.899760+00:00",
   "passed": 10,
   "failed": 0,
   "result": "PASS",
@@ -11,7 +11,7 @@
     {
       "test": "Live frontend availability",
       "status": "PASS",
-      "detail": "HTTP 200 at http://localhost:3000"
+      "detail": "HTTP 200 at https://poc4-budget-frontend.onrender.com"
     },
     {
       "test": "Page load",
@@ -31,7 +31,7 @@
     {
       "test": "Frontend/backend API handshake",
       "status": "PASS",
-      "detail": "health=200, summary=200, backend=http://127.0.0.1:8000"
+      "detail": "health=200, summary=200, backend=https://poc4-budget-backend.onrender.com"
     },
     {
       "test": "Filter interaction",
@@ -51,7 +51,7 @@
     {
       "test": "Responsive layout",
       "status": "PASS",
-      "detail": "{\"scrollWidth\": 487, \"width\": 487}"
+      "detail": "{\"scrollWidth\": 489, \"width\": 489}"
     },
     {
       "test": "Screenshot evidence",

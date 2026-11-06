@@ -1,0 +1,3256 @@
+{
+  "project_id": "poc-4-budget-vs-actual-variance-navigator",
+  "project_title": "Budget vs Actual Variance Navigator",
+  "approved_track": "Track A — Comparative Intelligence",
+  "contract_version": "1.0.0",
+  "dataset_version": "1.0.0",
+  "method_version": "1.0.0",
+  "generated_at": "2026-11-06T06:26:37Z",
+  "result_count": 64,
+  "results": [
+    {
+      "result_id": "track-a-cost_centre_comparison-20260101-cc-101",
+      "result_type": "cost_centre_comparison",
+      "record_id": null,
+      "entity_id": "CC-101",
+      "group_key": "CC-101",
+      "period_start": "2026-01-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 14500.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": 1,
+      "finding": "Cost Centre CC-101 recorded actual spending $149,500.00 against budget $135,000.00, a variance of $14,500.00 (above budget). The aggregate variance is 10.74%.",
+      "evidence": {
+        "budget_total": 135000.0,
+        "actual_total": 149500.0,
+        "variance_amount": 14500.0,
+        "variance_percentage": 10.74074074074074,
+        "committed_total": 6500.0,
+        "forecast_total": 154500.0,
+        "independent_source_count": 3,
+        "canonical_record_ids": [
+          "FIN-0001-ACTUAL_AMOUNT",
+          "FIN-0001-BUDGET_AMOUNT",
+          "FIN-0001-COMMITTED_AMOUNT",
+          "FIN-0001-FORECAST_AMOUNT",
+          "FIN-0002-ACTUAL_AMOUNT",
+          "FIN-0002-BUDGET_AMOUNT",
+          "FIN-0002-COMMITTED_AMOUNT",
+          "FIN-0002-FORECAST_AMOUNT",
+          "FIN-0003-ACTUAL_AMOUNT",
+          "FIN-0003-BUDGET_AMOUNT",
+          "FIN-0003-COMMITTED_AMOUNT",
+          "FIN-0003-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0001",
+          "SRC-0002",
+          "SRC-0003"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "validated_with_limitations",
+      "limitation": [
+        "All source observations are synthetic.",
+        "The dataset contains only 18 independent source observations.",
+        "Results describe the supplied period and do not establish population-level conclusions."
+      ]
+    },
+    {
+      "result_id": "track-a-cost_centre_comparison-20260101-cc-201",
+      "result_type": "cost_centre_comparison",
+      "record_id": null,
+      "entity_id": "CC-201",
+      "group_key": "CC-201",
+      "period_start": "2026-01-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 13000.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": 2,
+      "finding": "Cost Centre CC-201 recorded actual spending $198,000.00 against budget $185,000.00, a variance of $13,000.00 (above budget). The aggregate variance is 7.03%.",
+      "evidence": {
+        "budget_total": 185000.0,
+        "actual_total": 198000.0,
+        "variance_amount": 13000.0,
+        "variance_percentage": 7.027027027027027,
+        "committed_total": 17000.0,
+        "forecast_total": 207000.0,
+        "independent_source_count": 3,
+        "canonical_record_ids": [
+          "FIN-0007-ACTUAL_AMOUNT",
+          "FIN-0007-BUDGET_AMOUNT",
+          "FIN-0007-COMMITTED_AMOUNT",
+          "FIN-0007-FORECAST_AMOUNT",
+          "FIN-0008-ACTUAL_AMOUNT",
+          "FIN-0008-BUDGET_AMOUNT",
+          "FIN-0008-COMMITTED_AMOUNT",
+          "FIN-0008-FORECAST_AMOUNT",
+          "FIN-0009-ACTUAL_AMOUNT",
+          "FIN-0009-BUDGET_AMOUNT",
+          "FIN-0009-COMMITTED_AMOUNT",
+          "FIN-0009-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0007",
+          "SRC-0008",
+          "SRC-0009"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "validated_with_limitations",
+      "limitation": [
+        "All source observations are synthetic.",
+        "The dataset contains only 18 independent source observations.",
+        "Results describe the supplied period and do not establish population-level conclusions."
+      ]
+    },
+    {
+      "result_id": "track-a-cost_centre_comparison-20260101-cc-301",
+      "result_type": "cost_centre_comparison",
+      "record_id": null,
+      "entity_id": "CC-301",
+      "group_key": "CC-301",
+      "period_start": "2026-01-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 10500.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": 3,
+      "finding": "Cost Centre CC-301 recorded actual spending $88,500.00 against budget $78,000.00, a variance of $10,500.00 (above budget). The aggregate variance is 13.46%.",
+      "evidence": {
+        "budget_total": 78000.0,
+        "actual_total": 88500.0,
+        "variance_amount": 10500.0,
+        "variance_percentage": 13.461538461538462,
+        "committed_total": 6000.0,
+        "forecast_total": 91000.0,
+        "independent_source_count": 3,
+        "canonical_record_ids": [
+          "FIN-0013-ACTUAL_AMOUNT",
+          "FIN-0013-BUDGET_AMOUNT",
+          "FIN-0013-COMMITTED_AMOUNT",
+          "FIN-0013-FORECAST_AMOUNT",
+          "FIN-0014-ACTUAL_AMOUNT",
+          "FIN-0014-BUDGET_AMOUNT",
+          "FIN-0014-COMMITTED_AMOUNT",
+          "FIN-0014-FORECAST_AMOUNT",
+          "FIN-0015-ACTUAL_AMOUNT",
+          "FIN-0015-BUDGET_AMOUNT",
+          "FIN-0015-COMMITTED_AMOUNT",
+          "FIN-0015-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0013",
+          "SRC-0014",
+          "SRC-0015"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "validated_with_limitations",
+      "limitation": [
+        "All source observations are synthetic.",
+        "The dataset contains only 18 independent source observations.",
+        "Results describe the supplied period and do not establish population-level conclusions."
+      ]
+    },
+    {
+      "result_id": "track-a-cost_centre_comparison-20260101-cc-202",
+      "result_type": "cost_centre_comparison",
+      "record_id": null,
+      "entity_id": "CC-202",
+      "group_key": "CC-202",
+      "period_start": "2026-01-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": -5000.0,
+      "result_unit": "USD",
+      "result_category": "underspend",
+      "priority_rank": 4,
+      "finding": "Cost Centre CC-202 recorded actual spending $90,000.00 against budget $95,000.00, a variance of $-5,000.00 (below budget). The aggregate variance is -5.26%.",
+      "evidence": {
+        "budget_total": 95000.0,
+        "actual_total": 90000.0,
+        "variance_amount": -5000.0,
+        "variance_percentage": -5.263157894736842,
+        "committed_total": 6000.0,
+        "forecast_total": 97000.0,
+        "independent_source_count": 3,
+        "canonical_record_ids": [
+          "FIN-0010-ACTUAL_AMOUNT",
+          "FIN-0010-BUDGET_AMOUNT",
+          "FIN-0010-COMMITTED_AMOUNT",
+          "FIN-0010-FORECAST_AMOUNT",
+          "FIN-0011-ACTUAL_AMOUNT",
+          "FIN-0011-BUDGET_AMOUNT",
+          "FIN-0011-COMMITTED_AMOUNT",
+          "FIN-0011-FORECAST_AMOUNT",
+          "FIN-0012-ACTUAL_AMOUNT",
+          "FIN-0012-BUDGET_AMOUNT",
+          "FIN-0012-COMMITTED_AMOUNT",
+          "FIN-0012-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0010",
+          "SRC-0011",
+          "SRC-0012"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "validated_with_limitations",
+      "limitation": [
+        "All source observations are synthetic.",
+        "The dataset contains only 18 independent source observations.",
+        "Results describe the supplied period and do not establish population-level conclusions."
+      ]
+    },
+    {
+      "result_id": "track-a-cost_centre_comparison-20260101-cc-102",
+      "result_type": "cost_centre_comparison",
+      "record_id": null,
+      "entity_id": "CC-102",
+      "group_key": "CC-102",
+      "period_start": "2026-01-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": -1500.0,
+      "result_unit": "USD",
+      "result_category": "underspend",
+      "priority_rank": 5,
+      "finding": "Cost Centre CC-102 recorded actual spending $58,500.00 against budget $60,000.00, a variance of $-1,500.00 (below budget). The aggregate variance is -2.50%.",
+      "evidence": {
+        "budget_total": 60000.0,
+        "actual_total": 58500.0,
+        "variance_amount": -1500.0,
+        "variance_percentage": -2.5,
+        "committed_total": 2500.0,
+        "forecast_total": 60000.0,
+        "independent_source_count": 3,
+        "canonical_record_ids": [
+          "FIN-0004-ACTUAL_AMOUNT",
+          "FIN-0004-BUDGET_AMOUNT",
+          "FIN-0004-COMMITTED_AMOUNT",
+          "FIN-0004-FORECAST_AMOUNT",
+          "FIN-0005-ACTUAL_AMOUNT",
+          "FIN-0005-BUDGET_AMOUNT",
+          "FIN-0005-COMMITTED_AMOUNT",
+          "FIN-0005-FORECAST_AMOUNT",
+          "FIN-0006-ACTUAL_AMOUNT",
+          "FIN-0006-BUDGET_AMOUNT",
+          "FIN-0006-COMMITTED_AMOUNT",
+          "FIN-0006-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0004",
+          "SRC-0005",
+          "SRC-0006"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "validated_with_limitations",
+      "limitation": [
+        "All source observations are synthetic.",
+        "The dataset contains only 18 independent source observations.",
+        "Results describe the supplied period and do not establish population-level conclusions."
+      ]
+    },
+    {
+      "result_id": "track-a-cost_centre_comparison-20260101-cc-401",
+      "result_type": "cost_centre_comparison",
+      "record_id": null,
+      "entity_id": "CC-401",
+      "group_key": "CC-401",
+      "period_start": "2026-01-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 500.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": 6,
+      "finding": "Cost Centre CC-401 recorded actual spending $48,500.00 against budget $48,000.00, a variance of $500.00 (above budget). The aggregate variance is 1.04%.",
+      "evidence": {
+        "budget_total": 48000.0,
+        "actual_total": 48500.0,
+        "variance_amount": 500.0,
+        "variance_percentage": 1.0416666666666665,
+        "committed_total": 4500.0,
+        "forecast_total": 51000.0,
+        "independent_source_count": 3,
+        "canonical_record_ids": [
+          "FIN-0016-ACTUAL_AMOUNT",
+          "FIN-0016-BUDGET_AMOUNT",
+          "FIN-0016-COMMITTED_AMOUNT",
+          "FIN-0016-FORECAST_AMOUNT",
+          "FIN-0017-ACTUAL_AMOUNT",
+          "FIN-0017-BUDGET_AMOUNT",
+          "FIN-0017-COMMITTED_AMOUNT",
+          "FIN-0017-FORECAST_AMOUNT",
+          "FIN-0018-ACTUAL_AMOUNT",
+          "FIN-0018-BUDGET_AMOUNT",
+          "FIN-0018-COMMITTED_AMOUNT",
+          "FIN-0018-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0016",
+          "SRC-0017",
+          "SRC-0018"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "validated_with_limitations",
+      "limitation": [
+        "All source observations are synthetic.",
+        "The dataset contains only 18 independent source observations.",
+        "Results describe the supplied period and do not establish population-level conclusions."
+      ]
+    },
+    {
+      "result_id": "track-a-department_comparison-20260101-engineering",
+      "result_type": "department_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Engineering",
+      "period_start": "2026-01-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 13000.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": 1,
+      "finding": "Department Engineering recorded actual spending $208,000.00 against budget $195,000.00, a variance of $13,000.00 (above budget). The aggregate variance is 6.67%.",
+      "evidence": {
+        "budget_total": 195000.0,
+        "actual_total": 208000.0,
+        "variance_amount": 13000.0,
+        "variance_percentage": 6.666666666666667,
+        "committed_total": 9000.0,
+        "forecast_total": 214500.0,
+        "independent_source_count": 6,
+        "canonical_record_ids": [
+          "FIN-0001-ACTUAL_AMOUNT",
+          "FIN-0001-BUDGET_AMOUNT",
+          "FIN-0001-COMMITTED_AMOUNT",
+          "FIN-0001-FORECAST_AMOUNT",
+          "FIN-0002-ACTUAL_AMOUNT",
+          "FIN-0002-BUDGET_AMOUNT",
+          "FIN-0002-COMMITTED_AMOUNT",
+          "FIN-0002-FORECAST_AMOUNT",
+          "FIN-0003-ACTUAL_AMOUNT",
+          "FIN-0003-BUDGET_AMOUNT",
+          "FIN-0003-COMMITTED_AMOUNT",
+          "FIN-0003-FORECAST_AMOUNT",
+          "FIN-0004-ACTUAL_AMOUNT",
+          "FIN-0004-BUDGET_AMOUNT",
+          "FIN-0004-COMMITTED_AMOUNT",
+          "FIN-0004-FORECAST_AMOUNT",
+          "FIN-0005-ACTUAL_AMOUNT",
+          "FIN-0005-BUDGET_AMOUNT",
+          "FIN-0005-COMMITTED_AMOUNT",
+          "FIN-0005-FORECAST_AMOUNT",
+          "FIN-0006-ACTUAL_AMOUNT",
+          "FIN-0006-BUDGET_AMOUNT",
+          "FIN-0006-COMMITTED_AMOUNT",
+          "FIN-0006-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0001",
+          "SRC-0002",
+          "SRC-0003",
+          "SRC-0004",
+          "SRC-0005",
+          "SRC-0006"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "validated_with_limitations",
+      "limitation": [
+        "All source observations are synthetic.",
+        "The dataset contains only 18 independent source observations.",
+        "Results describe the supplied period and do not establish population-level conclusions."
+      ]
+    },
+    {
+      "result_id": "track-a-department_comparison-20260101-sales",
+      "result_type": "department_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Sales",
+      "period_start": "2026-01-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 10500.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": 2,
+      "finding": "Department Sales recorded actual spending $88,500.00 against budget $78,000.00, a variance of $10,500.00 (above budget). The aggregate variance is 13.46%.",
+      "evidence": {
+        "budget_total": 78000.0,
+        "actual_total": 88500.0,
+        "variance_amount": 10500.0,
+        "variance_percentage": 13.461538461538462,
+        "committed_total": 6000.0,
+        "forecast_total": 91000.0,
+        "independent_source_count": 3,
+        "canonical_record_ids": [
+          "FIN-0013-ACTUAL_AMOUNT",
+          "FIN-0013-BUDGET_AMOUNT",
+          "FIN-0013-COMMITTED_AMOUNT",
+          "FIN-0013-FORECAST_AMOUNT",
+          "FIN-0014-ACTUAL_AMOUNT",
+          "FIN-0014-BUDGET_AMOUNT",
+          "FIN-0014-COMMITTED_AMOUNT",
+          "FIN-0014-FORECAST_AMOUNT",
+          "FIN-0015-ACTUAL_AMOUNT",
+          "FIN-0015-BUDGET_AMOUNT",
+          "FIN-0015-COMMITTED_AMOUNT",
+          "FIN-0015-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0013",
+          "SRC-0014",
+          "SRC-0015"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "validated_with_limitations",
+      "limitation": [
+        "All source observations are synthetic.",
+        "The dataset contains only 18 independent source observations.",
+        "Results describe the supplied period and do not establish population-level conclusions."
+      ]
+    },
+    {
+      "result_id": "track-a-department_comparison-20260101-marketing",
+      "result_type": "department_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Marketing",
+      "period_start": "2026-01-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 8000.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": 3,
+      "finding": "Department Marketing recorded actual spending $288,000.00 against budget $280,000.00, a variance of $8,000.00 (above budget). The aggregate variance is 2.86%.",
+      "evidence": {
+        "budget_total": 280000.0,
+        "actual_total": 288000.0,
+        "variance_amount": 8000.0,
+        "variance_percentage": 2.857142857142857,
+        "committed_total": 23000.0,
+        "forecast_total": 304000.0,
+        "independent_source_count": 6,
+        "canonical_record_ids": [
+          "FIN-0007-ACTUAL_AMOUNT",
+          "FIN-0007-BUDGET_AMOUNT",
+          "FIN-0007-COMMITTED_AMOUNT",
+          "FIN-0007-FORECAST_AMOUNT",
+          "FIN-0008-ACTUAL_AMOUNT",
+          "FIN-0008-BUDGET_AMOUNT",
+          "FIN-0008-COMMITTED_AMOUNT",
+          "FIN-0008-FORECAST_AMOUNT",
+          "FIN-0009-ACTUAL_AMOUNT",
+          "FIN-0009-BUDGET_AMOUNT",
+          "FIN-0009-COMMITTED_AMOUNT",
+          "FIN-0009-FORECAST_AMOUNT",
+          "FIN-0010-ACTUAL_AMOUNT",
+          "FIN-0010-BUDGET_AMOUNT",
+          "FIN-0010-COMMITTED_AMOUNT",
+          "FIN-0010-FORECAST_AMOUNT",
+          "FIN-0011-ACTUAL_AMOUNT",
+          "FIN-0011-BUDGET_AMOUNT",
+          "FIN-0011-COMMITTED_AMOUNT",
+          "FIN-0011-FORECAST_AMOUNT",
+          "FIN-0012-ACTUAL_AMOUNT",
+          "FIN-0012-BUDGET_AMOUNT",
+          "FIN-0012-COMMITTED_AMOUNT",
+          "FIN-0012-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0007",
+          "SRC-0008",
+          "SRC-0009",
+          "SRC-0010",
+          "SRC-0011",
+          "SRC-0012"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "validated_with_limitations",
+      "limitation": [
+        "All source observations are synthetic.",
+        "The dataset contains only 18 independent source observations.",
+        "Results describe the supplied period and do not establish population-level conclusions."
+      ]
+    },
+    {
+      "result_id": "track-a-department_comparison-20260101-hr_and_ops",
+      "result_type": "department_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "HR & Ops",
+      "period_start": "2026-01-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 500.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": 4,
+      "finding": "Department HR & Ops recorded actual spending $48,500.00 against budget $48,000.00, a variance of $500.00 (above budget). The aggregate variance is 1.04%.",
+      "evidence": {
+        "budget_total": 48000.0,
+        "actual_total": 48500.0,
+        "variance_amount": 500.0,
+        "variance_percentage": 1.0416666666666665,
+        "committed_total": 4500.0,
+        "forecast_total": 51000.0,
+        "independent_source_count": 3,
+        "canonical_record_ids": [
+          "FIN-0016-ACTUAL_AMOUNT",
+          "FIN-0016-BUDGET_AMOUNT",
+          "FIN-0016-COMMITTED_AMOUNT",
+          "FIN-0016-FORECAST_AMOUNT",
+          "FIN-0017-ACTUAL_AMOUNT",
+          "FIN-0017-BUDGET_AMOUNT",
+          "FIN-0017-COMMITTED_AMOUNT",
+          "FIN-0017-FORECAST_AMOUNT",
+          "FIN-0018-ACTUAL_AMOUNT",
+          "FIN-0018-BUDGET_AMOUNT",
+          "FIN-0018-COMMITTED_AMOUNT",
+          "FIN-0018-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0016",
+          "SRC-0017",
+          "SRC-0018"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "validated_with_limitations",
+      "limitation": [
+        "All source observations are synthetic.",
+        "The dataset contains only 18 independent source observations.",
+        "Results describe the supplied period and do not establish population-level conclusions."
+      ]
+    },
+    {
+      "result_id": "track-a-expenditure_category_comparison-20260101-cloud_infrastructure",
+      "result_type": "expenditure_category_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Cloud Infrastructure",
+      "period_start": "2026-01-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 14500.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": 1,
+      "finding": "Expenditure Category Cloud Infrastructure recorded actual spending $149,500.00 against budget $135,000.00, a variance of $14,500.00 (above budget). The aggregate variance is 10.74%.",
+      "evidence": {
+        "budget_total": 135000.0,
+        "actual_total": 149500.0,
+        "variance_amount": 14500.0,
+        "variance_percentage": 10.74074074074074,
+        "committed_total": 6500.0,
+        "forecast_total": 154500.0,
+        "independent_source_count": 3,
+        "canonical_record_ids": [
+          "FIN-0001-ACTUAL_AMOUNT",
+          "FIN-0001-BUDGET_AMOUNT",
+          "FIN-0001-COMMITTED_AMOUNT",
+          "FIN-0001-FORECAST_AMOUNT",
+          "FIN-0002-ACTUAL_AMOUNT",
+          "FIN-0002-BUDGET_AMOUNT",
+          "FIN-0002-COMMITTED_AMOUNT",
+          "FIN-0002-FORECAST_AMOUNT",
+          "FIN-0003-ACTUAL_AMOUNT",
+          "FIN-0003-BUDGET_AMOUNT",
+          "FIN-0003-COMMITTED_AMOUNT",
+          "FIN-0003-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0001",
+          "SRC-0002",
+          "SRC-0003"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "validated_with_limitations",
+      "limitation": [
+        "All source observations are synthetic.",
+        "The dataset contains only 18 independent source observations.",
+        "Results describe the supplied period and do not establish population-level conclusions."
+      ]
+    },
+    {
+      "result_id": "track-a-expenditure_category_comparison-20260101-paid_ads_and_campaigns",
+      "result_type": "expenditure_category_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Paid Ads & Campaigns",
+      "period_start": "2026-01-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 13000.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": 2,
+      "finding": "Expenditure Category Paid Ads & Campaigns recorded actual spending $198,000.00 against budget $185,000.00, a variance of $13,000.00 (above budget). The aggregate variance is 7.03%.",
+      "evidence": {
+        "budget_total": 185000.0,
+        "actual_total": 198000.0,
+        "variance_amount": 13000.0,
+        "variance_percentage": 7.027027027027027,
+        "committed_total": 17000.0,
+        "forecast_total": 207000.0,
+        "independent_source_count": 3,
+        "canonical_record_ids": [
+          "FIN-0007-ACTUAL_AMOUNT",
+          "FIN-0007-BUDGET_AMOUNT",
+          "FIN-0007-COMMITTED_AMOUNT",
+          "FIN-0007-FORECAST_AMOUNT",
+          "FIN-0008-ACTUAL_AMOUNT",
+          "FIN-0008-BUDGET_AMOUNT",
+          "FIN-0008-COMMITTED_AMOUNT",
+          "FIN-0008-FORECAST_AMOUNT",
+          "FIN-0009-ACTUAL_AMOUNT",
+          "FIN-0009-BUDGET_AMOUNT",
+          "FIN-0009-COMMITTED_AMOUNT",
+          "FIN-0009-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0007",
+          "SRC-0008",
+          "SRC-0009"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "validated_with_limitations",
+      "limitation": [
+        "All source observations are synthetic.",
+        "The dataset contains only 18 independent source observations.",
+        "Results describe the supplied period and do not establish population-level conclusions."
+      ]
+    },
+    {
+      "result_id": "track-a-expenditure_category_comparison-20260101-travel_and_client_entertainment",
+      "result_type": "expenditure_category_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Travel & Client Entertainment",
+      "period_start": "2026-01-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 10500.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": 3,
+      "finding": "Expenditure Category Travel & Client Entertainment recorded actual spending $88,500.00 against budget $78,000.00, a variance of $10,500.00 (above budget). The aggregate variance is 13.46%.",
+      "evidence": {
+        "budget_total": 78000.0,
+        "actual_total": 88500.0,
+        "variance_amount": 10500.0,
+        "variance_percentage": 13.461538461538462,
+        "committed_total": 6000.0,
+        "forecast_total": 91000.0,
+        "independent_source_count": 3,
+        "canonical_record_ids": [
+          "FIN-0013-ACTUAL_AMOUNT",
+          "FIN-0013-BUDGET_AMOUNT",
+          "FIN-0013-COMMITTED_AMOUNT",
+          "FIN-0013-FORECAST_AMOUNT",
+          "FIN-0014-ACTUAL_AMOUNT",
+          "FIN-0014-BUDGET_AMOUNT",
+          "FIN-0014-COMMITTED_AMOUNT",
+          "FIN-0014-FORECAST_AMOUNT",
+          "FIN-0015-ACTUAL_AMOUNT",
+          "FIN-0015-BUDGET_AMOUNT",
+          "FIN-0015-COMMITTED_AMOUNT",
+          "FIN-0015-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0013",
+          "SRC-0014",
+          "SRC-0015"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "validated_with_limitations",
+      "limitation": [
+        "All source observations are synthetic.",
+        "The dataset contains only 18 independent source observations.",
+        "Results describe the supplied period and do not establish population-level conclusions."
+      ]
+    },
+    {
+      "result_id": "track-a-expenditure_category_comparison-20260101-events_and_pr",
+      "result_type": "expenditure_category_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Events & PR",
+      "period_start": "2026-01-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": -5000.0,
+      "result_unit": "USD",
+      "result_category": "underspend",
+      "priority_rank": 4,
+      "finding": "Expenditure Category Events & PR recorded actual spending $90,000.00 against budget $95,000.00, a variance of $-5,000.00 (below budget). The aggregate variance is -5.26%.",
+      "evidence": {
+        "budget_total": 95000.0,
+        "actual_total": 90000.0,
+        "variance_amount": -5000.0,
+        "variance_percentage": -5.263157894736842,
+        "committed_total": 6000.0,
+        "forecast_total": 97000.0,
+        "independent_source_count": 3,
+        "canonical_record_ids": [
+          "FIN-0010-ACTUAL_AMOUNT",
+          "FIN-0010-BUDGET_AMOUNT",
+          "FIN-0010-COMMITTED_AMOUNT",
+          "FIN-0010-FORECAST_AMOUNT",
+          "FIN-0011-ACTUAL_AMOUNT",
+          "FIN-0011-BUDGET_AMOUNT",
+          "FIN-0011-COMMITTED_AMOUNT",
+          "FIN-0011-FORECAST_AMOUNT",
+          "FIN-0012-ACTUAL_AMOUNT",
+          "FIN-0012-BUDGET_AMOUNT",
+          "FIN-0012-COMMITTED_AMOUNT",
+          "FIN-0012-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0010",
+          "SRC-0011",
+          "SRC-0012"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "validated_with_limitations",
+      "limitation": [
+        "All source observations are synthetic.",
+        "The dataset contains only 18 independent source observations.",
+        "Results describe the supplied period and do not establish population-level conclusions."
+      ]
+    },
+    {
+      "result_id": "track-a-expenditure_category_comparison-20260101-software_licenses",
+      "result_type": "expenditure_category_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Software Licenses",
+      "period_start": "2026-01-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": -1500.0,
+      "result_unit": "USD",
+      "result_category": "underspend",
+      "priority_rank": 5,
+      "finding": "Expenditure Category Software Licenses recorded actual spending $58,500.00 against budget $60,000.00, a variance of $-1,500.00 (below budget). The aggregate variance is -2.50%.",
+      "evidence": {
+        "budget_total": 60000.0,
+        "actual_total": 58500.0,
+        "variance_amount": -1500.0,
+        "variance_percentage": -2.5,
+        "committed_total": 2500.0,
+        "forecast_total": 60000.0,
+        "independent_source_count": 3,
+        "canonical_record_ids": [
+          "FIN-0004-ACTUAL_AMOUNT",
+          "FIN-0004-BUDGET_AMOUNT",
+          "FIN-0004-COMMITTED_AMOUNT",
+          "FIN-0004-FORECAST_AMOUNT",
+          "FIN-0005-ACTUAL_AMOUNT",
+          "FIN-0005-BUDGET_AMOUNT",
+          "FIN-0005-COMMITTED_AMOUNT",
+          "FIN-0005-FORECAST_AMOUNT",
+          "FIN-0006-ACTUAL_AMOUNT",
+          "FIN-0006-BUDGET_AMOUNT",
+          "FIN-0006-COMMITTED_AMOUNT",
+          "FIN-0006-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0004",
+          "SRC-0005",
+          "SRC-0006"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "validated_with_limitations",
+      "limitation": [
+        "All source observations are synthetic.",
+        "The dataset contains only 18 independent source observations.",
+        "Results describe the supplied period and do not establish population-level conclusions."
+      ]
+    },
+    {
+      "result_id": "track-a-expenditure_category_comparison-20260101-recruitment_and_onboarding",
+      "result_type": "expenditure_category_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Recruitment & Onboarding",
+      "period_start": "2026-01-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 500.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": 6,
+      "finding": "Expenditure Category Recruitment & Onboarding recorded actual spending $48,500.00 against budget $48,000.00, a variance of $500.00 (above budget). The aggregate variance is 1.04%.",
+      "evidence": {
+        "budget_total": 48000.0,
+        "actual_total": 48500.0,
+        "variance_amount": 500.0,
+        "variance_percentage": 1.0416666666666665,
+        "committed_total": 4500.0,
+        "forecast_total": 51000.0,
+        "independent_source_count": 3,
+        "canonical_record_ids": [
+          "FIN-0016-ACTUAL_AMOUNT",
+          "FIN-0016-BUDGET_AMOUNT",
+          "FIN-0016-COMMITTED_AMOUNT",
+          "FIN-0016-FORECAST_AMOUNT",
+          "FIN-0017-ACTUAL_AMOUNT",
+          "FIN-0017-BUDGET_AMOUNT",
+          "FIN-0017-COMMITTED_AMOUNT",
+          "FIN-0017-FORECAST_AMOUNT",
+          "FIN-0018-ACTUAL_AMOUNT",
+          "FIN-0018-BUDGET_AMOUNT",
+          "FIN-0018-COMMITTED_AMOUNT",
+          "FIN-0018-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0016",
+          "SRC-0017",
+          "SRC-0018"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "validated_with_limitations",
+      "limitation": [
+        "All source observations are synthetic.",
+        "The dataset contains only 18 independent source observations.",
+        "Results describe the supplied period and do not establish population-level conclusions."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260101-cc-101",
+      "result_type": "monthly_cost_centre_comparison",
+      "record_id": null,
+      "entity_id": "CC-101",
+      "group_key": "CC-101",
+      "period_start": "2026-01-01",
+      "period_end": "2026-01-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 3000.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Cost Centre CC-101 recorded actual spending $48,000.00 against budget $45,000.00, a variance of $3,000.00 (above budget). The aggregate variance is 6.67%.",
+      "evidence": {
+        "budget_total": 45000.0,
+        "actual_total": 48000.0,
+        "variance_amount": 3000.0,
+        "variance_percentage": 6.666666666666667,
+        "committed_total": 2000.0,
+        "forecast_total": 50000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0001-ACTUAL_AMOUNT",
+          "FIN-0001-BUDGET_AMOUNT",
+          "FIN-0001-COMMITTED_AMOUNT",
+          "FIN-0001-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0001"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-01-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260101-cc-102",
+      "result_type": "monthly_cost_centre_comparison",
+      "record_id": null,
+      "entity_id": "CC-102",
+      "group_key": "CC-102",
+      "period_start": "2026-01-01",
+      "period_end": "2026-01-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": -1500.0,
+      "result_unit": "USD",
+      "result_category": "underspend",
+      "priority_rank": null,
+      "finding": "Cost Centre CC-102 recorded actual spending $18,500.00 against budget $20,000.00, a variance of $-1,500.00 (below budget). The aggregate variance is -7.50%.",
+      "evidence": {
+        "budget_total": 20000.0,
+        "actual_total": 18500.0,
+        "variance_amount": -1500.0,
+        "variance_percentage": -7.5,
+        "committed_total": 1000.0,
+        "forecast_total": 19000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0004-ACTUAL_AMOUNT",
+          "FIN-0004-BUDGET_AMOUNT",
+          "FIN-0004-COMMITTED_AMOUNT",
+          "FIN-0004-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0004"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-01-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260101-cc-201",
+      "result_type": "monthly_cost_centre_comparison",
+      "record_id": null,
+      "entity_id": "CC-201",
+      "group_key": "CC-201",
+      "period_start": "2026-01-01",
+      "period_end": "2026-01-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 8000.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Cost Centre CC-201 recorded actual spending $68,000.00 against budget $60,000.00, a variance of $8,000.00 (above budget). The aggregate variance is 13.33%.",
+      "evidence": {
+        "budget_total": 60000.0,
+        "actual_total": 68000.0,
+        "variance_amount": 8000.0,
+        "variance_percentage": 13.333333333333334,
+        "committed_total": 5000.0,
+        "forecast_total": 70000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0007-ACTUAL_AMOUNT",
+          "FIN-0007-BUDGET_AMOUNT",
+          "FIN-0007-COMMITTED_AMOUNT",
+          "FIN-0007-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0007"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-01-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260101-cc-202",
+      "result_type": "monthly_cost_centre_comparison",
+      "record_id": null,
+      "entity_id": "CC-202",
+      "group_key": "CC-202",
+      "period_start": "2026-01-01",
+      "period_end": "2026-01-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": -5000.0,
+      "result_unit": "USD",
+      "result_category": "underspend",
+      "priority_rank": null,
+      "finding": "Cost Centre CC-202 recorded actual spending $25,000.00 against budget $30,000.00, a variance of $-5,000.00 (below budget). The aggregate variance is -16.67%.",
+      "evidence": {
+        "budget_total": 30000.0,
+        "actual_total": 25000.0,
+        "variance_amount": -5000.0,
+        "variance_percentage": -16.666666666666664,
+        "committed_total": 2000.0,
+        "forecast_total": 28000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0010-ACTUAL_AMOUNT",
+          "FIN-0010-BUDGET_AMOUNT",
+          "FIN-0010-COMMITTED_AMOUNT",
+          "FIN-0010-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0010"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-01-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260101-cc-301",
+      "result_type": "monthly_cost_centre_comparison",
+      "record_id": null,
+      "entity_id": "CC-301",
+      "group_key": "CC-301",
+      "period_start": "2026-01-01",
+      "period_end": "2026-01-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 4000.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Cost Centre CC-301 recorded actual spending $29,000.00 against budget $25,000.00, a variance of $4,000.00 (above budget). The aggregate variance is 16.00%.",
+      "evidence": {
+        "budget_total": 25000.0,
+        "actual_total": 29000.0,
+        "variance_amount": 4000.0,
+        "variance_percentage": 16.0,
+        "committed_total": 1500.0,
+        "forecast_total": 30000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0013-ACTUAL_AMOUNT",
+          "FIN-0013-BUDGET_AMOUNT",
+          "FIN-0013-COMMITTED_AMOUNT",
+          "FIN-0013-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0013"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-01-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260101-cc-401",
+      "result_type": "monthly_cost_centre_comparison",
+      "record_id": null,
+      "entity_id": "CC-401",
+      "group_key": "CC-401",
+      "period_start": "2026-01-01",
+      "period_end": "2026-01-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": -3000.0,
+      "result_unit": "USD",
+      "result_category": "underspend",
+      "priority_rank": null,
+      "finding": "Cost Centre CC-401 recorded actual spending $12,000.00 against budget $15,000.00, a variance of $-3,000.00 (below budget). The aggregate variance is -20.00%.",
+      "evidence": {
+        "budget_total": 15000.0,
+        "actual_total": 12000.0,
+        "variance_amount": -3000.0,
+        "variance_percentage": -20.0,
+        "committed_total": 500.0,
+        "forecast_total": 13000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0016-ACTUAL_AMOUNT",
+          "FIN-0016-BUDGET_AMOUNT",
+          "FIN-0016-COMMITTED_AMOUNT",
+          "FIN-0016-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0016"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-01-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260201-cc-101",
+      "result_type": "monthly_cost_centre_comparison",
+      "record_id": null,
+      "entity_id": "CC-101",
+      "group_key": "CC-101",
+      "period_start": "2026-02-01",
+      "period_end": "2026-02-28",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 4500.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Cost Centre CC-101 recorded actual spending $49,500.00 against budget $45,000.00, a variance of $4,500.00 (above budget). The aggregate variance is 10.00%.",
+      "evidence": {
+        "budget_total": 45000.0,
+        "actual_total": 49500.0,
+        "variance_amount": 4500.0,
+        "variance_percentage": 10.0,
+        "committed_total": 1500.0,
+        "forecast_total": 51000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0002-ACTUAL_AMOUNT",
+          "FIN-0002-BUDGET_AMOUNT",
+          "FIN-0002-COMMITTED_AMOUNT",
+          "FIN-0002-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0002"
+        ],
+        "reporting_period": {
+          "period_start": "2026-02-01",
+          "period_end": "2026-02-28"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260201-cc-102",
+      "result_type": "monthly_cost_centre_comparison",
+      "record_id": null,
+      "entity_id": "CC-102",
+      "group_key": "CC-102",
+      "period_start": "2026-02-01",
+      "period_end": "2026-02-28",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": -1000.0,
+      "result_unit": "USD",
+      "result_category": "underspend",
+      "priority_rank": null,
+      "finding": "Cost Centre CC-102 recorded actual spending $19,000.00 against budget $20,000.00, a variance of $-1,000.00 (below budget). The aggregate variance is -5.00%.",
+      "evidence": {
+        "budget_total": 20000.0,
+        "actual_total": 19000.0,
+        "variance_amount": -1000.0,
+        "variance_percentage": -5.0,
+        "committed_total": 1000.0,
+        "forecast_total": 19500.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0005-ACTUAL_AMOUNT",
+          "FIN-0005-BUDGET_AMOUNT",
+          "FIN-0005-COMMITTED_AMOUNT",
+          "FIN-0005-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0005"
+        ],
+        "reporting_period": {
+          "period_start": "2026-02-01",
+          "period_end": "2026-02-28"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260201-cc-201",
+      "result_type": "monthly_cost_centre_comparison",
+      "record_id": null,
+      "entity_id": "CC-201",
+      "group_key": "CC-201",
+      "period_start": "2026-02-01",
+      "period_end": "2026-02-28",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": -2000.0,
+      "result_unit": "USD",
+      "result_category": "underspend",
+      "priority_rank": null,
+      "finding": "Cost Centre CC-201 recorded actual spending $58,000.00 against budget $60,000.00, a variance of $-2,000.00 (below budget). The aggregate variance is -3.33%.",
+      "evidence": {
+        "budget_total": 60000.0,
+        "actual_total": 58000.0,
+        "variance_amount": -2000.0,
+        "variance_percentage": -3.3333333333333335,
+        "committed_total": 4000.0,
+        "forecast_total": 62000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0008-ACTUAL_AMOUNT",
+          "FIN-0008-BUDGET_AMOUNT",
+          "FIN-0008-COMMITTED_AMOUNT",
+          "FIN-0008-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0008"
+        ],
+        "reporting_period": {
+          "period_start": "2026-02-01",
+          "period_end": "2026-02-28"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260201-cc-202",
+      "result_type": "monthly_cost_centre_comparison",
+      "record_id": null,
+      "entity_id": "CC-202",
+      "group_key": "CC-202",
+      "period_start": "2026-02-01",
+      "period_end": "2026-02-28",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 4000.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Cost Centre CC-202 recorded actual spending $34,000.00 against budget $30,000.00, a variance of $4,000.00 (above budget). The aggregate variance is 13.33%.",
+      "evidence": {
+        "budget_total": 30000.0,
+        "actual_total": 34000.0,
+        "variance_amount": 4000.0,
+        "variance_percentage": 13.333333333333334,
+        "committed_total": 1000.0,
+        "forecast_total": 35000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0011-ACTUAL_AMOUNT",
+          "FIN-0011-BUDGET_AMOUNT",
+          "FIN-0011-COMMITTED_AMOUNT",
+          "FIN-0011-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0011"
+        ],
+        "reporting_period": {
+          "period_start": "2026-02-01",
+          "period_end": "2026-02-28"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260201-cc-301",
+      "result_type": "monthly_cost_centre_comparison",
+      "record_id": null,
+      "entity_id": "CC-301",
+      "group_key": "CC-301",
+      "period_start": "2026-02-01",
+      "period_end": "2026-02-28",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 2500.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Cost Centre CC-301 recorded actual spending $27,500.00 against budget $25,000.00, a variance of $2,500.00 (above budget). The aggregate variance is 10.00%.",
+      "evidence": {
+        "budget_total": 25000.0,
+        "actual_total": 27500.0,
+        "variance_amount": 2500.0,
+        "variance_percentage": 10.0,
+        "committed_total": 2000.0,
+        "forecast_total": 28000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0014-ACTUAL_AMOUNT",
+          "FIN-0014-BUDGET_AMOUNT",
+          "FIN-0014-COMMITTED_AMOUNT",
+          "FIN-0014-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0014"
+        ],
+        "reporting_period": {
+          "period_start": "2026-02-01",
+          "period_end": "2026-02-28"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260201-cc-401",
+      "result_type": "monthly_cost_centre_comparison",
+      "record_id": null,
+      "entity_id": "CC-401",
+      "group_key": "CC-401",
+      "period_start": "2026-02-01",
+      "period_end": "2026-02-28",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": -500.0,
+      "result_unit": "USD",
+      "result_category": "underspend",
+      "priority_rank": null,
+      "finding": "Cost Centre CC-401 recorded actual spending $14,500.00 against budget $15,000.00, a variance of $-500.00 (below budget). The aggregate variance is -3.33%.",
+      "evidence": {
+        "budget_total": 15000.0,
+        "actual_total": 14500.0,
+        "variance_amount": -500.0,
+        "variance_percentage": -3.3333333333333335,
+        "committed_total": 1000.0,
+        "forecast_total": 15000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0017-ACTUAL_AMOUNT",
+          "FIN-0017-BUDGET_AMOUNT",
+          "FIN-0017-COMMITTED_AMOUNT",
+          "FIN-0017-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0017"
+        ],
+        "reporting_period": {
+          "period_start": "2026-02-01",
+          "period_end": "2026-02-28"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260301-cc-101",
+      "result_type": "monthly_cost_centre_comparison",
+      "record_id": null,
+      "entity_id": "CC-101",
+      "group_key": "CC-101",
+      "period_start": "2026-03-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 7000.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Cost Centre CC-101 recorded actual spending $52,000.00 against budget $45,000.00, a variance of $7,000.00 (above budget). The aggregate variance is 15.56%.",
+      "evidence": {
+        "budget_total": 45000.0,
+        "actual_total": 52000.0,
+        "variance_amount": 7000.0,
+        "variance_percentage": 15.555555555555555,
+        "committed_total": 3000.0,
+        "forecast_total": 53500.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0003-ACTUAL_AMOUNT",
+          "FIN-0003-BUDGET_AMOUNT",
+          "FIN-0003-COMMITTED_AMOUNT",
+          "FIN-0003-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0003"
+        ],
+        "reporting_period": {
+          "period_start": "2026-03-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260301-cc-102",
+      "result_type": "monthly_cost_centre_comparison",
+      "record_id": null,
+      "entity_id": "CC-102",
+      "group_key": "CC-102",
+      "period_start": "2026-03-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 1000.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Cost Centre CC-102 recorded actual spending $21,000.00 against budget $20,000.00, a variance of $1,000.00 (above budget). The aggregate variance is 5.00%.",
+      "evidence": {
+        "budget_total": 20000.0,
+        "actual_total": 21000.0,
+        "variance_amount": 1000.0,
+        "variance_percentage": 5.0,
+        "committed_total": 500.0,
+        "forecast_total": 21500.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0006-ACTUAL_AMOUNT",
+          "FIN-0006-BUDGET_AMOUNT",
+          "FIN-0006-COMMITTED_AMOUNT",
+          "FIN-0006-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0006"
+        ],
+        "reporting_period": {
+          "period_start": "2026-03-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260301-cc-201",
+      "result_type": "monthly_cost_centre_comparison",
+      "record_id": null,
+      "entity_id": "CC-201",
+      "group_key": "CC-201",
+      "period_start": "2026-03-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 7000.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Cost Centre CC-201 recorded actual spending $72,000.00 against budget $65,000.00, a variance of $7,000.00 (above budget). The aggregate variance is 10.77%.",
+      "evidence": {
+        "budget_total": 65000.0,
+        "actual_total": 72000.0,
+        "variance_amount": 7000.0,
+        "variance_percentage": 10.76923076923077,
+        "committed_total": 8000.0,
+        "forecast_total": 75000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0009-ACTUAL_AMOUNT",
+          "FIN-0009-BUDGET_AMOUNT",
+          "FIN-0009-COMMITTED_AMOUNT",
+          "FIN-0009-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0009"
+        ],
+        "reporting_period": {
+          "period_start": "2026-03-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260301-cc-202",
+      "result_type": "monthly_cost_centre_comparison",
+      "record_id": null,
+      "entity_id": "CC-202",
+      "group_key": "CC-202",
+      "period_start": "2026-03-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": -4000.0,
+      "result_unit": "USD",
+      "result_category": "underspend",
+      "priority_rank": null,
+      "finding": "Cost Centre CC-202 recorded actual spending $31,000.00 against budget $35,000.00, a variance of $-4,000.00 (below budget). The aggregate variance is -11.43%.",
+      "evidence": {
+        "budget_total": 35000.0,
+        "actual_total": 31000.0,
+        "variance_amount": -4000.0,
+        "variance_percentage": -11.428571428571429,
+        "committed_total": 3000.0,
+        "forecast_total": 34000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0012-ACTUAL_AMOUNT",
+          "FIN-0012-BUDGET_AMOUNT",
+          "FIN-0012-COMMITTED_AMOUNT",
+          "FIN-0012-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0012"
+        ],
+        "reporting_period": {
+          "period_start": "2026-03-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260301-cc-301",
+      "result_type": "monthly_cost_centre_comparison",
+      "record_id": null,
+      "entity_id": "CC-301",
+      "group_key": "CC-301",
+      "period_start": "2026-03-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 4000.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Cost Centre CC-301 recorded actual spending $32,000.00 against budget $28,000.00, a variance of $4,000.00 (above budget). The aggregate variance is 14.29%.",
+      "evidence": {
+        "budget_total": 28000.0,
+        "actual_total": 32000.0,
+        "variance_amount": 4000.0,
+        "variance_percentage": 14.285714285714285,
+        "committed_total": 2500.0,
+        "forecast_total": 33000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0015-ACTUAL_AMOUNT",
+          "FIN-0015-BUDGET_AMOUNT",
+          "FIN-0015-COMMITTED_AMOUNT",
+          "FIN-0015-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0015"
+        ],
+        "reporting_period": {
+          "period_start": "2026-03-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260301-cc-401",
+      "result_type": "monthly_cost_centre_comparison",
+      "record_id": null,
+      "entity_id": "CC-401",
+      "group_key": "CC-401",
+      "period_start": "2026-03-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 4000.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Cost Centre CC-401 recorded actual spending $22,000.00 against budget $18,000.00, a variance of $4,000.00 (above budget). The aggregate variance is 22.22%.",
+      "evidence": {
+        "budget_total": 18000.0,
+        "actual_total": 22000.0,
+        "variance_amount": 4000.0,
+        "variance_percentage": 22.22222222222222,
+        "committed_total": 3000.0,
+        "forecast_total": 23000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0018-ACTUAL_AMOUNT",
+          "FIN-0018-BUDGET_AMOUNT",
+          "FIN-0018-COMMITTED_AMOUNT",
+          "FIN-0018-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0018"
+        ],
+        "reporting_period": {
+          "period_start": "2026-03-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_department_comparison-20260101-engineering",
+      "result_type": "monthly_department_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Engineering",
+      "period_start": "2026-01-01",
+      "period_end": "2026-01-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 1500.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Department Engineering recorded actual spending $66,500.00 against budget $65,000.00, a variance of $1,500.00 (above budget). The aggregate variance is 2.31%.",
+      "evidence": {
+        "budget_total": 65000.0,
+        "actual_total": 66500.0,
+        "variance_amount": 1500.0,
+        "variance_percentage": 2.307692307692308,
+        "committed_total": 3000.0,
+        "forecast_total": 69000.0,
+        "independent_source_count": 2,
+        "canonical_record_ids": [
+          "FIN-0001-ACTUAL_AMOUNT",
+          "FIN-0001-BUDGET_AMOUNT",
+          "FIN-0001-COMMITTED_AMOUNT",
+          "FIN-0001-FORECAST_AMOUNT",
+          "FIN-0004-ACTUAL_AMOUNT",
+          "FIN-0004-BUDGET_AMOUNT",
+          "FIN-0004-COMMITTED_AMOUNT",
+          "FIN-0004-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0001",
+          "SRC-0004"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-01-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 2 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_department_comparison-20260101-hr_and_ops",
+      "result_type": "monthly_department_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "HR & Ops",
+      "period_start": "2026-01-01",
+      "period_end": "2026-01-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": -3000.0,
+      "result_unit": "USD",
+      "result_category": "underspend",
+      "priority_rank": null,
+      "finding": "Department HR & Ops recorded actual spending $12,000.00 against budget $15,000.00, a variance of $-3,000.00 (below budget). The aggregate variance is -20.00%.",
+      "evidence": {
+        "budget_total": 15000.0,
+        "actual_total": 12000.0,
+        "variance_amount": -3000.0,
+        "variance_percentage": -20.0,
+        "committed_total": 500.0,
+        "forecast_total": 13000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0016-ACTUAL_AMOUNT",
+          "FIN-0016-BUDGET_AMOUNT",
+          "FIN-0016-COMMITTED_AMOUNT",
+          "FIN-0016-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0016"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-01-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_department_comparison-20260101-marketing",
+      "result_type": "monthly_department_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Marketing",
+      "period_start": "2026-01-01",
+      "period_end": "2026-01-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 3000.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Department Marketing recorded actual spending $93,000.00 against budget $90,000.00, a variance of $3,000.00 (above budget). The aggregate variance is 3.33%.",
+      "evidence": {
+        "budget_total": 90000.0,
+        "actual_total": 93000.0,
+        "variance_amount": 3000.0,
+        "variance_percentage": 3.3333333333333335,
+        "committed_total": 7000.0,
+        "forecast_total": 98000.0,
+        "independent_source_count": 2,
+        "canonical_record_ids": [
+          "FIN-0007-ACTUAL_AMOUNT",
+          "FIN-0007-BUDGET_AMOUNT",
+          "FIN-0007-COMMITTED_AMOUNT",
+          "FIN-0007-FORECAST_AMOUNT",
+          "FIN-0010-ACTUAL_AMOUNT",
+          "FIN-0010-BUDGET_AMOUNT",
+          "FIN-0010-COMMITTED_AMOUNT",
+          "FIN-0010-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0007",
+          "SRC-0010"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-01-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 2 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_department_comparison-20260101-sales",
+      "result_type": "monthly_department_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Sales",
+      "period_start": "2026-01-01",
+      "period_end": "2026-01-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 4000.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Department Sales recorded actual spending $29,000.00 against budget $25,000.00, a variance of $4,000.00 (above budget). The aggregate variance is 16.00%.",
+      "evidence": {
+        "budget_total": 25000.0,
+        "actual_total": 29000.0,
+        "variance_amount": 4000.0,
+        "variance_percentage": 16.0,
+        "committed_total": 1500.0,
+        "forecast_total": 30000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0013-ACTUAL_AMOUNT",
+          "FIN-0013-BUDGET_AMOUNT",
+          "FIN-0013-COMMITTED_AMOUNT",
+          "FIN-0013-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0013"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-01-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_department_comparison-20260201-engineering",
+      "result_type": "monthly_department_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Engineering",
+      "period_start": "2026-02-01",
+      "period_end": "2026-02-28",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 3500.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Department Engineering recorded actual spending $68,500.00 against budget $65,000.00, a variance of $3,500.00 (above budget). The aggregate variance is 5.38%.",
+      "evidence": {
+        "budget_total": 65000.0,
+        "actual_total": 68500.0,
+        "variance_amount": 3500.0,
+        "variance_percentage": 5.384615384615385,
+        "committed_total": 2500.0,
+        "forecast_total": 70500.0,
+        "independent_source_count": 2,
+        "canonical_record_ids": [
+          "FIN-0002-ACTUAL_AMOUNT",
+          "FIN-0002-BUDGET_AMOUNT",
+          "FIN-0002-COMMITTED_AMOUNT",
+          "FIN-0002-FORECAST_AMOUNT",
+          "FIN-0005-ACTUAL_AMOUNT",
+          "FIN-0005-BUDGET_AMOUNT",
+          "FIN-0005-COMMITTED_AMOUNT",
+          "FIN-0005-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0002",
+          "SRC-0005"
+        ],
+        "reporting_period": {
+          "period_start": "2026-02-01",
+          "period_end": "2026-02-28"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 2 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_department_comparison-20260201-hr_and_ops",
+      "result_type": "monthly_department_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "HR & Ops",
+      "period_start": "2026-02-01",
+      "period_end": "2026-02-28",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": -500.0,
+      "result_unit": "USD",
+      "result_category": "underspend",
+      "priority_rank": null,
+      "finding": "Department HR & Ops recorded actual spending $14,500.00 against budget $15,000.00, a variance of $-500.00 (below budget). The aggregate variance is -3.33%.",
+      "evidence": {
+        "budget_total": 15000.0,
+        "actual_total": 14500.0,
+        "variance_amount": -500.0,
+        "variance_percentage": -3.3333333333333335,
+        "committed_total": 1000.0,
+        "forecast_total": 15000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0017-ACTUAL_AMOUNT",
+          "FIN-0017-BUDGET_AMOUNT",
+          "FIN-0017-COMMITTED_AMOUNT",
+          "FIN-0017-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0017"
+        ],
+        "reporting_period": {
+          "period_start": "2026-02-01",
+          "period_end": "2026-02-28"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_department_comparison-20260201-marketing",
+      "result_type": "monthly_department_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Marketing",
+      "period_start": "2026-02-01",
+      "period_end": "2026-02-28",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 2000.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Department Marketing recorded actual spending $92,000.00 against budget $90,000.00, a variance of $2,000.00 (above budget). The aggregate variance is 2.22%.",
+      "evidence": {
+        "budget_total": 90000.0,
+        "actual_total": 92000.0,
+        "variance_amount": 2000.0,
+        "variance_percentage": 2.2222222222222223,
+        "committed_total": 5000.0,
+        "forecast_total": 97000.0,
+        "independent_source_count": 2,
+        "canonical_record_ids": [
+          "FIN-0008-ACTUAL_AMOUNT",
+          "FIN-0008-BUDGET_AMOUNT",
+          "FIN-0008-COMMITTED_AMOUNT",
+          "FIN-0008-FORECAST_AMOUNT",
+          "FIN-0011-ACTUAL_AMOUNT",
+          "FIN-0011-BUDGET_AMOUNT",
+          "FIN-0011-COMMITTED_AMOUNT",
+          "FIN-0011-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0008",
+          "SRC-0011"
+        ],
+        "reporting_period": {
+          "period_start": "2026-02-01",
+          "period_end": "2026-02-28"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 2 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_department_comparison-20260201-sales",
+      "result_type": "monthly_department_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Sales",
+      "period_start": "2026-02-01",
+      "period_end": "2026-02-28",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 2500.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Department Sales recorded actual spending $27,500.00 against budget $25,000.00, a variance of $2,500.00 (above budget). The aggregate variance is 10.00%.",
+      "evidence": {
+        "budget_total": 25000.0,
+        "actual_total": 27500.0,
+        "variance_amount": 2500.0,
+        "variance_percentage": 10.0,
+        "committed_total": 2000.0,
+        "forecast_total": 28000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0014-ACTUAL_AMOUNT",
+          "FIN-0014-BUDGET_AMOUNT",
+          "FIN-0014-COMMITTED_AMOUNT",
+          "FIN-0014-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0014"
+        ],
+        "reporting_period": {
+          "period_start": "2026-02-01",
+          "period_end": "2026-02-28"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_department_comparison-20260301-engineering",
+      "result_type": "monthly_department_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Engineering",
+      "period_start": "2026-03-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 8000.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Department Engineering recorded actual spending $73,000.00 against budget $65,000.00, a variance of $8,000.00 (above budget). The aggregate variance is 12.31%.",
+      "evidence": {
+        "budget_total": 65000.0,
+        "actual_total": 73000.0,
+        "variance_amount": 8000.0,
+        "variance_percentage": 12.307692307692308,
+        "committed_total": 3500.0,
+        "forecast_total": 75000.0,
+        "independent_source_count": 2,
+        "canonical_record_ids": [
+          "FIN-0003-ACTUAL_AMOUNT",
+          "FIN-0003-BUDGET_AMOUNT",
+          "FIN-0003-COMMITTED_AMOUNT",
+          "FIN-0003-FORECAST_AMOUNT",
+          "FIN-0006-ACTUAL_AMOUNT",
+          "FIN-0006-BUDGET_AMOUNT",
+          "FIN-0006-COMMITTED_AMOUNT",
+          "FIN-0006-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0003",
+          "SRC-0006"
+        ],
+        "reporting_period": {
+          "period_start": "2026-03-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 2 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_department_comparison-20260301-hr_and_ops",
+      "result_type": "monthly_department_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "HR & Ops",
+      "period_start": "2026-03-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 4000.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Department HR & Ops recorded actual spending $22,000.00 against budget $18,000.00, a variance of $4,000.00 (above budget). The aggregate variance is 22.22%.",
+      "evidence": {
+        "budget_total": 18000.0,
+        "actual_total": 22000.0,
+        "variance_amount": 4000.0,
+        "variance_percentage": 22.22222222222222,
+        "committed_total": 3000.0,
+        "forecast_total": 23000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0018-ACTUAL_AMOUNT",
+          "FIN-0018-BUDGET_AMOUNT",
+          "FIN-0018-COMMITTED_AMOUNT",
+          "FIN-0018-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0018"
+        ],
+        "reporting_period": {
+          "period_start": "2026-03-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_department_comparison-20260301-marketing",
+      "result_type": "monthly_department_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Marketing",
+      "period_start": "2026-03-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 3000.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Department Marketing recorded actual spending $103,000.00 against budget $100,000.00, a variance of $3,000.00 (above budget). The aggregate variance is 3.00%.",
+      "evidence": {
+        "budget_total": 100000.0,
+        "actual_total": 103000.0,
+        "variance_amount": 3000.0,
+        "variance_percentage": 3.0,
+        "committed_total": 11000.0,
+        "forecast_total": 109000.0,
+        "independent_source_count": 2,
+        "canonical_record_ids": [
+          "FIN-0009-ACTUAL_AMOUNT",
+          "FIN-0009-BUDGET_AMOUNT",
+          "FIN-0009-COMMITTED_AMOUNT",
+          "FIN-0009-FORECAST_AMOUNT",
+          "FIN-0012-ACTUAL_AMOUNT",
+          "FIN-0012-BUDGET_AMOUNT",
+          "FIN-0012-COMMITTED_AMOUNT",
+          "FIN-0012-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0009",
+          "SRC-0012"
+        ],
+        "reporting_period": {
+          "period_start": "2026-03-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 2 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_department_comparison-20260301-sales",
+      "result_type": "monthly_department_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Sales",
+      "period_start": "2026-03-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 4000.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Department Sales recorded actual spending $32,000.00 against budget $28,000.00, a variance of $4,000.00 (above budget). The aggregate variance is 14.29%.",
+      "evidence": {
+        "budget_total": 28000.0,
+        "actual_total": 32000.0,
+        "variance_amount": 4000.0,
+        "variance_percentage": 14.285714285714285,
+        "committed_total": 2500.0,
+        "forecast_total": 33000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0015-ACTUAL_AMOUNT",
+          "FIN-0015-BUDGET_AMOUNT",
+          "FIN-0015-COMMITTED_AMOUNT",
+          "FIN-0015-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0015"
+        ],
+        "reporting_period": {
+          "period_start": "2026-03-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260101-cloud_infrastructure",
+      "result_type": "monthly_expenditure_category_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Cloud Infrastructure",
+      "period_start": "2026-01-01",
+      "period_end": "2026-01-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 3000.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Expenditure Category Cloud Infrastructure recorded actual spending $48,000.00 against budget $45,000.00, a variance of $3,000.00 (above budget). The aggregate variance is 6.67%.",
+      "evidence": {
+        "budget_total": 45000.0,
+        "actual_total": 48000.0,
+        "variance_amount": 3000.0,
+        "variance_percentage": 6.666666666666667,
+        "committed_total": 2000.0,
+        "forecast_total": 50000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0001-ACTUAL_AMOUNT",
+          "FIN-0001-BUDGET_AMOUNT",
+          "FIN-0001-COMMITTED_AMOUNT",
+          "FIN-0001-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0001"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-01-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260101-events_and_pr",
+      "result_type": "monthly_expenditure_category_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Events & PR",
+      "period_start": "2026-01-01",
+      "period_end": "2026-01-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": -5000.0,
+      "result_unit": "USD",
+      "result_category": "underspend",
+      "priority_rank": null,
+      "finding": "Expenditure Category Events & PR recorded actual spending $25,000.00 against budget $30,000.00, a variance of $-5,000.00 (below budget). The aggregate variance is -16.67%.",
+      "evidence": {
+        "budget_total": 30000.0,
+        "actual_total": 25000.0,
+        "variance_amount": -5000.0,
+        "variance_percentage": -16.666666666666664,
+        "committed_total": 2000.0,
+        "forecast_total": 28000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0010-ACTUAL_AMOUNT",
+          "FIN-0010-BUDGET_AMOUNT",
+          "FIN-0010-COMMITTED_AMOUNT",
+          "FIN-0010-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0010"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-01-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260101-paid_ads_and_campaigns",
+      "result_type": "monthly_expenditure_category_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Paid Ads & Campaigns",
+      "period_start": "2026-01-01",
+      "period_end": "2026-01-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 8000.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Expenditure Category Paid Ads & Campaigns recorded actual spending $68,000.00 against budget $60,000.00, a variance of $8,000.00 (above budget). The aggregate variance is 13.33%.",
+      "evidence": {
+        "budget_total": 60000.0,
+        "actual_total": 68000.0,
+        "variance_amount": 8000.0,
+        "variance_percentage": 13.333333333333334,
+        "committed_total": 5000.0,
+        "forecast_total": 70000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0007-ACTUAL_AMOUNT",
+          "FIN-0007-BUDGET_AMOUNT",
+          "FIN-0007-COMMITTED_AMOUNT",
+          "FIN-0007-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0007"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-01-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260101-recruitment_and_onboarding",
+      "result_type": "monthly_expenditure_category_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Recruitment & Onboarding",
+      "period_start": "2026-01-01",
+      "period_end": "2026-01-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": -3000.0,
+      "result_unit": "USD",
+      "result_category": "underspend",
+      "priority_rank": null,
+      "finding": "Expenditure Category Recruitment & Onboarding recorded actual spending $12,000.00 against budget $15,000.00, a variance of $-3,000.00 (below budget). The aggregate variance is -20.00%.",
+      "evidence": {
+        "budget_total": 15000.0,
+        "actual_total": 12000.0,
+        "variance_amount": -3000.0,
+        "variance_percentage": -20.0,
+        "committed_total": 500.0,
+        "forecast_total": 13000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0016-ACTUAL_AMOUNT",
+          "FIN-0016-BUDGET_AMOUNT",
+          "FIN-0016-COMMITTED_AMOUNT",
+          "FIN-0016-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0016"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-01-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260101-software_licenses",
+      "result_type": "monthly_expenditure_category_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Software Licenses",
+      "period_start": "2026-01-01",
+      "period_end": "2026-01-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": -1500.0,
+      "result_unit": "USD",
+      "result_category": "underspend",
+      "priority_rank": null,
+      "finding": "Expenditure Category Software Licenses recorded actual spending $18,500.00 against budget $20,000.00, a variance of $-1,500.00 (below budget). The aggregate variance is -7.50%.",
+      "evidence": {
+        "budget_total": 20000.0,
+        "actual_total": 18500.0,
+        "variance_amount": -1500.0,
+        "variance_percentage": -7.5,
+        "committed_total": 1000.0,
+        "forecast_total": 19000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0004-ACTUAL_AMOUNT",
+          "FIN-0004-BUDGET_AMOUNT",
+          "FIN-0004-COMMITTED_AMOUNT",
+          "FIN-0004-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0004"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-01-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260101-travel_and_client_entertainment",
+      "result_type": "monthly_expenditure_category_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Travel & Client Entertainment",
+      "period_start": "2026-01-01",
+      "period_end": "2026-01-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 4000.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Expenditure Category Travel & Client Entertainment recorded actual spending $29,000.00 against budget $25,000.00, a variance of $4,000.00 (above budget). The aggregate variance is 16.00%.",
+      "evidence": {
+        "budget_total": 25000.0,
+        "actual_total": 29000.0,
+        "variance_amount": 4000.0,
+        "variance_percentage": 16.0,
+        "committed_total": 1500.0,
+        "forecast_total": 30000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0013-ACTUAL_AMOUNT",
+          "FIN-0013-BUDGET_AMOUNT",
+          "FIN-0013-COMMITTED_AMOUNT",
+          "FIN-0013-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0013"
+        ],
+        "reporting_period": {
+          "period_start": "2026-01-01",
+          "period_end": "2026-01-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260201-cloud_infrastructure",
+      "result_type": "monthly_expenditure_category_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Cloud Infrastructure",
+      "period_start": "2026-02-01",
+      "period_end": "2026-02-28",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 4500.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Expenditure Category Cloud Infrastructure recorded actual spending $49,500.00 against budget $45,000.00, a variance of $4,500.00 (above budget). The aggregate variance is 10.00%.",
+      "evidence": {
+        "budget_total": 45000.0,
+        "actual_total": 49500.0,
+        "variance_amount": 4500.0,
+        "variance_percentage": 10.0,
+        "committed_total": 1500.0,
+        "forecast_total": 51000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0002-ACTUAL_AMOUNT",
+          "FIN-0002-BUDGET_AMOUNT",
+          "FIN-0002-COMMITTED_AMOUNT",
+          "FIN-0002-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0002"
+        ],
+        "reporting_period": {
+          "period_start": "2026-02-01",
+          "period_end": "2026-02-28"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260201-events_and_pr",
+      "result_type": "monthly_expenditure_category_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Events & PR",
+      "period_start": "2026-02-01",
+      "period_end": "2026-02-28",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 4000.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Expenditure Category Events & PR recorded actual spending $34,000.00 against budget $30,000.00, a variance of $4,000.00 (above budget). The aggregate variance is 13.33%.",
+      "evidence": {
+        "budget_total": 30000.0,
+        "actual_total": 34000.0,
+        "variance_amount": 4000.0,
+        "variance_percentage": 13.333333333333334,
+        "committed_total": 1000.0,
+        "forecast_total": 35000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0011-ACTUAL_AMOUNT",
+          "FIN-0011-BUDGET_AMOUNT",
+          "FIN-0011-COMMITTED_AMOUNT",
+          "FIN-0011-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0011"
+        ],
+        "reporting_period": {
+          "period_start": "2026-02-01",
+          "period_end": "2026-02-28"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260201-paid_ads_and_campaigns",
+      "result_type": "monthly_expenditure_category_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Paid Ads & Campaigns",
+      "period_start": "2026-02-01",
+      "period_end": "2026-02-28",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": -2000.0,
+      "result_unit": "USD",
+      "result_category": "underspend",
+      "priority_rank": null,
+      "finding": "Expenditure Category Paid Ads & Campaigns recorded actual spending $58,000.00 against budget $60,000.00, a variance of $-2,000.00 (below budget). The aggregate variance is -3.33%.",
+      "evidence": {
+        "budget_total": 60000.0,
+        "actual_total": 58000.0,
+        "variance_amount": -2000.0,
+        "variance_percentage": -3.3333333333333335,
+        "committed_total": 4000.0,
+        "forecast_total": 62000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0008-ACTUAL_AMOUNT",
+          "FIN-0008-BUDGET_AMOUNT",
+          "FIN-0008-COMMITTED_AMOUNT",
+          "FIN-0008-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0008"
+        ],
+        "reporting_period": {
+          "period_start": "2026-02-01",
+          "period_end": "2026-02-28"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260201-recruitment_and_onboarding",
+      "result_type": "monthly_expenditure_category_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Recruitment & Onboarding",
+      "period_start": "2026-02-01",
+      "period_end": "2026-02-28",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": -500.0,
+      "result_unit": "USD",
+      "result_category": "underspend",
+      "priority_rank": null,
+      "finding": "Expenditure Category Recruitment & Onboarding recorded actual spending $14,500.00 against budget $15,000.00, a variance of $-500.00 (below budget). The aggregate variance is -3.33%.",
+      "evidence": {
+        "budget_total": 15000.0,
+        "actual_total": 14500.0,
+        "variance_amount": -500.0,
+        "variance_percentage": -3.3333333333333335,
+        "committed_total": 1000.0,
+        "forecast_total": 15000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0017-ACTUAL_AMOUNT",
+          "FIN-0017-BUDGET_AMOUNT",
+          "FIN-0017-COMMITTED_AMOUNT",
+          "FIN-0017-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0017"
+        ],
+        "reporting_period": {
+          "period_start": "2026-02-01",
+          "period_end": "2026-02-28"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260201-software_licenses",
+      "result_type": "monthly_expenditure_category_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Software Licenses",
+      "period_start": "2026-02-01",
+      "period_end": "2026-02-28",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": -1000.0,
+      "result_unit": "USD",
+      "result_category": "underspend",
+      "priority_rank": null,
+      "finding": "Expenditure Category Software Licenses recorded actual spending $19,000.00 against budget $20,000.00, a variance of $-1,000.00 (below budget). The aggregate variance is -5.00%.",
+      "evidence": {
+        "budget_total": 20000.0,
+        "actual_total": 19000.0,
+        "variance_amount": -1000.0,
+        "variance_percentage": -5.0,
+        "committed_total": 1000.0,
+        "forecast_total": 19500.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0005-ACTUAL_AMOUNT",
+          "FIN-0005-BUDGET_AMOUNT",
+          "FIN-0005-COMMITTED_AMOUNT",
+          "FIN-0005-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0005"
+        ],
+        "reporting_period": {
+          "period_start": "2026-02-01",
+          "period_end": "2026-02-28"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260201-travel_and_client_entertainment",
+      "result_type": "monthly_expenditure_category_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Travel & Client Entertainment",
+      "period_start": "2026-02-01",
+      "period_end": "2026-02-28",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 2500.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Expenditure Category Travel & Client Entertainment recorded actual spending $27,500.00 against budget $25,000.00, a variance of $2,500.00 (above budget). The aggregate variance is 10.00%.",
+      "evidence": {
+        "budget_total": 25000.0,
+        "actual_total": 27500.0,
+        "variance_amount": 2500.0,
+        "variance_percentage": 10.0,
+        "committed_total": 2000.0,
+        "forecast_total": 28000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0014-ACTUAL_AMOUNT",
+          "FIN-0014-BUDGET_AMOUNT",
+          "FIN-0014-COMMITTED_AMOUNT",
+          "FIN-0014-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0014"
+        ],
+        "reporting_period": {
+          "period_start": "2026-02-01",
+          "period_end": "2026-02-28"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260301-cloud_infrastructure",
+      "result_type": "monthly_expenditure_category_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Cloud Infrastructure",
+      "period_start": "2026-03-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 7000.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Expenditure Category Cloud Infrastructure recorded actual spending $52,000.00 against budget $45,000.00, a variance of $7,000.00 (above budget). The aggregate variance is 15.56%.",
+      "evidence": {
+        "budget_total": 45000.0,
+        "actual_total": 52000.0,
+        "variance_amount": 7000.0,
+        "variance_percentage": 15.555555555555555,
+        "committed_total": 3000.0,
+        "forecast_total": 53500.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0003-ACTUAL_AMOUNT",
+          "FIN-0003-BUDGET_AMOUNT",
+          "FIN-0003-COMMITTED_AMOUNT",
+          "FIN-0003-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0003"
+        ],
+        "reporting_period": {
+          "period_start": "2026-03-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260301-events_and_pr",
+      "result_type": "monthly_expenditure_category_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Events & PR",
+      "period_start": "2026-03-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": -4000.0,
+      "result_unit": "USD",
+      "result_category": "underspend",
+      "priority_rank": null,
+      "finding": "Expenditure Category Events & PR recorded actual spending $31,000.00 against budget $35,000.00, a variance of $-4,000.00 (below budget). The aggregate variance is -11.43%.",
+      "evidence": {
+        "budget_total": 35000.0,
+        "actual_total": 31000.0,
+        "variance_amount": -4000.0,
+        "variance_percentage": -11.428571428571429,
+        "committed_total": 3000.0,
+        "forecast_total": 34000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0012-ACTUAL_AMOUNT",
+          "FIN-0012-BUDGET_AMOUNT",
+          "FIN-0012-COMMITTED_AMOUNT",
+          "FIN-0012-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0012"
+        ],
+        "reporting_period": {
+          "period_start": "2026-03-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260301-paid_ads_and_campaigns",
+      "result_type": "monthly_expenditure_category_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Paid Ads & Campaigns",
+      "period_start": "2026-03-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 7000.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Expenditure Category Paid Ads & Campaigns recorded actual spending $72,000.00 against budget $65,000.00, a variance of $7,000.00 (above budget). The aggregate variance is 10.77%.",
+      "evidence": {
+        "budget_total": 65000.0,
+        "actual_total": 72000.0,
+        "variance_amount": 7000.0,
+        "variance_percentage": 10.76923076923077,
+        "committed_total": 8000.0,
+        "forecast_total": 75000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0009-ACTUAL_AMOUNT",
+          "FIN-0009-BUDGET_AMOUNT",
+          "FIN-0009-COMMITTED_AMOUNT",
+          "FIN-0009-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0009"
+        ],
+        "reporting_period": {
+          "period_start": "2026-03-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260301-recruitment_and_onboarding",
+      "result_type": "monthly_expenditure_category_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Recruitment & Onboarding",
+      "period_start": "2026-03-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 4000.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Expenditure Category Recruitment & Onboarding recorded actual spending $22,000.00 against budget $18,000.00, a variance of $4,000.00 (above budget). The aggregate variance is 22.22%.",
+      "evidence": {
+        "budget_total": 18000.0,
+        "actual_total": 22000.0,
+        "variance_amount": 4000.0,
+        "variance_percentage": 22.22222222222222,
+        "committed_total": 3000.0,
+        "forecast_total": 23000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0018-ACTUAL_AMOUNT",
+          "FIN-0018-BUDGET_AMOUNT",
+          "FIN-0018-COMMITTED_AMOUNT",
+          "FIN-0018-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0018"
+        ],
+        "reporting_period": {
+          "period_start": "2026-03-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260301-software_licenses",
+      "result_type": "monthly_expenditure_category_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Software Licenses",
+      "period_start": "2026-03-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 1000.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Expenditure Category Software Licenses recorded actual spending $21,000.00 against budget $20,000.00, a variance of $1,000.00 (above budget). The aggregate variance is 5.00%.",
+      "evidence": {
+        "budget_total": 20000.0,
+        "actual_total": 21000.0,
+        "variance_amount": 1000.0,
+        "variance_percentage": 5.0,
+        "committed_total": 500.0,
+        "forecast_total": 21500.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0006-ACTUAL_AMOUNT",
+          "FIN-0006-BUDGET_AMOUNT",
+          "FIN-0006-COMMITTED_AMOUNT",
+          "FIN-0006-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0006"
+        ],
+        "reporting_period": {
+          "period_start": "2026-03-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260301-travel_and_client_entertainment",
+      "result_type": "monthly_expenditure_category_comparison",
+      "record_id": null,
+      "entity_id": null,
+      "group_key": "Travel & Client Entertainment",
+      "period_start": "2026-03-01",
+      "period_end": "2026-03-31",
+      "metric_name": "budget_vs_actual_variance",
+      "result_value": 4000.0,
+      "result_unit": "USD",
+      "result_category": "overspend",
+      "priority_rank": null,
+      "finding": "Expenditure Category Travel & Client Entertainment recorded actual spending $32,000.00 against budget $28,000.00, a variance of $4,000.00 (above budget). The aggregate variance is 14.29%.",
+      "evidence": {
+        "budget_total": 28000.0,
+        "actual_total": 32000.0,
+        "variance_amount": 4000.0,
+        "variance_percentage": 14.285714285714285,
+        "committed_total": 2500.0,
+        "forecast_total": 33000.0,
+        "independent_source_count": 1,
+        "canonical_record_ids": [
+          "FIN-0015-ACTUAL_AMOUNT",
+          "FIN-0015-BUDGET_AMOUNT",
+          "FIN-0015-COMMITTED_AMOUNT",
+          "FIN-0015-FORECAST_AMOUNT"
+        ],
+        "source_record_ids": [
+          "SRC-0015"
+        ],
+        "reporting_period": {
+          "period_start": "2026-03-01",
+          "period_end": "2026-03-31"
+        },
+        "currency_unit": "USD",
+        "aggregation_method": "sum of source-observation Budget and Actual; variance = aggregate Actual - aggregate Budget; percentage = aggregate variance / aggregate Budget * 100"
+      },
+      "method_version": "1.0.0",
+      "data_version": "1.0.0",
+      "generated_at": "2026-11-06T06:26:37Z",
+      "quality_status": "insufficient_evidence",
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ]
+    }
+  ]
+}

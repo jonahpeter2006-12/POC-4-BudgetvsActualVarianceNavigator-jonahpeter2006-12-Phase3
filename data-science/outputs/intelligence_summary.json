@@ -1,0 +1,136 @@
+{
+  "project_id": "poc-4-budget-vs-actual-variance-navigator",
+  "project_title": "Budget vs Actual Variance Navigator",
+  "approved_track": "Track A — Comparative Intelligence",
+  "contract_version": "1.0.0",
+  "dataset_version": "1.0.0",
+  "method_version": "1.0.0",
+  "generated_at": "2026-11-06T06:26:37Z",
+  "primary_analytical_question": "Which cost centres, departments and expenditure categories show the largest budget-versus-actual differences, and where should a human reviewer focus budget review?",
+  "decision_to_be_supported": "Support descriptive, evidence-based human review of budget and actual financial measurements. Outputs inform review priorities and do not make autonomous financial decisions.",
+  "baseline_method": "Direct grouped arithmetic comparison of canonical Budget and Actual amounts, calculating variance as Actual minus Budget and variance percentage from the grouped totals.",
+  "baseline_result": {
+    "overall_comparison_count": 16,
+    "independently_validated_calculation_checks": 16,
+    "calculation_mismatches": 0,
+    "comparison_with_selected_method": "Track A preserves the baseline grouped financial calculations and adds evidence traceability, minimum source-count screening, descriptive monthly findings and deterministic overall ranking. No predictive accuracy or performance improvement is claimed."
+  },
+  "key_findings": [
+    {
+      "group": "CC-101",
+      "finding": "Cost Centre CC-101 recorded actual spending $149,500.00 against budget $135,000.00, a variance of $14,500.00 (above budget). The aggregate variance is 10.74%.",
+      "budget_total": 135000.0,
+      "actual_total": 149500.0,
+      "variance_amount": 14500.0,
+      "variance_percentage": 10.74074074074074,
+      "independent_source_count": 3,
+      "priority_rank": 1,
+      "result_id": "track-a-cost_centre_comparison-20260101-cc-101"
+    },
+    {
+      "group": "CC-201",
+      "finding": "Cost Centre CC-201 recorded actual spending $198,000.00 against budget $185,000.00, a variance of $13,000.00 (above budget). The aggregate variance is 7.03%.",
+      "budget_total": 185000.0,
+      "actual_total": 198000.0,
+      "variance_amount": 13000.0,
+      "variance_percentage": 7.027027027027027,
+      "independent_source_count": 3,
+      "priority_rank": 2,
+      "result_id": "track-a-cost_centre_comparison-20260101-cc-201"
+    },
+    {
+      "group": "CC-301",
+      "finding": "Cost Centre CC-301 recorded actual spending $88,500.00 against budget $78,000.00, a variance of $10,500.00 (above budget). The aggregate variance is 13.46%.",
+      "budget_total": 78000.0,
+      "actual_total": 88500.0,
+      "variance_amount": 10500.0,
+      "variance_percentage": 13.461538461538462,
+      "independent_source_count": 3,
+      "priority_rank": 3,
+      "result_id": "track-a-cost_centre_comparison-20260101-cc-301"
+    }
+  ],
+  "total_findings": 64,
+  "overall_finding_count": 16,
+  "monthly_finding_count": 48,
+  "findings_by_type": {
+    "cost_centre_comparison": 6,
+    "department_comparison": 4,
+    "expenditure_category_comparison": 6,
+    "monthly_cost_centre_comparison": 18,
+    "monthly_department_comparison": 12,
+    "monthly_expenditure_category_comparison": 18
+  },
+  "quality_status_counts": {
+    "insufficient_evidence": 48,
+    "validated_with_limitations": 16
+  },
+  "overall_ranked_finding_count": 16,
+  "monthly_ranked_finding_count": 0,
+  "financial_method": {
+    "variance_formula": "Actual - Budget",
+    "variance_percentage_formula": "(Actual - Budget) / Budget * 100",
+    "positive_variance": "Overspend",
+    "negative_variance": "Underspend",
+    "committed_and_forecast": "Separate contextual measures; not added to Budget or Actual"
+  },
+  "limitations": [
+    "The canonical dataset contains 18 independent synthetic source observations.",
+    "The 72 canonical rows represent four derived financial measures per source observation, not 72 independent transactions.",
+    "Monthly findings with fewer than three independent observations are descriptive and marked insufficient_evidence.",
+    "Forecast values are illustrative and are not validated predictive outputs.",
+    "Results do not establish population-level financial conclusions."
+  ],
+  "data_version": "1.0.0",
+  "decision_supported": "Support descriptive, evidence-based human review of budget and actual financial measurements. Outputs inform review priorities and do not make autonomous financial decisions.",
+  "result_count": 64,
+  "priority_items": [
+    {
+      "group": "CC-101",
+      "finding": "Cost Centre CC-101 recorded actual spending $149,500.00 against budget $135,000.00, a variance of $14,500.00 (above budget). The aggregate variance is 10.74%.",
+      "budget_total": 135000.0,
+      "actual_total": 149500.0,
+      "variance_amount": 14500.0,
+      "variance_percentage": 10.74074074074074,
+      "independent_source_count": 3,
+      "priority_rank": 1,
+      "result_id": "track-a-cost_centre_comparison-20260101-cc-101"
+    },
+    {
+      "group": "CC-201",
+      "finding": "Cost Centre CC-201 recorded actual spending $198,000.00 against budget $185,000.00, a variance of $13,000.00 (above budget). The aggregate variance is 7.03%.",
+      "budget_total": 185000.0,
+      "actual_total": 198000.0,
+      "variance_amount": 13000.0,
+      "variance_percentage": 7.027027027027027,
+      "independent_source_count": 3,
+      "priority_rank": 2,
+      "result_id": "track-a-cost_centre_comparison-20260101-cc-201"
+    },
+    {
+      "group": "CC-301",
+      "finding": "Cost Centre CC-301 recorded actual spending $88,500.00 against budget $78,000.00, a variance of $10,500.00 (above budget). The aggregate variance is 13.46%.",
+      "budget_total": 78000.0,
+      "actual_total": 88500.0,
+      "variance_amount": 10500.0,
+      "variance_percentage": 13.461538461538462,
+      "independent_source_count": 3,
+      "priority_rank": 3,
+      "result_id": "track-a-cost_centre_comparison-20260101-cc-301"
+    }
+  ],
+  "validation_result": {
+    "overall_status": "PASS",
+    "total_checks": 1230,
+    "passed_checks": 1230,
+    "failed_checks": 0,
+    "validation_source": "analytical_validation.json"
+  },
+  "important_limitations": [
+    "The canonical dataset contains 18 independent synthetic source observations.",
+    "The 72 canonical rows represent four derived financial measures per source observation, not 72 independent transactions.",
+    "Monthly findings with fewer than three independent observations are descriptive and marked insufficient_evidence.",
+    "Forecast values are illustrative and are not validated predictive outputs.",
+    "Results do not establish population-level financial conclusions."
+  ]
+}

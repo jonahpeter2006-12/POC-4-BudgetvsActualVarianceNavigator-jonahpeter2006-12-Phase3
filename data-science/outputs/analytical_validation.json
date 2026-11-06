@@ -1,0 +1,6255 @@
+{
+  "validation_version": "1.0.0",
+  "dataset_version": "1.0.0",
+  "method_version": "1.0.0",
+  "generated_at": "2026-11-06T06:26:37Z",
+  "overall_status": "PASS",
+  "total_checks": 1230,
+  "passed_count": 1230,
+  "failed_count": 0,
+  "category_summary": {
+    "calculations": {
+      "check_count": 256,
+      "passed_count": 256,
+      "failed_count": 0,
+      "status": "PASS"
+    },
+    "classification": {
+      "check_count": 128,
+      "passed_count": 128,
+      "failed_count": 0,
+      "status": "PASS"
+    },
+    "count": {
+      "check_count": 1,
+      "passed_count": 1,
+      "failed_count": 0,
+      "status": "PASS"
+    },
+    "evidence": {
+      "check_count": 256,
+      "passed_count": 256,
+      "failed_count": 0,
+      "status": "PASS"
+    },
+    "evidence_status": {
+      "check_count": 64,
+      "passed_count": 64,
+      "failed_count": 0,
+      "status": "PASS"
+    },
+    "finding": {
+      "check_count": 64,
+      "passed_count": 64,
+      "failed_count": 0,
+      "status": "PASS"
+    },
+    "identity": {
+      "check_count": 1,
+      "passed_count": 1,
+      "failed_count": 0,
+      "status": "PASS"
+    },
+    "limitations": {
+      "check_count": 64,
+      "passed_count": 64,
+      "failed_count": 0,
+      "status": "PASS"
+    },
+    "measure_separation": {
+      "check_count": 128,
+      "passed_count": 128,
+      "failed_count": 0,
+      "status": "PASS"
+    },
+    "metadata": {
+      "check_count": 3,
+      "passed_count": 3,
+      "failed_count": 0,
+      "status": "PASS"
+    },
+    "ranking_eligibility": {
+      "check_count": 64,
+      "passed_count": 64,
+      "failed_count": 0,
+      "status": "PASS"
+    },
+    "ranking_order": {
+      "check_count": 3,
+      "passed_count": 3,
+      "failed_count": 0,
+      "status": "PASS"
+    },
+    "schema": {
+      "check_count": 128,
+      "passed_count": 128,
+      "failed_count": 0,
+      "status": "PASS"
+    },
+    "type_counts": {
+      "check_count": 6,
+      "passed_count": 6,
+      "failed_count": 0,
+      "status": "PASS"
+    },
+    "versions": {
+      "check_count": 64,
+      "passed_count": 64,
+      "failed_count": 0,
+      "status": "PASS"
+    }
+  },
+  "check_results": [
+    {
+      "category": "metadata",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "metadata",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "metadata",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "count",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "identity",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "schema",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "versions",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "finding",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "limitations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "calculations",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "measure_separation",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "classification",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "evidence_status",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_eligibility",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "type_counts",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "type_counts",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "type_counts",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "type_counts",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "type_counts",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "type_counts",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_order",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_order",
+      "passed": true,
+      "detail": "Passed"
+    },
+    {
+      "category": "ranking_order",
+      "passed": true,
+      "detail": "Passed"
+    }
+  ],
+  "failures": []
+}

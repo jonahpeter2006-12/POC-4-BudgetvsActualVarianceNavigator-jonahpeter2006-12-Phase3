@@ -1,0 +1,158 @@
+{
+  "validation_version": "1.0.0",
+  "dataset_version": "1.0.0",
+  "method_version": "1.0.0",
+  "generated_at": "2026-11-06T06:26:37Z",
+  "overall_status": "PASS",
+  "checks": [
+    {
+      "check_id": "CALCULATIONS",
+      "description": "Calculations",
+      "status": "PASS",
+      "check_count": 256,
+      "passed_count": 256,
+      "failed_count": 0
+    },
+    {
+      "check_id": "CLASSIFICATION",
+      "description": "Classification",
+      "status": "PASS",
+      "check_count": 128,
+      "passed_count": 128,
+      "failed_count": 0
+    },
+    {
+      "check_id": "COUNT",
+      "description": "Count",
+      "status": "PASS",
+      "check_count": 1,
+      "passed_count": 1,
+      "failed_count": 0
+    },
+    {
+      "check_id": "EVIDENCE",
+      "description": "Evidence",
+      "status": "PASS",
+      "check_count": 256,
+      "passed_count": 256,
+      "failed_count": 0
+    },
+    {
+      "check_id": "EVIDENCE_STATUS",
+      "description": "Evidence Status",
+      "status": "PASS",
+      "check_count": 64,
+      "passed_count": 64,
+      "failed_count": 0
+    },
+    {
+      "check_id": "FINDING",
+      "description": "Finding",
+      "status": "PASS",
+      "check_count": 64,
+      "passed_count": 64,
+      "failed_count": 0
+    },
+    {
+      "check_id": "IDENTITY",
+      "description": "Identity",
+      "status": "PASS",
+      "check_count": 1,
+      "passed_count": 1,
+      "failed_count": 0
+    },
+    {
+      "check_id": "LIMITATIONS",
+      "description": "Limitations",
+      "status": "PASS",
+      "check_count": 64,
+      "passed_count": 64,
+      "failed_count": 0
+    },
+    {
+      "check_id": "MEASURE_SEPARATION",
+      "description": "Measure Separation",
+      "status": "PASS",
+      "check_count": 128,
+      "passed_count": 128,
+      "failed_count": 0
+    },
+    {
+      "check_id": "METADATA",
+      "description": "Metadata",
+      "status": "PASS",
+      "check_count": 3,
+      "passed_count": 3,
+      "failed_count": 0
+    },
+    {
+      "check_id": "RANKING_ELIGIBILITY",
+      "description": "Ranking Eligibility",
+      "status": "PASS",
+      "check_count": 64,
+      "passed_count": 64,
+      "failed_count": 0
+    },
+    {
+      "check_id": "RANKING_ORDER",
+      "description": "Ranking Order",
+      "status": "PASS",
+      "check_count": 3,
+      "passed_count": 3,
+      "failed_count": 0
+    },
+    {
+      "check_id": "SCHEMA",
+      "description": "Schema",
+      "status": "PASS",
+      "check_count": 128,
+      "passed_count": 128,
+      "failed_count": 0
+    },
+    {
+      "check_id": "TYPE_COUNTS",
+      "description": "Type Counts",
+      "status": "PASS",
+      "check_count": 6,
+      "passed_count": 6,
+      "failed_count": 0
+    },
+    {
+      "check_id": "VERSIONS",
+      "description": "Versions",
+      "status": "PASS",
+      "check_count": 64,
+      "passed_count": 64,
+      "failed_count": 0
+    }
+  ],
+  "passed_count": 1230,
+  "failed_count": 0,
+  "warning_count": 0,
+  "independent_recalculation": {
+    "status": "PASS",
+    "comparison_count": 16,
+    "passed_count": 16,
+    "failed_count": 0,
+    "evidence": "Sixteen overall grouped financial comparisons were independently recalculated with zero mismatches."
+  },
+  "aggregation_reconciliation": {
+    "status": "NOT_SEPARATELY_TESTED",
+    "evidence": "The validator recalculates finding values; a separate aggregation reconciliation test has not been run."
+  },
+  "reproducibility": {
+    "status": "PASS",
+    "method_version": "1.0.0",
+    "dataset_version": "1.0.0",
+    "fixed_timestamp": "2026-11-06T00:00:00Z",
+    "repeat_runs_identical": true,
+    "sha256": "5769ac9aea58a657914b983827f0b831f7eb78cffae28974ecd8b9f57ad9ae09",
+    "evidence": "Two analytical executions using the same fixed timestamp produced identical SHA-256 output hashes."
+  },
+  "baseline_comparison": {
+    "status": "NOT_SEPARATELY_TESTED",
+    "baseline_method": "Direct grouped Budget and Actual arithmetic comparison.",
+    "evidence": "A separate baseline comparison run has not been recorded."
+  },
+  "check_results_file": "analytical_validation.json"
+}
