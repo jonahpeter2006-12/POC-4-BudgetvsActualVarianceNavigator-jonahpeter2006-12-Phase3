@@ -1,11 +1,11 @@
 ﻿services:
   backend:
     build:
-      context: ./backend
-      dockerfile: Dockerfile
-    container_name: budget-variance-backend
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: budget-variance-backend-phase3
     ports:
-      - "8000:8000"
+      - "8002:8000"
     healthcheck:
       test:
         - CMD
@@ -23,10 +23,10 @@
       context: ./frontend
       dockerfile: Dockerfile
       args:
-        NEXT_PUBLIC_API_URL: http://localhost:8000
-    container_name: budget-variance-frontend
+        NEXT_PUBLIC_API_URL: http://localhost:8002
+    container_name: budget-variance-frontend-phase3
     ports:
-      - "3000:3000"
+      - "3002:3000"
     depends_on:
       backend:
         condition: service_healthy
