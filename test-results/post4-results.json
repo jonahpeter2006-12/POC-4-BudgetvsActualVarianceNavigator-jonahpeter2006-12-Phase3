@@ -1,11 +1,11 @@
 {
   "project": "POC-4 Budget vs Actual Variance Navigator",
   "phase": "Phase 3 Post #4",
-  "frontend_url": "http://localhost:3000",
-  "backend_url": "http://127.0.0.1:8000",
+  "frontend_url": "http://127.0.0.1:3002",
+  "backend_url": "http://127.0.0.1:8002",
   "browser": "Google Chrome via Selenium WebDriver",
-  "executed_at_utc": "2026-11-07T09:24:39.758574+00:00",
-  "passed": 11,
+  "executed_at_utc": "2026-11-07T13:46:08.210421+00:00",
+  "passed": 12,
   "failed": 0,
   "result": "PASS",
   "tests": [
@@ -58,6 +58,11 @@
       "test": "Mobile viewport overflow check",
       "status": "PASS",
       "detail": "{\"scrollWidth\": 487, \"width\": 487}"
+    },
+    {
+      "test": "Post #4 screenshot evidence",
+      "status": "PASS",
+      "detail": "Completed Data Intelligence page screenshot captured"
     },
     {
       "test": "Post #4 screenshot evidence",

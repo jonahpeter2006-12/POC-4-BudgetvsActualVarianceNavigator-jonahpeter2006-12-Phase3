@@ -18,8 +18,8 @@ SCREENSHOTS = ROOT / "screenshots"
 RESULTS.mkdir(exist_ok=True)
 SCREENSHOTS.mkdir(exist_ok=True)
 
-FRONTEND = "http://localhost:3000"
-BACKEND = "http://127.0.0.1:8000"
+FRONTEND = "http://127.0.0.1:3002"
+BACKEND = "http://127.0.0.1:8002"
 TIMEOUT = 25
 results = []
 
@@ -243,11 +243,40 @@ def main():
             responsive_ok,
             json.dumps(dimensions),
         )
-
+        # Capture screenshot only after intelligence data is fully rendered.
         driver.set_window_size(1440, 1000)
         driver.get(f"{FRONTEND}/data-intelligence")
-        wait.until(EC.presence_of_element_located((By.TAG_NAME, "main")))
-        driver.save_screenshot(str(SCREENSHOTS / "post4-intelligence.png"))
+
+        wait.until(
+            EC.presence_of_element_located((By.TAG_NAME, "main"))
+        )
+
+        wait.until(
+            lambda d: (
+                "Overall comparisons" in d.find_element(
+                    By.TAG_NAME, "body"
+                ).text
+                and "Monthly findings" in d.find_element(
+                    By.TAG_NAME, "body"
+                ).text
+                and "1,230" in d.find_element(
+                    By.TAG_NAME, "body"
+                ).text
+                and "64" in d.find_element(
+                    By.TAG_NAME, "body"
+                ).text
+            )
+        )
+
+        driver.save_screenshot(
+            str(SCREENSHOTS / "post4-intelligence.png")
+        )
+
+        record(
+            "Post #4 screenshot evidence",
+            (SCREENSHOTS / "post4-intelligence.png").exists(),
+            "Completed Data Intelligence page screenshot captured",
+        )
         record(
             "Post #4 screenshot evidence",
             (SCREENSHOTS / "post4-intelligence.png").exists(),
