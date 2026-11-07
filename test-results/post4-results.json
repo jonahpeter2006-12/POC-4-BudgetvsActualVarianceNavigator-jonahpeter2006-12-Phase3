@@ -1,0 +1,68 @@
+{
+  "project": "POC-4 Budget vs Actual Variance Navigator",
+  "phase": "Phase 3 Post #4",
+  "frontend_url": "http://localhost:3000",
+  "backend_url": "http://127.0.0.1:8000",
+  "browser": "Google Chrome via Selenium WebDriver",
+  "executed_at_utc": "2026-11-07T06:48:44.111875+00:00",
+  "passed": 11,
+  "failed": 0,
+  "result": "PASS",
+  "tests": [
+    {
+      "test": "Intelligence API readiness",
+      "status": "PASS",
+      "detail": "HTTP 200; findings=64"
+    },
+    {
+      "test": "Data Intelligence route availability",
+      "status": "PASS",
+      "detail": "HTTP 200"
+    },
+    {
+      "test": "Data Intelligence page and summary render",
+      "status": "PASS",
+      "detail": "Summary cards and analytical validation are visible"
+    },
+    {
+      "test": "Overall comparisons view",
+      "status": "PASS",
+      "detail": "16 findings displayed; expected 16"
+    },
+    {
+      "test": "Monthly findings and limitation warning",
+      "status": "PASS",
+      "detail": "48 findings; insufficient-evidence warning visible"
+    },
+    {
+      "test": "Finding search interaction",
+      "status": "PASS",
+      "detail": "Search returned 3 matching monthly findings"
+    },
+    {
+      "test": "Finding evidence detail",
+      "status": "PASS",
+      "detail": "Financial measures, source traceability and method details visible"
+    },
+    {
+      "test": "Evidence detail close interaction",
+      "status": "PASS",
+      "detail": "Details panel closed"
+    },
+    {
+      "test": "Operational dashboard regression",
+      "status": "PASS",
+      "detail": "Original dashboard and Data Intelligence navigation are present"
+    },
+    {
+      "test": "Mobile viewport overflow check",
+      "status": "PASS",
+      "detail": "{\"scrollWidth\": 487, \"width\": 487}"
+    },
+    {
+      "test": "Post #4 screenshot evidence",
+      "status": "PASS",
+      "detail": "screenshots/post4-intelligence.png"
+    }
+  ]
+}

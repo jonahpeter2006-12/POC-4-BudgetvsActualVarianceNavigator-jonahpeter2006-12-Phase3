@@ -1,6 +1,7 @@
 ﻿'use client';
 
 import React, { useEffect, useMemo, useState } from 'react';
+import Link from 'next/link';
 import {
   ResponsiveContainer,
   BarChart,
@@ -397,12 +398,17 @@ export default function DashboardPage() {
               <span className="hidden rounded-full border border-[#3a3548] px-3 py-2 text-[10px] uppercase tracking-wider text-[#a49db3] sm:inline-flex">
                 PoC-4 · Batch 8
               </span>
+              <Link
+                href="/data-intelligence"
+                className="flex h-10 items-center rounded-xl border border-violet-300/30 bg-violet-300/[0.08] px-3 text-xs font-medium text-violet-100 transition hover:border-violet-300/60 hover:bg-violet-300/[0.14]"
+              >
+                Data Intelligence
+              </Link>
               <button
                 type="button"
                 onClick={() => setMetadataOpen(true)}
                 aria-label="Open application metadata"
-                className="flex h-10 items-center gap-2 rounded-xl border border-[#464054] bg-[#171521] px-3 text-xs font-medium text-[#d9d2e5] transition hover:border-violet-300/50 hover:text-white"
-              >
+                className="flex h-10 items-center gap-2 rounded-xl border border-[#464054] bg-[#171521] px-3 text-xs font-medium text-[#d9d2e5] transition hover:border-violet-300/50 hover:text-white">
                 <span className="text-violet-200">ⓘ</span>
                 <span className="hidden sm:inline">Project details</span>
               </button>

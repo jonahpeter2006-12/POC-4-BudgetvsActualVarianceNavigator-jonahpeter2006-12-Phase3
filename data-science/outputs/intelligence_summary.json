@@ -11,8 +11,10 @@
   "baseline_method": "Direct grouped arithmetic comparison of canonical Budget and Actual amounts, calculating variance as Actual minus Budget and variance percentage from the grouped totals.",
   "baseline_result": {
     "overall_comparison_count": 16,
-    "independently_validated_calculation_checks": 16,
+    "independently_validated_calculation_checks": 80,
     "calculation_mismatches": 0,
+    "baseline_check_count": 83,
+    "baseline_status": "PASS",
     "comparison_with_selected_method": "Track A preserves the baseline grouped financial calculations and adds evidence traceability, minimum source-count screening, descriptive monthly findings and deterministic overall ranking. No predictive accuracy or performance improvement is claimed."
   },
   "key_findings": [
@@ -50,6 +52,61 @@
       "result_id": "track-a-cost_centre_comparison-20260101-cc-301"
     }
   ],
+  "sensitivity_assessment": {
+    "status": "COMPLETED",
+    "test_design": "Leave-one-source-observation-out sensitivity review",
+    "removed_source_record_id": "SRC-0007",
+    "source_observations_before": 18,
+    "source_observations_after": 17,
+    "overall_comparison_count": 16,
+    "rank_changed_count": 12,
+    "variance_changed_count": 3,
+    "quality_status_changed_count": 2,
+    "newly_insufficient_evidence_count": 2,
+    "affected_comparisons": [
+      {
+        "result_type": "cost_centre_comparison",
+        "group": "CC-201",
+        "variance_before": 13000.0,
+        "variance_after": 5000.0,
+        "variance_change": -8000.0,
+        "rank_before": 2,
+        "rank_after": null,
+        "quality_status_before": "validated_with_limitations",
+        "quality_status_after": "insufficient_evidence"
+      },
+      {
+        "result_type": "department_comparison",
+        "group": "Marketing",
+        "variance_before": 8000.0,
+        "variance_after": 0.0,
+        "variance_change": -8000.0,
+        "rank_before": 3,
+        "rank_after": 4,
+        "quality_status_before": "validated_with_limitations",
+        "quality_status_after": "validated_with_limitations"
+      },
+      {
+        "result_type": "expenditure_category_comparison",
+        "group": "Paid Ads & Campaigns",
+        "variance_before": 13000.0,
+        "variance_after": 5000.0,
+        "variance_change": -8000.0,
+        "rank_before": 2,
+        "rank_after": null,
+        "quality_status_before": "validated_with_limitations",
+        "quality_status_after": "insufficient_evidence"
+      }
+    ],
+    "interpretation": "This is a descriptive sensitivity assessment of the effect of removing one large source observation. Changes in variance, ranking or evidence status indicate sensitivity to that observation. Unchanged findings do not establish statistical robustness or population-level validity.",
+    "limitations": [
+      "The dataset contains synthetic source observations.",
+      "Only one removal scenario was tested.",
+      "This test does not establish statistical significance or population-level robustness.",
+      "Groups falling below the minimum source threshold become insufficient_evidence and are excluded from ranking.",
+      "Ranking changes can result from changed variances, evidence eligibility or the ordering of remaining groups."
+    ]
+  },
   "total_findings": 64,
   "overall_finding_count": 16,
   "monthly_finding_count": 48,
@@ -79,7 +136,8 @@
     "The 72 canonical rows represent four derived financial measures per source observation, not 72 independent transactions.",
     "Monthly findings with fewer than three independent observations are descriptive and marked insufficient_evidence.",
     "Forecast values are illustrative and are not validated predictive outputs.",
-    "Results do not establish population-level financial conclusions."
+    "Results do not establish population-level financial conclusions.",
+    "A single leave-one-source-observation-out assessment found ranking and variance sensitivity; it is not a statistical robustness test."
   ],
   "data_version": "1.0.0",
   "decision_supported": "Support descriptive, evidence-based human review of budget and actual financial measurements. Outputs inform review priorities and do not make autonomous financial decisions.",
@@ -121,16 +179,19 @@
   ],
   "validation_result": {
     "overall_status": "PASS",
-    "total_checks": 1230,
-    "passed_checks": 1230,
+    "total_checks": 1325,
+    "passed_checks": 1325,
     "failed_checks": 0,
-    "validation_source": "analytical_validation.json"
+    "analytical_validation_checks": 1230,
+    "reconciliation_checks": 95,
+    "validation_source": "analytical_validation.json and baseline_reconciliation.json"
   },
   "important_limitations": [
     "The canonical dataset contains 18 independent synthetic source observations.",
     "The 72 canonical rows represent four derived financial measures per source observation, not 72 independent transactions.",
     "Monthly findings with fewer than three independent observations are descriptive and marked insufficient_evidence.",
     "Forecast values are illustrative and are not validated predictive outputs.",
-    "Results do not establish population-level financial conclusions."
+    "Results do not establish population-level financial conclusions.",
+    "A single leave-one-source-observation-out assessment found ranking and variance sensitivity; it is not a statistical robustness test."
   ]
 }

@@ -126,19 +126,50 @@
       "failed_count": 0
     }
   ],
-  "passed_count": 1230,
+  "passed_count": 1325,
   "failed_count": 0,
   "warning_count": 0,
-  "independent_recalculation": {
+  "analytical_validation": {
     "status": "PASS",
-    "comparison_count": 16,
-    "passed_count": 16,
+    "total_checks": 1230,
+    "passed_count": 1230,
     "failed_count": 0,
-    "evidence": "Sixteen overall grouped financial comparisons were independently recalculated with zero mismatches."
+    "evidence_file": "analytical_validation.json"
+  },
+  "check_results_file": "analytical_validation.json",
+  "reconciliation_validation": {
+    "status": "PASS",
+    "total_checks": 95,
+    "passed_count": 95,
+    "failed_count": 0,
+    "evidence_file": "baseline_reconciliation.json"
   },
   "aggregation_reconciliation": {
-    "status": "NOT_SEPARATELY_TESTED",
-    "evidence": "The validator recalculates finding values; a separate aggregation reconciliation test has not been run."
+    "status": "PASS",
+    "grouping_dimension_count": 3,
+    "measure_check_count": 12,
+    "passed_count": 12,
+    "failed_count": 0,
+    "canonical_totals": {
+      "budget_amount": 601000.0,
+      "actual_amount": 633000.0,
+      "committed_amount": 42500.0,
+      "forecast_amount": 660500.0
+    },
+    "evidence_file": "baseline_reconciliation.json",
+    "evidence": "Budget, Actual, Committed and Forecast totals were reconciled across all three overall grouping dimensions."
+  },
+  "baseline_comparison": {
+    "status": "PASS",
+    "baseline_method": "Independent Pandas aggregation of canonical source observations.",
+    "overall_comparison_count": 16,
+    "check_count": 83,
+    "passed_count": 83,
+    "failed_count": 0,
+    "calculation_check_count": 80,
+    "calculation_mismatches": 0,
+    "evidence_file": "baseline_reconciliation.json",
+    "evidence": "Overall grouped findings were independently compared against canonical-data aggregates."
   },
   "reproducibility": {
     "status": "PASS",
@@ -149,10 +180,14 @@
     "sha256": "5769ac9aea58a657914b983827f0b831f7eb78cffae28974ecd8b9f57ad9ae09",
     "evidence": "Two analytical executions using the same fixed timestamp produced identical SHA-256 output hashes."
   },
-  "baseline_comparison": {
-    "status": "NOT_SEPARATELY_TESTED",
-    "baseline_method": "Direct grouped Budget and Actual arithmetic comparison.",
-    "evidence": "A separate baseline comparison run has not been recorded."
-  },
-  "check_results_file": "analytical_validation.json"
+  "sensitivity_assessment": {
+    "status": "COMPLETED",
+    "test_design": "Leave-one-source-observation-out sensitivity review",
+    "rank_changed_count": 12,
+    "variance_changed_count": 3,
+    "quality_status_changed_count": 2,
+    "newly_insufficient_evidence_count": 2,
+    "evidence_file": "sensitivity_review.json",
+    "note": "Sensitivity assessment is reported separately and is not included in the combined validation-check total."
+  }
 }
