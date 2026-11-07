@@ -22,6 +22,7 @@ app.add_middleware(
     "http://localhost:3002",
     "http://127.0.0.1:3000",
     "https://poc4-budget-frontend.onrender.com",
+    "https://poc4-budget-phase3-frontend.onrender.com",
 ],
     allow_credentials=True,
     allow_methods=["GET"],
