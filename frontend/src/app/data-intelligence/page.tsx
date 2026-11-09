@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
@@ -108,6 +108,53 @@ type SummaryPayload = {
   };
 };
 
+type AssistantEvidenceFinding = {
+  result_id: string;
+  source_record_ids: string[];
+  canonical_record_ids: string[];
+  reporting_period: {
+    period_start?: string;
+    period_end?: string;
+  };
+  independent_source_count: number;
+  quality_status: string;
+  limitations: string[] | string;
+  excerpt: string;
+};
+
+type AssistantEvidenceReference = {
+  result_type: string;
+  findings: AssistantEvidenceFinding[];
+};
+
+type AssistantKeyValue = {
+  result_id: string;
+  result_type: string;
+  entity_id: string | null;
+  group_key: string;
+  priority_rank: number | null;
+  result_value: number;
+  result_category: string;
+  result_unit: string;
+  budget_total?: number;
+  actual_total?: number;
+  variance_amount?: number;
+  variance_percentage?: number;
+  committed_total?: number;
+  forecast_total?: number;
+};
+
+type AssistantResponse = {
+  answer_id: string;
+  status: string;
+  intent: string | null;
+  answer: string;
+  evidence_references: AssistantEvidenceReference[];
+  key_values: AssistantKeyValue[];
+  metadata: Record<string, unknown>;
+  limitation: string[] | string;
+  suggested_follow_ups: string[];
+};
 const money = (value?: number, unit = 'USD') => {
   if (typeof value !== 'number' || !Number.isFinite(value)) return '—';
 
@@ -187,6 +234,10 @@ export default function DataIntelligencePage() {
   const [statusFilter, setStatusFilter] = useState('all');
   const [categoryFilter, setCategoryFilter] = useState('all');
   const [view, setView] = useState('overall');
+  const [assistantQuestion, setAssistantQuestion] = useState('');
+  const [assistantResponse, setAssistantResponse] = useState<AssistantResponse | null>(null);
+  const [assistantLoading, setAssistantLoading] = useState(false);
+  const [assistantError, setAssistantError] = useState('');
 
   useEffect(() => {
     let active = true;
@@ -325,6 +376,46 @@ export default function DataIntelligencePage() {
     }
   }
 
+  async function submitAssistantQuestion(question = assistantQuestion) {
+    const trimmedQuestion = question.trim();
+
+    if (!trimmedQuestion || assistantLoading) return;
+
+    setAssistantLoading(true);
+    setAssistantError('');
+    setAssistantResponse(null);
+
+    try {
+      const response = await fetch(`${API_URL}/api/assistant/query`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ question: trimmedQuestion }),
+        cache: 'no-store',
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(
+          typeof data.detail === 'string'
+            ? data.detail
+            : 'The assistant request could not be completed.',
+        );
+      }
+
+      setAssistantResponse(data as AssistantResponse);
+    } catch (requestError) {
+      setAssistantError(
+        requestError instanceof Error
+          ? requestError.message
+          : 'Unable to contact the assistant service.',
+      );
+    } finally {
+      setAssistantLoading(false);
+    }
+  }
   if (loading) {
     return (
       <main className="min-h-screen bg-[#080b12] px-5 py-16 text-[#e8edf5]">
@@ -398,6 +489,235 @@ export default function DataIntelligencePage() {
       </header>
 
       <div className="mx-auto max-w-7xl space-y-8 px-5 py-8 sm:px-8">
+        <section className="rounded-2xl border border-[#315078] bg-[#101b2b] p-5 sm:p-6">
+          <div className="flex flex-wrap items-start justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-[#55a6ff]">
+                Post #5 · Mode A
+              </p>
+              <h2 className="mt-2 text-xl font-semibold text-[#e8edf5]">
+                Grounded Data Assistant
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm leading-6 text-[#aab5c5]">
+                Ask questions about approved intelligence findings. Answers are
+                deterministic and supported by verified evidence; predictions
+                and unsupported requests are not provided.
+              </p>
+            </div>
+            <span className="rounded-full border border-[#315078] px-3 py-1.5 text-xs text-[#9fcaff]">
+              Evidence-based answers
+            </span>
+          </div>
+
+          <form
+            className="mt-5 space-y-3"
+            onSubmit={(event) => {
+              event.preventDefault();
+              void submitAssistantQuestion();
+            }}
+          >
+            <label
+              htmlFor="assistant-question"
+              className="block text-sm font-medium text-[#dce5f2]"
+            >
+              Your question
+            </label>
+            <textarea
+              id="assistant-question"
+              value={assistantQuestion}
+              onChange={(event) => setAssistantQuestion(event.target.value)}
+              maxLength={500}
+              rows={3}
+              placeholder="Example: Compare cost centres"
+              className="w-full rounded-xl border border-[#35445a] bg-[#080f1b] px-4 py-3 text-sm text-[#e8edf5] outline-none placeholder:text-[#68778d] focus:border-[#55a6ff]"
+            />
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <p className="text-xs text-[#8995a8]">
+                Maximum 500 characters. Only supported question types are answered.
+              </p>
+              <button
+                type="submit"
+                disabled={assistantLoading || !assistantQuestion.trim()}
+                className="rounded-xl bg-[#2675c9] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#3489e2] disabled:cursor-not-allowed disabled:opacity-50"
+              >
+                {assistantLoading ? 'Analysing evidence...' : 'Ask assistant'}
+              </button>
+            </div>
+          </form>
+
+          {assistantError && (
+            <div className="mt-4 rounded-xl border border-rose-400/30 bg-rose-400/5 p-4 text-sm text-rose-300">
+              {assistantError}
+            </div>
+          )}
+
+          {assistantResponse && (
+            <div className="mt-5 space-y-5 border-t border-[#263244] pt-5">
+              <div>
+                <div className="flex flex-wrap items-center gap-3">
+                  <p className="text-xs font-semibold uppercase tracking-widest text-[#8995a8]">
+                    Assistant response
+                  </p>
+                  <span className="rounded-full border border-[#526078] px-3 py-1 text-xs font-semibold text-[#c3cedd]">
+                    {assistantResponse.status}
+                  </span>
+                  {assistantResponse.intent && (
+                    <span className="text-xs text-[#8995a8]">
+                      {assistantResponse.intent}
+                    </span>
+                  )}
+                </div>
+                <p className="mt-3 whitespace-pre-wrap text-sm leading-7 text-[#e8edf5]">
+                  {assistantResponse.answer}
+                </p>
+              </div>
+
+              {assistantResponse.key_values.length > 0 && (
+                <div>
+                  <h3 className="text-sm font-semibold text-[#dce5f2]">
+                    Supporting financial values
+                  </h3>
+                  <div className="mt-3 overflow-x-auto rounded-xl border border-[#263244]">
+                    <table className="w-full min-w-[650px] text-left text-xs">
+                      <thead className="bg-[#172235] text-[#aab5c5]">
+                        <tr>
+                          <th className="px-3 py-3">Group</th>
+                          <th className="px-3 py-3">Category</th>
+                          <th className="px-3 py-3">Budget</th>
+                          <th className="px-3 py-3">Actual</th>
+                          <th className="px-3 py-3">Variance</th>
+                          <th className="px-3 py-3">Variance %</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {assistantResponse.key_values.map((item) => (
+                          <tr
+                            key={item.result_id}
+                            className="border-t border-[#263244] text-[#c3cedd]"
+                          >
+                            <td className="px-3 py-3">{item.group_key}</td>
+                            <td className="px-3 py-3">{label(item.result_category)}</td>
+                            <td className="px-3 py-3">
+                              {typeof item.budget_total === 'number'
+                                ? money(item.budget_total)
+                                : '—'}
+                            </td>
+                            <td className="px-3 py-3">
+                              {typeof item.actual_total === 'number'
+                                ? money(item.actual_total)
+                                : '—'}
+                            </td>
+                            <td className="px-3 py-3">
+                              {typeof item.variance_amount === 'number'
+                                ? money(item.variance_amount)
+                                : number(item.result_value)}
+                            </td>
+                            <td className="px-3 py-3">
+                              {typeof item.variance_percentage === 'number'
+                                ? percent(item.variance_percentage)
+                                : '—'}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              )}
+
+              {assistantResponse.evidence_references.length > 0 && (
+                <div>
+                  <h3 className="text-sm font-semibold text-[#dce5f2]">
+                    Evidence references
+                  </h3>
+                  <div className="mt-3 space-y-3">
+                    {assistantResponse.evidence_references.map((group, index) => (
+                      <div
+                        key={`${group.result_type}-${index}`}
+                        className="rounded-xl border border-[#263244] bg-[#0b1320] p-4"
+                      >
+                        <p className="text-xs font-semibold uppercase tracking-wider text-[#55a6ff]">
+                          {label(group.result_type)}
+                        </p>
+                        {group.findings.map((finding) => (
+                          <div
+                            key={finding.result_id}
+                            className="mt-3 border-t border-[#263244] pt-3"
+                          >
+                            <p className="text-sm leading-6 text-[#dce5f2]">
+                              {finding.excerpt}
+                            </p>
+                            <div className="mt-2 space-y-1 text-xs leading-5 text-[#8995a8]">
+                              <p>Result ID: {finding.result_id}</p>
+                              <p>
+                                Source records: {finding.source_record_ids.join(', ') || 'None supplied'}
+                              </p>
+                              <p>
+                                Canonical records: {finding.canonical_record_ids.join(', ') || 'None supplied'}
+                              </p>
+                              <p>
+                                Reporting period: {finding.reporting_period.period_start || 'N/A'}
+                                {' to '}
+                                {finding.reporting_period.period_end || 'N/A'}
+                              </p>
+                              <p>
+                                Independent sources: {finding.independent_source_count}
+                                {' · '}Quality: {finding.quality_status}
+                              </p>
+                              <p>
+                                Limitations: {Array.isArray(finding.limitations)
+                                  ? finding.limitations.join('; ') || 'None supplied'
+                                  : finding.limitations || 'None supplied'}
+                              </p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {(Array.isArray(assistantResponse.limitation)
+                ? assistantResponse.limitation.length > 0
+                : Boolean(assistantResponse.limitation)) && (
+                <div className="rounded-xl border border-amber-400/20 bg-amber-400/5 p-4">
+                  <h3 className="text-xs font-semibold uppercase tracking-wider text-amber-300">
+                    Response limitations
+                  </h3>
+                  <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-5 text-[#c3cedd]">
+                    {(Array.isArray(assistantResponse.limitation)
+                      ? assistantResponse.limitation
+                      : [assistantResponse.limitation]
+                    ).map((item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {assistantResponse.suggested_follow_ups.length > 0 && (
+                <div>
+                  <h3 className="text-xs font-semibold uppercase tracking-wider text-[#8995a8]">
+                    Suggested follow-up questions
+                  </h3>
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    {assistantResponse.suggested_follow_ups.map((question) => (
+                      <button
+                        key={question}
+                        type="button"
+                        onClick={() => setAssistantQuestion(question)}
+                        className="rounded-full border border-[#35445a] px-3 py-2 text-left text-xs text-[#c3cedd] transition hover:border-[#55a6ff] hover:text-white"
+                      >
+                        {question}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+        </section>
         <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           <MetricCard
             title="Overall comparisons"

@@ -8,6 +8,12 @@ import duckdb
 import pandas as pd
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
+from backend.assistant import process_question
+
+class AssistantQueryRequest(BaseModel):
+    question: Any = None
+
 
 app = FastAPI(
     title="Budget vs Actual Variance Navigator API",
@@ -26,7 +32,7 @@ app.add_middleware(
     "https://poc4-budget-phase3-frontend.onrender.com",
 ],
     allow_credentials=True,
-    allow_methods=["GET"],
+    allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
 
@@ -835,3 +841,39 @@ def intelligence_result_detail(result_id: str):
         status_code=404,
         detail="Intelligence result not found.",
     )
+
+
+
+@app.post("/api/assistant/query")
+def assistant_query(request: AssistantQueryRequest):
+    from backend.assistant import (
+        build_status_response,
+        is_unsafe_question,
+        validate_question,
+    )
+
+    validation_error = validate_question(request.question)
+
+    if validation_error:
+        return build_status_response(
+            validation_error,
+            None,
+            "Please provide a valid question of no more than 500 characters.",
+        )
+
+    if is_unsafe_question(request.question):
+        return build_status_response(
+            "UNSAFE",
+            None,
+            "This request cannot be processed because it violates the assistant safety rules.",
+        )
+
+    artifacts = _get_verified_intelligence_artifacts()
+
+    try:
+        return process_question(request.question, artifacts)
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=503,
+            detail="Verified assistant evidence is unavailable.",
+        ) from exc
