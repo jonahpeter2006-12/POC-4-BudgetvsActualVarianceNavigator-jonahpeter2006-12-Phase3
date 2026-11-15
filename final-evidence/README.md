@@ -84,7 +84,7 @@ The earlier preliminary browser run and diagnostic evidence remain preserved.
 - Clean-clone Docker build remains BLOCKED because the Docker Desktop Linux engine was unavailable.
 - Full default pytest collection previously remained blocked because two legacy test modules required the missing `requests` package in that clean-clone environment.
 - Public Gemini Mode B behavior has not been certified.
-- Final Repomix generation and reviewer approval remain outstanding.
+- Final Repomix snapshot generation and XML validation were completed for GitHub master commit `029b6bb` on 15 November 2026; reviewer approval and certification remain outstanding.
 - No Phase 3 release tag has been created.
 
 **PHASE 3 STATUS: DRAFT — NOT CERTIFIED.**

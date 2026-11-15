@@ -88,7 +88,7 @@ The dataset remains synthetic and limited to 18 independent source observations.
 
 The verified public API behavior, analytical validation summary, representative deterministic assistant responses, and local build and test evidence support the tested portions of Phase 3.
 
-Complete Post #6 UAT is not established because fresh browser-based acceptance, clean-clone validation, final release evidence, and reviewer approval remain outstanding.
+At this earlier UAT checkpoint, complete Post #6 UAT was not established because fresh browser-based acceptance, clean-clone validation, final release evidence, and reviewer approval remained outstanding. The later public browser acceptance and evidence-pack reconciliation are recorded in the dated addendum below. Clean-clone limitations and reviewer certification remain outstanding.
 
 This report does not declare Phase 3 complete or certified.
 
@@ -99,10 +99,10 @@ The following later evidence supplements the earlier UAT record:
 - Clean-clone validation at commit `daa7f610882862157287e350d8850499cb8ca44f` completed with documented limitations: 24 targeted tests passed; compilation, reproducibility, frontend dependency installation, and production build passed. The clean-clone Docker build was BLOCKED because the Docker Desktop Linux engine was unavailable.
 - Following a subsequent local assistant correction, 27 targeted Python tests passed (19 assistant API tests and 8 Gemini explainer tests).
 - Local browser acceptance after that correction passed 17 checks: 4 assistant regression, 9 filter/responsive, and 4 viewport checks.
-- The local correction has not been committed, pushed, or deployed. Public Render remains on commit `daa7f61`.
-- Public post-correction browser acceptance: NOT PERFORMED. Local browser results must not be represented as public deployment acceptance.
+- Historical checkpoint: the local correction had not yet been committed, pushed, or deployed, and public Render was recorded on commit `daa7f61`. This was superseded by the later correction push and public acceptance recorded below.
+- Historical checkpoint: public post-correction browser acceptance had not yet been performed. This was superseded by the public Selenium acceptance on 15 November 2026, which passed 19/19 checks.
 - Public Gemini Mode B behavior remains unverified; the public deployment uses the deterministic assistant path.
-- Final evidence-pack completion, final Repomix generation, and reviewer approval remain outstanding.
+- At that earlier checkpoint, final evidence-pack completion and Repomix generation remained outstanding. Both were subsequently completed and validated for GitHub master commit `029b6bb`. Reviewer approval remains outstanding.
 
 **Updated UAT status: PARTIAL ACCEPTANCE — PASS WITH DOCUMENTED LIMITATIONS. Phase 3 certification is not established.**
 
@@ -134,7 +134,7 @@ The earlier preliminary browser run and diagnostic evidence remain preserved.
 - Clean-clone Docker build remains BLOCKED because the Docker Desktop Linux engine was unavailable.
 - Full default pytest collection previously remained blocked because two legacy test modules required the missing `requests` package in that clean-clone environment.
 - Public Gemini Mode B behavior has not been certified.
-- Final Repomix generation and reviewer approval remain outstanding.
+- Final Repomix snapshot generation and XML validation were completed for GitHub master commit `029b6bb` on 15 November 2026; reviewer approval and certification remain outstanding.
 - No Phase 3 release tag has been created.
 
 **PHASE 3 STATUS: DRAFT — NOT CERTIFIED.**
@@ -159,9 +159,9 @@ This reconciliation supersedes earlier status snapshots in this document whereve
 - Clean-clone Docker build remains **BLOCKED** because the Docker Desktop Linux engine was unavailable during that validation.
 - Full default pytest collection in the separate clean-clone environment was **BLOCKED** by missing `requests` for two legacy test modules; those modules were not executed in that environment.
 - Public Gemini Mode B behavior has not been certified. The public results establish the tested deterministic assistant behavior only.
-- The Render backend deployment commit is confirmed as `3610659`. The exact active frontend deployment commit has not been independently confirmed in the Render dashboard evidence reviewed for this reconciliation.
+- Both Render frontend and backend services are confirmed Live on commit `029b6bb` (15 November 2026).
 - Formal keyboard-only and screen-reader accessibility audits were not performed.
-- The final Repomix has not yet been regenerated from the finalized release state.
+- The final Repomix snapshot was generated from GitHub master commit `029b6bb` and XML-validated on 15 November 2026.
 - Reviewer approval and the required certification decision have not been received. The release tag has not been created.
 
 **Current release status: NOT CERTIFIED — reviewer approval and final release packaging remain outstanding.**

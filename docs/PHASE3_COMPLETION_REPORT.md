@@ -96,7 +96,7 @@ Historical Post #4 browser evidence is not substituted for fresh Post #6 browser
 
 **POST #6 RELEASE CERTIFICATION: NOT YET ESTABLISHED.**
 
-The available evidence supports the tested analytical, API, assistant, build, clean-clone, and local browser capabilities, subject to their documented limitations. Public post-correction browser acceptance, completion of the required evidence pack and final Repomix, final release reconciliation, and reviewer approval remain outstanding. The local assistant correction has not been deployed publicly.
+At this earlier completion checkpoint, public post-correction browser acceptance, completion of the evidence pack and final Repomix, final release reconciliation, and reviewer approval remained outstanding. The assistant correction was subsequently pushed, public acceptance passed 19/19 checks, the official evidence pack was reconciled, and the Repomix was generated and XML-validated for commit 029b6bb. Reviewer approval and certification remain outstanding.
 
 ## 9. Final Status
 
@@ -131,7 +131,7 @@ The earlier preliminary browser run and diagnostic evidence remain preserved.
 - Clean-clone Docker build remains BLOCKED because the Docker Desktop Linux engine was unavailable.
 - Full default pytest collection previously remained blocked because two legacy test modules required the missing `requests` package in that clean-clone environment.
 - Public Gemini Mode B behavior has not been certified.
-- Final Repomix generation and reviewer approval remain outstanding.
+- Final Repomix snapshot generation and XML validation were completed for GitHub master commit `029b6bb` on 15 November 2026; reviewer approval and certification remain outstanding.
 - No Phase 3 release tag has been created.
 
 **PHASE 3 STATUS: DRAFT — NOT CERTIFIED.**
@@ -156,9 +156,9 @@ This reconciliation supersedes earlier status snapshots in this document whereve
 - Clean-clone Docker build remains **BLOCKED** because the Docker Desktop Linux engine was unavailable during that validation.
 - Full default pytest collection in the separate clean-clone environment was **BLOCKED** by missing `requests` for two legacy test modules; those modules were not executed in that environment.
 - Public Gemini Mode B behavior has not been certified. The public results establish the tested deterministic assistant behavior only.
-- The Render backend deployment commit is confirmed as `3610659`. The exact active frontend deployment commit has not been independently confirmed in the Render dashboard evidence reviewed for this reconciliation.
+- Both Render frontend and backend services are confirmed Live on commit `029b6bb` (15 November 2026).
 - Formal keyboard-only and screen-reader accessibility audits were not performed.
-- The final Repomix has not yet been regenerated from the finalized release state.
+- The final Repomix snapshot was generated from GitHub master commit `029b6bb` and XML-validated on 15 November 2026.
 - Reviewer approval and the required certification decision have not been received. The release tag has not been created.
 
 **Current release status: NOT CERTIFIED — reviewer approval and final release packaging remain outstanding.**

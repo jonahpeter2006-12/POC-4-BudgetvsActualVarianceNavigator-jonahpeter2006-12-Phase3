@@ -137,9 +137,9 @@ This reconciliation supersedes earlier status snapshots in this document whereve
 - Clean-clone Docker build remains **BLOCKED** because the Docker Desktop Linux engine was unavailable during that validation.
 - Full default pytest collection in the separate clean-clone environment was **BLOCKED** by missing `requests` for two legacy test modules; those modules were not executed in that environment.
 - Public Gemini Mode B behavior has not been certified. The public results establish the tested deterministic assistant behavior only.
-- The Render backend deployment commit is confirmed as `3610659`. The exact active frontend deployment commit has not been independently confirmed in the Render dashboard evidence reviewed for this reconciliation.
+- Both Render frontend and backend services are confirmed Live on commit `029b6bb` (15 November 2026).
 - Formal keyboard-only and screen-reader accessibility audits were not performed.
-- The final Repomix has not yet been regenerated from the finalized release state.
+- The final Repomix snapshot was generated from GitHub master commit `029b6bb` and XML-validated on 15 November 2026.
 - Reviewer approval and the required certification decision have not been received. The release tag has not been created.
 
 **Current release status: NOT CERTIFIED — reviewer approval and final release packaging remain outstanding.**
