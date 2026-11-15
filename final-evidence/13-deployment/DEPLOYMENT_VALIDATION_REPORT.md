@@ -196,3 +196,24 @@ This reconciliation supersedes earlier status snapshots in this document whereve
 **Current release status: NOT CERTIFIED — reviewer approval and final release packaging remain outstanding.**
 
 The 19/19 public browser result is a successful acceptance test; it does not remove the documented clean-clone limitations or substitute for the required reviewer certification.
+
+## Public Gemini Mode B Positive-Path Validation — 15 November 2026
+
+A public request to the deployed Render backend was completed using the supported question "Compare cost centres".
+
+- Deployment commit: `954a6ed`
+- Endpoint: `POST /api/assistant/query`
+- Assistant status: `SUPPORTED`
+- Intent: `cost_centre_variance_comparison`
+- Explanation status: `generated`
+- Explanation provider: `gemini`
+- Returned cost-centre findings: 6
+- Response metadata validation status: `PASS`
+- Dataset version: `1.0.0`
+- Method version: `1.0.0`
+
+The response retained deterministic cost-centre results and their evidence references, including source record IDs, canonical record IDs, reporting period, and stated data limitations. The Gemini explanation matched the approved comparative findings.
+
+The actual public response is preserved in `final-evidence/09-assistant-or-skip/post6-public-gemini-mode-b-acceptance-20261115.json`.
+
+**Scope limitation:** This establishes successful public Gemini explanation generation for the tested supported question. Public fallback behavior during provider unavailability was not retested in this run. This result does not constitute reviewer approval or Phase 3 certification. The release remains `DRAFT — NOT CERTIFIED` pending reviewer approval.

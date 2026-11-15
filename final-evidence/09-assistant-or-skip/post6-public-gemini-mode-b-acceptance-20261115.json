@@ -1,0 +1,350 @@
+﻿{
+    "test_date":  "2026-11-15",
+    "test_type":  "Public Render Gemini Mode B positive-path acceptance",
+    "endpoint":  "https://poc4-budget-phase3-backend.onrender.com/api/assistant/query",
+    "request":  {
+                    "question":  "Compare cost centres"
+                },
+    "deployment_commit":  "954a6ed",
+    "result":  {
+                   "answer_id":  "962fa6a9-8101-4b6b-b361-d4dd76813aaf",
+                   "status":  "SUPPORTED",
+                   "intent":  "cost_centre_variance_comparison",
+                   "answer":  "Approved cost-centre variance comparison:\n- Cost Centre CC-101 recorded actual spending $149,500.00 against budget $135,000.00, a variance of $14,500.00 (above budget). The aggregate variance is 10.74%.\n- Cost Centre CC-201 recorded actual spending $198,000.00 against budget $185,000.00, a variance of $13,000.00 (above budget). The aggregate variance is 7.03%.\n- Cost Centre CC-301 recorded actual spending $88,500.00 against budget $78,000.00, a variance of $10,500.00 (above budget). The aggregate variance is 13.46%.\n- Cost Centre CC-202 recorded actual spending $90,000.00 against budget $95,000.00, a variance of $-5,000.00 (below budget). The aggregate variance is -5.26%.\n- Cost Centre CC-102 recorded actual spending $58,500.00 against budget $60,000.00, a variance of $-1,500.00 (below budget). The aggregate variance is -2.50%.\n- Cost Centre CC-401 recorded actual spending $48,500.00 against budget $48,000.00, a variance of $500.00 (above budget). The aggregate variance is 1.04%.",
+                   "evidence_references":  [
+                                               {
+                                                   "result_type":  "cost_centre_comparison",
+                                                   "findings":  [
+                                                                    {
+                                                                        "result_id":  "track-a-cost_centre_comparison-20260101-cc-101",
+                                                                        "source_record_ids":  [
+                                                                                                  "SRC-0001",
+                                                                                                  "SRC-0002",
+                                                                                                  "SRC-0003"
+                                                                                              ],
+                                                                        "canonical_record_ids":  [
+                                                                                                     "FIN-0001-ACTUAL_AMOUNT",
+                                                                                                     "FIN-0001-BUDGET_AMOUNT",
+                                                                                                     "FIN-0001-COMMITTED_AMOUNT",
+                                                                                                     "FIN-0001-FORECAST_AMOUNT",
+                                                                                                     "FIN-0002-ACTUAL_AMOUNT",
+                                                                                                     "FIN-0002-BUDGET_AMOUNT",
+                                                                                                     "FIN-0002-COMMITTED_AMOUNT",
+                                                                                                     "FIN-0002-FORECAST_AMOUNT",
+                                                                                                     "FIN-0003-ACTUAL_AMOUNT",
+                                                                                                     "FIN-0003-BUDGET_AMOUNT",
+                                                                                                     "FIN-0003-COMMITTED_AMOUNT",
+                                                                                                     "FIN-0003-FORECAST_AMOUNT"
+                                                                                                 ],
+                                                                        "reporting_period":  {
+                                                                                                 "period_start":  "2026-01-01",
+                                                                                                 "period_end":  "2026-03-31"
+                                                                                             },
+                                                                        "independent_source_count":  3,
+                                                                        "quality_status":  "validated_with_limitations",
+                                                                        "limitations":  [
+                                                                                            "All source observations are synthetic.",
+                                                                                            "The dataset contains only 18 independent source observations.",
+                                                                                            "Results describe the supplied period and do not establish population-level conclusions."
+                                                                                        ],
+                                                                        "excerpt":  "Cost Centre CC-101 recorded actual spending $149,500.00 against budget $135,000.00, a variance of $14,500.00 (above budget). The aggregate variance is 10.74%."
+                                                                    },
+                                                                    {
+                                                                        "result_id":  "track-a-cost_centre_comparison-20260101-cc-201",
+                                                                        "source_record_ids":  [
+                                                                                                  "SRC-0007",
+                                                                                                  "SRC-0008",
+                                                                                                  "SRC-0009"
+                                                                                              ],
+                                                                        "canonical_record_ids":  [
+                                                                                                     "FIN-0007-ACTUAL_AMOUNT",
+                                                                                                     "FIN-0007-BUDGET_AMOUNT",
+                                                                                                     "FIN-0007-COMMITTED_AMOUNT",
+                                                                                                     "FIN-0007-FORECAST_AMOUNT",
+                                                                                                     "FIN-0008-ACTUAL_AMOUNT",
+                                                                                                     "FIN-0008-BUDGET_AMOUNT",
+                                                                                                     "FIN-0008-COMMITTED_AMOUNT",
+                                                                                                     "FIN-0008-FORECAST_AMOUNT",
+                                                                                                     "FIN-0009-ACTUAL_AMOUNT",
+                                                                                                     "FIN-0009-BUDGET_AMOUNT",
+                                                                                                     "FIN-0009-COMMITTED_AMOUNT",
+                                                                                                     "FIN-0009-FORECAST_AMOUNT"
+                                                                                                 ],
+                                                                        "reporting_period":  {
+                                                                                                 "period_start":  "2026-01-01",
+                                                                                                 "period_end":  "2026-03-31"
+                                                                                             },
+                                                                        "independent_source_count":  3,
+                                                                        "quality_status":  "validated_with_limitations",
+                                                                        "limitations":  [
+                                                                                            "All source observations are synthetic.",
+                                                                                            "The dataset contains only 18 independent source observations.",
+                                                                                            "Results describe the supplied period and do not establish population-level conclusions."
+                                                                                        ],
+                                                                        "excerpt":  "Cost Centre CC-201 recorded actual spending $198,000.00 against budget $185,000.00, a variance of $13,000.00 (above budget). The aggregate variance is 7.03%."
+                                                                    },
+                                                                    {
+                                                                        "result_id":  "track-a-cost_centre_comparison-20260101-cc-301",
+                                                                        "source_record_ids":  [
+                                                                                                  "SRC-0013",
+                                                                                                  "SRC-0014",
+                                                                                                  "SRC-0015"
+                                                                                              ],
+                                                                        "canonical_record_ids":  [
+                                                                                                     "FIN-0013-ACTUAL_AMOUNT",
+                                                                                                     "FIN-0013-BUDGET_AMOUNT",
+                                                                                                     "FIN-0013-COMMITTED_AMOUNT",
+                                                                                                     "FIN-0013-FORECAST_AMOUNT",
+                                                                                                     "FIN-0014-ACTUAL_AMOUNT",
+                                                                                                     "FIN-0014-BUDGET_AMOUNT",
+                                                                                                     "FIN-0014-COMMITTED_AMOUNT",
+                                                                                                     "FIN-0014-FORECAST_AMOUNT",
+                                                                                                     "FIN-0015-ACTUAL_AMOUNT",
+                                                                                                     "FIN-0015-BUDGET_AMOUNT",
+                                                                                                     "FIN-0015-COMMITTED_AMOUNT",
+                                                                                                     "FIN-0015-FORECAST_AMOUNT"
+                                                                                                 ],
+                                                                        "reporting_period":  {
+                                                                                                 "period_start":  "2026-01-01",
+                                                                                                 "period_end":  "2026-03-31"
+                                                                                             },
+                                                                        "independent_source_count":  3,
+                                                                        "quality_status":  "validated_with_limitations",
+                                                                        "limitations":  [
+                                                                                            "All source observations are synthetic.",
+                                                                                            "The dataset contains only 18 independent source observations.",
+                                                                                            "Results describe the supplied period and do not establish population-level conclusions."
+                                                                                        ],
+                                                                        "excerpt":  "Cost Centre CC-301 recorded actual spending $88,500.00 against budget $78,000.00, a variance of $10,500.00 (above budget). The aggregate variance is 13.46%."
+                                                                    },
+                                                                    {
+                                                                        "result_id":  "track-a-cost_centre_comparison-20260101-cc-202",
+                                                                        "source_record_ids":  [
+                                                                                                  "SRC-0010",
+                                                                                                  "SRC-0011",
+                                                                                                  "SRC-0012"
+                                                                                              ],
+                                                                        "canonical_record_ids":  [
+                                                                                                     "FIN-0010-ACTUAL_AMOUNT",
+                                                                                                     "FIN-0010-BUDGET_AMOUNT",
+                                                                                                     "FIN-0010-COMMITTED_AMOUNT",
+                                                                                                     "FIN-0010-FORECAST_AMOUNT",
+                                                                                                     "FIN-0011-ACTUAL_AMOUNT",
+                                                                                                     "FIN-0011-BUDGET_AMOUNT",
+                                                                                                     "FIN-0011-COMMITTED_AMOUNT",
+                                                                                                     "FIN-0011-FORECAST_AMOUNT",
+                                                                                                     "FIN-0012-ACTUAL_AMOUNT",
+                                                                                                     "FIN-0012-BUDGET_AMOUNT",
+                                                                                                     "FIN-0012-COMMITTED_AMOUNT",
+                                                                                                     "FIN-0012-FORECAST_AMOUNT"
+                                                                                                 ],
+                                                                        "reporting_period":  {
+                                                                                                 "period_start":  "2026-01-01",
+                                                                                                 "period_end":  "2026-03-31"
+                                                                                             },
+                                                                        "independent_source_count":  3,
+                                                                        "quality_status":  "validated_with_limitations",
+                                                                        "limitations":  [
+                                                                                            "All source observations are synthetic.",
+                                                                                            "The dataset contains only 18 independent source observations.",
+                                                                                            "Results describe the supplied period and do not establish population-level conclusions."
+                                                                                        ],
+                                                                        "excerpt":  "Cost Centre CC-202 recorded actual spending $90,000.00 against budget $95,000.00, a variance of $-5,000.00 (below budget). The aggregate variance is -5.26%."
+                                                                    },
+                                                                    {
+                                                                        "result_id":  "track-a-cost_centre_comparison-20260101-cc-102",
+                                                                        "source_record_ids":  [
+                                                                                                  "SRC-0004",
+                                                                                                  "SRC-0005",
+                                                                                                  "SRC-0006"
+                                                                                              ],
+                                                                        "canonical_record_ids":  [
+                                                                                                     "FIN-0004-ACTUAL_AMOUNT",
+                                                                                                     "FIN-0004-BUDGET_AMOUNT",
+                                                                                                     "FIN-0004-COMMITTED_AMOUNT",
+                                                                                                     "FIN-0004-FORECAST_AMOUNT",
+                                                                                                     "FIN-0005-ACTUAL_AMOUNT",
+                                                                                                     "FIN-0005-BUDGET_AMOUNT",
+                                                                                                     "FIN-0005-COMMITTED_AMOUNT",
+                                                                                                     "FIN-0005-FORECAST_AMOUNT",
+                                                                                                     "FIN-0006-ACTUAL_AMOUNT",
+                                                                                                     "FIN-0006-BUDGET_AMOUNT",
+                                                                                                     "FIN-0006-COMMITTED_AMOUNT",
+                                                                                                     "FIN-0006-FORECAST_AMOUNT"
+                                                                                                 ],
+                                                                        "reporting_period":  {
+                                                                                                 "period_start":  "2026-01-01",
+                                                                                                 "period_end":  "2026-03-31"
+                                                                                             },
+                                                                        "independent_source_count":  3,
+                                                                        "quality_status":  "validated_with_limitations",
+                                                                        "limitations":  [
+                                                                                            "All source observations are synthetic.",
+                                                                                            "The dataset contains only 18 independent source observations.",
+                                                                                            "Results describe the supplied period and do not establish population-level conclusions."
+                                                                                        ],
+                                                                        "excerpt":  "Cost Centre CC-102 recorded actual spending $58,500.00 against budget $60,000.00, a variance of $-1,500.00 (below budget). The aggregate variance is -2.50%."
+                                                                    },
+                                                                    {
+                                                                        "result_id":  "track-a-cost_centre_comparison-20260101-cc-401",
+                                                                        "source_record_ids":  [
+                                                                                                  "SRC-0016",
+                                                                                                  "SRC-0017",
+                                                                                                  "SRC-0018"
+                                                                                              ],
+                                                                        "canonical_record_ids":  [
+                                                                                                     "FIN-0016-ACTUAL_AMOUNT",
+                                                                                                     "FIN-0016-BUDGET_AMOUNT",
+                                                                                                     "FIN-0016-COMMITTED_AMOUNT",
+                                                                                                     "FIN-0016-FORECAST_AMOUNT",
+                                                                                                     "FIN-0017-ACTUAL_AMOUNT",
+                                                                                                     "FIN-0017-BUDGET_AMOUNT",
+                                                                                                     "FIN-0017-COMMITTED_AMOUNT",
+                                                                                                     "FIN-0017-FORECAST_AMOUNT",
+                                                                                                     "FIN-0018-ACTUAL_AMOUNT",
+                                                                                                     "FIN-0018-BUDGET_AMOUNT",
+                                                                                                     "FIN-0018-COMMITTED_AMOUNT",
+                                                                                                     "FIN-0018-FORECAST_AMOUNT"
+                                                                                                 ],
+                                                                        "reporting_period":  {
+                                                                                                 "period_start":  "2026-01-01",
+                                                                                                 "period_end":  "2026-03-31"
+                                                                                             },
+                                                                        "independent_source_count":  3,
+                                                                        "quality_status":  "validated_with_limitations",
+                                                                        "limitations":  [
+                                                                                            "All source observations are synthetic.",
+                                                                                            "The dataset contains only 18 independent source observations.",
+                                                                                            "Results describe the supplied period and do not establish population-level conclusions."
+                                                                                        ],
+                                                                        "excerpt":  "Cost Centre CC-401 recorded actual spending $48,500.00 against budget $48,000.00, a variance of $500.00 (above budget). The aggregate variance is 1.04%."
+                                                                    }
+                                                                ]
+                                               }
+                                           ],
+                   "key_values":  [
+                                      {
+                                          "result_id":  "track-a-cost_centre_comparison-20260101-cc-101",
+                                          "result_type":  "cost_centre_comparison",
+                                          "entity_id":  "CC-101",
+                                          "group_key":  "CC-101",
+                                          "priority_rank":  1,
+                                          "result_value":  14500.0,
+                                          "result_category":  "overspend",
+                                          "result_unit":  "USD",
+                                          "budget_total":  135000.0,
+                                          "actual_total":  149500.0,
+                                          "variance_amount":  14500.0,
+                                          "variance_percentage":  10.74074074074074,
+                                          "committed_total":  6500.0,
+                                          "forecast_total":  154500.0
+                                      },
+                                      {
+                                          "result_id":  "track-a-cost_centre_comparison-20260101-cc-201",
+                                          "result_type":  "cost_centre_comparison",
+                                          "entity_id":  "CC-201",
+                                          "group_key":  "CC-201",
+                                          "priority_rank":  2,
+                                          "result_value":  13000.0,
+                                          "result_category":  "overspend",
+                                          "result_unit":  "USD",
+                                          "budget_total":  185000.0,
+                                          "actual_total":  198000.0,
+                                          "variance_amount":  13000.0,
+                                          "variance_percentage":  7.027027027027027,
+                                          "committed_total":  17000.0,
+                                          "forecast_total":  207000.0
+                                      },
+                                      {
+                                          "result_id":  "track-a-cost_centre_comparison-20260101-cc-301",
+                                          "result_type":  "cost_centre_comparison",
+                                          "entity_id":  "CC-301",
+                                          "group_key":  "CC-301",
+                                          "priority_rank":  3,
+                                          "result_value":  10500.0,
+                                          "result_category":  "overspend",
+                                          "result_unit":  "USD",
+                                          "budget_total":  78000.0,
+                                          "actual_total":  88500.0,
+                                          "variance_amount":  10500.0,
+                                          "variance_percentage":  13.461538461538462,
+                                          "committed_total":  6000.0,
+                                          "forecast_total":  91000.0
+                                      },
+                                      {
+                                          "result_id":  "track-a-cost_centre_comparison-20260101-cc-202",
+                                          "result_type":  "cost_centre_comparison",
+                                          "entity_id":  "CC-202",
+                                          "group_key":  "CC-202",
+                                          "priority_rank":  4,
+                                          "result_value":  -5000.0,
+                                          "result_category":  "underspend",
+                                          "result_unit":  "USD",
+                                          "budget_total":  95000.0,
+                                          "actual_total":  90000.0,
+                                          "variance_amount":  -5000.0,
+                                          "variance_percentage":  -5.263157894736842,
+                                          "committed_total":  6000.0,
+                                          "forecast_total":  97000.0
+                                      },
+                                      {
+                                          "result_id":  "track-a-cost_centre_comparison-20260101-cc-102",
+                                          "result_type":  "cost_centre_comparison",
+                                          "entity_id":  "CC-102",
+                                          "group_key":  "CC-102",
+                                          "priority_rank":  5,
+                                          "result_value":  -1500.0,
+                                          "result_category":  "underspend",
+                                          "result_unit":  "USD",
+                                          "budget_total":  60000.0,
+                                          "actual_total":  58500.0,
+                                          "variance_amount":  -1500.0,
+                                          "variance_percentage":  -2.5,
+                                          "committed_total":  2500.0,
+                                          "forecast_total":  60000.0
+                                      },
+                                      {
+                                          "result_id":  "track-a-cost_centre_comparison-20260101-cc-401",
+                                          "result_type":  "cost_centre_comparison",
+                                          "entity_id":  "CC-401",
+                                          "group_key":  "CC-401",
+                                          "priority_rank":  6,
+                                          "result_value":  500.0,
+                                          "result_category":  "overspend",
+                                          "result_unit":  "USD",
+                                          "budget_total":  48000.0,
+                                          "actual_total":  48500.0,
+                                          "variance_amount":  500.0,
+                                          "variance_percentage":  1.0416666666666665,
+                                          "committed_total":  4500.0,
+                                          "forecast_total":  51000.0
+                                      }
+                                  ],
+                   "metadata":  {
+                                    "project_id":  "poc-4-budget-vs-actual-variance-navigator",
+                                    "approved_track":  "Track A â Comparative Intelligence",
+                                    "contract_version":  "1.0.0",
+                                    "dataset_version":  "1.0.0",
+                                    "method_version":  "1.0.0",
+                                    "generated_at":  "2026-11-06T06:26:37Z",
+                                    "result_count":  64,
+                                    "validation_status":  "PASS",
+                                    "returned_count":  6,
+                                    "total_matched":  6,
+                                    "truncated":  false
+                                },
+                   "limitation":  [
+                                      "All source observations are synthetic.",
+                                      "The dataset contains only 18 independent source observations.",
+                                      "Results describe the supplied period and do not establish population-level conclusions."
+                                  ],
+                   "suggested_follow_ups":  [
+                                                "Show the evidence for a specific cost centre.",
+                                                "Compare two departments.",
+                                                "Show monthly findings with insufficient evidence."
+                                            ],
+                   "explanation":  "Based on the approved financial review, here is the cost centre comparison:\n\n- **Cost Centre CC-101**: Actual spending was $149,500.00 against a budget of $135,000.00, resulting in an overspend variance of $14,500.00 (10.74%).\n- **Cost Centre CC-201**: Actual spending was $198,000.00 against a budget of $185,000.00, resulting in an overspend variance of $13,000.00 (7.03%).\n- **Cost Centre CC-301**: Actual spending was $88,500.00 against a budget of $78,000.00, resulting in an overspend variance of $10,500.00 (13.46%).\n- **Cost Centre CC-202**: Actual spending was $90,000.00 against a budget of $95,000.00, resulting in an underspend variance of $-5,000.00 (-5.26%).\n- **Cost Centre CC-102**: Actual spending was $58,500.00 against a budget of $60,000.00, resulting in an underspend variance of $-1,500.00 (-2.50%).\n- **Cost Centre CC-401**: Actual spending was $48,500.00 against a budget of $48,000.00, resulting in an overspend variance of $500.00 (1.04%).\n\n**Evidence Limitations:**\n- All source observations are synthetic.\n- The dataset contains only 18 independent source observations.\n- Results describe the supplied period and do not establish population-level conclusions.",
+                   "explanation_status":  "generated",
+                   "explanation_provider":  "gemini"
+               }
+}

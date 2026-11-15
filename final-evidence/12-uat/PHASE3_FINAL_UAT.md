@@ -167,3 +167,24 @@ This reconciliation supersedes earlier status snapshots in this document whereve
 **Current release status: NOT CERTIFIED — reviewer approval and final release packaging remain outstanding.**
 
 The 19/19 public browser result is a successful acceptance test; it does not remove the documented clean-clone limitations or substitute for the required reviewer certification.
+
+## Public Gemini Mode B Positive-Path UAT — 15 November 2026
+
+**Result: PASS — tested public positive path.**
+
+The deployed Render assistant successfully processed the supported question "Compare cost centres" and returned:
+
+- `status`: `SUPPORTED`
+- `intent`: `cost_centre_variance_comparison`
+- `explanation_status`: `generated`
+- `explanation_provider`: `gemini`
+- `metadata.validation_status`: `PASS`
+- Six cost-centre findings with deterministic evidence references.
+
+The response retained the approved Track A comparison, source and canonical record references, and the documented limitations. The Gemini explanation agreed with the deterministic values.
+
+The captured response is stored at `final-evidence/09-assistant-or-skip/post6-public-gemini-mode-b-acceptance-20261115.json`.
+
+**Not established by this test:** Public provider-failure or missing-key fallback behavior. Earlier local fallback tests remain separate evidence and are not represented as a new public test.
+
+This positive-path result does not replace reviewer approval. Phase 3 remains `DRAFT — NOT CERTIFIED` pending formal review.
