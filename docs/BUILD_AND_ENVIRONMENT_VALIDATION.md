@@ -1,4 +1,4 @@
-﻿# BUILD AND ENVIRONMENT VALIDATION
+# BUILD AND ENVIRONMENT VALIDATION
 
 ## 1. Purpose
 
@@ -101,3 +101,42 @@ The updated Gemini implementation has not yet been deployed or configured on Ren
 **PASS WITH DOCUMENTED LIMITATIONS** for the local Python compilation, automated tests, targeted frontend lint, production build, and Docker image checks.
 
 Public deployment of the updated Gemini implementation and the blocked Selenium browser run remain outstanding. This report does not certify the complete Phase 3 release.
+
+## Post-Correction and Clean-Clone Reconciliation — 2026-11-15
+
+The earlier results in this report are historical results from the original Post #6 validation environment. The following later checks are recorded separately and must not be conflated:
+
+- Clean clone at commit `daa7f610882862157287e350d8850499cb8ca44f`: 24 targeted tests passed; Python compilation, reproducibility checks, frontend dependency installation, and frontend production build passed.
+- Clean-clone Docker build: BLOCKED because the Docker Desktop Linux engine was unavailable. The earlier Docker PASS in this report refers to the original environment and does not establish a clean-clone Docker PASS.
+- Subsequent local assistant correction: 27 targeted Python tests passed (19 assistant API tests and 8 Gemini explainer tests); Python compilation and `git diff --check` passed.
+- Local Selenium/browser acceptance after that correction: 17 checks passed (4 assistant regression, 9 filter/responsive, and 4 viewport checks).
+- The correction and these later local results have not been published to Render. Public post-correction browser acceptance remains NOT PERFORMED.
+- Certification remains BLOCKED pending final evidence reconciliation and reviewer approval.
+
+## Final status reconciliation — 15 November 2026
+
+This reconciliation supersedes earlier status snapshots in this document wherever they describe the assistant correction as unpublished, the public browser acceptance as not performed, or the public backend as remaining on commit `daa7f61`. Those statements accurately describe earlier checkpoints but are no longer the current release status.
+
+### Verified current results
+
+- The assistant scope correction is committed and pushed to GitHub `master` at commit `3610659d87831639ee2fc3b17d8ce66beb3fdcb1`.
+- The Render dashboard independently confirmed the backend service `poc4-budget-phase3-backend` Live on commit `3610659`.
+- Public assistant API regression: 4/4 checks passed. The supported comparison question returned `SUPPORTED`; the three predictive/future-projection questions returned `OUT_OF_SCOPE` with zero evidence.
+- Public Selenium acceptance on 15 November 2026: **19 passed, 0 failed**. This included backend and intelligence health, summary, assistant API behavior, desktop dashboard rendering, Data Intelligence content, and both pages at a 390 × 844 mobile viewport.
+- The public acceptance report is `final-evidence/browser-automation/post6-public-final-acceptance-20261115-142307.json`. The corresponding final dashboard and Data Intelligence screenshots are stored in the official evidence folders.
+- The official evidence structure contains all 15 required folders and 73 files. The latest structural and evidence-copy consistency audits passed, with zero report-copy failures and zero required-evidence-copy failures.
+- The correction's local targeted tests passed 27/27. Python compilation passed. Earlier clean-clone checks recorded 24 targeted tests passing, with the limitations below.
+
+### Remaining limitations and certification status
+
+- Clean-clone Docker build remains **BLOCKED** because the Docker Desktop Linux engine was unavailable during that validation.
+- Full default pytest collection in the separate clean-clone environment was **BLOCKED** by missing `requests` for two legacy test modules; those modules were not executed in that environment.
+- Public Gemini Mode B behavior has not been certified. The public results establish the tested deterministic assistant behavior only.
+- The Render backend deployment commit is confirmed as `3610659`. The exact active frontend deployment commit has not been independently confirmed in the Render dashboard evidence reviewed for this reconciliation.
+- Formal keyboard-only and screen-reader accessibility audits were not performed.
+- The final Repomix has not yet been regenerated from the finalized release state.
+- Reviewer approval and the required certification decision have not been received. The release tag has not been created.
+
+**Current release status: NOT CERTIFIED — reviewer approval and final release packaging remain outstanding.**
+
+The 19/19 public browser result is a successful acceptance test; it does not remove the documented clean-clone limitations or substitute for the required reviewer certification.

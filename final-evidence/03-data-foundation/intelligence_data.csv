@@ -1,0 +1,73 @@
+record_id,record_type,observed_at,entity_id,related_entity_id,entity_name,category,subcategory,status,stage,metric_name,metric_value,metric_unit,text_value,latitude,longitude,source_name,source_record_id,is_synthetic,data_version
+FIN-0001-BUDGET_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-101,,Engineering,Cloud Infrastructure,,,,budget_amount,45000,USD,,,,backend/budget_data.csv,SRC-0001,true,1.0.0
+FIN-0001-ACTUAL_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-101,,Engineering,Cloud Infrastructure,,,,actual_amount,48000,USD,,,,backend/budget_data.csv,SRC-0001,true,1.0.0
+FIN-0001-COMMITTED_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-101,,Engineering,Cloud Infrastructure,,,,committed_amount,2000,USD,,,,backend/budget_data.csv,SRC-0001,true,1.0.0
+FIN-0001-FORECAST_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-101,,Engineering,Cloud Infrastructure,,,,forecast_amount,50000,USD,,,,backend/budget_data.csv,SRC-0001,true,1.0.0
+FIN-0002-BUDGET_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-101,,Engineering,Cloud Infrastructure,,,,budget_amount,45000,USD,,,,backend/budget_data.csv,SRC-0002,true,1.0.0
+FIN-0002-ACTUAL_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-101,,Engineering,Cloud Infrastructure,,,,actual_amount,49500,USD,,,,backend/budget_data.csv,SRC-0002,true,1.0.0
+FIN-0002-COMMITTED_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-101,,Engineering,Cloud Infrastructure,,,,committed_amount,1500,USD,,,,backend/budget_data.csv,SRC-0002,true,1.0.0
+FIN-0002-FORECAST_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-101,,Engineering,Cloud Infrastructure,,,,forecast_amount,51000,USD,,,,backend/budget_data.csv,SRC-0002,true,1.0.0
+FIN-0003-BUDGET_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-101,,Engineering,Cloud Infrastructure,,,,budget_amount,45000,USD,,,,backend/budget_data.csv,SRC-0003,true,1.0.0
+FIN-0003-ACTUAL_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-101,,Engineering,Cloud Infrastructure,,,,actual_amount,52000,USD,,,,backend/budget_data.csv,SRC-0003,true,1.0.0
+FIN-0003-COMMITTED_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-101,,Engineering,Cloud Infrastructure,,,,committed_amount,3000,USD,,,,backend/budget_data.csv,SRC-0003,true,1.0.0
+FIN-0003-FORECAST_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-101,,Engineering,Cloud Infrastructure,,,,forecast_amount,53500,USD,,,,backend/budget_data.csv,SRC-0003,true,1.0.0
+FIN-0004-BUDGET_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-102,,Engineering,Software Licenses,,,,budget_amount,20000,USD,,,,backend/budget_data.csv,SRC-0004,true,1.0.0
+FIN-0004-ACTUAL_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-102,,Engineering,Software Licenses,,,,actual_amount,18500,USD,,,,backend/budget_data.csv,SRC-0004,true,1.0.0
+FIN-0004-COMMITTED_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-102,,Engineering,Software Licenses,,,,committed_amount,1000,USD,,,,backend/budget_data.csv,SRC-0004,true,1.0.0
+FIN-0004-FORECAST_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-102,,Engineering,Software Licenses,,,,forecast_amount,19000,USD,,,,backend/budget_data.csv,SRC-0004,true,1.0.0
+FIN-0005-BUDGET_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-102,,Engineering,Software Licenses,,,,budget_amount,20000,USD,,,,backend/budget_data.csv,SRC-0005,true,1.0.0
+FIN-0005-ACTUAL_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-102,,Engineering,Software Licenses,,,,actual_amount,19000,USD,,,,backend/budget_data.csv,SRC-0005,true,1.0.0
+FIN-0005-COMMITTED_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-102,,Engineering,Software Licenses,,,,committed_amount,1000,USD,,,,backend/budget_data.csv,SRC-0005,true,1.0.0
+FIN-0005-FORECAST_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-102,,Engineering,Software Licenses,,,,forecast_amount,19500,USD,,,,backend/budget_data.csv,SRC-0005,true,1.0.0
+FIN-0006-BUDGET_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-102,,Engineering,Software Licenses,,,,budget_amount,20000,USD,,,,backend/budget_data.csv,SRC-0006,true,1.0.0
+FIN-0006-ACTUAL_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-102,,Engineering,Software Licenses,,,,actual_amount,21000,USD,,,,backend/budget_data.csv,SRC-0006,true,1.0.0
+FIN-0006-COMMITTED_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-102,,Engineering,Software Licenses,,,,committed_amount,500,USD,,,,backend/budget_data.csv,SRC-0006,true,1.0.0
+FIN-0006-FORECAST_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-102,,Engineering,Software Licenses,,,,forecast_amount,21500,USD,,,,backend/budget_data.csv,SRC-0006,true,1.0.0
+FIN-0007-BUDGET_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-201,,Marketing,Paid Ads & Campaigns,,,,budget_amount,60000,USD,,,,backend/budget_data.csv,SRC-0007,true,1.0.0
+FIN-0007-ACTUAL_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-201,,Marketing,Paid Ads & Campaigns,,,,actual_amount,68000,USD,,,,backend/budget_data.csv,SRC-0007,true,1.0.0
+FIN-0007-COMMITTED_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-201,,Marketing,Paid Ads & Campaigns,,,,committed_amount,5000,USD,,,,backend/budget_data.csv,SRC-0007,true,1.0.0
+FIN-0007-FORECAST_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-201,,Marketing,Paid Ads & Campaigns,,,,forecast_amount,70000,USD,,,,backend/budget_data.csv,SRC-0007,true,1.0.0
+FIN-0008-BUDGET_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-201,,Marketing,Paid Ads & Campaigns,,,,budget_amount,60000,USD,,,,backend/budget_data.csv,SRC-0008,true,1.0.0
+FIN-0008-ACTUAL_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-201,,Marketing,Paid Ads & Campaigns,,,,actual_amount,58000,USD,,,,backend/budget_data.csv,SRC-0008,true,1.0.0
+FIN-0008-COMMITTED_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-201,,Marketing,Paid Ads & Campaigns,,,,committed_amount,4000,USD,,,,backend/budget_data.csv,SRC-0008,true,1.0.0
+FIN-0008-FORECAST_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-201,,Marketing,Paid Ads & Campaigns,,,,forecast_amount,62000,USD,,,,backend/budget_data.csv,SRC-0008,true,1.0.0
+FIN-0009-BUDGET_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-201,,Marketing,Paid Ads & Campaigns,,,,budget_amount,65000,USD,,,,backend/budget_data.csv,SRC-0009,true,1.0.0
+FIN-0009-ACTUAL_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-201,,Marketing,Paid Ads & Campaigns,,,,actual_amount,72000,USD,,,,backend/budget_data.csv,SRC-0009,true,1.0.0
+FIN-0009-COMMITTED_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-201,,Marketing,Paid Ads & Campaigns,,,,committed_amount,8000,USD,,,,backend/budget_data.csv,SRC-0009,true,1.0.0
+FIN-0009-FORECAST_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-201,,Marketing,Paid Ads & Campaigns,,,,forecast_amount,75000,USD,,,,backend/budget_data.csv,SRC-0009,true,1.0.0
+FIN-0010-BUDGET_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-202,,Marketing,Events & PR,,,,budget_amount,30000,USD,,,,backend/budget_data.csv,SRC-0010,true,1.0.0
+FIN-0010-ACTUAL_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-202,,Marketing,Events & PR,,,,actual_amount,25000,USD,,,,backend/budget_data.csv,SRC-0010,true,1.0.0
+FIN-0010-COMMITTED_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-202,,Marketing,Events & PR,,,,committed_amount,2000,USD,,,,backend/budget_data.csv,SRC-0010,true,1.0.0
+FIN-0010-FORECAST_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-202,,Marketing,Events & PR,,,,forecast_amount,28000,USD,,,,backend/budget_data.csv,SRC-0010,true,1.0.0
+FIN-0011-BUDGET_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-202,,Marketing,Events & PR,,,,budget_amount,30000,USD,,,,backend/budget_data.csv,SRC-0011,true,1.0.0
+FIN-0011-ACTUAL_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-202,,Marketing,Events & PR,,,,actual_amount,34000,USD,,,,backend/budget_data.csv,SRC-0011,true,1.0.0
+FIN-0011-COMMITTED_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-202,,Marketing,Events & PR,,,,committed_amount,1000,USD,,,,backend/budget_data.csv,SRC-0011,true,1.0.0
+FIN-0011-FORECAST_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-202,,Marketing,Events & PR,,,,forecast_amount,35000,USD,,,,backend/budget_data.csv,SRC-0011,true,1.0.0
+FIN-0012-BUDGET_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-202,,Marketing,Events & PR,,,,budget_amount,35000,USD,,,,backend/budget_data.csv,SRC-0012,true,1.0.0
+FIN-0012-ACTUAL_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-202,,Marketing,Events & PR,,,,actual_amount,31000,USD,,,,backend/budget_data.csv,SRC-0012,true,1.0.0
+FIN-0012-COMMITTED_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-202,,Marketing,Events & PR,,,,committed_amount,3000,USD,,,,backend/budget_data.csv,SRC-0012,true,1.0.0
+FIN-0012-FORECAST_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-202,,Marketing,Events & PR,,,,forecast_amount,34000,USD,,,,backend/budget_data.csv,SRC-0012,true,1.0.0
+FIN-0013-BUDGET_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-301,,Sales,Travel & Client Entertainment,,,,budget_amount,25000,USD,,,,backend/budget_data.csv,SRC-0013,true,1.0.0
+FIN-0013-ACTUAL_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-301,,Sales,Travel & Client Entertainment,,,,actual_amount,29000,USD,,,,backend/budget_data.csv,SRC-0013,true,1.0.0
+FIN-0013-COMMITTED_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-301,,Sales,Travel & Client Entertainment,,,,committed_amount,1500,USD,,,,backend/budget_data.csv,SRC-0013,true,1.0.0
+FIN-0013-FORECAST_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-301,,Sales,Travel & Client Entertainment,,,,forecast_amount,30000,USD,,,,backend/budget_data.csv,SRC-0013,true,1.0.0
+FIN-0014-BUDGET_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-301,,Sales,Travel & Client Entertainment,,,,budget_amount,25000,USD,,,,backend/budget_data.csv,SRC-0014,true,1.0.0
+FIN-0014-ACTUAL_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-301,,Sales,Travel & Client Entertainment,,,,actual_amount,27500,USD,,,,backend/budget_data.csv,SRC-0014,true,1.0.0
+FIN-0014-COMMITTED_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-301,,Sales,Travel & Client Entertainment,,,,committed_amount,2000,USD,,,,backend/budget_data.csv,SRC-0014,true,1.0.0
+FIN-0014-FORECAST_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-301,,Sales,Travel & Client Entertainment,,,,forecast_amount,28000,USD,,,,backend/budget_data.csv,SRC-0014,true,1.0.0
+FIN-0015-BUDGET_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-301,,Sales,Travel & Client Entertainment,,,,budget_amount,28000,USD,,,,backend/budget_data.csv,SRC-0015,true,1.0.0
+FIN-0015-ACTUAL_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-301,,Sales,Travel & Client Entertainment,,,,actual_amount,32000,USD,,,,backend/budget_data.csv,SRC-0015,true,1.0.0
+FIN-0015-COMMITTED_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-301,,Sales,Travel & Client Entertainment,,,,committed_amount,2500,USD,,,,backend/budget_data.csv,SRC-0015,true,1.0.0
+FIN-0015-FORECAST_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-301,,Sales,Travel & Client Entertainment,,,,forecast_amount,33000,USD,,,,backend/budget_data.csv,SRC-0015,true,1.0.0
+FIN-0016-BUDGET_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-401,,HR & Ops,Recruitment & Onboarding,,,,budget_amount,15000,USD,,,,backend/budget_data.csv,SRC-0016,true,1.0.0
+FIN-0016-ACTUAL_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-401,,HR & Ops,Recruitment & Onboarding,,,,actual_amount,12000,USD,,,,backend/budget_data.csv,SRC-0016,true,1.0.0
+FIN-0016-COMMITTED_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-401,,HR & Ops,Recruitment & Onboarding,,,,committed_amount,500,USD,,,,backend/budget_data.csv,SRC-0016,true,1.0.0
+FIN-0016-FORECAST_AMOUNT,financial_metric,2026-01-01T00:00:00Z,CC-401,,HR & Ops,Recruitment & Onboarding,,,,forecast_amount,13000,USD,,,,backend/budget_data.csv,SRC-0016,true,1.0.0
+FIN-0017-BUDGET_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-401,,HR & Ops,Recruitment & Onboarding,,,,budget_amount,15000,USD,,,,backend/budget_data.csv,SRC-0017,true,1.0.0
+FIN-0017-ACTUAL_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-401,,HR & Ops,Recruitment & Onboarding,,,,actual_amount,14500,USD,,,,backend/budget_data.csv,SRC-0017,true,1.0.0
+FIN-0017-COMMITTED_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-401,,HR & Ops,Recruitment & Onboarding,,,,committed_amount,1000,USD,,,,backend/budget_data.csv,SRC-0017,true,1.0.0
+FIN-0017-FORECAST_AMOUNT,financial_metric,2026-02-01T00:00:00Z,CC-401,,HR & Ops,Recruitment & Onboarding,,,,forecast_amount,15000,USD,,,,backend/budget_data.csv,SRC-0017,true,1.0.0
+FIN-0018-BUDGET_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-401,,HR & Ops,Recruitment & Onboarding,,,,budget_amount,18000,USD,,,,backend/budget_data.csv,SRC-0018,true,1.0.0
+FIN-0018-ACTUAL_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-401,,HR & Ops,Recruitment & Onboarding,,,,actual_amount,22000,USD,,,,backend/budget_data.csv,SRC-0018,true,1.0.0
+FIN-0018-COMMITTED_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-401,,HR & Ops,Recruitment & Onboarding,,,,committed_amount,3000,USD,,,,backend/budget_data.csv,SRC-0018,true,1.0.0
+FIN-0018-FORECAST_AMOUNT,financial_metric,2026-03-01T00:00:00Z,CC-401,,HR & Ops,Recruitment & Onboarding,,,,forecast_amount,23000,USD,,,,backend/budget_data.csv,SRC-0018,true,1.0.0

@@ -1,4 +1,4 @@
-﻿# FINAL DATA INTELLIGENCE VALIDATION
+# FINAL DATA INTELLIGENCE VALIDATION
 
 ## 1. Purpose
 
@@ -111,3 +111,42 @@ The currently deployed public Render backend is still the earlier deterministic 
 The deployed public Data Intelligence capability remains deterministic Mode A. Optional Gemini Mode B is verified locally only and is not part of the current public deployment.
 
 This report does not claim complete browser UAT, public Gemini deployment, or final Phase 3 certification.
+
+## Local Post-Correction Browser Validation Addendum — 2026-11-15
+
+The local Data Intelligence and assistant browser regression run completed 17 checks with 0 failures:
+- 4 assistant browser regression checks, including a supported comparative question and a predictive question classified OUT_OF_SCOPE.
+- 9 filter and responsive checks.
+- 4 mobile/tablet viewport checks.
+
+The local assistant correction and these browser results have not been published. Public Render remains on commit daa7f61. Public post-correction browser acceptance remains **NOT PERFORMED**. Public Gemini Mode B behavior remains unverified.
+
+These local results supplement, but do not replace, the existing public API validation evidence. They do not certify the public post-correction experience or the overall Phase 3 release.
+
+## Final status reconciliation — 15 November 2026
+
+This reconciliation supersedes earlier status snapshots in this document wherever they describe the assistant correction as unpublished, the public browser acceptance as not performed, or the public backend as remaining on commit `daa7f61`. Those statements accurately describe earlier checkpoints but are no longer the current release status.
+
+### Verified current results
+
+- The assistant scope correction is committed and pushed to GitHub `master` at commit `3610659d87831639ee2fc3b17d8ce66beb3fdcb1`.
+- The Render dashboard independently confirmed the backend service `poc4-budget-phase3-backend` Live on commit `3610659`.
+- Public assistant API regression: 4/4 checks passed. The supported comparison question returned `SUPPORTED`; the three predictive/future-projection questions returned `OUT_OF_SCOPE` with zero evidence.
+- Public Selenium acceptance on 15 November 2026: **19 passed, 0 failed**. This included backend and intelligence health, summary, assistant API behavior, desktop dashboard rendering, Data Intelligence content, and both pages at a 390 × 844 mobile viewport.
+- The public acceptance report is `final-evidence/browser-automation/post6-public-final-acceptance-20261115-142307.json`. The corresponding final dashboard and Data Intelligence screenshots are stored in the official evidence folders.
+- The official evidence structure contains all 15 required folders and 73 files. The latest structural and evidence-copy consistency audits passed, with zero report-copy failures and zero required-evidence-copy failures.
+- The correction's local targeted tests passed 27/27. Python compilation passed. Earlier clean-clone checks recorded 24 targeted tests passing, with the limitations below.
+
+### Remaining limitations and certification status
+
+- Clean-clone Docker build remains **BLOCKED** because the Docker Desktop Linux engine was unavailable during that validation.
+- Full default pytest collection in the separate clean-clone environment was **BLOCKED** by missing `requests` for two legacy test modules; those modules were not executed in that environment.
+- Public Gemini Mode B behavior has not been certified. The public results establish the tested deterministic assistant behavior only.
+- The Render backend deployment commit is confirmed as `3610659`. The exact active frontend deployment commit has not been independently confirmed in the Render dashboard evidence reviewed for this reconciliation.
+- Formal keyboard-only and screen-reader accessibility audits were not performed.
+- The final Repomix has not yet been regenerated from the finalized release state.
+- Reviewer approval and the required certification decision have not been received. The release tag has not been created.
+
+**Current release status: NOT CERTIFIED — reviewer approval and final release packaging remain outstanding.**
+
+The 19/19 public browser result is a successful acceptance test; it does not remove the documented clean-clone limitations or substitute for the required reviewer certification.

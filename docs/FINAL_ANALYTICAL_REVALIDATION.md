@@ -1,4 +1,4 @@
-﻿# FINAL ANALYTICAL REVALIDATION
+# FINAL ANALYTICAL REVALIDATION
 
 ## 1. Purpose
 
@@ -100,3 +100,48 @@ The approved analytical method continues to require:
 The approved Track A method and its version boundaries remain unchanged. The latest local-container and public Render API validation summaries both report 1,325 passed checks, zero failures, and zero warnings.
 
 This analytical revalidation does not certify the entire Phase 3 release. Final certification remains subject to the outstanding Post #6 deployment, browser, evidence, clean-clone, and reviewer-approval requirements.
+
+## Final Release-State Reconciliation — 2026-11-15
+
+The analytical validation results remain unchanged: 1,325 combined analytical and reconciliation checks passed, with 0 failures and 0 warnings. The Track A comparative findings and documented analytical limitations remain the basis of this report.
+
+Subsequent release validation:
+- Fresh clean-clone validation completed with documented limitations: 24 targeted tests passed; compilation, reproducibility, frontend dependency installation, and frontend build passed.
+- The clean-clone Docker build was BLOCKED because the Docker Desktop Linux engine was unavailable. An earlier Docker PASS refers to the original project environment only.
+- Public Render deployment remains live on commit daa7f61, with the previously recorded public API validation.
+- Local post-correction assistant tests: 27 passed (19 assistant API and 8 Gemini explainer tests).
+- Local post-correction browser checks: 17 passed (4 assistant regression, 9 filter/responsive, and 4 viewport checks).
+
+These later local assistant and browser results do not change the analytical validation totals and do not establish public post-correction browser acceptance. The local assistant correction has not been committed, pushed, or deployed.
+
+The final evidence pack has been structurally assembled. Final Repomix generation, public post-correction browser acceptance or an approved alternative, and reviewer approval remain outstanding.
+
+**Overall Phase 3 status: DRAFT — NOT CERTIFIED.**
+
+## Final status reconciliation — 15 November 2026
+
+This reconciliation supersedes earlier status snapshots in this document wherever they describe the assistant correction as unpublished, the public browser acceptance as not performed, or the public backend as remaining on commit `daa7f61`. Those statements accurately describe earlier checkpoints but are no longer the current release status.
+
+### Verified current results
+
+- The assistant scope correction is committed and pushed to GitHub `master` at commit `3610659d87831639ee2fc3b17d8ce66beb3fdcb1`.
+- The Render dashboard independently confirmed the backend service `poc4-budget-phase3-backend` Live on commit `3610659`.
+- Public assistant API regression: 4/4 checks passed. The supported comparison question returned `SUPPORTED`; the three predictive/future-projection questions returned `OUT_OF_SCOPE` with zero evidence.
+- Public Selenium acceptance on 15 November 2026: **19 passed, 0 failed**. This included backend and intelligence health, summary, assistant API behavior, desktop dashboard rendering, Data Intelligence content, and both pages at a 390 × 844 mobile viewport.
+- The public acceptance report is `final-evidence/browser-automation/post6-public-final-acceptance-20261115-142307.json`. The corresponding final dashboard and Data Intelligence screenshots are stored in the official evidence folders.
+- The official evidence structure contains all 15 required folders and 73 files. The latest structural and evidence-copy consistency audits passed, with zero report-copy failures and zero required-evidence-copy failures.
+- The correction's local targeted tests passed 27/27. Python compilation passed. Earlier clean-clone checks recorded 24 targeted tests passing, with the limitations below.
+
+### Remaining limitations and certification status
+
+- Clean-clone Docker build remains **BLOCKED** because the Docker Desktop Linux engine was unavailable during that validation.
+- Full default pytest collection in the separate clean-clone environment was **BLOCKED** by missing `requests` for two legacy test modules; those modules were not executed in that environment.
+- Public Gemini Mode B behavior has not been certified. The public results establish the tested deterministic assistant behavior only.
+- The Render backend deployment commit is confirmed as `3610659`. The exact active frontend deployment commit has not been independently confirmed in the Render dashboard evidence reviewed for this reconciliation.
+- Formal keyboard-only and screen-reader accessibility audits were not performed.
+- The final Repomix has not yet been regenerated from the finalized release state.
+- Reviewer approval and the required certification decision have not been received. The release tag has not been created.
+
+**Current release status: NOT CERTIFIED — reviewer approval and final release packaging remain outstanding.**
+
+The 19/19 public browser result is a successful acceptance test; it does not remove the documented clean-clone limitations or substitute for the required reviewer certification.
