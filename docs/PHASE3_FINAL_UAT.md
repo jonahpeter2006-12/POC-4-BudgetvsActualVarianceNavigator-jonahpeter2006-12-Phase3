@@ -84,7 +84,7 @@ The dataset remains synthetic and limited to 18 independent source observations.
 
 ## 9. UAT Conclusion
 
-**PARTIAL ACCEPTANCE — PASS WITH DOCUMENTED LIMITATIONS.**
+**PARTIAL ACCEPTANCE â€” PASS WITH DOCUMENTED LIMITATIONS.**
 
 The verified public API behavior, analytical validation summary, representative deterministic assistant responses, and local build and test evidence support the tested portions of Phase 3.
 
@@ -92,7 +92,7 @@ At this earlier UAT checkpoint, complete Post #6 UAT was not established because
 
 This report does not declare Phase 3 complete or certified.
 
-## Updated Local and Clean-Clone Acceptance Record — 2026-11-15
+## Updated Local and Clean-Clone Acceptance Record â€” 2026-11-15
 
 The following later evidence supplements the earlier UAT record:
 
@@ -104,13 +104,13 @@ The following later evidence supplements the earlier UAT record:
 - Public Gemini Mode B behavior remains unverified; the public deployment uses the deterministic assistant path.
 - At that earlier checkpoint, final evidence-pack completion and Repomix generation remained outstanding. Both were subsequently completed and validated for GitHub master commit `029b6bb`. Reviewer approval remains outstanding.
 
-**Updated UAT status: PARTIAL ACCEPTANCE — PASS WITH DOCUMENTED LIMITATIONS. Phase 3 certification is not established.**
+**Updated UAT status: PARTIAL ACCEPTANCE â€” PASS WITH DOCUMENTED LIMITATIONS. Phase 3 certification is not established.**
 
-## Public Post #6 Acceptance Addendum — 2026-11-15
+## Public Post #6 Acceptance Addendum â€” 2026-11-15
 
 A fresh public Render browser and API acceptance run completed on 2026-11-15.
 
-**Result: PASS — 19 checks passed, 0 failed.**
+**Result: PASS â€” 19 checks passed, 0 failed.**
 
 Verified:
 - Chrome 157.0.8103.78 started using the matching ChromeDriver.
@@ -137,10 +137,10 @@ The earlier preliminary browser run and diagnostic evidence remain preserved.
 - Final Repomix snapshot generation and XML validation were completed for GitHub master commit `029b6bb` on 15 November 2026; reviewer approval and certification remain outstanding.
 - No Phase 3 release tag has been created.
 
-**PHASE 3 STATUS: DRAFT — NOT CERTIFIED.**
+**PHASE 3 STATUS: DRAFT â€” NOT CERTIFIED.**
 This addendum records executed checks; it is not reviewer certification.
 
-## Final status reconciliation — 15 November 2026
+## Final status reconciliation â€” 15 November 2026
 
 This reconciliation supersedes earlier status snapshots in this document wherever they describe the assistant correction as unpublished, the public browser acceptance as not performed, or the public backend as remaining on commit `daa7f61`. Those statements accurately describe earlier checkpoints but are no longer the current release status.
 
@@ -149,7 +149,7 @@ This reconciliation supersedes earlier status snapshots in this document whereve
 - The assistant scope correction is committed and pushed to GitHub `master` at commit `3610659d87831639ee2fc3b17d8ce66beb3fdcb1`.
 - The Render dashboard independently confirmed the backend service `poc4-budget-phase3-backend` Live on commit `3610659`.
 - Public assistant API regression: 4/4 checks passed. The supported comparison question returned `SUPPORTED`; the three predictive/future-projection questions returned `OUT_OF_SCOPE` with zero evidence.
-- Public Selenium acceptance on 15 November 2026: **19 passed, 0 failed**. This included backend and intelligence health, summary, assistant API behavior, desktop dashboard rendering, Data Intelligence content, and both pages at a 390 × 844 mobile viewport.
+- Public Selenium acceptance on 15 November 2026: **19 passed, 0 failed**. This included backend and intelligence health, summary, assistant API behavior, desktop dashboard rendering, Data Intelligence content, and both pages at a 390 Ã— 844 mobile viewport.
 - The public acceptance report is `final-evidence/browser-automation/post6-public-final-acceptance-20261115-142307.json`. The corresponding final dashboard and Data Intelligence screenshots are stored in the official evidence folders.
 - The official evidence structure contains all 15 required folders and 73 files. The latest structural and evidence-copy consistency audits passed, with zero report-copy failures and zero required-evidence-copy failures.
 - The correction's local targeted tests passed 27/27. Python compilation passed. Earlier clean-clone checks recorded 24 targeted tests passing, with the limitations below.
@@ -158,19 +158,19 @@ This reconciliation supersedes earlier status snapshots in this document whereve
 
 - Clean-clone Docker build remains **BLOCKED** because the Docker Desktop Linux engine was unavailable during that validation.
 - Full default pytest collection in the separate clean-clone environment was **BLOCKED** by missing `requests` for two legacy test modules; those modules were not executed in that environment.
-- Public Gemini Mode B behavior has not been certified. The public results establish the tested deterministic assistant behavior only.
-- Both Render frontend and backend services are confirmed Live on commit `029b6bb` (15 November 2026).
+- Public Gemini Mode B positive-path and staging fallback behavior have been operationally validated for the tested scenarios. Formal reviewer certification remains outstanding.
+- Production Render frontend and backend services were confirmed Live on application commit `954a6ed` (15 November 2026). The isolated staging fallback service was deployed from repository commit `79feed9`.
 - Formal keyboard-only and screen-reader accessibility audits were not performed.
 - The final Repomix snapshot was generated from GitHub master commit `029b6bb` and XML-validated on 15 November 2026.
 - Reviewer approval and the required certification decision have not been received. The release tag has not been created.
 
-**Current release status: NOT CERTIFIED — reviewer approval and final release packaging remain outstanding.**
+**Current release status: NOT CERTIFIED â€” reviewer approval and final release packaging remain outstanding.**
 
 The 19/19 public browser result is a successful acceptance test; it does not remove the documented clean-clone limitations or substitute for the required reviewer certification.
 
-## Public Gemini Mode B Positive-Path UAT — 15 November 2026
+## Public Gemini Mode B Positive-Path UAT â€” 15 November 2026
 
-**Result: PASS — tested public positive path.**
+**Result: PASS â€” tested public positive path.**
 
 The deployed Render assistant successfully processed the supported question "Compare cost centres" and returned:
 
@@ -187,4 +187,32 @@ The captured response is stored at `final-evidence/09-assistant-or-skip/post6-pu
 
 **Not established by this test:** Public provider-failure or missing-key fallback behavior. Earlier local fallback tests remain separate evidence and are not represented as a new public test.
 
-This positive-path result does not replace reviewer approval. Phase 3 remains `DRAFT — NOT CERTIFIED` pending formal review.
+This positive-path result does not replace reviewer approval. Phase 3 remains `DRAFT â€” NOT CERTIFIED` pending formal review.
+
+## Public Gemini Mode B Fallback UAT — 15 November 2026
+
+**Result: PASS — tested public staging fallback paths.**
+
+The isolated Render staging service was tested with two configurations:
+
+1. Gemini API key absent: the assistant returned `SUPPORTED` with `explanation_status: disabled`.
+2. Deliberately invalid staging-only Gemini API key: the assistant returned `SUPPORTED` with `explanation_status: fallback`.
+
+For the provider-failure test:
+
+- Intent: `cost_centre_variance_comparison`
+- Deterministic answer: present
+- Gemini explanation: absent, as expected during fallback
+- Evidence references: preserved, containing six findings
+- Metadata validation: `PASS`
+- Assertions: 6 passed, 0 failed
+- Staging deployment source: `79feed9`
+- Production environment: not modified
+
+The provider-failure response is preserved at `final-evidence/09-assistant-or-skip/post6-public-gemini-provider-failure-fallback-20261115.json`.
+
+The missing-key test was separately observed on the same staging service before the invalid-key configuration was applied.
+
+These results complement the production Gemini positive-path UAT. They do not constitute reviewer approval or Phase 3 certification.
+
+**Phase 3 remains DRAFT — NOT CERTIFIED pending formal review.**

@@ -92,7 +92,7 @@ Both the Phase 3 frontend and backend Render services were confirmed Live on com
 
 The documented browser and Gemini-provider limitations remain open. This report does not independently certify the complete Phase 3 release.
 
-## 8. Post-Correction Local Browser Acceptance — 2026-11-15
+## 8. Post-Correction Local Browser Acceptance â€” 2026-11-15
 
 A targeted local correction was applied to the deterministic assistant intent classifier. Predictive and future-projection questions that are outside the approved comparative-intelligence scope are now rejected as `OUT_OF_SCOPE`.
 
@@ -102,7 +102,7 @@ The correction was validated locally in the original project working directory.
 
 | Validation | Result |
 |---|---|
-| Assistant API and Gemini explainer tests | PASS — 27 passed, 0 failed |
+| Assistant API and Gemini explainer tests | PASS â€” 27 passed, 0 failed |
 | Python compilation (`backend`, `tests`) | PASS |
 | `git diff --check` | PASS |
 
@@ -113,16 +113,16 @@ The 27-test result comprises 19 assistant API tests and 8 Gemini explainer tests
 | Browser validation | Result |
 |---|---|
 | Dashboard and Data Intelligence page loading | PASS |
-| Supported comparative question | PASS — `SUPPORTED` |
-| Predictive question | PASS — `OUT_OF_SCOPE` |
+| Supported comparative question | PASS â€” `SUPPORTED` |
+| Predictive question | PASS â€” `OUT_OF_SCOPE` |
 | Assistant browser regression checks | 4 passed |
 | Dashboard filters and responsive checks | 9 passed |
 | Exact viewport responsive checks | 4 passed |
 | Total recorded browser checks | 17 passed, 0 failed |
 
 Exact responsive viewport checks:
-- Dashboard: mobile 390 × 844 and tablet 768 × 1024.
-- Data Intelligence: mobile 390 × 844 and tablet 768 × 1024.
+- Dashboard: mobile 390 Ã— 844 and tablet 768 Ã— 1024.
+- Data Intelligence: mobile 390 Ã— 844 and tablet 768 Ã— 1024.
 - No horizontal overflow was detected at these four tested dimensions.
 
 ### Public deployment distinction
@@ -135,11 +135,11 @@ The earlier Windows Application Control limitation concerned a separate clean-cl
 
 These results establish targeted local regression and browser acceptance only. They do not establish public deployment of the correction or complete Phase 3 certification.
 
-## Public Post #6 Acceptance Addendum — 2026-11-15
+## Public Post #6 Acceptance Addendum â€” 2026-11-15
 
 A fresh public Render browser and API acceptance run completed on 2026-11-15.
 
-**Result: PASS — 19 checks passed, 0 failed.**
+**Result: PASS â€” 19 checks passed, 0 failed.**
 
 Verified:
 - Chrome 157.0.8103.78 started using the matching ChromeDriver.
@@ -166,10 +166,10 @@ The earlier preliminary browser run and diagnostic evidence remain preserved.
 - Final Repomix snapshot generation and XML validation were completed for GitHub master commit `029b6bb` on 15 November 2026; reviewer approval and certification remain outstanding.
 - No Phase 3 release tag has been created.
 
-**PHASE 3 STATUS: DRAFT — NOT CERTIFIED.**
+**PHASE 3 STATUS: DRAFT â€” NOT CERTIFIED.**
 This addendum records executed checks; it is not reviewer certification.
 
-## Final status reconciliation — 15 November 2026
+## Final status reconciliation â€” 15 November 2026
 
 This reconciliation supersedes earlier status snapshots in this document wherever they describe the assistant correction as unpublished, the public browser acceptance as not performed, or the public backend as remaining on commit `daa7f61`. Those statements accurately describe earlier checkpoints but are no longer the current release status.
 
@@ -178,7 +178,7 @@ This reconciliation supersedes earlier status snapshots in this document whereve
 - The assistant scope correction is committed and pushed to GitHub `master` at commit `3610659d87831639ee2fc3b17d8ce66beb3fdcb1`.
 - The Render dashboard independently confirmed the backend service `poc4-budget-phase3-backend` Live on commit `3610659`.
 - Public assistant API regression: 4/4 checks passed. The supported comparison question returned `SUPPORTED`; the three predictive/future-projection questions returned `OUT_OF_SCOPE` with zero evidence.
-- Public Selenium acceptance on 15 November 2026: **19 passed, 0 failed**. This included backend and intelligence health, summary, assistant API behavior, desktop dashboard rendering, Data Intelligence content, and both pages at a 390 × 844 mobile viewport.
+- Public Selenium acceptance on 15 November 2026: **19 passed, 0 failed**. This included backend and intelligence health, summary, assistant API behavior, desktop dashboard rendering, Data Intelligence content, and both pages at a 390 Ã— 844 mobile viewport.
 - The public acceptance report is `final-evidence/browser-automation/post6-public-final-acceptance-20261115-142307.json`. The corresponding final dashboard and Data Intelligence screenshots are stored in the official evidence folders.
 - The official evidence structure contains all 15 required folders and 73 files. The latest structural and evidence-copy consistency audits passed, with zero report-copy failures and zero required-evidence-copy failures.
 - The correction's local targeted tests passed 27/27. Python compilation passed. Earlier clean-clone checks recorded 24 targeted tests passing, with the limitations below.
@@ -187,17 +187,17 @@ This reconciliation supersedes earlier status snapshots in this document whereve
 
 - Clean-clone Docker build remains **BLOCKED** because the Docker Desktop Linux engine was unavailable during that validation.
 - Full default pytest collection in the separate clean-clone environment was **BLOCKED** by missing `requests` for two legacy test modules; those modules were not executed in that environment.
-- Public Gemini Mode B behavior has not been certified. The public results establish the tested deterministic assistant behavior only.
-- Both Render frontend and backend services are confirmed Live on commit `029b6bb` (15 November 2026).
+- Public Gemini Mode B positive-path and staging fallback behavior have been operationally validated for the tested scenarios. Formal reviewer certification remains outstanding.
+- Production Render frontend and backend services were confirmed Live on application commit `954a6ed` (15 November 2026). The isolated staging fallback service was deployed from repository commit `79feed9`.
 - Formal keyboard-only and screen-reader accessibility audits were not performed.
 - The final Repomix snapshot was generated from GitHub master commit `029b6bb` and XML-validated on 15 November 2026.
 - Reviewer approval and the required certification decision have not been received. The release tag has not been created.
 
-**Current release status: NOT CERTIFIED — reviewer approval and final release packaging remain outstanding.**
+**Current release status: NOT CERTIFIED â€” reviewer approval and final release packaging remain outstanding.**
 
 The 19/19 public browser result is a successful acceptance test; it does not remove the documented clean-clone limitations or substitute for the required reviewer certification.
 
-## Public Gemini Mode B Positive-Path Validation — 15 November 2026
+## Public Gemini Mode B Positive-Path Validation â€” 15 November 2026
 
 A public request to the deployed Render backend was completed using the supported question "Compare cost centres".
 
@@ -216,4 +216,27 @@ The response retained deterministic cost-centre results and their evidence refer
 
 The actual public response is preserved in `final-evidence/09-assistant-or-skip/post6-public-gemini-mode-b-acceptance-20261115.json`.
 
-**Scope limitation:** This establishes successful public Gemini explanation generation for the tested supported question. Public fallback behavior during provider unavailability was not retested in this run. This result does not constitute reviewer approval or Phase 3 certification. The release remains `DRAFT — NOT CERTIFIED` pending reviewer approval.
+**Scope limitation:** This establishes successful public Gemini explanation generation for the tested supported question. Public fallback behavior during provider unavailability was not retested in this run. This result does not constitute reviewer approval or Phase 3 certification. The release remains `DRAFT â€” NOT CERTIFIED` pending reviewer approval.
+
+## Public Gemini Mode B Fallback Validation — 15 November 2026
+
+Public fallback behavior was tested against the isolated Render staging service:
+
+- Staging service: `https://poc4-budget-phase3-fallback-staging.onrender.com`
+- Staging deployment source: `79feed9`
+- Production Gemini configuration was not modified for these tests.
+- Missing Gemini key: `explanation_status: disabled`; deterministic response remained available.
+- Deliberately invalid staging-only Gemini key: `explanation_status: fallback`; deterministic response remained available.
+- Provider-failure response: `status: SUPPORTED`.
+- Intent: `cost_centre_variance_comparison`.
+- Evidence references: preserved, including six cost-centre findings.
+- Metadata validation: `PASS`.
+- All six provider-failure assertions passed.
+
+The public provider-failure response is preserved at `final-evidence/09-assistant-or-skip/post6-public-gemini-provider-failure-fallback-20261115.json`.
+
+The missing-key result was verified in a separate earlier staging request. The provider-failure artifact above preserves the subsequent invalid-key test response.
+
+These staging tests demonstrate fallback behavior for the tested configurations. They do not establish continuous availability or replace formal reviewer approval.
+
+**Certification status remains DRAFT — NOT CERTIFIED pending formal reviewer approval.**
