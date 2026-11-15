@@ -30,6 +30,21 @@ def test_supported_question():
 
 
 @pytest.mark.parametrize(
+    "question",
+    [
+        "Predict next quarter's spending for each cost centre",
+        "Forecast next quarter spending for cost centers",
+        "Project future spending for CC-101",
+    ],
+)
+def test_predictive_cost_centre_questions_are_out_of_scope(question):
+    response = post_question({"question": question})
+
+    assert response.status_code == 200
+    assert response.json()["status"] == "OUT_OF_SCOPE"
+
+
+@pytest.mark.parametrize(
     ("payload", "expected_status"),
     [
         ({}, "MISSING_PARAMETER"),

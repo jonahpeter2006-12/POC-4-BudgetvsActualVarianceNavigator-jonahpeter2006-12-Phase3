@@ -145,6 +145,20 @@ def classify_intent(
     """Map a question to one of the five approved assistant intents."""
     text = normalize_text(question)
 
+    # Predictive and future-projection questions are not approved intents.
+    if (
+        re.search(
+            r"\b(predict(?:ion|ive)?|forecast(?:ing)?|project(?:ion|ed)?)\b",
+            text,
+        )
+        or re.search(
+            r"\b(next|future|upcoming)\b.{0,40}\b"
+            r"(spending|expenditure|budget|costs?|revenue)\b",
+            text,
+        )
+    ):
+        return None
+
     # Q-05: Monthly findings with insufficient evidence.
     if (
         "monthly" in text
