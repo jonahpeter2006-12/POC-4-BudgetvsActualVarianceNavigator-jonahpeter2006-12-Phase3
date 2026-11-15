@@ -1,0 +1,17 @@
+{
+  "project": "POC-4 Budget vs Actual Variance Navigator",
+  "frontend_url": "https://poc4-budget-phase3-frontend.onrender.com",
+  "backend_url": "https://poc4-budget-phase3-backend.onrender.com",
+  "browser": "Google Chrome via Selenium WebDriver",
+  "executed_at_utc": "2026-11-14T04:21:56.289791+00:00",
+  "passed": 0,
+  "failed": 1,
+  "result": "FAIL",
+  "tests": [
+    {
+      "test": "Execution exception",
+      "status": "FAIL",
+      "detail": "NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location\n"
+    }
+  ]
+}

@@ -1,0 +1,1316 @@
+{
+  "review_version": "1.0.0",
+  "project_id": "poc-4-budget-vs-actual-variance-navigator",
+  "approved_track": "Track A — Comparative Intelligence",
+  "dataset_version": "1.0.0",
+  "method_version": "1.0.0",
+  "generated_at": "2026-11-06T06:26:37Z",
+  "review_scope": "Findings below the minimum independent-source threshold",
+  "minimum_group_size": 3,
+  "minimum_overall_group_size": 3,
+  "weak_case_count": 48,
+  "small_group_cases": 48,
+  "extreme_value_cases": {
+    "status": "NOT_ASSESSED",
+    "note": "No separate extreme-value assessment was performed."
+  },
+  "missing_group_effects": {
+    "status": "NOT_ASSESSED",
+    "note": "No separate missing-group impact assessment was performed."
+  },
+  "ranking_stability": {
+    "status": "SENSITIVE_IN_SINGLE_SCENARIO",
+    "test_design": "Leave-one-source-observation-out sensitivity review",
+    "rank_changed_count": 12,
+    "overall_comparison_count": 16,
+    "note": "12 of 16 overall comparison ranks changed after removing one source observation. This indicates sensitivity in the tested scenario, not a comprehensive stability test."
+  },
+  "sensitivity_review": {
+    "status": "COMPLETED",
+    "report_file": "sensitivity_review.json",
+    "test_design": {
+      "test_type": "Leave-one-source-observation-out sensitivity review",
+      "selection_rule": "Remove the individual source observation with the largest absolute Actual minus Budget variance.",
+      "removal_unit": "One complete source observation containing four financial measures.",
+      "analytical_method": "The existing approved load_and_pair and build_comparisons functions were used without modification.",
+      "minimum_overall_group_size": 3,
+      "canonical_dataset_modified": false
+    },
+    "removed_source_observation": {
+      "source_record_id": "SRC-0007",
+      "entity_id": "CC-201",
+      "entity_name": "Marketing",
+      "category": "Paid Ads & Campaigns",
+      "period": "2026-01",
+      "budget_amount": 60000.0,
+      "actual_amount": 68000.0,
+      "variance_amount": 8000.0,
+      "absolute_variance": 8000.0,
+      "removed_metric_row_count": 4,
+      "removed_metrics": [
+        "actual_amount",
+        "budget_amount",
+        "committed_amount",
+        "forecast_amount"
+      ]
+    },
+    "dataset_counts": {
+      "source_observations_before": 18,
+      "source_observations_after": 17,
+      "source_observations_removed": 1,
+      "canonical_rows_before": 72,
+      "canonical_rows_after": 68,
+      "canonical_rows_removed": 4,
+      "overall_groups_before": 16,
+      "overall_groups_after": 16
+    },
+    "results": {
+      "overall_comparison_count": 16,
+      "rank_changed_count": 12,
+      "variance_changed_count": 3,
+      "quality_status_changed_count": 2,
+      "newly_insufficient_evidence_count": 2,
+      "comparisons": [
+        {
+          "result_type": "cost_centre_comparison",
+          "group_key": "CC-101",
+          "variance_before": 14500.0,
+          "variance_after": 14500.0,
+          "variance_change": 0.0,
+          "variance_percentage_before": 10.74074074074074,
+          "variance_percentage_after": 10.74074074074074,
+          "source_count_before": 3,
+          "source_count_after": 3,
+          "rank_before": 1,
+          "rank_after": 1,
+          "rank_changed": false,
+          "quality_status_before": "validated_with_limitations",
+          "quality_status_after": "validated_with_limitations",
+          "quality_status_changed": false
+        },
+        {
+          "result_type": "cost_centre_comparison",
+          "group_key": "CC-102",
+          "variance_before": -1500.0,
+          "variance_after": -1500.0,
+          "variance_change": 0.0,
+          "variance_percentage_before": -2.5,
+          "variance_percentage_after": -2.5,
+          "source_count_before": 3,
+          "source_count_after": 3,
+          "rank_before": 5,
+          "rank_after": 4,
+          "rank_changed": true,
+          "quality_status_before": "validated_with_limitations",
+          "quality_status_after": "validated_with_limitations",
+          "quality_status_changed": false
+        },
+        {
+          "result_type": "cost_centre_comparison",
+          "group_key": "CC-201",
+          "variance_before": 13000.0,
+          "variance_after": 5000.0,
+          "variance_change": -8000.0,
+          "variance_percentage_before": 7.027027027027027,
+          "variance_percentage_after": 4.0,
+          "source_count_before": 3,
+          "source_count_after": 2,
+          "rank_before": 2,
+          "rank_after": null,
+          "rank_changed": true,
+          "quality_status_before": "validated_with_limitations",
+          "quality_status_after": "insufficient_evidence",
+          "quality_status_changed": true
+        },
+        {
+          "result_type": "cost_centre_comparison",
+          "group_key": "CC-202",
+          "variance_before": -5000.0,
+          "variance_after": -5000.0,
+          "variance_change": 0.0,
+          "variance_percentage_before": -5.263157894736842,
+          "variance_percentage_after": -5.263157894736842,
+          "source_count_before": 3,
+          "source_count_after": 3,
+          "rank_before": 4,
+          "rank_after": 3,
+          "rank_changed": true,
+          "quality_status_before": "validated_with_limitations",
+          "quality_status_after": "validated_with_limitations",
+          "quality_status_changed": false
+        },
+        {
+          "result_type": "cost_centre_comparison",
+          "group_key": "CC-301",
+          "variance_before": 10500.0,
+          "variance_after": 10500.0,
+          "variance_change": 0.0,
+          "variance_percentage_before": 13.461538461538462,
+          "variance_percentage_after": 13.461538461538462,
+          "source_count_before": 3,
+          "source_count_after": 3,
+          "rank_before": 3,
+          "rank_after": 2,
+          "rank_changed": true,
+          "quality_status_before": "validated_with_limitations",
+          "quality_status_after": "validated_with_limitations",
+          "quality_status_changed": false
+        },
+        {
+          "result_type": "cost_centre_comparison",
+          "group_key": "CC-401",
+          "variance_before": 500.0,
+          "variance_after": 500.0,
+          "variance_change": 0.0,
+          "variance_percentage_before": 1.0416666666666665,
+          "variance_percentage_after": 1.0416666666666665,
+          "source_count_before": 3,
+          "source_count_after": 3,
+          "rank_before": 6,
+          "rank_after": 5,
+          "rank_changed": true,
+          "quality_status_before": "validated_with_limitations",
+          "quality_status_after": "validated_with_limitations",
+          "quality_status_changed": false
+        },
+        {
+          "result_type": "department_comparison",
+          "group_key": "Engineering",
+          "variance_before": 13000.0,
+          "variance_after": 13000.0,
+          "variance_change": 0.0,
+          "variance_percentage_before": 6.666666666666667,
+          "variance_percentage_after": 6.666666666666667,
+          "source_count_before": 6,
+          "source_count_after": 6,
+          "rank_before": 1,
+          "rank_after": 1,
+          "rank_changed": false,
+          "quality_status_before": "validated_with_limitations",
+          "quality_status_after": "validated_with_limitations",
+          "quality_status_changed": false
+        },
+        {
+          "result_type": "department_comparison",
+          "group_key": "HR & Ops",
+          "variance_before": 500.0,
+          "variance_after": 500.0,
+          "variance_change": 0.0,
+          "variance_percentage_before": 1.0416666666666665,
+          "variance_percentage_after": 1.0416666666666665,
+          "source_count_before": 3,
+          "source_count_after": 3,
+          "rank_before": 4,
+          "rank_after": 3,
+          "rank_changed": true,
+          "quality_status_before": "validated_with_limitations",
+          "quality_status_after": "validated_with_limitations",
+          "quality_status_changed": false
+        },
+        {
+          "result_type": "department_comparison",
+          "group_key": "Marketing",
+          "variance_before": 8000.0,
+          "variance_after": 0.0,
+          "variance_change": -8000.0,
+          "variance_percentage_before": 2.857142857142857,
+          "variance_percentage_after": 0.0,
+          "source_count_before": 6,
+          "source_count_after": 5,
+          "rank_before": 3,
+          "rank_after": 4,
+          "rank_changed": true,
+          "quality_status_before": "validated_with_limitations",
+          "quality_status_after": "validated_with_limitations",
+          "quality_status_changed": false
+        },
+        {
+          "result_type": "department_comparison",
+          "group_key": "Sales",
+          "variance_before": 10500.0,
+          "variance_after": 10500.0,
+          "variance_change": 0.0,
+          "variance_percentage_before": 13.461538461538462,
+          "variance_percentage_after": 13.461538461538462,
+          "source_count_before": 3,
+          "source_count_after": 3,
+          "rank_before": 2,
+          "rank_after": 2,
+          "rank_changed": false,
+          "quality_status_before": "validated_with_limitations",
+          "quality_status_after": "validated_with_limitations",
+          "quality_status_changed": false
+        },
+        {
+          "result_type": "expenditure_category_comparison",
+          "group_key": "Cloud Infrastructure",
+          "variance_before": 14500.0,
+          "variance_after": 14500.0,
+          "variance_change": 0.0,
+          "variance_percentage_before": 10.74074074074074,
+          "variance_percentage_after": 10.74074074074074,
+          "source_count_before": 3,
+          "source_count_after": 3,
+          "rank_before": 1,
+          "rank_after": 1,
+          "rank_changed": false,
+          "quality_status_before": "validated_with_limitations",
+          "quality_status_after": "validated_with_limitations",
+          "quality_status_changed": false
+        },
+        {
+          "result_type": "expenditure_category_comparison",
+          "group_key": "Events & PR",
+          "variance_before": -5000.0,
+          "variance_after": -5000.0,
+          "variance_change": 0.0,
+          "variance_percentage_before": -5.263157894736842,
+          "variance_percentage_after": -5.263157894736842,
+          "source_count_before": 3,
+          "source_count_after": 3,
+          "rank_before": 4,
+          "rank_after": 3,
+          "rank_changed": true,
+          "quality_status_before": "validated_with_limitations",
+          "quality_status_after": "validated_with_limitations",
+          "quality_status_changed": false
+        },
+        {
+          "result_type": "expenditure_category_comparison",
+          "group_key": "Paid Ads & Campaigns",
+          "variance_before": 13000.0,
+          "variance_after": 5000.0,
+          "variance_change": -8000.0,
+          "variance_percentage_before": 7.027027027027027,
+          "variance_percentage_after": 4.0,
+          "source_count_before": 3,
+          "source_count_after": 2,
+          "rank_before": 2,
+          "rank_after": null,
+          "rank_changed": true,
+          "quality_status_before": "validated_with_limitations",
+          "quality_status_after": "insufficient_evidence",
+          "quality_status_changed": true
+        },
+        {
+          "result_type": "expenditure_category_comparison",
+          "group_key": "Recruitment & Onboarding",
+          "variance_before": 500.0,
+          "variance_after": 500.0,
+          "variance_change": 0.0,
+          "variance_percentage_before": 1.0416666666666665,
+          "variance_percentage_after": 1.0416666666666665,
+          "source_count_before": 3,
+          "source_count_after": 3,
+          "rank_before": 6,
+          "rank_after": 5,
+          "rank_changed": true,
+          "quality_status_before": "validated_with_limitations",
+          "quality_status_after": "validated_with_limitations",
+          "quality_status_changed": false
+        },
+        {
+          "result_type": "expenditure_category_comparison",
+          "group_key": "Software Licenses",
+          "variance_before": -1500.0,
+          "variance_after": -1500.0,
+          "variance_change": 0.0,
+          "variance_percentage_before": -2.5,
+          "variance_percentage_after": -2.5,
+          "source_count_before": 3,
+          "source_count_after": 3,
+          "rank_before": 5,
+          "rank_after": 4,
+          "rank_changed": true,
+          "quality_status_before": "validated_with_limitations",
+          "quality_status_after": "validated_with_limitations",
+          "quality_status_changed": false
+        },
+        {
+          "result_type": "expenditure_category_comparison",
+          "group_key": "Travel & Client Entertainment",
+          "variance_before": 10500.0,
+          "variance_after": 10500.0,
+          "variance_change": 0.0,
+          "variance_percentage_before": 13.461538461538462,
+          "variance_percentage_after": 13.461538461538462,
+          "source_count_before": 3,
+          "source_count_after": 3,
+          "rank_before": 3,
+          "rank_after": 2,
+          "rank_changed": true,
+          "quality_status_before": "validated_with_limitations",
+          "quality_status_after": "validated_with_limitations",
+          "quality_status_changed": false
+        }
+      ]
+    },
+    "interpretation": "This is a descriptive sensitivity assessment of the effect of removing one large source observation. Changes in variance, ranking or evidence status indicate sensitivity to that observation. Unchanged findings do not establish statistical robustness or population-level validity.",
+    "limitations": [
+      "The dataset contains synthetic source observations.",
+      "Only one removal scenario was tested.",
+      "This test does not establish statistical significance or population-level robustness.",
+      "Groups falling below the minimum source threshold become insufficient_evidence and are excluded from ranking.",
+      "Ranking changes can result from changed variances, evidence eligibility or the ordering of remaining groups."
+    ]
+  },
+  "excluded_cases": {
+    "count": 48,
+    "reason": "Monthly findings below the minimum independent-source threshold are not eligible for overall ranking."
+  },
+  "monthly_source_count_distribution": {
+    "1": 42,
+    "2": 6
+  },
+  "quality_status_counts": {
+    "insufficient_evidence": 48,
+    "validated_with_limitations": 16
+  },
+  "review_conclusion": "Monthly findings with fewer than three independent source observations remain descriptive, are not ranked, and must not be interpreted as sufficiently supported overall comparisons.",
+  "interpretation": "The 48 monthly findings are descriptive only. Their limited source counts do not support population-level conclusions.",
+  "weak_cases": [
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260101-cc-101",
+      "result_type": "monthly_cost_centre_comparison",
+      "group_key": "CC-101",
+      "period_start": "2026-01-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0001-ACTUAL_AMOUNT",
+        "FIN-0001-BUDGET_AMOUNT",
+        "FIN-0001-COMMITTED_AMOUNT",
+        "FIN-0001-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260101-cc-102",
+      "result_type": "monthly_cost_centre_comparison",
+      "group_key": "CC-102",
+      "period_start": "2026-01-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0004-ACTUAL_AMOUNT",
+        "FIN-0004-BUDGET_AMOUNT",
+        "FIN-0004-COMMITTED_AMOUNT",
+        "FIN-0004-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260101-cc-201",
+      "result_type": "monthly_cost_centre_comparison",
+      "group_key": "CC-201",
+      "period_start": "2026-01-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0007-ACTUAL_AMOUNT",
+        "FIN-0007-BUDGET_AMOUNT",
+        "FIN-0007-COMMITTED_AMOUNT",
+        "FIN-0007-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260101-cc-202",
+      "result_type": "monthly_cost_centre_comparison",
+      "group_key": "CC-202",
+      "period_start": "2026-01-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0010-ACTUAL_AMOUNT",
+        "FIN-0010-BUDGET_AMOUNT",
+        "FIN-0010-COMMITTED_AMOUNT",
+        "FIN-0010-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260101-cc-301",
+      "result_type": "monthly_cost_centre_comparison",
+      "group_key": "CC-301",
+      "period_start": "2026-01-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0013-ACTUAL_AMOUNT",
+        "FIN-0013-BUDGET_AMOUNT",
+        "FIN-0013-COMMITTED_AMOUNT",
+        "FIN-0013-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260101-cc-401",
+      "result_type": "monthly_cost_centre_comparison",
+      "group_key": "CC-401",
+      "period_start": "2026-01-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0016-ACTUAL_AMOUNT",
+        "FIN-0016-BUDGET_AMOUNT",
+        "FIN-0016-COMMITTED_AMOUNT",
+        "FIN-0016-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260201-cc-101",
+      "result_type": "monthly_cost_centre_comparison",
+      "group_key": "CC-101",
+      "period_start": "2026-02-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0002-ACTUAL_AMOUNT",
+        "FIN-0002-BUDGET_AMOUNT",
+        "FIN-0002-COMMITTED_AMOUNT",
+        "FIN-0002-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260201-cc-102",
+      "result_type": "monthly_cost_centre_comparison",
+      "group_key": "CC-102",
+      "period_start": "2026-02-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0005-ACTUAL_AMOUNT",
+        "FIN-0005-BUDGET_AMOUNT",
+        "FIN-0005-COMMITTED_AMOUNT",
+        "FIN-0005-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260201-cc-201",
+      "result_type": "monthly_cost_centre_comparison",
+      "group_key": "CC-201",
+      "period_start": "2026-02-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0008-ACTUAL_AMOUNT",
+        "FIN-0008-BUDGET_AMOUNT",
+        "FIN-0008-COMMITTED_AMOUNT",
+        "FIN-0008-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260201-cc-202",
+      "result_type": "monthly_cost_centre_comparison",
+      "group_key": "CC-202",
+      "period_start": "2026-02-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0011-ACTUAL_AMOUNT",
+        "FIN-0011-BUDGET_AMOUNT",
+        "FIN-0011-COMMITTED_AMOUNT",
+        "FIN-0011-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260201-cc-301",
+      "result_type": "monthly_cost_centre_comparison",
+      "group_key": "CC-301",
+      "period_start": "2026-02-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0014-ACTUAL_AMOUNT",
+        "FIN-0014-BUDGET_AMOUNT",
+        "FIN-0014-COMMITTED_AMOUNT",
+        "FIN-0014-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260201-cc-401",
+      "result_type": "monthly_cost_centre_comparison",
+      "group_key": "CC-401",
+      "period_start": "2026-02-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0017-ACTUAL_AMOUNT",
+        "FIN-0017-BUDGET_AMOUNT",
+        "FIN-0017-COMMITTED_AMOUNT",
+        "FIN-0017-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260301-cc-101",
+      "result_type": "monthly_cost_centre_comparison",
+      "group_key": "CC-101",
+      "period_start": "2026-03-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0003-ACTUAL_AMOUNT",
+        "FIN-0003-BUDGET_AMOUNT",
+        "FIN-0003-COMMITTED_AMOUNT",
+        "FIN-0003-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260301-cc-102",
+      "result_type": "monthly_cost_centre_comparison",
+      "group_key": "CC-102",
+      "period_start": "2026-03-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0006-ACTUAL_AMOUNT",
+        "FIN-0006-BUDGET_AMOUNT",
+        "FIN-0006-COMMITTED_AMOUNT",
+        "FIN-0006-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260301-cc-201",
+      "result_type": "monthly_cost_centre_comparison",
+      "group_key": "CC-201",
+      "period_start": "2026-03-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0009-ACTUAL_AMOUNT",
+        "FIN-0009-BUDGET_AMOUNT",
+        "FIN-0009-COMMITTED_AMOUNT",
+        "FIN-0009-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260301-cc-202",
+      "result_type": "monthly_cost_centre_comparison",
+      "group_key": "CC-202",
+      "period_start": "2026-03-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0012-ACTUAL_AMOUNT",
+        "FIN-0012-BUDGET_AMOUNT",
+        "FIN-0012-COMMITTED_AMOUNT",
+        "FIN-0012-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260301-cc-301",
+      "result_type": "monthly_cost_centre_comparison",
+      "group_key": "CC-301",
+      "period_start": "2026-03-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0015-ACTUAL_AMOUNT",
+        "FIN-0015-BUDGET_AMOUNT",
+        "FIN-0015-COMMITTED_AMOUNT",
+        "FIN-0015-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_cost_centre_comparison-20260301-cc-401",
+      "result_type": "monthly_cost_centre_comparison",
+      "group_key": "CC-401",
+      "period_start": "2026-03-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0018-ACTUAL_AMOUNT",
+        "FIN-0018-BUDGET_AMOUNT",
+        "FIN-0018-COMMITTED_AMOUNT",
+        "FIN-0018-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_department_comparison-20260101-engineering",
+      "result_type": "monthly_department_comparison",
+      "group_key": "Engineering",
+      "period_start": "2026-01-01",
+      "independent_source_count": 2,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 2 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0001-ACTUAL_AMOUNT",
+        "FIN-0001-BUDGET_AMOUNT",
+        "FIN-0001-COMMITTED_AMOUNT",
+        "FIN-0001-FORECAST_AMOUNT",
+        "FIN-0004-ACTUAL_AMOUNT",
+        "FIN-0004-BUDGET_AMOUNT",
+        "FIN-0004-COMMITTED_AMOUNT",
+        "FIN-0004-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_department_comparison-20260101-hr_and_ops",
+      "result_type": "monthly_department_comparison",
+      "group_key": "HR & Ops",
+      "period_start": "2026-01-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0016-ACTUAL_AMOUNT",
+        "FIN-0016-BUDGET_AMOUNT",
+        "FIN-0016-COMMITTED_AMOUNT",
+        "FIN-0016-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_department_comparison-20260101-marketing",
+      "result_type": "monthly_department_comparison",
+      "group_key": "Marketing",
+      "period_start": "2026-01-01",
+      "independent_source_count": 2,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 2 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0007-ACTUAL_AMOUNT",
+        "FIN-0007-BUDGET_AMOUNT",
+        "FIN-0007-COMMITTED_AMOUNT",
+        "FIN-0007-FORECAST_AMOUNT",
+        "FIN-0010-ACTUAL_AMOUNT",
+        "FIN-0010-BUDGET_AMOUNT",
+        "FIN-0010-COMMITTED_AMOUNT",
+        "FIN-0010-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_department_comparison-20260101-sales",
+      "result_type": "monthly_department_comparison",
+      "group_key": "Sales",
+      "period_start": "2026-01-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0013-ACTUAL_AMOUNT",
+        "FIN-0013-BUDGET_AMOUNT",
+        "FIN-0013-COMMITTED_AMOUNT",
+        "FIN-0013-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_department_comparison-20260201-engineering",
+      "result_type": "monthly_department_comparison",
+      "group_key": "Engineering",
+      "period_start": "2026-02-01",
+      "independent_source_count": 2,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 2 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0002-ACTUAL_AMOUNT",
+        "FIN-0002-BUDGET_AMOUNT",
+        "FIN-0002-COMMITTED_AMOUNT",
+        "FIN-0002-FORECAST_AMOUNT",
+        "FIN-0005-ACTUAL_AMOUNT",
+        "FIN-0005-BUDGET_AMOUNT",
+        "FIN-0005-COMMITTED_AMOUNT",
+        "FIN-0005-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_department_comparison-20260201-hr_and_ops",
+      "result_type": "monthly_department_comparison",
+      "group_key": "HR & Ops",
+      "period_start": "2026-02-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0017-ACTUAL_AMOUNT",
+        "FIN-0017-BUDGET_AMOUNT",
+        "FIN-0017-COMMITTED_AMOUNT",
+        "FIN-0017-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_department_comparison-20260201-marketing",
+      "result_type": "monthly_department_comparison",
+      "group_key": "Marketing",
+      "period_start": "2026-02-01",
+      "independent_source_count": 2,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 2 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0008-ACTUAL_AMOUNT",
+        "FIN-0008-BUDGET_AMOUNT",
+        "FIN-0008-COMMITTED_AMOUNT",
+        "FIN-0008-FORECAST_AMOUNT",
+        "FIN-0011-ACTUAL_AMOUNT",
+        "FIN-0011-BUDGET_AMOUNT",
+        "FIN-0011-COMMITTED_AMOUNT",
+        "FIN-0011-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_department_comparison-20260201-sales",
+      "result_type": "monthly_department_comparison",
+      "group_key": "Sales",
+      "period_start": "2026-02-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0014-ACTUAL_AMOUNT",
+        "FIN-0014-BUDGET_AMOUNT",
+        "FIN-0014-COMMITTED_AMOUNT",
+        "FIN-0014-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_department_comparison-20260301-engineering",
+      "result_type": "monthly_department_comparison",
+      "group_key": "Engineering",
+      "period_start": "2026-03-01",
+      "independent_source_count": 2,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 2 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0003-ACTUAL_AMOUNT",
+        "FIN-0003-BUDGET_AMOUNT",
+        "FIN-0003-COMMITTED_AMOUNT",
+        "FIN-0003-FORECAST_AMOUNT",
+        "FIN-0006-ACTUAL_AMOUNT",
+        "FIN-0006-BUDGET_AMOUNT",
+        "FIN-0006-COMMITTED_AMOUNT",
+        "FIN-0006-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_department_comparison-20260301-hr_and_ops",
+      "result_type": "monthly_department_comparison",
+      "group_key": "HR & Ops",
+      "period_start": "2026-03-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0018-ACTUAL_AMOUNT",
+        "FIN-0018-BUDGET_AMOUNT",
+        "FIN-0018-COMMITTED_AMOUNT",
+        "FIN-0018-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_department_comparison-20260301-marketing",
+      "result_type": "monthly_department_comparison",
+      "group_key": "Marketing",
+      "period_start": "2026-03-01",
+      "independent_source_count": 2,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 2 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0009-ACTUAL_AMOUNT",
+        "FIN-0009-BUDGET_AMOUNT",
+        "FIN-0009-COMMITTED_AMOUNT",
+        "FIN-0009-FORECAST_AMOUNT",
+        "FIN-0012-ACTUAL_AMOUNT",
+        "FIN-0012-BUDGET_AMOUNT",
+        "FIN-0012-COMMITTED_AMOUNT",
+        "FIN-0012-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_department_comparison-20260301-sales",
+      "result_type": "monthly_department_comparison",
+      "group_key": "Sales",
+      "period_start": "2026-03-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0015-ACTUAL_AMOUNT",
+        "FIN-0015-BUDGET_AMOUNT",
+        "FIN-0015-COMMITTED_AMOUNT",
+        "FIN-0015-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260101-cloud_infrastructure",
+      "result_type": "monthly_expenditure_category_comparison",
+      "group_key": "Cloud Infrastructure",
+      "period_start": "2026-01-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0001-ACTUAL_AMOUNT",
+        "FIN-0001-BUDGET_AMOUNT",
+        "FIN-0001-COMMITTED_AMOUNT",
+        "FIN-0001-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260101-events_and_pr",
+      "result_type": "monthly_expenditure_category_comparison",
+      "group_key": "Events & PR",
+      "period_start": "2026-01-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0010-ACTUAL_AMOUNT",
+        "FIN-0010-BUDGET_AMOUNT",
+        "FIN-0010-COMMITTED_AMOUNT",
+        "FIN-0010-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260101-paid_ads_and_campaigns",
+      "result_type": "monthly_expenditure_category_comparison",
+      "group_key": "Paid Ads & Campaigns",
+      "period_start": "2026-01-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0007-ACTUAL_AMOUNT",
+        "FIN-0007-BUDGET_AMOUNT",
+        "FIN-0007-COMMITTED_AMOUNT",
+        "FIN-0007-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260101-recruitment_and_onboarding",
+      "result_type": "monthly_expenditure_category_comparison",
+      "group_key": "Recruitment & Onboarding",
+      "period_start": "2026-01-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0016-ACTUAL_AMOUNT",
+        "FIN-0016-BUDGET_AMOUNT",
+        "FIN-0016-COMMITTED_AMOUNT",
+        "FIN-0016-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260101-software_licenses",
+      "result_type": "monthly_expenditure_category_comparison",
+      "group_key": "Software Licenses",
+      "period_start": "2026-01-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0004-ACTUAL_AMOUNT",
+        "FIN-0004-BUDGET_AMOUNT",
+        "FIN-0004-COMMITTED_AMOUNT",
+        "FIN-0004-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260101-travel_and_client_entertainment",
+      "result_type": "monthly_expenditure_category_comparison",
+      "group_key": "Travel & Client Entertainment",
+      "period_start": "2026-01-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0013-ACTUAL_AMOUNT",
+        "FIN-0013-BUDGET_AMOUNT",
+        "FIN-0013-COMMITTED_AMOUNT",
+        "FIN-0013-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260201-cloud_infrastructure",
+      "result_type": "monthly_expenditure_category_comparison",
+      "group_key": "Cloud Infrastructure",
+      "period_start": "2026-02-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0002-ACTUAL_AMOUNT",
+        "FIN-0002-BUDGET_AMOUNT",
+        "FIN-0002-COMMITTED_AMOUNT",
+        "FIN-0002-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260201-events_and_pr",
+      "result_type": "monthly_expenditure_category_comparison",
+      "group_key": "Events & PR",
+      "period_start": "2026-02-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0011-ACTUAL_AMOUNT",
+        "FIN-0011-BUDGET_AMOUNT",
+        "FIN-0011-COMMITTED_AMOUNT",
+        "FIN-0011-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260201-paid_ads_and_campaigns",
+      "result_type": "monthly_expenditure_category_comparison",
+      "group_key": "Paid Ads & Campaigns",
+      "period_start": "2026-02-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0008-ACTUAL_AMOUNT",
+        "FIN-0008-BUDGET_AMOUNT",
+        "FIN-0008-COMMITTED_AMOUNT",
+        "FIN-0008-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260201-recruitment_and_onboarding",
+      "result_type": "monthly_expenditure_category_comparison",
+      "group_key": "Recruitment & Onboarding",
+      "period_start": "2026-02-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0017-ACTUAL_AMOUNT",
+        "FIN-0017-BUDGET_AMOUNT",
+        "FIN-0017-COMMITTED_AMOUNT",
+        "FIN-0017-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260201-software_licenses",
+      "result_type": "monthly_expenditure_category_comparison",
+      "group_key": "Software Licenses",
+      "period_start": "2026-02-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0005-ACTUAL_AMOUNT",
+        "FIN-0005-BUDGET_AMOUNT",
+        "FIN-0005-COMMITTED_AMOUNT",
+        "FIN-0005-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260201-travel_and_client_entertainment",
+      "result_type": "monthly_expenditure_category_comparison",
+      "group_key": "Travel & Client Entertainment",
+      "period_start": "2026-02-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0014-ACTUAL_AMOUNT",
+        "FIN-0014-BUDGET_AMOUNT",
+        "FIN-0014-COMMITTED_AMOUNT",
+        "FIN-0014-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260301-cloud_infrastructure",
+      "result_type": "monthly_expenditure_category_comparison",
+      "group_key": "Cloud Infrastructure",
+      "period_start": "2026-03-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0003-ACTUAL_AMOUNT",
+        "FIN-0003-BUDGET_AMOUNT",
+        "FIN-0003-COMMITTED_AMOUNT",
+        "FIN-0003-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260301-events_and_pr",
+      "result_type": "monthly_expenditure_category_comparison",
+      "group_key": "Events & PR",
+      "period_start": "2026-03-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0012-ACTUAL_AMOUNT",
+        "FIN-0012-BUDGET_AMOUNT",
+        "FIN-0012-COMMITTED_AMOUNT",
+        "FIN-0012-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260301-paid_ads_and_campaigns",
+      "result_type": "monthly_expenditure_category_comparison",
+      "group_key": "Paid Ads & Campaigns",
+      "period_start": "2026-03-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0009-ACTUAL_AMOUNT",
+        "FIN-0009-BUDGET_AMOUNT",
+        "FIN-0009-COMMITTED_AMOUNT",
+        "FIN-0009-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260301-recruitment_and_onboarding",
+      "result_type": "monthly_expenditure_category_comparison",
+      "group_key": "Recruitment & Onboarding",
+      "period_start": "2026-03-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0018-ACTUAL_AMOUNT",
+        "FIN-0018-BUDGET_AMOUNT",
+        "FIN-0018-COMMITTED_AMOUNT",
+        "FIN-0018-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260301-software_licenses",
+      "result_type": "monthly_expenditure_category_comparison",
+      "group_key": "Software Licenses",
+      "period_start": "2026-03-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0006-ACTUAL_AMOUNT",
+        "FIN-0006-BUDGET_AMOUNT",
+        "FIN-0006-COMMITTED_AMOUNT",
+        "FIN-0006-FORECAST_AMOUNT"
+      ]
+    },
+    {
+      "result_id": "track-a-monthly_expenditure_category_comparison-20260301-travel_and_client_entertainment",
+      "result_type": "monthly_expenditure_category_comparison",
+      "group_key": "Travel & Client Entertainment",
+      "period_start": "2026-03-01",
+      "independent_source_count": 1,
+      "quality_status": "insufficient_evidence",
+      "priority_rank": null,
+      "limitation": [
+        "Monthly subgroup results are descriptive and are not overall rankings.",
+        "Only 1 independent source observation(s); the overall evidence threshold is 3."
+      ],
+      "canonical_record_ids": [
+        "FIN-0015-ACTUAL_AMOUNT",
+        "FIN-0015-BUDGET_AMOUNT",
+        "FIN-0015-COMMITTED_AMOUNT",
+        "FIN-0015-FORECAST_AMOUNT"
+      ]
+    }
+  ],
+  "limitations": [
+    "The minimum evidence threshold is an evidence-screening rule, not a statistical representativeness guarantee.",
+    "All source observations are synthetic.",
+    "Small monthly groups do not support population-level conclusions.",
+    "Extreme-value effects and missing-group effects have not been separately assessed.",
+    "The executed sensitivity review tests only one removal scenario and does not establish statistical robustness or population-level validity."
+  ]
+}

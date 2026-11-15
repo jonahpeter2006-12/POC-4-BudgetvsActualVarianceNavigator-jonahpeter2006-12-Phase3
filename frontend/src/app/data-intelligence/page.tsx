@@ -154,6 +154,9 @@ type AssistantResponse = {
   metadata: Record<string, unknown>;
   limitation: string[] | string;
   suggested_follow_ups: string[];
+  explanation?: string | null;
+  explanation_status?: string;
+  explanation_provider?: string | null;
 };
 const money = (value?: number, unit = 'USD') => {
   if (typeof value !== 'number' || !Number.isFinite(value)) return '—';
@@ -571,6 +574,32 @@ export default function DataIntelligencePage() {
                   {assistantResponse.answer}
                 </p>
               </div>
+
+              {assistantResponse.explanation && (
+                <div className="rounded-xl border border-[#35445a] bg-[#111c2c] p-4">
+                  <h3 className="text-xs font-semibold uppercase tracking-wider text-[#8fc5ff]">
+                    AI explanation (Gemini)
+                  </h3>
+                  <p className="mt-2 whitespace-pre-wrap text-sm leading-6 text-[#c3cedd]">
+                    {assistantResponse.explanation}
+                  </p>
+                  <p className="mt-2 text-xs text-[#8995a8]">
+                    Explanation only. Approved financial findings and evidence above remain authoritative.
+                  </p>
+                </div>
+              )}
+
+              {!assistantResponse.explanation &&
+                assistantResponse.explanation_status &&
+                assistantResponse.explanation_status !== 'not_applicable' && (
+                  <p className="text-xs text-[#8995a8]">
+                    {assistantResponse.explanation_status === 'disabled'
+                      ? 'Gemini explanation is not enabled. The deterministic answer is shown.'
+                      : assistantResponse.explanation_status === 'rejected'
+                        ? 'The optional Gemini explanation was rejected by validation. The deterministic answer is shown.'
+                        : 'Gemini explanation is unavailable. The deterministic answer is shown.'}
+                  </p>
+                )}
 
               {assistantResponse.key_values.length > 0 && (
                 <div>

@@ -851,6 +851,7 @@ def assistant_query(request: AssistantQueryRequest):
         is_unsafe_question,
         validate_question,
     )
+    from backend.gemini_explainer import explain_supported_response
 
     validation_error = validate_question(request.question)
 
@@ -871,9 +872,14 @@ def assistant_query(request: AssistantQueryRequest):
     artifacts = _get_verified_intelligence_artifacts()
 
     try:
-        return process_question(request.question, artifacts)
+        result = process_question(request.question, artifacts)
     except ValueError as exc:
         raise HTTPException(
             status_code=503,
             detail="Verified assistant evidence is unavailable.",
         ) from exc
+
+    result.update(
+        explain_supported_response(request.question, result)
+    )
+    return result

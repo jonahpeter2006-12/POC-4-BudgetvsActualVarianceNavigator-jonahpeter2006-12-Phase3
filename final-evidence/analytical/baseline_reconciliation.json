@@ -1,0 +1,691 @@
+{
+  "report_version": "1.0.0",
+  "dataset_version": "1.0.0",
+  "method_version": "1.0.0",
+  "overall_status": "PASS",
+  "baseline_comparison": {
+    "status": "PASS",
+    "overall_group_count": 16
+  },
+  "aggregation_reconciliation": {
+    "status": "PASS",
+    "measure_check_count": 12,
+    "canonical_totals": {
+      "budget_amount": 601000.0,
+      "actual_amount": 633000.0,
+      "committed_amount": 42500.0,
+      "forecast_amount": 660500.0
+    }
+  },
+  "total_checks": 95,
+  "passed_count": 95,
+  "failed_count": 0,
+  "checks": [
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison: group coverage",
+      "actual": 6.0,
+      "expected": 6.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison/CC-101: budget_total",
+      "actual": 135000.0,
+      "expected": 135000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison/CC-101: actual_total",
+      "actual": 149500.0,
+      "expected": 149500.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison/CC-101: variance_amount",
+      "actual": 14500.0,
+      "expected": 14500.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison/CC-101: result_value",
+      "actual": 14500.0,
+      "expected": 14500.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison/CC-101: variance_percentage",
+      "actual": 10.74074074074074,
+      "expected": 10.74074074074074,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison/CC-102: budget_total",
+      "actual": 60000.0,
+      "expected": 60000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison/CC-102: actual_total",
+      "actual": 58500.0,
+      "expected": 58500.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison/CC-102: variance_amount",
+      "actual": -1500.0,
+      "expected": -1500.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison/CC-102: result_value",
+      "actual": -1500.0,
+      "expected": -1500.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison/CC-102: variance_percentage",
+      "actual": -2.5,
+      "expected": -2.5,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison/CC-201: budget_total",
+      "actual": 185000.0,
+      "expected": 185000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison/CC-201: actual_total",
+      "actual": 198000.0,
+      "expected": 198000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison/CC-201: variance_amount",
+      "actual": 13000.0,
+      "expected": 13000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison/CC-201: result_value",
+      "actual": 13000.0,
+      "expected": 13000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison/CC-201: variance_percentage",
+      "actual": 7.027027027027027,
+      "expected": 7.027027027027027,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison/CC-202: budget_total",
+      "actual": 95000.0,
+      "expected": 95000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison/CC-202: actual_total",
+      "actual": 90000.0,
+      "expected": 90000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison/CC-202: variance_amount",
+      "actual": -5000.0,
+      "expected": -5000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison/CC-202: result_value",
+      "actual": -5000.0,
+      "expected": -5000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison/CC-202: variance_percentage",
+      "actual": -5.263157894736842,
+      "expected": -5.263157894736842,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison/CC-301: budget_total",
+      "actual": 78000.0,
+      "expected": 78000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison/CC-301: actual_total",
+      "actual": 88500.0,
+      "expected": 88500.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison/CC-301: variance_amount",
+      "actual": 10500.0,
+      "expected": 10500.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison/CC-301: result_value",
+      "actual": 10500.0,
+      "expected": 10500.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison/CC-301: variance_percentage",
+      "actual": 13.461538461538462,
+      "expected": 13.461538461538462,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison/CC-401: budget_total",
+      "actual": 48000.0,
+      "expected": 48000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison/CC-401: actual_total",
+      "actual": 48500.0,
+      "expected": 48500.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison/CC-401: variance_amount",
+      "actual": 500.0,
+      "expected": 500.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison/CC-401: result_value",
+      "actual": 500.0,
+      "expected": 500.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "cost_centre_comparison/CC-401: variance_percentage",
+      "actual": 1.0416666666666665,
+      "expected": 1.0416666666666665,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "department_comparison: group coverage",
+      "actual": 4.0,
+      "expected": 4.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "department_comparison/Engineering: budget_total",
+      "actual": 195000.0,
+      "expected": 195000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "department_comparison/Engineering: actual_total",
+      "actual": 208000.0,
+      "expected": 208000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "department_comparison/Engineering: variance_amount",
+      "actual": 13000.0,
+      "expected": 13000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "department_comparison/Engineering: result_value",
+      "actual": 13000.0,
+      "expected": 13000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "department_comparison/Engineering: variance_percentage",
+      "actual": 6.666666666666667,
+      "expected": 6.666666666666667,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "department_comparison/HR & Ops: budget_total",
+      "actual": 48000.0,
+      "expected": 48000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "department_comparison/HR & Ops: actual_total",
+      "actual": 48500.0,
+      "expected": 48500.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "department_comparison/HR & Ops: variance_amount",
+      "actual": 500.0,
+      "expected": 500.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "department_comparison/HR & Ops: result_value",
+      "actual": 500.0,
+      "expected": 500.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "department_comparison/HR & Ops: variance_percentage",
+      "actual": 1.0416666666666665,
+      "expected": 1.0416666666666665,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "department_comparison/Marketing: budget_total",
+      "actual": 280000.0,
+      "expected": 280000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "department_comparison/Marketing: actual_total",
+      "actual": 288000.0,
+      "expected": 288000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "department_comparison/Marketing: variance_amount",
+      "actual": 8000.0,
+      "expected": 8000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "department_comparison/Marketing: result_value",
+      "actual": 8000.0,
+      "expected": 8000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "department_comparison/Marketing: variance_percentage",
+      "actual": 2.857142857142857,
+      "expected": 2.857142857142857,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "department_comparison/Sales: budget_total",
+      "actual": 78000.0,
+      "expected": 78000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "department_comparison/Sales: actual_total",
+      "actual": 88500.0,
+      "expected": 88500.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "department_comparison/Sales: variance_amount",
+      "actual": 10500.0,
+      "expected": 10500.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "department_comparison/Sales: result_value",
+      "actual": 10500.0,
+      "expected": 10500.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "department_comparison/Sales: variance_percentage",
+      "actual": 13.461538461538462,
+      "expected": 13.461538461538462,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison: group coverage",
+      "actual": 6.0,
+      "expected": 6.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison/Cloud Infrastructure: budget_total",
+      "actual": 135000.0,
+      "expected": 135000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison/Cloud Infrastructure: actual_total",
+      "actual": 149500.0,
+      "expected": 149500.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison/Cloud Infrastructure: variance_amount",
+      "actual": 14500.0,
+      "expected": 14500.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison/Cloud Infrastructure: result_value",
+      "actual": 14500.0,
+      "expected": 14500.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison/Cloud Infrastructure: variance_percentage",
+      "actual": 10.74074074074074,
+      "expected": 10.74074074074074,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison/Events & PR: budget_total",
+      "actual": 95000.0,
+      "expected": 95000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison/Events & PR: actual_total",
+      "actual": 90000.0,
+      "expected": 90000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison/Events & PR: variance_amount",
+      "actual": -5000.0,
+      "expected": -5000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison/Events & PR: result_value",
+      "actual": -5000.0,
+      "expected": -5000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison/Events & PR: variance_percentage",
+      "actual": -5.263157894736842,
+      "expected": -5.263157894736842,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison/Paid Ads & Campaigns: budget_total",
+      "actual": 185000.0,
+      "expected": 185000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison/Paid Ads & Campaigns: actual_total",
+      "actual": 198000.0,
+      "expected": 198000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison/Paid Ads & Campaigns: variance_amount",
+      "actual": 13000.0,
+      "expected": 13000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison/Paid Ads & Campaigns: result_value",
+      "actual": 13000.0,
+      "expected": 13000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison/Paid Ads & Campaigns: variance_percentage",
+      "actual": 7.027027027027027,
+      "expected": 7.027027027027027,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison/Recruitment & Onboarding: budget_total",
+      "actual": 48000.0,
+      "expected": 48000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison/Recruitment & Onboarding: actual_total",
+      "actual": 48500.0,
+      "expected": 48500.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison/Recruitment & Onboarding: variance_amount",
+      "actual": 500.0,
+      "expected": 500.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison/Recruitment & Onboarding: result_value",
+      "actual": 500.0,
+      "expected": 500.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison/Recruitment & Onboarding: variance_percentage",
+      "actual": 1.0416666666666665,
+      "expected": 1.0416666666666665,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison/Software Licenses: budget_total",
+      "actual": 60000.0,
+      "expected": 60000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison/Software Licenses: actual_total",
+      "actual": 58500.0,
+      "expected": 58500.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison/Software Licenses: variance_amount",
+      "actual": -1500.0,
+      "expected": -1500.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison/Software Licenses: result_value",
+      "actual": -1500.0,
+      "expected": -1500.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison/Software Licenses: variance_percentage",
+      "actual": -2.5,
+      "expected": -2.5,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison/Travel & Client Entertainment: budget_total",
+      "actual": 78000.0,
+      "expected": 78000.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison/Travel & Client Entertainment: actual_total",
+      "actual": 88500.0,
+      "expected": 88500.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison/Travel & Client Entertainment: variance_amount",
+      "actual": 10500.0,
+      "expected": 10500.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison/Travel & Client Entertainment: result_value",
+      "actual": 10500.0,
+      "expected": 10500.0,
+      "passed": true
+    },
+    {
+      "category": "baseline_comparison",
+      "name": "expenditure_category_comparison/Travel & Client Entertainment: variance_percentage",
+      "actual": 13.461538461538462,
+      "expected": 13.461538461538462,
+      "passed": true
+    },
+    {
+      "category": "aggregation_reconciliation",
+      "name": "cost_centre_comparison: budget_amount",
+      "actual": 601000.0,
+      "expected": 601000.0,
+      "passed": true
+    },
+    {
+      "category": "aggregation_reconciliation",
+      "name": "cost_centre_comparison: actual_amount",
+      "actual": 633000.0,
+      "expected": 633000.0,
+      "passed": true
+    },
+    {
+      "category": "aggregation_reconciliation",
+      "name": "cost_centre_comparison: committed_amount",
+      "actual": 42500.0,
+      "expected": 42500.0,
+      "passed": true
+    },
+    {
+      "category": "aggregation_reconciliation",
+      "name": "cost_centre_comparison: forecast_amount",
+      "actual": 660500.0,
+      "expected": 660500.0,
+      "passed": true
+    },
+    {
+      "category": "aggregation_reconciliation",
+      "name": "department_comparison: budget_amount",
+      "actual": 601000.0,
+      "expected": 601000.0,
+      "passed": true
+    },
+    {
+      "category": "aggregation_reconciliation",
+      "name": "department_comparison: actual_amount",
+      "actual": 633000.0,
+      "expected": 633000.0,
+      "passed": true
+    },
+    {
+      "category": "aggregation_reconciliation",
+      "name": "department_comparison: committed_amount",
+      "actual": 42500.0,
+      "expected": 42500.0,
+      "passed": true
+    },
+    {
+      "category": "aggregation_reconciliation",
+      "name": "department_comparison: forecast_amount",
+      "actual": 660500.0,
+      "expected": 660500.0,
+      "passed": true
+    },
+    {
+      "category": "aggregation_reconciliation",
+      "name": "expenditure_category_comparison: budget_amount",
+      "actual": 601000.0,
+      "expected": 601000.0,
+      "passed": true
+    },
+    {
+      "category": "aggregation_reconciliation",
+      "name": "expenditure_category_comparison: actual_amount",
+      "actual": 633000.0,
+      "expected": 633000.0,
+      "passed": true
+    },
+    {
+      "category": "aggregation_reconciliation",
+      "name": "expenditure_category_comparison: committed_amount",
+      "actual": 42500.0,
+      "expected": 42500.0,
+      "passed": true
+    },
+    {
+      "category": "aggregation_reconciliation",
+      "name": "expenditure_category_comparison: forecast_amount",
+      "actual": 660500.0,
+      "expected": 660500.0,
+      "passed": true
+    }
+  ],
+  "failures": []
+}

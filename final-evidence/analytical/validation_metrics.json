@@ -1,0 +1,193 @@
+{
+  "validation_version": "1.0.0",
+  "dataset_version": "1.0.0",
+  "method_version": "1.0.0",
+  "generated_at": "2026-11-06T06:26:37Z",
+  "overall_status": "PASS",
+  "checks": [
+    {
+      "check_id": "CALCULATIONS",
+      "description": "Calculations",
+      "status": "PASS",
+      "check_count": 256,
+      "passed_count": 256,
+      "failed_count": 0
+    },
+    {
+      "check_id": "CLASSIFICATION",
+      "description": "Classification",
+      "status": "PASS",
+      "check_count": 128,
+      "passed_count": 128,
+      "failed_count": 0
+    },
+    {
+      "check_id": "COUNT",
+      "description": "Count",
+      "status": "PASS",
+      "check_count": 1,
+      "passed_count": 1,
+      "failed_count": 0
+    },
+    {
+      "check_id": "EVIDENCE",
+      "description": "Evidence",
+      "status": "PASS",
+      "check_count": 256,
+      "passed_count": 256,
+      "failed_count": 0
+    },
+    {
+      "check_id": "EVIDENCE_STATUS",
+      "description": "Evidence Status",
+      "status": "PASS",
+      "check_count": 64,
+      "passed_count": 64,
+      "failed_count": 0
+    },
+    {
+      "check_id": "FINDING",
+      "description": "Finding",
+      "status": "PASS",
+      "check_count": 64,
+      "passed_count": 64,
+      "failed_count": 0
+    },
+    {
+      "check_id": "IDENTITY",
+      "description": "Identity",
+      "status": "PASS",
+      "check_count": 1,
+      "passed_count": 1,
+      "failed_count": 0
+    },
+    {
+      "check_id": "LIMITATIONS",
+      "description": "Limitations",
+      "status": "PASS",
+      "check_count": 64,
+      "passed_count": 64,
+      "failed_count": 0
+    },
+    {
+      "check_id": "MEASURE_SEPARATION",
+      "description": "Measure Separation",
+      "status": "PASS",
+      "check_count": 128,
+      "passed_count": 128,
+      "failed_count": 0
+    },
+    {
+      "check_id": "METADATA",
+      "description": "Metadata",
+      "status": "PASS",
+      "check_count": 3,
+      "passed_count": 3,
+      "failed_count": 0
+    },
+    {
+      "check_id": "RANKING_ELIGIBILITY",
+      "description": "Ranking Eligibility",
+      "status": "PASS",
+      "check_count": 64,
+      "passed_count": 64,
+      "failed_count": 0
+    },
+    {
+      "check_id": "RANKING_ORDER",
+      "description": "Ranking Order",
+      "status": "PASS",
+      "check_count": 3,
+      "passed_count": 3,
+      "failed_count": 0
+    },
+    {
+      "check_id": "SCHEMA",
+      "description": "Schema",
+      "status": "PASS",
+      "check_count": 128,
+      "passed_count": 128,
+      "failed_count": 0
+    },
+    {
+      "check_id": "TYPE_COUNTS",
+      "description": "Type Counts",
+      "status": "PASS",
+      "check_count": 6,
+      "passed_count": 6,
+      "failed_count": 0
+    },
+    {
+      "check_id": "VERSIONS",
+      "description": "Versions",
+      "status": "PASS",
+      "check_count": 64,
+      "passed_count": 64,
+      "failed_count": 0
+    }
+  ],
+  "passed_count": 1325,
+  "failed_count": 0,
+  "warning_count": 0,
+  "analytical_validation": {
+    "status": "PASS",
+    "total_checks": 1230,
+    "passed_count": 1230,
+    "failed_count": 0,
+    "evidence_file": "analytical_validation.json"
+  },
+  "check_results_file": "analytical_validation.json",
+  "reconciliation_validation": {
+    "status": "PASS",
+    "total_checks": 95,
+    "passed_count": 95,
+    "failed_count": 0,
+    "evidence_file": "baseline_reconciliation.json"
+  },
+  "aggregation_reconciliation": {
+    "status": "PASS",
+    "grouping_dimension_count": 3,
+    "measure_check_count": 12,
+    "passed_count": 12,
+    "failed_count": 0,
+    "canonical_totals": {
+      "budget_amount": 601000.0,
+      "actual_amount": 633000.0,
+      "committed_amount": 42500.0,
+      "forecast_amount": 660500.0
+    },
+    "evidence_file": "baseline_reconciliation.json",
+    "evidence": "Budget, Actual, Committed and Forecast totals were reconciled across all three overall grouping dimensions."
+  },
+  "baseline_comparison": {
+    "status": "PASS",
+    "baseline_method": "Independent Pandas aggregation of canonical source observations.",
+    "overall_comparison_count": 16,
+    "check_count": 83,
+    "passed_count": 83,
+    "failed_count": 0,
+    "calculation_check_count": 80,
+    "calculation_mismatches": 0,
+    "evidence_file": "baseline_reconciliation.json",
+    "evidence": "Overall grouped findings were independently compared against canonical-data aggregates."
+  },
+  "reproducibility": {
+    "status": "PASS",
+    "method_version": "1.0.0",
+    "dataset_version": "1.0.0",
+    "fixed_timestamp": "2026-11-06T00:00:00Z",
+    "repeat_runs_identical": true,
+    "sha256": "5769ac9aea58a657914b983827f0b831f7eb78cffae28974ecd8b9f57ad9ae09",
+    "evidence": "Two analytical executions using the same fixed timestamp produced identical SHA-256 output hashes."
+  },
+  "sensitivity_assessment": {
+    "status": "COMPLETED",
+    "test_design": "Leave-one-source-observation-out sensitivity review",
+    "rank_changed_count": 12,
+    "variance_changed_count": 3,
+    "quality_status_changed_count": 2,
+    "newly_insufficient_evidence_count": 2,
+    "evidence_file": "sensitivity_review.json",
+    "note": "Sensitivity assessment is reported separately and is not included in the combined validation-check total."
+  }
+}

@@ -145,3 +145,60 @@ def test_evidence_processing_value_error_returns_503(monkeypatch):
     assert response.json()["detail"] == (
         "Verified assistant evidence is unavailable."
     )
+
+
+def test_gemini_explanation_fields_preserve_deterministic_response(
+    monkeypatch,
+):
+    import backend.gemini_explainer as gemini_module
+    import backend.main as main_module
+
+    original_process_question = main_module.process_question
+    captured = {}
+
+    def capture_deterministic_result(question, artifacts):
+        result = original_process_question(question, artifacts)
+        captured["result"] = result.copy()
+        return result
+
+    def fake_explanation(question, result):
+        return {
+            "explanation": "This is a test-only explanation.",
+            "explanation_status": "generated",
+            "explanation_provider": "gemini",
+        }
+
+    monkeypatch.setattr(
+        main_module,
+        "process_question",
+        capture_deterministic_result,
+    )
+    monkeypatch.setattr(
+        gemini_module,
+        "explain_supported_response",
+        fake_explanation,
+    )
+
+    response = post_question(
+        {"question": "Compare cost centres"}
+    )
+
+    assert response.status_code == 200
+    data = response.json()
+    deterministic = captured["result"]
+
+    assert data["status"] == deterministic["status"] == "SUPPORTED"
+
+    for field in (
+        "answer",
+        "evidence_references",
+        "key_values",
+        "metadata",
+    ):
+        assert data[field] == deterministic[field]
+
+    assert data["explanation"] == (
+        "This is a test-only explanation."
+    )
+    assert data["explanation_status"] == "generated"
+    assert data["explanation_provider"] == "gemini"
