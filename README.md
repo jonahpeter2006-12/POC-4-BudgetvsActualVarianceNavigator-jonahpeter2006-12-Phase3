@@ -2,8 +2,9 @@
 
 A containerized financial analytics application with an operational budget-versus-actual dashboard, Phase 3 comparative intelligence, and an evidence-grounded assistant.
 
-> **Phase 3 release status: CERTIFICATION BLOCKED.**
-> The current public Render deployment and local Post #6 implementation have different capabilities. Clean-clone validation is completed with documented limitations. Public browser acceptance and the official evidence pack have since been completed; reviewer approval and certification remain outstanding.
+> **Project status: DEVELOPMENT COMPLETE; PROFESSIONAL DEMONSTRATION ACCEPTED; FORMAL PHASE 3 RELEASE CERTIFICATION PENDING.**
+>
+> The source release tag `v2.0.0-phase3-final` is published. Public browser acceptance and the official evidence pack are complete. Documented validation limitations remain, and formal release certification requires separate governance approval.
 
 ## 1. Project Overview
 
