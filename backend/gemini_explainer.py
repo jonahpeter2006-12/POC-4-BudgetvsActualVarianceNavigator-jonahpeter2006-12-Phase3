@@ -1,6 +1,7 @@
 ﻿"""Optional Gemini explanation layer for approved deterministic findings."""
 
 import json
+import logging
 import os
 import re
 from urllib.error import HTTPError, URLError
@@ -230,6 +231,9 @@ def explain_supported_response(question, deterministic_response):
         explanation = _request_gemini(question, approved_payload)
 
         if not validate_explanation(explanation, approved_payload):
+            logging.warning(
+                "Gemini explanation rejected by evidence validation."
+            )
             return {
                 "explanation": None,
                 "explanation_status": "rejected",
@@ -242,13 +246,46 @@ def explain_supported_response(question, deterministic_response):
             "explanation_provider": "gemini",
         }
 
-    except (HTTPError, URLError, TimeoutError, ValueError, RuntimeError, OSError):
+    except HTTPError as exc:
+        error_body = ""
+        try:
+            error_body = exc.read().decode("utf-8", errors="replace")
+        except Exception:
+            pass
+
+        logging.error(
+            "Gemini HTTP error: status=%s response=%s",
+            exc.code,
+            error_body[:500],
+        )
         return {
             "explanation": None,
             "explanation_status": "fallback",
             "explanation_provider": None,
         }
+
+    except URLError as exc:
+        logging.error("Gemini connection error: %s", exc.reason)
+        return {
+            "explanation": None,
+            "explanation_status": "fallback",
+            "explanation_provider": None,
+        }
+
+    except (TimeoutError, ValueError, RuntimeError, OSError) as exc:
+        logging.error(
+            "Gemini explanation error: %s: %s",
+            type(exc).__name__,
+            str(exc)[:500],
+        )
+        return {
+            "explanation": None,
+            "explanation_status": "fallback",
+            "explanation_provider": None,
+        }
+
     except Exception:
+        logging.exception("Unexpected Gemini explanation failure.")
         return {
             "explanation": None,
             "explanation_status": "fallback",
