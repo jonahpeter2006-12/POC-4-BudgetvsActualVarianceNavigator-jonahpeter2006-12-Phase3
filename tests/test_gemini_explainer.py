@@ -1,4 +1,5 @@
-﻿import pytest
+﻿
+import pytest
 import backend.gemini_explainer as gemini
 
 
@@ -162,6 +163,8 @@ def test_unsupported_response_does_not_call_gemini(
         "explanation_status": "not_applicable",
         "explanation_provider": None,
     }
+
+
 def test_explanation_exceeding_length_limit_is_rejected(
     monkeypatch, deterministic_response
 ):
@@ -202,3 +205,41 @@ def test_empty_explanation_is_rejected(
 
     assert result["explanation"] is None
     assert result["explanation_status"] == "rejected"
+
+
+def test_equivalent_decimal_formatting_is_accepted():
+    approved_payload = {
+        "approved_answer": "Forecast is 154500.0.",
+        "approved_key_values": [
+            {
+                "committed_total": 6500.0,
+                "forecast_total": 154500.0,
+            }
+        ],
+    }
+
+    explanation = (
+        "The forecast is 154500.00 and the committed "
+        "amount is 6500.00."
+    )
+
+    assert gemini.validate_explanation(
+        explanation,
+        approved_payload,
+    )
+
+
+def test_different_decimal_value_is_rejected():
+    approved_payload = {
+        "approved_answer": "Forecast is 154500.0.",
+        "approved_key_values": [
+            {"forecast_total": 154500.0}
+        ],
+    }
+
+    explanation = "The forecast is 154501.00."
+
+    assert not gemini.validate_explanation(
+        explanation,
+        approved_payload,
+    )

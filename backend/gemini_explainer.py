@@ -1,9 +1,11 @@
+
 """Optional Gemini explanation layer for approved deterministic findings."""
 
 import json
 import logging
 import os
 import re
+from decimal import Decimal, InvalidOperation
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
@@ -36,7 +38,7 @@ Strict rules:
 
 
 def _numeric_tokens(value):
-    """Return normalized numeric tokens found in text."""
+    """Return numerically normalized tokens found in text."""
     if not isinstance(value, str):
         value = json.dumps(value, ensure_ascii=False, default=str)
 
@@ -45,10 +47,20 @@ def _numeric_tokens(value):
         value,
     )
 
-    return {
-        token.replace(",", "").rstrip("%")
-        for token in tokens
-    }
+    normalized = set()
+
+    for token in tokens:
+        numeric_text = token.replace(",", "").rstrip("%")
+
+        try:
+            number = Decimal(numeric_text)
+        except InvalidOperation:
+            continue
+
+        if number.is_finite():
+            normalized.add(number.normalize())
+
+    return normalized
 
 
 def _approved_payload(response):
