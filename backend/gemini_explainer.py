@@ -1,4 +1,4 @@
-﻿"""Optional Gemini explanation layer for approved deterministic findings."""
+"""Optional Gemini explanation layer for approved deterministic findings."""
 
 import json
 import logging
@@ -203,8 +203,9 @@ def validate_explanation(explanation, approved_payload):
     if unsupported_numbers:
         logging.warning(
             "Gemini validation rejected: unsupported numeric claims. "
-            "Count=%s",
+            "Count=%s Tokens=%s",
             len(unsupported_numbers),
+            sorted(unsupported_numbers),
         )
         return False
 
