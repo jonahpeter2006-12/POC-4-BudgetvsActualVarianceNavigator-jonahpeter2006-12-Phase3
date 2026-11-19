@@ -177,11 +177,17 @@ def _has_direction_contradiction(explanation, approved_values):
 def validate_explanation(explanation, approved_payload):
     """Accept only concise explanations grounded in approved response data."""
     if not isinstance(explanation, str):
+        logging.warning("Gemini validation rejected: response is not text.")
         return False
 
     explanation = explanation.strip()
 
-    if not explanation or len(explanation) > MAX_EXPLANATION_LENGTH:
+    if not explanation:
+        logging.warning("Gemini validation rejected: empty explanation.")
+        return False
+
+    if len(explanation) > MAX_EXPLANATION_LENGTH:
+        logging.warning("Gemini validation rejected: explanation exceeds length limit.")
         return False
 
     approved_text = json.dumps(
@@ -193,13 +199,22 @@ def validate_explanation(explanation, approved_payload):
     allowed_numbers = _numeric_tokens(approved_text)
     explanation_numbers = _numeric_tokens(explanation)
 
-    if not explanation_numbers.issubset(allowed_numbers):
+    unsupported_numbers = explanation_numbers - allowed_numbers
+    if unsupported_numbers:
+        logging.warning(
+            "Gemini validation rejected: unsupported numeric claims. "
+            "Count=%s",
+            len(unsupported_numbers),
+        )
         return False
 
     if _has_direction_contradiction(
         explanation,
         approved_payload.get("approved_key_values", []),
     ):
+        logging.warning(
+            "Gemini validation rejected: contradictory budget direction."
+        )
         return False
 
     return True
