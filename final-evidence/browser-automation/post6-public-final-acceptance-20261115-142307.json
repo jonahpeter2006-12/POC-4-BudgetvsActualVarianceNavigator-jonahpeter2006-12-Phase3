@@ -1,0 +1,110 @@
+{
+  "project": "POC-4 Budget vs Actual Variance Navigator",
+  "scope": "Final public Post #6 Render browser and API acceptance",
+  "frontend_url": "https://poc4-budget-phase3-frontend.onrender.com",
+  "backend_url": "https://poc4-budget-phase3-backend.onrender.com",
+  "browser": "Google Chrome 157.0.8103.78",
+  "chromedriver": "157.0.8103.78",
+  "executed_at_utc": "2026-11-15T08:53:17.791393+00:00",
+  "passed": 19,
+  "failed": 0,
+  "result": "PASS",
+  "tests": [
+    {
+      "test": "Chrome session",
+      "status": "PASS",
+      "detail": "157.0.8103.78"
+    },
+    {
+      "test": "Backend health",
+      "status": "PASS",
+      "detail": "HTTP 200"
+    },
+    {
+      "test": "Intelligence health",
+      "status": "PASS",
+      "detail": "HTTP 200"
+    },
+    {
+      "test": "Intelligence summary",
+      "status": "PASS",
+      "detail": "HTTP 200"
+    },
+    {
+      "test": "Assistant: Compare cost centres",
+      "status": "PASS",
+      "detail": "HTTP 200; status=SUPPORTED; evidence=1"
+    },
+    {
+      "test": "Assistant: Forecast next quarter spending for cost centers",
+      "status": "PASS",
+      "detail": "HTTP 200; status=OUT_OF_SCOPE; evidence=0"
+    },
+    {
+      "test": "Assistant: Project future spending for CC-101",
+      "status": "PASS",
+      "detail": "HTTP 200; status=OUT_OF_SCOPE; evidence=0"
+    },
+    {
+      "test": "Assistant: Predict next quarter's spending for each cost centre",
+      "status": "PASS",
+      "detail": "HTTP 200; status=OUT_OF_SCOPE; evidence=0"
+    },
+    {
+      "test": "Dashboard desktop rendering",
+      "status": "PASS",
+      "detail": "title=Budget vs Actual Variance Navigator | Infocreon; body_chars=477"
+    },
+    {
+      "test": "Dashboard backend error absent",
+      "status": "PASS",
+      "detail": "No visible backend connection error"
+    },
+    {
+      "test": "Data Intelligence desktop rendering",
+      "status": "PASS",
+      "detail": "title=Budget vs Actual Variance Navigator | Infocreon; body_chars=5490"
+    },
+    {
+      "test": "Data Intelligence backend error absent",
+      "status": "PASS",
+      "detail": "No visible backend connection error"
+    },
+    {
+      "test": "Data Intelligence content: 64 findings available from the API",
+      "status": "PASS",
+      "detail": "Expected content found"
+    },
+    {
+      "test": "Data Intelligence content: 1,230 / 1,230",
+      "status": "PASS",
+      "detail": "Expected content found"
+    },
+    {
+      "test": "Data Intelligence content: 95 / 95",
+      "status": "PASS",
+      "detail": "Expected content found"
+    },
+    {
+      "test": "Data Intelligence content: 1,325 passed, 0 failed",
+      "status": "PASS",
+      "detail": "Expected content found"
+    },
+    {
+      "test": "Data Intelligence content: Track A",
+      "status": "PASS",
+      "detail": "Expected content found"
+    },
+    {
+      "test": "Dashboard exact 390x844 mobile layout",
+      "status": "PASS",
+      "detail": "{\"clientWidth\": 390, \"innerHeight\": 844, \"innerWidth\": 390, \"scrollWidth\": 390}"
+    },
+    {
+      "test": "Data Intelligence exact 390x844 mobile layout",
+      "status": "PASS",
+      "detail": "{\"clientWidth\": 390, \"innerHeight\": 844, \"innerWidth\": 390, \"scrollWidth\": 390}"
+    }
+  ],
+  "certification_status": "DRAFT - NOT CERTIFIED"
+}

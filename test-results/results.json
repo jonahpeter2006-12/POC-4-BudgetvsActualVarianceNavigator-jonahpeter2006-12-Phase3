@@ -1,62 +1,17 @@
 {
   "project": "POC-4 Budget vs Actual Variance Navigator",
-  "frontend_url": "https://poc4-budget-frontend.onrender.com",
-  "backend_url": "https://poc4-budget-backend.onrender.com",
+  "frontend_url": "https://poc4-budget-phase3-frontend.onrender.com",
+  "backend_url": "https://poc4-budget-phase3-backend.onrender.com",
   "browser": "Google Chrome via Selenium WebDriver",
-  "executed_at_utc": "2026-11-06T06:06:09.899760+00:00",
-  "passed": 10,
-  "failed": 0,
-  "result": "PASS",
+  "executed_at_utc": "2026-11-14T04:21:56.289791+00:00",
+  "passed": 0,
+  "failed": 1,
+  "result": "FAIL",
   "tests": [
     {
-      "test": "Live frontend availability",
-      "status": "PASS",
-      "detail": "HTTP 200 at https://poc4-budget-frontend.onrender.com"
-    },
-    {
-      "test": "Page load",
-      "status": "PASS",
-      "detail": "title=Budget vs Actual Variance Navigator | Infocreon"
-    },
-    {
-      "test": "Data rendered",
-      "status": "PASS",
-      "detail": "Dashboard text is present"
-    },
-    {
-      "test": "Visualization rendering",
-      "status": "PASS",
-      "detail": "6 Recharts chart surface(s) found"
-    },
-    {
-      "test": "Frontend/backend API handshake",
-      "status": "PASS",
-      "detail": "health=200, summary=200, backend=https://poc4-budget-backend.onrender.com"
-    },
-    {
-      "test": "Filter interaction",
-      "status": "PASS",
-      "detail": "Selected Engineering"
-    },
-    {
-      "test": "Intelligence panel interaction",
-      "status": "PASS",
-      "detail": "Financial insights dialog opened from Approved budget KPI"
-    },
-    {
-      "test": "Info icon / signature",
-      "status": "PASS",
-      "detail": "Expected 'Jona Peter' in metadata; modal text: INFOCREON INTERNSHIP\nApplication metadata\n\u2715\nArchitect\nJona Peter\nBatch\nBatch 8\nPoC ID\nPoC-4\nProject\nBudget vs Actual Variance Navigator\nTech stack\nNext.js, FastAPI, Tailwind CSS, Recharts\nProgram\nInfocreon Internship\nGitHub\n@jonahpeter2006-12 \u2197\nClose project details"
-    },
-    {
-      "test": "Responsive layout",
-      "status": "PASS",
-      "detail": "{\"scrollWidth\": 489, \"width\": 489}"
-    },
-    {
-      "test": "Screenshot evidence",
-      "status": "PASS",
-      "detail": "screenshots/selenium-live-dashboard.png"
+      "test": "Execution exception",
+      "status": "FAIL",
+      "detail": "NoSuchDriverException: Message: Unable to obtain driver for chrome; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location\n"
     }
   ]
 }

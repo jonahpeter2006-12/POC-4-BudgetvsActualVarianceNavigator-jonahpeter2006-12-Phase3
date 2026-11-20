@@ -1,0 +1,65 @@
+﻿{
+    "project":  "POC-4 Budget vs Actual Variance Navigator",
+    "evidence_type":  "Local post-correction browser acceptance",
+    "executed_at_local":  "2026-11-15T13:14:27.3599891+05:30",
+    "timezone":  "India Standard Time",
+    "environment":  "Original local project working directory",
+    "frontend_url":  "http://localhost:3000",
+    "backend_url":  "http://127.0.0.1:8000",
+    "browser":  "Google Chrome 157.0.8103.78",
+    "webdriver":  "Official ChromeDriver 157.0.8103.78",
+    "correction_status":  "Applied locally; not committed, pushed, or deployed",
+    "results":  {
+                    "assistant_browser_regression":  {
+                                                         "details":  [
+                                                                         "Dashboard loaded",
+                                                                         "Data Intelligence page loaded",
+                                                                         "Supported comparative question returned SUPPORTED",
+                                                                         "Predictive question returned OUT_OF_SCOPE"
+                                                                     ],
+                                                         "failed":  0,
+                                                         "passed":  4
+                                                     },
+                    "dashboard_filter_and_responsive_checks":  {
+                                                                   "details":  [
+                                                                                   "Department and month options populated",
+                                                                                   "Engineering department filter",
+                                                                                   "January 2026 month filter",
+                                                                                   "Dashboard reset",
+                                                                                   "Dashboard and Data Intelligence responsive checks"
+                                                                               ],
+                                                                   "failed":  0,
+                                                                   "passed":  9
+                                                               },
+                    "exact_viewport_checks":  {
+                                                  "horizontal_overflow":  false,
+                                                  "viewports":  [
+                                                                    "Dashboard mobile 390x844",
+                                                                    "Dashboard tablet 768x1024",
+                                                                    "Data Intelligence mobile 390x844",
+                                                                    "Data Intelligence tablet 768x1024"
+                                                                ],
+                                                  "failed":  0,
+                                                  "passed":  4
+                                              },
+                    "total":  {
+                                  "passed":  17,
+                                  "failed":  0
+                              }
+                },
+    "screenshots":  [
+                        {
+                            "sha256":  "54C3E6F230DF054BD7B48ABAEF11F37FB0DE07A121ACEBB01202D2374AB522B4",
+                            "file":  "post6-local-dashboard-2026-11-15.png",
+                            "bytes":  57620
+                        },
+                        {
+                            "sha256":  "822291631634B0655695905145197656B99F6DFC2D29DBB3A01CCBFE03CC0AD2",
+                            "file":  "post6-local-assistant-regression-2026-11-15.png",
+                            "bytes":  59764
+                        }
+                    ],
+    "public_render_post_correction_validation":  "NOT PERFORMED",
+    "certification_status":  "DRAFT - NOT CERTIFIED",
+    "historical_blocked_attempt":  "post6-selenium-attempt-2026-11-14.json; preserved unchanged"
+}

@@ -1,0 +1,66 @@
+{
+  "project": "POC-4 Budget vs Actual Variance Navigator",
+  "test_scope": "Fresh public Post #6 Render browser acceptance",
+  "frontend_url": "https://poc4-budget-phase3-frontend.onrender.com",
+  "backend_url": "https://poc4-budget-phase3-backend.onrender.com",
+  "browser": "Google Chrome",
+  "chromedriver": "157.0.8103.78",
+  "selenium_version": "4.52.0",
+  "executed_at_utc": "2026-11-15T08:50:36.936443+00:00",
+  "passed": 9,
+  "failed": 1,
+  "result": "FAIL",
+  "tests": [
+    {
+      "test": "Chrome session started",
+      "status": "PASS",
+      "detail": "157.0.8103.78"
+    },
+    {
+      "test": "ChromeDriver version",
+      "status": "PASS",
+      "detail": "{'chromedriverVersion': '157.0.8103.78 (4b3d0dabb8250b6f152d2d85d79e7706e309d087-refs/branch-heads/8103@{#1573})', 'userDataDir': 'C:\\\\Users\\\\MYPC~1\\\\AppData\\\\Local\\\\Temp\\\\scoped_dir2100_2034049433'}"
+    },
+    {
+      "test": "Public frontend HTTP",
+      "status": "PASS",
+      "detail": "HTTP 200"
+    },
+    {
+      "test": "Public backend health",
+      "status": "PASS",
+      "detail": "HTTP 200; {\"status\":\"ok\",\"service\":\"Budget vs Actual Variance Navigator\",\"version\":\"2.0.0\"}"
+    },
+    {
+      "test": "Dashboard page rendered",
+      "status": "PASS",
+      "detail": "title=Budget vs Actual Variance Navigator | Infocreon; body_chars=477"
+    },
+    {
+      "test": "Dashboard backend error absent",
+      "status": "PASS",
+      "detail": "No visible backend connection error"
+    },
+    {
+      "test": "Data Intelligence page rendered",
+      "status": "FAIL",
+      "detail": "title=Budget vs Actual Variance Navigator | Infocreon; body_chars=38"
+    },
+    {
+      "test": "Data Intelligence backend error absent",
+      "status": "PASS",
+      "detail": "No visible backend connection error"
+    },
+    {
+      "test": "Dashboard mobile overflow",
+      "status": "PASS",
+      "detail": "{\"scrollWidth\": 489, \"width\": 489}"
+    },
+    {
+      "test": "Data Intelligence mobile overflow",
+      "status": "PASS",
+      "detail": "{\"scrollWidth\": 504, \"width\": 504}"
+    }
+  ],
+  "certification_status": "DRAFT - NOT CERTIFIED"
+}
