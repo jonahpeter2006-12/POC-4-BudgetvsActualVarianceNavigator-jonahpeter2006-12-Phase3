@@ -244,6 +244,7 @@ def test_different_decimal_value_is_rejected():
         approved_payload,
     )
 
+
 def test_extract_model_text_accepts_completed_model_output():
     response_data = {
         "status": "completed",
@@ -318,7 +319,10 @@ def test_extract_model_text_logs_oversized_response(caplog):
         gemini._extract_model_text(response_data)
 
     assert "exceeds length limit" in caplog.text
-    assert "extracted_text_length=1201" in caplog.text
+    assert (
+        f"extracted_text_length={gemini.MAX_EXPLANATION_LENGTH + 1}"
+        in caplog.text
+    )
     assert "A" * 100 not in caplog.text
 
 

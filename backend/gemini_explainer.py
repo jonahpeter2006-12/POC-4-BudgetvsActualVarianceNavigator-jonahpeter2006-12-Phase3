@@ -13,7 +13,7 @@ from urllib.request import Request, urlopen
 GEMINI_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/interactions"
 DEFAULT_MODEL = "gemini-3.5-flash-lite"
 REQUEST_TIMEOUT_SECONDS = 12
-MAX_EXPLANATION_LENGTH = 1200
+MAX_EXPLANATION_LENGTH = 1600
 
 SYSTEM_INSTRUCTION = """
 You are an explanation-only layer for a financial variance review assistant.
