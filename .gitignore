@@ -22,3 +22,8 @@ frontend/frontend-backup/
 
 # Git
 .git/
+# Local Post 6 Python environment
+.venv-post6/
+
+# Local backup files
+*.bak
