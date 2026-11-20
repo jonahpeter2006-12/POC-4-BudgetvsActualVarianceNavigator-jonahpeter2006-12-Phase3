@@ -1,0 +1,48 @@
+﻿{
+    "evidence_id":  "post5-public-live-api-smoke-20261120",
+    "execution_date":  "2026-11-20",
+    "environment":  "Public Render deployment",
+    "backend":  "https://poc4-budget-phase3-backend.onrender.com",
+    "deployed_commit":  "0cf2e6f",
+    "overall_result":  "PASS",
+    "tests":  [
+                  {
+                      "explanation_status":  "generated",
+                      "intent":  "expenditure_category_lookup",
+                      "budget_usd":  135000,
+                      "variance_percentage":  10.74074074074074,
+                      "result":  "PASS",
+                      "explanation_provider":  "gemini",
+                      "question":  "What was the actual spending and budget variance for Cloud Infrastructure?",
+                      "answer_id":  "ea556642-0422-4bbc-8724-ce3f2e164ded",
+                      "source_record_ids":  [
+                                                "SRC-0001",
+                                                "SRC-0002",
+                                                "SRC-0003"
+                                            ],
+                      "status":  "SUPPORTED",
+                      "variance_usd":  14500,
+                      "independent_source_count":  3,
+                      "actual_usd":  149500,
+                      "test_name":  "Supported Cloud Infrastructure lookup"
+                  },
+                  {
+                      "test_name":  "Unsupported future spending prediction",
+                      "question":  "Predict next year\u0027s spending for Cloud Infrastructure.",
+                      "key_value_count":  0,
+                      "answer_id":  "2644abda-d478-4ae3-bd60-59066bcd6759",
+                      "evidence_reference_count":  0,
+                      "explanation_status":  "not_applicable",
+                      "explanation_provider":  null,
+                      "status":  "OUT_OF_SCOPE",
+                      "result":  "PASS"
+                  }
+              ],
+    "limitations":  [
+                        "All source observations are synthetic.",
+                        "The dataset contains only 18 independent source observations.",
+                        "Results describe the supplied period and do not establish population-level conclusions."
+                    ],
+    "certification_status":  "PENDING_REVIEWER_APPROVAL",
+    "scope_note":  "Two live public API smoke tests only; not complete UAT or full assistant certification."
+}
