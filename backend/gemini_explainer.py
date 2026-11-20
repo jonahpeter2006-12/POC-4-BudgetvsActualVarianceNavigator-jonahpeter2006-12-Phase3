@@ -83,26 +83,80 @@ def _extract_model_text(data):
         raise ValueError("Gemini did not return a completed interaction.")
 
     text_parts = []
+    step_types = []
+    content_types = []
+    model_output_steps = 0
 
-    for step in data.get("steps", []):
+    steps = data.get("steps", [])
+
+    if not isinstance(steps, list):
+        logging.warning(
+            "Gemini response diagnostic: completed response has "
+            "non-list steps; steps_type=%s top_level_keys=%s",
+            type(steps).__name__,
+            sorted(str(key) for key in data.keys()),
+        )
+        steps = []
+
+    for step in steps:
         if not isinstance(step, dict):
+            step_types.append(type(step).__name__)
             continue
 
-        if step.get("type") != "model_output":
+        step_type = step.get("type")
+        step_types.append(str(step_type))
+
+        if step_type != "model_output":
             continue
 
-        for content in step.get("content", []):
+        model_output_steps += 1
+        contents = step.get("content", [])
+
+        if not isinstance(contents, list):
+            content_types.append(type(contents).__name__)
+            continue
+
+        for content in contents:
+            if not isinstance(content, dict):
+                content_types.append(type(content).__name__)
+                continue
+
+            content_type = content.get("type")
+            content_types.append(str(content_type))
+
             if (
-                isinstance(content, dict)
-                and content.get("type") == "text"
+                content_type == "text"
                 and isinstance(content.get("text"), str)
             ):
                 text_parts.append(content["text"])
 
     result = "\n".join(text_parts).strip()
 
-    if not result or len(result) > MAX_EXPLANATION_LENGTH:
-        raise ValueError("Gemini returned empty or oversized explanation text.")
+    if not result:
+        logging.warning(
+            "Gemini response diagnostic: no extractable text; "
+            "top_level_keys=%s step_count=%d model_output_steps=%d "
+            "step_types=%s content_types=%s",
+            sorted(str(key) for key in data.keys()),
+            len(steps),
+            model_output_steps,
+            step_types,
+            content_types,
+        )
+        raise ValueError(
+            "Gemini completed response contained no extractable text."
+        )
+
+    if len(result) > MAX_EXPLANATION_LENGTH:
+        logging.warning(
+            "Gemini response diagnostic: explanation exceeds length limit; "
+            "extracted_text_length=%d limit=%d",
+            len(result),
+            MAX_EXPLANATION_LENGTH,
+        )
+        raise ValueError(
+            "Gemini explanation exceeded configured length limit."
+        )
 
     return result
 
@@ -199,7 +253,9 @@ def validate_explanation(explanation, approved_payload):
         return False
 
     if len(explanation) > MAX_EXPLANATION_LENGTH:
-        logging.warning("Gemini validation rejected: explanation exceeds length limit.")
+        logging.warning(
+            "Gemini validation rejected: explanation exceeds length limit."
+        )
         return False
 
     approved_text = json.dumps(

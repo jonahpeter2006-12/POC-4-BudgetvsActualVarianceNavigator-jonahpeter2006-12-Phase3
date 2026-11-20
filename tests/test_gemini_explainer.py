@@ -243,3 +243,96 @@ def test_different_decimal_value_is_rejected():
         explanation,
         approved_payload,
     )
+
+def test_extract_model_text_accepts_completed_model_output():
+    response_data = {
+        "status": "completed",
+        "steps": [
+            {
+                "type": "input",
+                "content": [
+                    {"type": "text", "text": "This must be ignored."}
+                ],
+            },
+            {
+                "type": "model_output",
+                "content": [
+                    {"type": "text", "text": "CC-101 is over budget."}
+                ],
+            },
+        ],
+    }
+
+    result = gemini._extract_model_text(response_data)
+
+    assert result == "CC-101 is over budget."
+
+
+def test_extract_model_text_logs_unrecognised_response_structure(caplog):
+    response_data = {
+        "status": "completed",
+        "steps": [
+            {
+                "type": "model_output",
+                "content": [
+                    {"type": "other", "text": "Unrecognised content."}
+                ],
+            }
+        ],
+    }
+
+    with pytest.raises(
+        ValueError,
+        match="no extractable text",
+    ):
+        gemini._extract_model_text(response_data)
+
+    assert "no extractable text" in caplog.text
+    assert "model_output_steps=1" in caplog.text
+    assert "other" in caplog.text
+    assert "Unrecognised content." not in caplog.text
+
+
+def test_extract_model_text_logs_oversized_response(caplog):
+    response_data = {
+        "status": "completed",
+        "steps": [
+            {
+                "type": "model_output",
+                "content": [
+                    {
+                        "type": "text",
+                        "text": "A" * (
+                            gemini.MAX_EXPLANATION_LENGTH + 1
+                        ),
+                    }
+                ],
+            }
+        ],
+    }
+
+    with pytest.raises(
+        ValueError,
+        match="exceeded configured length limit",
+    ):
+        gemini._extract_model_text(response_data)
+
+    assert "exceeds length limit" in caplog.text
+    assert "extracted_text_length=1201" in caplog.text
+    assert "A" * 100 not in caplog.text
+
+
+def test_extract_model_text_handles_non_list_steps(caplog):
+    response_data = {
+        "status": "completed",
+        "steps": {"unexpected": "structure"},
+    }
+
+    with pytest.raises(
+        ValueError,
+        match="no extractable text",
+    ):
+        gemini._extract_model_text(response_data)
+
+    assert "non-list steps" in caplog.text
+    assert "no extractable text" in caplog.text
