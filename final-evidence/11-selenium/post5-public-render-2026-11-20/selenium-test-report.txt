@@ -1,0 +1,36 @@
+POC-4 SELENIUM E2E TEST REPORT
+Executed (UTC): 2026-11-20T13:51:56.532585+00:00
+Frontend URL: https://poc4-budget-phase3-frontend.onrender.com
+Backend URL: https://poc4-budget-phase3-backend.onrender.com
+Browser: Google Chrome / Selenium WebDriver
+
+PASS: Live frontend availability — HTTP 200 at https://poc4-budget-phase3-frontend.onrender.com
+PASS: Page load — title=Budget vs Actual Variance Navigator | Infocreon
+PASS: Data rendered — Dashboard text is present
+PASS: Visualization rendering — 6 Recharts chart surface(s) found
+PASS: Frontend/backend API handshake — health=200, summary=200, backend=https://poc4-budget-phase3-backend.onrender.com
+PASS: Filter interaction — Selected Engineering
+PASS: Intelligence panel interaction — Financial insights dialog opened from Approved budget KPI
+PASS: Info icon / signature — Expected 'Jona Peter' in metadata; modal text: INFOCREON INTERNSHIP
+Application metadata
+✕
+Architect
+Jona Peter
+Batch
+Batch 8
+PoC ID
+PoC-4
+Project
+Budget vs Actual Variance Navigator
+Tech stack
+Next.js, FastAPI, Tailwind CSS, Recharts
+Program
+Infocreon Internship
+GitHub
+@jonahpeter2006-12 ↗
+Close project details
+PASS: Responsive layout — {"scrollWidth": 489, "width": 489}
+PASS: Screenshot evidence — screenshots/selenium-live-dashboard.png
+
+TOTAL: 10 PASS, 0 FAIL
+FINAL RESULT: PASS
